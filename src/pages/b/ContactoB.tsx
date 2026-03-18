@@ -25,7 +25,7 @@ export default function ContactoB() {
 
   return (
     <div className="min-h-screen">
-      <Navbar />
+      <Navbar version="b" />
 
       {/* HERO SPLIT */}
       <section className="min-h-[40vh] flex flex-col md:flex-row">

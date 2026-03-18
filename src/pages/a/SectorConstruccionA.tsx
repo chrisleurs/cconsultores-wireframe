@@ -46,7 +46,7 @@ const faqs = [
 export default function SectorConstruccionA() {
   return (
     <div className="min-h-screen">
-      <Navbar />
+      <Navbar version="a" />
 
       {/* HERO */}
       <section className="bg-primary pt-32 pb-20 md:pt-40 md:pb-24 min-h-[50vh] flex items-end">

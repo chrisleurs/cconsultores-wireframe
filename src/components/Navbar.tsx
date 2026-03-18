@@ -1,16 +1,25 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
-const navLinks = [
-  { label: "Nosotros", href: "#por-que" },
-  { label: "Servicios", href: "#servicios" },
-  { label: "Sectores", href: "#sectores" },
-  { label: "Equipo", href: "#equipo" },
-];
+interface NavbarProps {
+  version?: "a" | "b";
+}
 
-export function Navbar() {
+export function Navbar({ version }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const base = version ? `/version-${version}` : "";
+
+  const navLinks = [
+    { label: "Nosotros", href: `${base}/nosotros` },
+    { label: "Servicios", href: `${base}/servicios/contabilidad` },
+    { label: "Sectores", href: `${base}/sectores/construccion` },
+    { label: "Contacto", href: `${base}/contacto` },
+  ];
+
+  const ctaHref = version ? `${base}/contacto` : "#cta";
+  const logoHref = base || "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -26,7 +35,7 @@ export function Navbar() {
     >
       <div className="max-w-[1200px] mx-auto flex items-center justify-between px-5 py-4 md:px-8 md:py-5">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-3">
+        <a href={logoHref} className="flex items-center gap-3">
           <div
             className={`w-9 h-9 flex items-center justify-center rounded-sm font-serif text-lg font-bold transition-colors duration-300 ${
               scrolled ? "bg-primary text-primary-foreground" : "bg-white text-primary"
@@ -66,7 +75,7 @@ export function Navbar() {
             </a>
           ))}
           <a
-            href="#cta"
+            href={ctaHref}
             className={`btn-uppercase px-6 py-2.5 transition-all duration-300 ${
               scrolled
                 ? "bg-primary text-primary-foreground"
@@ -105,7 +114,7 @@ export function Navbar() {
             </a>
           ))}
           <a
-            href="#cta"
+            href={ctaHref}
             className="block btn-uppercase bg-primary text-primary-foreground px-6 py-3 text-center"
             onClick={() => setMenuOpen(false)}
           >

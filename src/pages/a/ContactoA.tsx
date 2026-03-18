@@ -25,7 +25,7 @@ export default function ContactoA() {
 
   return (
     <div className="min-h-screen">
-      <Navbar />
+      <Navbar version="a" />
 
       {/* HERO */}
       <section className="bg-primary pt-32 pb-16 md:pt-40 md:pb-20 min-h-[40vh] flex items-end">

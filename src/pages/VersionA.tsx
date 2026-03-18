@@ -100,7 +100,7 @@ const faqs = [
 export default function VersionA() {
   return (
     <div className="min-h-screen">
-      <Navbar />
+      <Navbar version="a" />
 
       {/* HERO */}
       <section className="relative min-h-screen bg-primary flex items-center justify-center overflow-hidden">
