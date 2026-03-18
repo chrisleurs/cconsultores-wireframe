@@ -392,6 +392,8 @@ export default function VersionA() {
         </div>
       </section>
 
+      <ClientLogos variant="a" />
+
       {/* CTA BANNER */}
       <section id="cta" className="relative bg-primary py-20 md:py-24 overflow-hidden">
         <span
