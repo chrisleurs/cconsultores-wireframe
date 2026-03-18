@@ -108,7 +108,7 @@ export default function VersionB() {
 
   return (
     <div className="min-h-screen">
-      <Navbar />
+      <Navbar version="b" />
 
       {/* HERO SPLIT */}
       <section className="min-h-screen flex flex-col md:flex-row">

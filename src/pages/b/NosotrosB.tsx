@@ -43,7 +43,7 @@ const certs = ["COLEGIO DE CONTADORES · CANCÚN", "REGISTRO SAT", "CERTIFICADO 
 export default function NosotrosB() {
   return (
     <div className="min-h-screen">
-      <Navbar />
+      <Navbar version="b" />
 
       {/* HERO SPLIT */}
       <section className="min-h-[50vh] flex flex-col md:flex-row">
