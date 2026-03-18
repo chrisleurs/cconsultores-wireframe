@@ -153,6 +153,8 @@ export default function VersionA() {
         </div>
       </section>
 
+      <ClientLogos variant="a" />
+
       {/* STATS */}
       <section className="bg-surface py-20 md:py-24">
         <div className="max-w-[1200px] mx-auto px-5 md:px-8">

@@ -118,6 +118,8 @@ export default function VersionC() {
         </div>
       </section>
 
+      <ClientLogos variant="c" />
+
       {/* STATEMENT — white full-screen */}
       <section className="min-h-screen bg-white flex flex-col items-center justify-center text-center px-5 md:px-10 py-20">
         <p className="label-uppercase text-camhaji-muted mb-12">QUIÉNES SOMOS</p>

@@ -64,6 +64,8 @@ export default function NosotrosB() {
         </div>
       </section>
 
+      <ClientLogos variant="b" />
+
       {/* DECLARACIÓN TIPOGRÁFICA */}
       <section className="bg-background py-20 md:py-24">
         <div className="max-w-[1200px] mx-auto px-5 md:px-8">

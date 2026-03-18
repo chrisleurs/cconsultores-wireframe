@@ -69,6 +69,8 @@ export default function NosotrosC() {
         </div>
       </section>
 
+      <ClientLogos variant="c" />
+
       {/* ORIGEN — declaración full-screen */}
       <section className="min-h-screen bg-white flex flex-col items-center justify-center text-center px-5 md:px-10 py-20">
         <p className="label-uppercase text-camhaji-muted mb-16">QUIÉNES SOMOS</p>
