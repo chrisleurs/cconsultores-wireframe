@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { ClientLogos } from "@/components/ClientLogos";
 
 const values = [
   { num: "01", title: "Cumplir la palabra", desc: "Si lo decimos, lo hacemos. Sin pretextos." },
@@ -159,6 +160,8 @@ export default function NosotrosB() {
           </div>
         </div>
       </section>
+
+      <ClientLogos variant="b" />
 
       {/* CTA — NEGRO */}
       <section className="bg-camhaji-black py-20 md:py-24">

@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { ClientLogos } from "@/components/ClientLogos";
 
 const timeline = [
   { year: "2009", title: "Inicio de trayectoria", desc: "Rogelio Moo inicia su carrera en grandes firmas de auditoría en Cancún." },
@@ -185,6 +186,8 @@ export default function NosotrosA() {
           </div>
         </div>
       </section>
+
+      <ClientLogos variant="a" />
 
       {/* CTA */}
       <section className="relative bg-primary py-20 md:py-24 overflow-hidden">

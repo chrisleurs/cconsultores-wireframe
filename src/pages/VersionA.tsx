@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { ClientLogos } from "@/components/ClientLogos";
 import { BookOpen, Shield, Users } from "lucide-react";
 import {
   Accordion,
@@ -390,6 +391,8 @@ export default function VersionA() {
           </p>
         </div>
       </section>
+
+      <ClientLogos variant="a" />
 
       {/* CTA BANNER */}
       <section id="cta" className="relative bg-primary py-20 md:py-24 overflow-hidden">

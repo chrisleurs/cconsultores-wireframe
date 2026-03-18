@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Navbar } from "@/components/Navbar";
 import { FooterC } from "@/components/FooterC";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { ClientLogos } from "@/components/ClientLogos";
 import { BarChart3, Shield, Users, Phone } from "lucide-react";
 import {
   Accordion,
@@ -302,6 +303,8 @@ export default function VersionC() {
           ))}
         </div>
       </section>
+
+      <ClientLogos variant="c" />
 
       {/* TESTIMONIAL — dark full-screen */}
       <section className="min-h-screen bg-camhaji-base flex flex-col items-center justify-center text-center px-5 md:px-10 py-20">

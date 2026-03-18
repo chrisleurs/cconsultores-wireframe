@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { ClientLogos } from "@/components/ClientLogos";
 import { BookOpen, Shield, Users, ChevronLeft, ChevronRight } from "lucide-react";
 import {
   Accordion,
@@ -398,6 +399,8 @@ export default function VersionB() {
           </p>
         </div>
       </section>
+
+      <ClientLogos variant="b" />
 
       {/* CTA - BLACK */}
       <section id="cta" className="bg-camhaji-black py-20 md:py-24 relative overflow-hidden">

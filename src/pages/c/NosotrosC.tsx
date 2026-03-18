@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { FooterC } from "@/components/FooterC";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { ClientLogos } from "@/components/ClientLogos";
 import { Phone } from "lucide-react";
 
 const principles = [
@@ -165,6 +166,8 @@ export default function NosotrosC() {
           ))}
         </div>
       </section>
+
+      <ClientLogos variant="c" />
 
       {/* REGISTROS */}
       <section className="bg-camhaji-base py-16 px-5 md:px-10">
