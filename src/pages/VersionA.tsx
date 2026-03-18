@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { ClientLogos } from "@/components/ClientLogos";
 import { BookOpen, Shield, Users } from "lucide-react";
 import {
   Accordion,
