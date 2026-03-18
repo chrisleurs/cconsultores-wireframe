@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
 interface NavbarProps {
-  version?: "a" | "b";
+  version?: "a" | "b" | "c";
 }
 
 export function Navbar({ version }: NavbarProps) {

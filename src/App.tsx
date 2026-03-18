@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import VersionA from "./pages/VersionA.tsx";
 import VersionB from "./pages/VersionB.tsx";
+import VersionC from "./pages/VersionC.tsx";
 import ServicioContabilidadA from "./pages/a/ServicioContabilidadA.tsx";
 import SectorConstruccionA from "./pages/a/SectorConstruccionA.tsx";
 import NosotrosA from "./pages/a/NosotrosA.tsx";
@@ -14,6 +15,10 @@ import ServicioContabilidadB from "./pages/b/ServicioContabilidadB.tsx";
 import SectorConstruccionB from "./pages/b/SectorConstruccionB.tsx";
 import NosotrosB from "./pages/b/NosotrosB.tsx";
 import ContactoB from "./pages/b/ContactoB.tsx";
+import ServicioContabilidadC from "./pages/c/ServicioContabilidadC.tsx";
+import SectorConstruccionC from "./pages/c/SectorConstruccionC.tsx";
+import NosotrosC from "./pages/c/NosotrosC.tsx";
+import ContactoC from "./pages/c/ContactoC.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -36,6 +41,11 @@ const App = () => (
           <Route path="/version-b/sectores/construccion" element={<SectorConstruccionB />} />
           <Route path="/version-b/nosotros" element={<NosotrosB />} />
           <Route path="/version-b/contacto" element={<ContactoB />} />
+          <Route path="/version-c" element={<VersionC />} />
+          <Route path="/version-c/servicios/contabilidad" element={<ServicioContabilidadC />} />
+          <Route path="/version-c/sectores/construccion" element={<SectorConstruccionC />} />
+          <Route path="/version-c/nosotros" element={<NosotrosC />} />
+          <Route path="/version-c/contacto" element={<ContactoC />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
