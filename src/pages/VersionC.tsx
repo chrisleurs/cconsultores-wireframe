@@ -306,9 +306,7 @@ export default function VersionC() {
         </div>
       </section>
 
-      <ClientLogos variant="c" />
 
-      {/* TESTIMONIAL — dark full-screen */}
       <section className="min-h-screen bg-camhaji-base flex flex-col items-center justify-center text-center px-5 md:px-10 py-20">
         <p className="label-uppercase text-white/25 mb-16">LO QUE DICEN NUESTROS CLIENTES</p>
         <span className="font-serif text-[120px] text-white/[0.06] leading-none block -mb-12" aria-hidden="true">"</span>
