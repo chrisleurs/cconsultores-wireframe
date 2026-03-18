@@ -15,6 +15,8 @@
     --color-muted-text: 0 0% 35%;       /* #5A5A5A */
     --color-border-subtle: 33 18% 89%;   /* #E8E4DC */
     --color-whatsapp: 142 70% 49%;       /* #25D366 */
+    --color-base-dark: 160 41% 9%;       /* #0D1F1C */
+    --color-accent-green: 160 27% 49%;   /* #5D9E90 */
 
     /* shadcn mapping */
     --background: 0 0% 100%;

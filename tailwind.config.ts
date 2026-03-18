@@ -55,6 +55,8 @@ export default {
         },
         surface: "hsl(var(--color-surface))",
         "camhaji-black": "hsl(var(--color-black))",
+        "camhaji-base": "hsl(var(--color-base-dark))",
+        "camhaji-accent": "hsl(var(--color-accent-green))",
         "camhaji-text": "hsl(var(--color-text))",
         "camhaji-muted": "hsl(var(--color-muted-text))",
         "border-subtle": "hsl(var(--color-border-subtle))",
