@@ -12,6 +12,7 @@ export function Navbar({ version }: NavbarProps) {
   const base = version ? `/version-${version}` : "";
 
   const navLinks = [
+    ...(version ? [{ label: "Home", href: base }] : []),
     { label: "Nosotros", href: `${base}/nosotros` },
     { label: "Servicios", href: `${base}/servicios/contabilidad` },
     { label: "Sectores", href: `${base}/sectores/construccion` },
@@ -19,7 +20,7 @@ export function Navbar({ version }: NavbarProps) {
   ];
 
   const ctaHref = version ? `${base}/contacto` : "#cta";
-  const logoHref = base || "/";
+  const logoHref = "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
