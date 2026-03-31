@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Navbar } from "@/components/Navbar";
 import { FooterC } from "@/components/FooterC";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
@@ -10,6 +9,14 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+
+import heroBg from "@/assets/hero-cancun-skyline.jpg";
+import statementBg from "@/assets/statement-office.jpg";
+import servicesBg from "@/assets/services-desk.jpg";
+import sectorConstruccion from "@/assets/sector-construccion.jpg";
+import sectorComercial from "@/assets/sector-comercial.jpg";
+import testimonialBg from "@/assets/testimonial-cancun-night.jpg";
+import ctaBg from "@/assets/cta-architecture.jpg";
 
 const services = [
   {
@@ -82,22 +89,34 @@ export default function VersionC() {
     <div className="min-h-screen">
       <Navbar version="c" />
 
-      {/* HERO — full-screen dark */}
-      <section className="min-h-screen bg-camhaji-base flex items-center justify-center text-center relative overflow-hidden">
-        <div className="relative z-10 px-5 md:px-10">
-          <p className="label-uppercase text-white/35 mb-12">
+      {/* HERO — full-bleed image, ARC-style left-aligned */}
+      <section className="min-h-screen relative flex items-end overflow-hidden">
+        <img
+          src={heroBg}
+          alt="Cancún skyline zona hotelera"
+          className="absolute inset-0 w-full h-full object-cover"
+          width={1920}
+          height={1080}
+        />
+        <div className="absolute inset-0 bg-black/55" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+        <div className="relative z-10 px-5 md:px-10 lg:px-16 pb-16 md:pb-24 max-w-[1200px] w-full">
+          <p className="label-uppercase text-white/40 mb-8">
             DESPACHO CONTABLE · CANCÚN, MÉXICO
           </p>
-          <h1
-            className="font-sans font-bold text-white leading-[0.95] mb-8"
-            style={{ fontSize: "clamp(52px, 8vw, 100px)", letterSpacing: "-0.04em" }}
-          >
-            Contabilidad<br />con Compromiso<br />Real.
-          </h1>
-          <p className="font-serif italic text-white/50 mb-12" style={{ fontSize: "clamp(16px, 2vw, 20px)" }}>
+          <div className="flex items-stretch gap-5 md:gap-6 mb-8">
+            <div className="w-1 bg-camhaji-accent flex-shrink-0 rounded-full" />
+            <h1
+              className="font-sans font-bold text-white leading-[0.95]"
+              style={{ fontSize: "clamp(44px, 7vw, 96px)", letterSpacing: "-0.04em" }}
+            >
+              Contabilidad<br />con Compromiso<br />Real.
+            </h1>
+          </div>
+          <p className="font-serif italic text-white/55 mb-10 max-w-[480px]" style={{ fontSize: "clamp(16px, 2vw, 20px)" }}>
             Más de 10 años de trayectoria. Una sola promesa: cumplir.
           </p>
-          <div className="flex gap-4 justify-center flex-wrap">
+          <div className="flex gap-4 flex-wrap">
             <a
               href="/version-c/contacto"
               className="btn-uppercase border border-white/50 text-white px-8 py-3.5 hover:bg-white/[0.08] hover:border-white transition-all duration-300"
@@ -113,35 +132,55 @@ export default function VersionC() {
           </div>
         </div>
         {/* Scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
+        <div className="absolute bottom-10 right-10 md:right-16">
           <div className="w-px h-10 bg-white/20 animate-scroll-pulse" />
         </div>
       </section>
 
       <ClientLogos variant="c" />
 
-      {/* STATEMENT — white full-screen */}
-      <section className="min-h-screen bg-white flex flex-col items-center justify-center text-center px-5 md:px-10 py-20">
-        <p className="label-uppercase text-camhaji-muted mb-12">QUIÉNES SOMOS</p>
-        <blockquote
-          className="font-serif italic text-camhaji-text max-w-[840px] mb-16"
-          style={{ fontSize: "clamp(28px, 4.5vw, 56px)", lineHeight: 1.25, letterSpacing: "-0.01em" }}
-        >
-          "Somos una firma joven con más de 10 años de trayectoria. Nuestro trabajo se guía por cinco principios."
-        </blockquote>
-        <div className="flex items-center gap-4 md:gap-8 flex-wrap justify-center border-t border-border-subtle pt-8">
-          {["CUMPLIR LA PALABRA", "HONESTIDAD", "TRANSPARENCIA", "RESPONSABILIDAD", "EMPATÍA"].map((p, i) => (
-            <span key={p} className="flex items-center gap-4 md:gap-8">
-              <span className="label-uppercase text-camhaji-muted">{p}</span>
-              {i < 4 && <span className="text-border-subtle">·</span>}
-            </span>
-          ))}
+      {/* STATEMENT — image background with white overlay */}
+      <section className="min-h-screen relative flex flex-col items-center justify-center text-center px-5 md:px-10 py-20 overflow-hidden">
+        <img
+          src={statementBg}
+          alt="Oficina profesional"
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
+          width={1920}
+          height={1080}
+        />
+        <div className="absolute inset-0 bg-white/[0.92]" />
+        <div className="relative z-10">
+          <p className="label-uppercase text-camhaji-muted mb-12">QUIÉNES SOMOS</p>
+          <blockquote
+            className="font-serif italic text-camhaji-text max-w-[840px] mb-16"
+            style={{ fontSize: "clamp(28px, 4.5vw, 56px)", lineHeight: 1.25, letterSpacing: "-0.01em" }}
+          >
+            "Somos una firma joven con más de 10 años de trayectoria. Nuestro trabajo se guía por cinco principios."
+          </blockquote>
+          <div className="flex items-center gap-4 md:gap-8 flex-wrap justify-center border-t border-border-subtle pt-8">
+            {["CUMPLIR LA PALABRA", "HONESTIDAD", "TRANSPARENCIA", "RESPONSABILIDAD", "EMPATÍA"].map((p, i) => (
+              <span key={p} className="flex items-center gap-4 md:gap-8">
+                <span className="label-uppercase text-camhaji-muted">{p}</span>
+                {i < 4 && <span className="text-border-subtle">·</span>}
+              </span>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* SERVICIOS — dark full-screen 3-col */}
-      <section id="servicios" className="min-h-screen bg-camhaji-base flex flex-col">
-        <div className="max-w-[1200px] mx-auto w-full px-5 md:px-10 pt-20 pb-0">
+      {/* SERVICIOS — image background with dark overlay */}
+      <section id="servicios" className="min-h-screen relative flex flex-col overflow-hidden">
+        <img
+          src={servicesBg}
+          alt="Escritorio profesional con documentos"
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
+          width={1920}
+          height={1080}
+        />
+        <div className="absolute inset-0 bg-camhaji-base/[0.92]" />
+        <div className="relative z-10 max-w-[1200px] mx-auto w-full px-5 md:px-10 pt-20 pb-0">
           <div className="flex flex-col md:flex-row justify-between items-baseline mb-20 gap-4">
             <p className="label-uppercase text-white/35">NUESTROS SERVICIOS</p>
             <p className="font-sans text-base text-white/50 max-w-[360px] md:text-right">
@@ -149,18 +188,18 @@ export default function VersionC() {
             </p>
           </div>
         </div>
-        <div className="flex-1 grid grid-cols-1 md:grid-cols-3 max-w-[1200px] mx-auto w-full">
+        <div className="relative z-10 flex-1 grid grid-cols-1 md:grid-cols-3 max-w-[1200px] mx-auto w-full">
           {services.map((s, i) => (
             <div
               key={i}
-              className={`flex flex-col justify-end p-8 md:p-10 hover:bg-white/[0.02] transition-colors duration-300 ${
+              className={`group flex flex-col justify-end p-8 md:p-10 hover:bg-white/[0.04] transition-colors duration-300 ${
                 i < services.length - 1 ? "md:border-r border-white/[0.07]" : ""
               } border-b md:border-b-0 border-white/[0.07]`}
             >
               <span className="font-sans text-xs text-white/[0.18] uppercase tracking-[0.2em] mb-12">{s.num}</span>
               <s.icon className="w-8 h-8 text-white/50 mb-7" strokeWidth={1} />
               <h3
-                className="font-sans font-bold text-white mb-4 hover:text-camhaji-accent transition-colors"
+                className="font-sans font-bold text-white mb-4 group-hover:text-camhaji-accent transition-colors"
                 style={{ fontSize: "clamp(20px, 3vw, 36px)", letterSpacing: "-0.02em", lineHeight: 1.1 }}
               >
                 {s.title}
@@ -212,17 +251,22 @@ export default function VersionC() {
             </h2>
           </div>
           <div className="border-t border-white/10">
-            {principles.map((p) => (
+            {principles.map((p, i) => (
               <div
                 key={p.name}
-                className="flex flex-col md:flex-row justify-between items-start md:items-center py-7 border-b border-white/[0.08] hover:pl-3 transition-all duration-200 gap-2"
+                className="flex flex-col md:flex-row justify-between items-start md:items-center py-7 border-b border-white/[0.08] hover:pl-3 transition-all duration-200 gap-2 group"
               >
-                <span
-                  className="font-sans font-bold text-white"
-                  style={{ fontSize: "clamp(18px, 2.5vw, 32px)", letterSpacing: "-0.02em" }}
-                >
-                  {p.name}
-                </span>
+                <div className="flex items-center gap-4">
+                  <span className="font-sans text-xs text-white/20 tracking-[0.15em]">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span
+                    className="font-sans font-bold text-white"
+                    style={{ fontSize: "clamp(18px, 2.5vw, 32px)", letterSpacing: "-0.02em" }}
+                  >
+                    {p.name}
+                  </span>
+                </div>
                 <span className="font-sans text-[15px] font-light text-white/45 md:text-right max-w-[440px] leading-relaxed">
                   {p.desc}
                 </span>
@@ -232,37 +276,44 @@ export default function VersionC() {
         </div>
       </section>
 
-      {/* SECTORES — dark split */}
-      <section className="min-h-screen bg-camhaji-base flex flex-col">
-        <div className="max-w-[1200px] mx-auto w-full px-5 md:px-10 pt-20">
-          <div className="flex flex-col md:flex-row justify-between items-baseline mb-10 gap-4">
+      {/* SECTORES — full-bleed images ARC-style split */}
+      <section className="min-h-screen flex flex-col">
+        <div className="bg-camhaji-base max-w-[1200px] mx-auto w-full px-5 md:px-10 pt-20 pb-10">
+          <div className="flex flex-col md:flex-row justify-between items-baseline gap-4">
             <p className="label-uppercase text-white/35">SECTORES QUE ATENDEMOS</p>
             <p className="font-sans text-[15px] font-light text-white/50">Especialistas donde más lo necesitas</p>
           </div>
         </div>
         <div className="flex-1 grid grid-cols-1 md:grid-cols-2">
           {[
-            { badge: "ESPECIALIZACIÓN", name: "Construcción", desc: "Costos de obra, nómina de construcción y fiscal para constructoras en Q.Roo.", href: "/version-c/sectores/construccion" },
-            { badge: "SECTOR", name: "Comercial", desc: "Contabilidad y estrategia fiscal para empresas de comercialización y distribución.", href: "#" },
+            { badge: "ESPECIALIZACIÓN", name: "Construcción", desc: "Costos de obra, nómina de construcción y fiscal para constructoras en Q.Roo.", href: "/version-c/sectores/construccion", img: sectorConstruccion },
+            { badge: "SECTOR", name: "Comercial", desc: "Contabilidad y estrategia fiscal para empresas de comercialización y distribución.", href: "#", img: sectorComercial },
           ].map((s, i) => (
             <div
               key={s.name}
-              className={`relative min-h-[50dvh] bg-white/[0.04] flex items-end p-10 md:p-12 group cursor-pointer overflow-hidden hover:bg-white/[0.06] transition-colors duration-300 ${
-                i === 0 ? "md:border-r border-white/[0.06]" : ""
-              }`}
+              className="relative min-h-[50dvh] md:min-h-[70dvh] flex items-end group cursor-pointer overflow-hidden"
             >
-              <div>
-                <span className="inline-block border border-white/25 rounded-sm px-2.5 py-1 label-uppercase text-[10px] text-white/60 mb-4">
+              <img
+                src={s.img}
+                alt={s.name}
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                loading="lazy"
+                width={960}
+                height={1080}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20 group-hover:from-black/85 transition-colors duration-500" />
+              <div className="relative z-10 p-8 md:p-12">
+                <span className="inline-block border border-white/30 rounded-sm px-2.5 py-1 label-uppercase text-[10px] text-white/70 mb-4">
                   {s.badge}
                 </span>
                 <h3
-                  className="font-sans font-bold text-white mb-2"
-                  style={{ fontSize: "clamp(22px, 3.5vw, 40px)", letterSpacing: "-0.02em" }}
+                  className="font-sans font-bold text-white mb-3"
+                  style={{ fontSize: "clamp(28px, 4vw, 48px)", letterSpacing: "-0.02em" }}
                 >
                   {s.name}
                 </h3>
-                <p className="font-sans text-sm font-light text-white/55 mb-5">{s.desc}</p>
-                <a href={s.href} className="label-uppercase text-white/40 hover:text-white transition-colors">
+                <p className="font-sans text-sm font-light text-white/65 mb-6 max-w-[360px]">{s.desc}</p>
+                <a href={s.href} className="label-uppercase text-white/50 hover:text-white transition-colors group-hover:text-white/80">
                   VER ESPECIALIZACIÓN →
                 </a>
               </div>
@@ -292,8 +343,11 @@ export default function VersionC() {
                 i < team.length - 1 ? "md:border-r border-border-subtle" : ""
               }`}
             >
-              <div className="flex-1 bg-surface min-h-[320px] flex items-center justify-center">
-                <span className="label-uppercase text-camhaji-muted">FOTO CORPORATIVA</span>
+              <div className="flex-1 bg-gradient-to-br from-camhaji-base to-primary/80 min-h-[320px] flex items-center justify-center relative overflow-hidden">
+                <span className="font-sans font-bold text-white/[0.06] absolute" style={{ fontSize: "clamp(100px, 20vw, 200px)" }}>
+                  {m.name.split(" ").map(n => n[0]).join("")}
+                </span>
+                <span className="label-uppercase text-white/30 relative z-10">FOTO CORPORATIVA</span>
               </div>
               <div className="p-6 md:p-10 pb-12">
                 <div className="w-6 h-px bg-primary mb-4" />
@@ -306,40 +360,62 @@ export default function VersionC() {
         </div>
       </section>
 
-
-      <section className="min-h-screen bg-camhaji-base flex flex-col items-center justify-center text-center px-5 md:px-10 py-20">
-        <p className="label-uppercase text-white/25 mb-16">LO QUE DICEN NUESTROS CLIENTES</p>
-        <span className="font-serif text-[120px] text-white/[0.06] leading-none block -mb-12" aria-hidden="true">"</span>
-        <blockquote
-          className="font-serif italic text-white/[0.88] max-w-[820px] mb-12"
-          style={{ fontSize: "clamp(20px, 3.5vw, 40px)", lineHeight: 1.5, letterSpacing: "-0.01em" }}
-        >
-          "Llevan más de 4 años como mis contadores. Entienden mi negocio de verdad — siempre puntuales, siempre claros, siempre resolviendo. No cambiaría de despacho por nada."
-        </blockquote>
-        <div className="w-8 h-px bg-white/20 mb-6" />
-        <p className="font-sans text-[13px] font-medium uppercase tracking-[0.15em] text-white/50 mb-1">CLIENTE DEL DESPACHO</p>
-        <p className="font-sans text-[13px] font-light text-white/30">Sector Construcción · Cancún, Q.Roo</p>
-        <p className="font-sans text-xs text-white/20 mt-8 italic">* Testimonio de referencia — pendiente validación</p>
+      {/* TESTIMONIAL — full-bleed night image */}
+      <section className="min-h-screen relative flex flex-col items-center justify-center text-center px-5 md:px-10 py-20 overflow-hidden">
+        <img
+          src={testimonialBg}
+          alt="Cancún de noche"
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
+          width={1920}
+          height={1080}
+        />
+        <div className="absolute inset-0 bg-black/65" />
+        <div className="relative z-10">
+          <p className="label-uppercase text-white/25 mb-16">LO QUE DICEN NUESTROS CLIENTES</p>
+          <span className="font-serif text-[120px] text-white/[0.08] leading-none block -mb-12" aria-hidden="true">"</span>
+          <blockquote
+            className="font-serif italic text-white/[0.88] max-w-[820px] mb-12"
+            style={{ fontSize: "clamp(20px, 3.5vw, 40px)", lineHeight: 1.5, letterSpacing: "-0.01em" }}
+          >
+            "Llevan más de 4 años como mis contadores. Entienden mi negocio de verdad — siempre puntuales, siempre claros, siempre resolviendo. No cambiaría de despacho por nada."
+          </blockquote>
+          <div className="w-8 h-px bg-white/20 mb-6" />
+          <p className="font-sans text-[13px] font-medium uppercase tracking-[0.15em] text-white/50 mb-1">CLIENTE DEL DESPACHO</p>
+          <p className="font-sans text-[13px] font-light text-white/30">Sector Construcción · Cancún, Q.Roo</p>
+          <p className="font-sans text-xs text-white/20 mt-8 italic">* Testimonio de referencia — pendiente validación</p>
+        </div>
       </section>
 
-      {/* CTA — primary */}
-      <section className="min-h-[60dvh] bg-primary flex flex-col items-center justify-center text-center px-5 md:px-10 py-20">
-        <p className="label-uppercase text-white/40 mb-6">DA EL SIGUIENTE PASO</p>
-        <h2
-          className="font-sans font-bold text-white mb-12"
-          style={{ fontSize: "clamp(36px, 6vw, 80px)", letterSpacing: "-0.04em", lineHeight: 1.0 }}
-        >
-          Hablemos de tu negocio.
-        </h2>
-        <a
-          href="/version-c/contacto"
-          className="btn-uppercase border border-white/50 text-white px-10 py-4 hover:bg-white/10 hover:border-white transition-all duration-300 mb-5"
-        >
-          AGENDAR CONSULTA GRATUITA
-        </a>
-        <div className="flex items-center gap-2">
-          <Phone className="w-3.5 h-3.5 text-white/40" />
-          <span className="font-sans text-sm text-white/50">(998) 123-4567</span>
+      {/* CTA — full-bleed architecture image with primary overlay */}
+      <section className="min-h-[60dvh] relative flex flex-col items-center justify-center text-center px-5 md:px-10 py-20 overflow-hidden">
+        <img
+          src={ctaBg}
+          alt="Arquitectura moderna Cancún"
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
+          width={1920}
+          height={1080}
+        />
+        <div className="absolute inset-0 bg-primary/85" />
+        <div className="relative z-10">
+          <p className="label-uppercase text-white/40 mb-6">DA EL SIGUIENTE PASO</p>
+          <h2
+            className="font-sans font-bold text-white mb-12"
+            style={{ fontSize: "clamp(36px, 6vw, 80px)", letterSpacing: "-0.04em", lineHeight: 1.0 }}
+          >
+            Hablemos de tu negocio.
+          </h2>
+          <a
+            href="/version-c/contacto"
+            className="btn-uppercase border border-white/50 text-white px-10 py-4 hover:bg-white/10 hover:border-white transition-all duration-300 mb-5 inline-block"
+          >
+            AGENDAR CONSULTA GRATUITA
+          </a>
+          <div className="flex items-center gap-2 justify-center mt-5">
+            <Phone className="w-3.5 h-3.5 text-white/40" />
+            <span className="font-sans text-sm text-white/50">(998) 123-4567</span>
+          </div>
         </div>
       </section>
 
