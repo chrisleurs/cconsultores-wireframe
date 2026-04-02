@@ -1,49 +1,51 @@
 
 
-## Plan: Actualizar Páginas Interiores Versión C con Diseño HiFi
+## Plan: Propuesta SEO — Landing Page + Actualización del Index
 
-Reescribir las 3 páginas interiores de Versión C (Nosotros, Sector Construcción, Servicio Contabilidad) para que coincidan pixel-perfect con los HTML proporcionados. Son diseños significativamente diferentes a los actuales.
+### Resumen
+1. **Modificar `src/pages/Index.tsx`**: Quitar las tarjetas de Propuesta A y B. Mantener Propuesta C y añadir una nueva tarjeta "Propuesta SEO" que lleve a `/propuesta-seo`.
+2. **Crear `src/pages/PropuestaSEO.tsx`**: Una landing page con el diseño de Versión C (dark, cinematic, accent verde) que presente toda la estrategia SEO contenida en los 4 documentos.
 
-### Archivos a modificar
-1. `src/pages/c/NosotrosC.tsx`
-2. `src/pages/c/SectorConstruccionC.tsx`
-3. `src/pages/c/ServicioContabilidadC.tsx`
+### Index (`src/pages/Index.tsx`)
+- Grid de 2 tarjetas (en vez de 3): Propuesta C + Propuesta SEO
+- La tarjeta SEO usa el mismo estilo dark de la tarjeta C actual
 
-### NosotrosC.tsx — Cambios principales
-- **Hero**: Centrado con imagen de fondo (handshake Unsplash), overlay oscuro 84%, título serif italic "La Firma", subtítulo, breadcrumb
-- **Historia**: Grid 2 col — blockquote italic a la izquierda + texto narrativo a la derecha. Debajo: 3 milestones (10+, 6, 10) con separadores verticales
-- **Misión/Visión**: Fondo surface, 2 paneles blancos lado a lado con gap 3px, texto serif italic
-- **Filosofía**: Fondo primary, header con label + h2 alineado derecha, lista de 5 principios con números (01-05), hover translateX(10px), descripciones en opacity 0.5
-- **Equipo**: 3 miembros en grid con fotos Unsplash (aspect 3/4, grayscale 15%), línea verde accent, nombre, role uppercase, bio
-- **CTA**: Centrado sobre primary con botón outline
+### PropuestaSEO.tsx — Secciones
 
-### SectorConstruccionC.tsx — Cambios principales
-- **Hero**: Left-aligned con foto construcción, gradient overlay (bottom-heavy), tag "Especialización Principal", título bold sans "Construcción" (gigante), breadcrumb con 2 niveles
-- **El Sector**: Grid 2 col — izquierda con quote + texto narrativo, derecha con lista de 5 pain points con dots verdes y bordes
-- **Lo que Hacemos**: Fondo dark base, 3 columnas con separadores verticales, iconos SVG, números 01-03, sub-items con "—" prefix
-- **Por Qué Camhaji**: Fondo surface, header con h2 + lead text, 3 diferenciadores en cards blancos con icon boxes verdes
-- **CTA**: "¿Tienes una constructora?" + "Hablemos de tus proyectos."
+Usando el design system de Versión C (fondo `camhaji-base`, accent `#5D9E90`, tipografía sans bold, overlays oscuros):
 
-### ServicioContabilidadC.tsx — Cambios principales
-- **Hero**: Centrado con imagen contabilidad, overlay 86%, tag "Servicio 01", título "Contabilidad & Administración"
-- **Alcance**: Grid 3x2 con 6 items (iconos SVG), header con h2 + lead text separados por border-bottom
-- **Proceso**: Fondo dark, 5 pasos numerados con nombre + descripción + tag de días (Día 1-5, etc.), hover translateX
-- **Tecnología**: Grid 2 col — izquierda con pills (CONTPAQi, ERP, Portal) + derecha con 3 feature cards con icon boxes
-- **FAQ**: 4 items colapsables con números, toggle +/rotate 45°
-- **Otros Servicios**: 2 cards (Estrategia Fiscal, Nómina) con números y links
-- **CTA**: "¿Listo para empezar?" + "Hablemos de tu contabilidad."
+**1. Hero** — Full dark, título "Estrategia SEO HiFi", subtítulo "Camhaji Consultores — camhajiconsultores.mx", fecha abril 2026
 
-### Contenido actualizado (del HTML)
-- Textos narrativos completos de historia, misión, visión
-- Nombres reales del equipo con bios actualizadas
-- Pain points específicos del sector construcción
-- Proceso mensual detallado con rangos de días
-- FAQs con respuestas completas
-- Todo el copy viene directo de los HTML proporcionados
+**2. Resumen Ejecutivo** (de hifi-01) — Tabla de oportunidades con 6 keywords, sus brechas y oportunidades. Diseño de grid con accent lines
 
-### Notas técnicas
-- Imágenes: URLs de Unsplash directas (como en los HTML)
-- Mantener componentes compartidos: `<Navbar version="c" />`, `<FooterC />`, `<WhatsAppButton />`
-- FAQ: usar estado local con toggle (no shadcn Accordion) para coincidir con el diseño del HTML
-- Todos los layouts responsive con breakpoint 768px
+**3. Análisis SERP** (de hifi-01) — Las 6 keywords con sus competidores actuales, brechas identificadas y oportunidades. Cards oscuras con separadores
+
+**4. Clusters del Sitio Web** (de hifi-02) — Las 12 páginas del sitio con su keyword primaria, volumen, KD, CPC, meta title y H1. Grid compacto con prioridad visual (estrellas)
+
+**5. Mapa Anti-Canibalización** (de hifi-02) — Tabla visual keyword → página asignada
+
+**6. Clusters de Blog** (de hifi-03) — Los 5 artículos con keyword, volumen, estructura y calendario editorial
+
+**7. Schemas JSON-LD** (de hifi-04) — Resumen de schemas por página (tabla) + FAQs bank por sección (accordions)
+
+**8. Competidores** (de hifi-01) — Mapa de amenazas con fortalezas/debilidades/cómo superar
+
+**9. Prioridad de Publicación** — Tabla ordenada con razones
+
+**10. Footer** — Reutilizar `<FooterC />`
+
+### Ruta nueva
+- `/propuesta-seo` → `PropuestaSEO.tsx`
+- Registrar en `App.tsx`
+
+### Archivos a modificar/crear
+1. `src/pages/Index.tsx` — Quitar A y B, añadir tarjeta SEO
+2. `src/pages/PropuestaSEO.tsx` — Nueva landing page completa
+3. `src/App.tsx` — Añadir ruta `/propuesta-seo`
+
+### Notas
+- Componentes compartidos: `<Navbar version="c" />`, `<FooterC />`, `<WhatsAppButton />`
+- Los datos de los 4 documentos se hardcodean como arrays/objetos en el componente
+- Accordion de shadcn para las secciones de FAQ
+- Responsive: tablas se convierten en cards en mobile
 
