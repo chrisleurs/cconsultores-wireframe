@@ -19,6 +19,7 @@ import ServicioContabilidadC from "./pages/c/ServicioContabilidadC.tsx";
 import SectorConstruccionC from "./pages/c/SectorConstruccionC.tsx";
 import NosotrosC from "./pages/c/NosotrosC.tsx";
 import ContactoC from "./pages/c/ContactoC.tsx";
+import PropuestaSEO from "./pages/PropuestaSEO.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -31,6 +32,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/propuesta-seo" element={<PropuestaSEO />} />
           <Route path="/version-a" element={<VersionA />} />
           <Route path="/version-a/servicios/contabilidad" element={<ServicioContabilidadA />} />
           <Route path="/version-a/sectores/construccion" element={<SectorConstruccionA />} />
