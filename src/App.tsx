@@ -19,6 +19,7 @@ import ServicioContabilidadC from "./pages/c/ServicioContabilidadC.tsx";
 import SectorConstruccionC from "./pages/c/SectorConstruccionC.tsx";
 import NosotrosC from "./pages/c/NosotrosC.tsx";
 import ContactoC from "./pages/c/ContactoC.tsx";
+import PropuestaSEO from "./pages/PropuestaSEO.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
