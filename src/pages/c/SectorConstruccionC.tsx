@@ -1,44 +1,89 @@
 import { Navbar } from "@/components/Navbar";
 import { FooterC } from "@/components/FooterC";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
-import { Building2, Users, Shield, AlertCircle, Phone } from "lucide-react";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { Phone } from "lucide-react";
 
-const heroStats = [
-  { value: "6+", label: "AÑOS EN SECTOR" },
-  { value: "30+", label: "PROYECTOS" },
-  { value: "100%", label: "SIN MULTAS SAT" },
-  { value: "QR", label: "QUINTANA ROO" },
+const painPoints = [
+  "Estimaciones de avance sin registro contable",
+  "Nómina semanal con altas y bajas constantes en IMSS",
+  "Retenciones a subcontratistas mal aplicadas",
+  "Falta de visibilidad de costos por proyecto",
+  "ISR diferido sin control ni planeación",
 ];
 
-const sectorServices = [
-  { icon: Building2, title: "Contabilidad de Obra", desc: "Costos por proyecto, estimaciones de avance, retenciones y cierre contable por obra." },
-  { icon: Users, title: "Nómina de Construcción", desc: "Altas/bajas IMSS frecuentes, nómina semanal y contribuciones del sector obra." },
-  { icon: Shield, title: "Fiscal para Construcción", desc: "ISR diferido, IVA materiales y mano de obra, retenciones SAT a subcontratistas." },
+const services = [
+  {
+    num: "01",
+    title: "Contabilidad de Obra",
+    icon: (
+      <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M3 21h18M3 7v14m4-14v14m4-14v14m4-14v14m4-14v14M1 7l11-4 11 4" />
+      </svg>
+    ),
+    items: [
+      "Costos por proyecto y estimaciones de avance",
+      "Conciliación bancaria por obra",
+      "Cierre contable mensual por proyecto",
+    ],
+  },
+  {
+    num: "02",
+    title: "Nómina de Construcción",
+    icon: (
+      <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" />
+      </svg>
+    ),
+    items: [
+      "Nómina semanal con altas/bajas IMSS frecuentes",
+      "Cálculo de contribuciones de seguridad social",
+      "Timbrado CFDI de nómina con CONTPAQi",
+    ],
+  },
+  {
+    num: "03",
+    title: "Fiscal para Construcción",
+    icon: (
+      <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+      </svg>
+    ),
+    items: [
+      "ISR diferido y planeación fiscal por obra",
+      "IVA en materiales y mano de obra",
+      "Retenciones SAT a subcontratistas",
+    ],
+  },
 ];
 
-const challenges = [
-  { problem: "Atraso en impuestos por estimaciones", solution: "Proceso de cierre por estimación en tiempo real" },
-  { problem: "IMSS mal calculado para obra", solution: "Altas/bajas con el proceso correcto" },
-  { problem: "Sin visibilidad de rentabilidad por proyecto", solution: "ERP con centros de costo por obra" },
-  { problem: "Retenciones a subcontratistas mal registradas", solution: "Procedimientos específicos SAT" },
-];
-
-const faqs = [
-  { q: "¿Manejan costos por proyecto individual?", a: "Sí. Cada proyecto tiene su propio centro de costos con seguimiento de estimaciones, avance y rentabilidad." },
-  { q: "¿Pueden llevar la nómina semanal de obra?", a: "Sí. Gestionamos nómina semanal con altas/bajas frecuentes de IMSS, como es habitual en el sector." },
-  { q: "¿Tienen experiencia con retenciones a subcontratistas?", a: "Es parte de nuestro día a día. Aplicamos los procedimientos SAT vigentes para retenciones de IVA e ISR." },
-  { q: "¿Atienden constructoras fuera de Cancún?", a: "Principalmente en Quintana Roo, pero podemos trabajar de forma remota con empresas en otros estados." },
-];
-
-const teamMembers = [
-  { name: "Rogelio R. Moo Ruiz", role: "Gerente General", bio: "Fundador del despacho. Experiencia en contabilidad corporativa y auditoría en Cancún." },
-  { name: "Marlon R. Chávez Sánchez", role: "Supervisor Nómina", bio: "Especialista en nómina de construcción, IMSS y CONTPAQi para el sector obra." },
+const differentiators = [
+  {
+    title: "Experiencia Real en Obra",
+    desc: "No somos contadores generales adaptados. Conocemos la operación de una constructora desde adentro: estimaciones, subcontratos y IMSS de obra.",
+    icon: (
+      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" />
+      </svg>
+    ),
+  },
+  {
+    title: "Costos por Proyecto",
+    desc: "Cada obra tiene su propio centro de costos. Sabes exactamente cuánto gastas y cuánto ganas por proyecto, no en promedio.",
+    icon: (
+      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="2" y="7" width="20" height="14" rx="2" ry="2" /><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+      </svg>
+    ),
+  },
+  {
+    title: "Cero Multas SAT",
+    desc: "Nuestros clientes de construcción no han recibido multas por retenciones mal aplicadas ni por incumplimiento fiscal. Ese es nuestro estándar.",
+    icon: (
+      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+      </svg>
+    ),
+  },
 ];
 
 export default function SectorConstruccionC() {
@@ -46,181 +91,140 @@ export default function SectorConstruccionC() {
     <div className="min-h-screen">
       <Navbar version="c" />
 
-      {/* HERO SPLIT */}
-      <section className="min-h-[60dvh] grid grid-cols-1 md:grid-cols-2">
-        <div className="bg-camhaji-base flex flex-col justify-end p-8 md:p-12 pt-32">
+      {/* HERO — left-aligned with construction photo */}
+      <section className="min-h-[75dvh] relative flex items-end">
+        <img
+          src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&h=900&fit=crop"
+          alt="Construcción en Cancún"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-camhaji-base/95 via-camhaji-base/60 to-camhaji-base/30" />
+        <div className="relative z-10 px-5 md:px-10 lg:px-16 pb-16 pt-32 w-full max-w-[1200px] mx-auto">
           <p className="font-sans text-xs text-white/30 mb-8">
             <a href="/version-c" className="hover:text-white/50 transition-colors">Inicio</a>
-            <span className="text-white/15 mx-2">/</span>Sectores<span className="text-white/15 mx-2">/</span>Construcción
+            <span className="text-white/15 mx-2">/</span>
+            <span>Sectores</span>
+            <span className="text-white/15 mx-2">/</span>
+            <span>Construcción</span>
           </p>
-          <p className="label-uppercase text-white/30 mb-6">ESPECIALIZACIÓN PRINCIPAL · 6+ AÑOS EN EL SECTOR</p>
-          <h1 className="font-sans font-bold text-white" style={{ fontSize: "clamp(28px, 4.5vw, 52px)", letterSpacing: "-0.03em", lineHeight: 1.05 }}>
-            Contabilidad Especializada para el Sector Construcción
+          <p className="label-uppercase text-camhaji-accent/70 mb-6">ESPECIALIZACIÓN PRINCIPAL</p>
+          <h1
+            className="font-sans font-bold text-white"
+            style={{ fontSize: "clamp(48px, 8vw, 100px)", letterSpacing: "-0.04em", lineHeight: 0.95 }}
+          >
+            Construcción
           </h1>
-        </div>
-        <div className="bg-primary flex items-end p-8 md:p-12">
-          <div className="flex flex-col gap-7">
-            {heroStats.map((s) => (
-              <div key={s.label} className="flex items-baseline gap-3">
-                <span className="font-sans font-bold text-[32px] text-white" style={{ letterSpacing: "-0.03em" }}>{s.value}</span>
-                <span className="label-uppercase text-white/40">{s.label}</span>
-              </div>
-            ))}
-          </div>
+          <p className="font-sans text-white/50 mt-6 max-w-[500px]" style={{ fontSize: "clamp(16px, 1.6vw, 19px)", lineHeight: 1.6 }}>
+            Contabilidad especializada para constructoras en Quintana Roo. Más de 6 años de experiencia real en el sector.
+          </p>
         </div>
       </section>
 
-      {/* POR QUÉ */}
+      {/* EL SECTOR */}
       <section className="bg-white py-24 px-5 md:px-10">
-        <div className="max-w-[1200px] mx-auto">
-          <span className="font-sans font-bold text-primary/[0.05] text-[100px] leading-none block -mb-5">02</span>
-          <h2 className="font-sans font-bold text-camhaji-text max-w-[800px] mb-12" style={{ fontSize: "clamp(26px, 4vw, 48px)", letterSpacing: "-0.03em", lineHeight: 1.05 }}>
-            La construcción tiene una contabilidad que pocos conocen de verdad
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-16">
+        <div className="max-w-[1100px] mx-auto">
+          <p className="label-uppercase text-camhaji-muted mb-14">EL SECTOR</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-20">
             <div>
-              <p className="font-sans text-[17px] text-camhaji-text leading-relaxed mb-4">
-                Las constructoras tienen desafíos contables únicos: proyectos de duración variable, múltiples subcontratistas, estimaciones de avance, retenciones y normativa fiscal específica. Un contador genérico comete errores costosos aquí.
-              </p>
-              <p className="font-sans text-base font-light text-camhaji-muted leading-relaxed">
-                Llevamos más de 6 años trabajando con empresas de construcción en Quintana Roo.
+              <blockquote
+                className="font-serif italic text-camhaji-text mb-6"
+                style={{ fontSize: "clamp(20px, 2.5vw, 28px)", lineHeight: 1.4 }}
+              >
+                "La construcción tiene una contabilidad que pocos contadores conocen de verdad."
+              </blockquote>
+              <p className="font-sans text-[15px] font-light text-camhaji-muted leading-relaxed">
+                Las constructoras enfrentan desafíos contables únicos: proyectos de duración variable, múltiples subcontratistas, estimaciones de avance, retenciones y normativa fiscal específica. Un contador genérico comete errores costosos aquí.
               </p>
             </div>
-            <div className="md:sticky md:top-[100px] border-l-2 border-primary pl-6">
-              <p className="label-uppercase text-camhaji-muted mb-4">4 DIFERENCIADORES</p>
-              <ul className="space-y-0">
-                {["Costos por proyecto y estimaciones", "Nómina de obra especializada", "ISR diferido para construcción", "Retenciones a subcontratistas"].map((d) => (
-                  <li key={d} className="font-sans text-[15px] text-camhaji-text leading-[2.1]">→ {d}</li>
+            <div>
+              <p className="label-uppercase text-camhaji-muted mb-5">PUNTOS CRÍTICOS DEL SECTOR</p>
+              <div className="border-t border-border-subtle">
+                {painPoints.map((p) => (
+                  <div key={p} className="flex items-start gap-3 py-3.5 border-b border-border-subtle">
+                    <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0 mt-2" />
+                    <span className="font-sans text-[15px] text-camhaji-text">{p}</span>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* SERVICIOS APLICADOS */}
+      {/* LO QUE HACEMOS — dark 3-col */}
       <section className="bg-camhaji-base py-24 px-5 md:px-10">
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-[1100px] mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-baseline mb-16 gap-4">
-            <p className="label-uppercase text-white/35">SERVICIOS ESPECIALIZADOS</p>
-            <p className="font-sans text-[15px] font-light text-white/50">Todo lo que necesita una constructora</p>
+            <p className="label-uppercase text-white/30">LO QUE HACEMOS</p>
+            <h2
+              className="font-sans font-bold text-white md:text-right max-w-[450px]"
+              style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em" }}
+            >
+              Servicios especializados para constructoras
+            </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 border-t border-white/[0.08]">
-            {sectorServices.map((s, i) => (
-              <div key={i} className={`py-10 pr-8 ${i < 2 ? "md:border-r border-white/[0.07]" : ""} md:pl-8 first:md:pl-0`}>
-                <s.icon className="w-8 h-8 text-white/50 mb-7" strokeWidth={1} />
-                <h3 className="font-sans font-bold text-white text-lg mb-3">{s.title}</h3>
-                <p className="font-sans text-sm font-light text-white/50 leading-relaxed">{s.desc}</p>
+            {services.map((s, i) => (
+              <div
+                key={s.num}
+                className={`py-10 ${i < 2 ? "md:border-r border-white/[0.06]" : ""} ${i > 0 ? "md:pl-8" : ""} ${i < 2 ? "md:pr-8" : ""}`}
+              >
+                <div className="text-white/40 mb-6">{s.icon}</div>
+                <span className="font-sans text-xs text-white/20 tracking-[0.1em]">{s.num}</span>
+                <h3 className="font-sans font-bold text-white text-lg mt-2 mb-5">{s.title}</h3>
+                <div className="space-y-2.5">
+                  {s.items.map((item) => (
+                    <p key={item} className="font-sans text-sm font-light text-white/50 leading-relaxed">
+                      — {item}
+                    </p>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* EXPERIENCIA — stats 2×2 */}
-      <section className="min-h-[80dvh] bg-surface grid grid-cols-1 md:grid-cols-2">
-        {heroStats.map((s, i) => (
-          <div
-            key={i}
-            className={`flex flex-col items-center justify-center text-center min-h-[20dvh] md:min-h-[40dvh] ${
-              i % 2 === 0 ? "md:border-r border-border-subtle" : ""
-            } ${i < 2 ? "border-b border-border-subtle" : ""}`}
+      {/* POR QUÉ CAMHAJI */}
+      <section className="bg-surface py-24 px-5 md:px-10">
+        <div className="max-w-[1100px] mx-auto">
+          <p className="label-uppercase text-camhaji-muted mb-4">POR QUÉ CAMHAJI</p>
+          <h2
+            className="font-sans font-bold text-camhaji-text mb-4"
+            style={{ fontSize: "clamp(24px, 3.5vw, 40px)", letterSpacing: "-0.03em" }}
           >
-            <span className="font-sans font-bold text-primary" style={{ fontSize: "clamp(64px, 12vw, 120px)", letterSpacing: "-0.04em", lineHeight: 1 }}>
-              {s.value}
-            </span>
-            <p className="label-uppercase text-camhaji-muted mt-3">{s.label}</p>
-          </div>
-        ))}
-      </section>
-
-      {/* RETOS */}
-      <section className="bg-primary py-24 px-5 md:px-10">
-        <div className="max-w-[1200px] mx-auto">
-          <p className="label-uppercase text-white/40 mb-3">RETOS QUE CONOCEMOS</p>
-          <h2 className="font-sans font-bold text-white mb-12" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
-            Los problemas que más vemos en constructoras
+            Lo que nos diferencia en el sector
           </h2>
-          <div className="border-t border-white/10">
-            {challenges.map((c, i) => (
-              <div key={i} className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 py-7 border-b border-white/[0.08] items-start">
-                <div className="flex items-start gap-3">
-                  <AlertCircle className="w-4 h-4 text-white/40 flex-shrink-0 mt-1" />
-                  <span className="font-sans font-semibold text-white" style={{ fontSize: "clamp(16px, 2vw, 20px)" }}>{c.problem}</span>
+          <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed mb-14 max-w-[600px]">
+            No somos un despacho genérico que también lleva constructoras. La construcción es nuestra especialización principal.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {differentiators.map((d) => (
+              <div key={d.title} className="bg-white p-8 md:p-10">
+                <div className="w-10 h-10 rounded-sm bg-primary/10 flex items-center justify-center text-primary mb-6">
+                  {d.icon}
                 </div>
-                <p className="font-sans text-[15px] font-light text-white/55 leading-relaxed md:text-right">
-                  <span className="text-camhaji-accent">→</span> {c.solution}
-                </p>
+                <h3 className="font-sans font-bold text-camhaji-text text-lg mb-3">{d.title}</h3>
+                <p className="font-sans text-sm font-light text-camhaji-muted leading-relaxed">{d.desc}</p>
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* EQUIPO */}
-      <section className="bg-white py-24 px-5 md:px-10">
-        <div className="max-w-[700px] mx-auto">
-          <p className="label-uppercase text-camhaji-muted mb-3">TU EQUIPO ASIGNADO</p>
-          <h2 className="font-sans font-bold text-camhaji-text mb-12" style={{ fontSize: "clamp(22px, 2.5vw, 32px)", letterSpacing: "-0.02em" }}>
-            Quiénes trabajan con tu empresa
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
-            {teamMembers.map((m, i) => (
-              <div key={i} className={`${i === 0 ? "md:border-r border-border-subtle md:pr-10" : "md:pl-10"}`}>
-                <div className="w-full aspect-square bg-surface mb-5 flex items-center justify-center">
-                  <span className="label-uppercase text-camhaji-muted">FOTO</span>
-                </div>
-                <div className="w-6 h-px bg-primary mb-3" />
-                <h3 className="font-sans font-bold text-[17px] text-camhaji-text">{m.name}</h3>
-                <p className="label-uppercase text-primary mb-2.5">{m.role}</p>
-                <p className="font-sans text-sm font-light text-camhaji-muted leading-relaxed">{m.bio}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ DARK */}
-      <section className="bg-camhaji-base py-24 px-5 md:px-10">
-        <div className="max-w-[840px] mx-auto">
-          <p className="label-uppercase text-white/35 mb-3">PREGUNTAS FRECUENTES</p>
-          <h2 className="font-sans font-bold text-white mb-14" style={{ fontSize: "clamp(24px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
-            Sobre el Sector Construcción
-          </h2>
-          <Accordion type="single" collapsible>
-            {faqs.map((f, i) => (
-              <AccordionItem key={i} value={`faq-${i}`} className="border-b border-white/[0.07]">
-                <AccordionTrigger className="py-6 hover:no-underline text-white/85 [&>svg]:text-white/40">
-                  <div className="flex items-baseline gap-4 text-left">
-                    <span className="font-sans text-xs tracking-[0.1em] text-white/20">{String(i + 1).padStart(2, "0")}</span>
-                    <span className="font-sans font-semibold text-base text-white/85">{f.q}</span>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent className="pl-11 pb-6 font-sans text-[15px] text-white/50 leading-relaxed">
-                  {f.a}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
-      </section>
-
-      {/* OTROS SECTORES */}
-      <section className="bg-surface py-16 px-5 md:px-10">
-        <div className="flex items-center justify-center gap-4 md:gap-8 flex-wrap max-w-[600px] mx-auto">
-          <span className="font-sans text-lg text-camhaji-text">¿Tu empresa es del sector comercial?</span>
-          <span className="text-camhaji-muted/40">—</span>
-          <a href="#" className="label-uppercase text-primary border-b border-primary pb-0.5">VER ESPECIALIZACIÓN →</a>
         </div>
       </section>
 
       {/* CTA */}
       <section className="min-h-[60dvh] bg-primary flex flex-col items-center justify-center text-center px-5 md:px-10 py-20">
-        <p className="label-uppercase text-white/40 mb-6">DA EL SIGUIENTE PASO</p>
-        <h2 className="font-sans font-bold text-white mb-12" style={{ fontSize: "clamp(36px, 6vw, 80px)", letterSpacing: "-0.04em", lineHeight: 1.0 }}>
-          Hablemos de tu negocio.
+        <p className="label-uppercase text-white/40 mb-6">¿TIENES UNA CONSTRUCTORA?</p>
+        <h2
+          className="font-sans font-bold text-white mb-12"
+          style={{ fontSize: "clamp(36px, 6vw, 80px)", letterSpacing: "-0.04em", lineHeight: 1.0 }}
+        >
+          Hablemos de tus proyectos.
         </h2>
-        <a href="/version-c/contacto" className="btn-uppercase border border-white/50 text-white px-10 py-4 hover:bg-white/10 hover:border-white transition-all duration-300 mb-5">
+        <a
+          href="/version-c/contacto"
+          className="btn-uppercase border border-white/50 text-white px-10 py-4 hover:bg-white/10 hover:border-white transition-all duration-300 mb-5"
+        >
           AGENDAR CONSULTA GRATUITA
         </a>
         <div className="flex items-center gap-2">
