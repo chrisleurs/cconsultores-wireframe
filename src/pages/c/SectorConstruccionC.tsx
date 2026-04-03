@@ -1,211 +1,175 @@
+import { useState } from "react";
 import { Navbar } from "@/components/Navbar";
 import { FooterC } from "@/components/FooterC";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { Phone } from "lucide-react";
 
-const painPoints = [
-  "Estimaciones de avance sin registro contable",
-  "Nómina semanal con altas y bajas constantes en IMSS",
-  "Retenciones a subcontratistas mal aplicadas",
-  "Falta de visibilidad de costos por proyecto",
-  "ISR diferido sin control ni planeación",
-];
-
-const services = [
+const retosFiscales = [
   {
-    num: "01",
-    title: "Contabilidad de Obra",
-    icon: (
-      <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M3 21h18M3 7v14m4-14v14m4-14v14m4-14v14m4-14v14M1 7l11-4 11 4" />
-      </svg>
-    ),
-    items: [
-      "Costos por proyecto y estimaciones de avance",
-      "Conciliación bancaria por obra",
-      "Cierre contable mensual por proyecto",
-    ],
+    title: "Facturación de estimaciones y anticipos",
+    desc: "Las constructoras facturan por avance de obra, anticipos y estimaciones. Cada uno tiene un tratamiento fiscal distinto en IVA e ISR. Un error de clasificación genera diferencias que el SAT detecta — y cobra con recargos.",
   },
   {
-    num: "02",
-    title: "Nómina de Construcción",
-    icon: (
-      <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" />
-      </svg>
-    ),
-    items: [
-      "Nómina semanal con altas/bajas IMSS frecuentes",
-      "Cálculo de contribuciones de seguridad social",
-      "Timbrado CFDI de nómina con CONTPAQi",
-    ],
+    title: "Retenciones a subcontratistas",
+    desc: "Cuando contratas subcontratistas para obra, la ley te obliga a retenerles el 6% de IVA sobre los servicios de construcción. Si no lo haces correctamente, la responsabilidad es tuya — no del subcontratista. Es uno de los errores más costosos del sector.",
   },
   {
-    num: "03",
-    title: "Fiscal para Construcción",
-    icon: (
-      <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-      </svg>
-    ),
-    items: [
-      "ISR diferido y planeación fiscal por obra",
-      "IVA en materiales y mano de obra",
-      "Retenciones SAT a subcontratistas",
-    ],
+    title: "Deducción de materiales y activos de obra",
+    desc: "Materiales, herramientas, maquinaria y equipo de construcción tienen formas de deducción distintas entre sí. Deducir mal significa pagar más impuestos de lo necesario o exponer tu empresa a observaciones en una revisión del SAT.",
+  },
+  {
+    title: "Nómina de trabajadores eventuales",
+    desc: "La construcción trabaja con personal por obra y por tiempo determinado. Sus prestaciones son proporcionales a los días trabajados. Sus cuotas al IMSS e Infonavit se calculan de una forma diferente al empleado de planta. Equivocarse aquí genera multas del IMSS y contingencias laborales.",
   },
 ];
 
-const differentiators = [
-  {
-    title: "Experiencia Real en Obra",
-    desc: "No somos contadores generales adaptados. Conocemos la operación de una constructora desde adentro: estimaciones, subcontratos y IMSS de obra.",
-    icon: (
-      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" />
-      </svg>
-    ),
-  },
-  {
-    title: "Costos por Proyecto",
-    desc: "Cada obra tiene su propio centro de costos. Sabes exactamente cuánto gastas y cuánto ganas por proyecto, no en promedio.",
-    icon: (
-      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="2" y="7" width="20" height="14" rx="2" ry="2" /><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
-      </svg>
-    ),
-  },
-  {
-    title: "Cero Multas SAT",
-    desc: "Nuestros clientes de construcción no han recibido multas por retenciones mal aplicadas ni por incumplimiento fiscal. Ese es nuestro estándar.",
-    icon: (
-      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-      </svg>
-    ),
-  },
+const loQueHacemos = [
+  "Contabilidad mensual adaptada al ciclo de obra y tipo de contrato",
+  "Registro y control de costos por proyecto (directos e indirectos)",
+  "Facturación de estimaciones, anticipos y complementos de pago",
+  "Retenciones correctas a subcontratistas (ISR e IVA) para que la responsabilidad no caiga sobre ti",
+  "Declaraciones mensuales y anuales del sector construcción",
+  "Nómina de trabajadores eventuales y de planta con altas y bajas en IMSS",
+  "Revisión de CFDI de proveedores y materiales para evitar deducciones rechazadas",
+  "Respuesta ante requerimientos del SAT relacionados con el sector",
+];
+
+const faqs = [
+  { q: "¿Qué régimen fiscal usan las constructoras en México?", a: "Las constructoras que operan como personas morales (SA de CV, SRL) usan el Régimen General de Personas Morales. Las micro-constructoras o contratistas persona física pueden tributar en RESICO si sus ingresos anuales no superan $35 millones. El régimen correcto depende de tu estructura legal y volumen de operaciones — te ayudamos a identificarlo." },
+  { q: "¿Cómo se llevan los costos de obra en contabilidad?", a: "Los costos de obra se clasifican en directos (materiales, mano de obra de obra) e indirectos (administración, supervisión, maquinaria) y se registran por proyecto. Se reconocen como gasto conforme avanza la obra o al momento de la estimación correspondiente. Un registro incorrecto puede generar pagos excesivos de impuestos o deducciones rechazadas." },
+  { q: "¿Las constructoras deben retener IVA a sus subcontratistas?", a: "Sí. Cuando contratas servicios de construcción a un subcontratista, debes retener el 6% de IVA sobre esos servicios y enterarlo directamente al SAT. Esta retención aplica a los servicios de construcción, no a la compra de materiales. No hacerlo correctamente pone la responsabilidad en tu empresa." },
+  { q: "¿Cómo se manejan los trabajadores eventuales en el IMSS?", a: "Los trabajadores eventuales deben darse de alta en el IMSS antes de iniciar labores en obra y darse de baja al terminar. El patrón paga cuotas proporcionales a los días trabajados. No hacerlo genera multas del IMSS y contingencias laborales que aparecen al momento del finiquito." },
+  { q: "¿Qué pasa si no llevo bien la contabilidad de mi constructora?", a: "Una contabilidad mal llevada en construcción puede resultar en deducciones rechazadas por el SAT, pago excesivo de impuestos por costeo incorrecto, multas por trabajadores sin registro en IMSS y, en una auditoría, créditos fiscales con recargos sobre varios ejercicios." },
 ];
 
 export default function SectorConstruccionC() {
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
   return (
     <div className="min-h-screen">
       <Navbar version="c" />
 
-      {/* HERO — left-aligned with construction photo */}
+      {/* HERO */}
       <section className="min-h-[75dvh] relative flex items-end">
-        <img
-          src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&h=900&fit=crop"
-          alt="Construcción en Cancún"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&h=900&fit=crop" alt="Construcción en Cancún" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-camhaji-base/95 via-camhaji-base/60 to-camhaji-base/30" />
         <div className="relative z-10 px-5 md:px-10 lg:px-16 pb-16 pt-32 w-full max-w-[1200px] mx-auto">
           <p className="font-sans text-xs text-white/30 mb-8">
             <a href="/version-c" className="hover:text-white/50 transition-colors">Inicio</a>
-            <span className="text-white/15 mx-2">/</span>
-            <span>Sectores</span>
-            <span className="text-white/15 mx-2">/</span>
-            <span>Construcción</span>
+            <span className="text-white/15 mx-2">/</span><span>Sectores</span>
+            <span className="text-white/15 mx-2">/</span><span>Construcción</span>
           </p>
           <p className="label-uppercase text-camhaji-accent/70 mb-6">ESPECIALIZACIÓN PRINCIPAL</p>
-          <h1
-            className="font-sans font-bold text-white"
-            style={{ fontSize: "clamp(48px, 8vw, 100px)", letterSpacing: "-0.04em", lineHeight: 0.95 }}
-          >
-            Construcción
+          <h1 className="font-sans font-bold text-white" style={{ fontSize: "clamp(40px, 7vw, 88px)", letterSpacing: "-0.04em", lineHeight: 0.95 }}>
+            Contabilidad para<br />Constructoras en Cancún
           </h1>
-          <p className="font-sans text-white/50 mt-6 max-w-[500px]" style={{ fontSize: "clamp(16px, 1.6vw, 19px)", lineHeight: 1.6 }}>
-            Contabilidad especializada para constructoras en Quintana Roo. Más de 6 años de experiencia real en el sector.
+          <p className="font-sans text-white/50 mt-6 max-w-[560px]" style={{ fontSize: "clamp(16px, 1.6vw, 19px)", lineHeight: 1.6 }}>
+            La contabilidad de una constructora no funciona igual que la de cualquier otra empresa. Si tu contador no conoce el sector, tarde o temprano lo vas a notar — y no de buena manera.
           </p>
         </div>
       </section>
 
-      {/* EL SECTOR */}
+      {/* POR QUÉ ESPECIALIZADA */}
       <section className="bg-white py-24 px-5 md:px-10">
-        <div className="max-w-[1100px] mx-auto">
-          <p className="label-uppercase text-camhaji-muted mb-14">EL SECTOR</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-20">
-            <div>
-              <blockquote
-                className="font-serif italic text-camhaji-text mb-6"
-                style={{ fontSize: "clamp(20px, 2.5vw, 28px)", lineHeight: 1.4 }}
-              >
-                "La construcción tiene una contabilidad que pocos contadores conocen de verdad."
-              </blockquote>
-              <p className="font-sans text-[15px] font-light text-camhaji-muted leading-relaxed">
-                Las constructoras enfrentan desafíos contables únicos: proyectos de duración variable, múltiples subcontratistas, estimaciones de avance, retenciones y normativa fiscal específica. Un contador genérico comete errores costosos aquí.
-              </p>
-            </div>
-            <div>
-              <p className="label-uppercase text-camhaji-muted mb-5">PUNTOS CRÍTICOS DEL SECTOR</p>
-              <div className="border-t border-border-subtle">
-                {painPoints.map((p) => (
-                  <div key={p} className="flex items-start gap-3 py-3.5 border-b border-border-subtle">
-                    <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0 mt-2" />
-                    <span className="font-sans text-[15px] text-camhaji-text">{p}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+        <div className="max-w-[900px] mx-auto">
+          <p className="label-uppercase text-camhaji-muted mb-4">EL SECTOR</p>
+          <h2 className="font-sans font-bold text-camhaji-text mb-8" style={{ fontSize: "clamp(24px, 3.5vw, 40px)", letterSpacing: "-0.03em" }}>
+            Por qué la construcción necesita contabilidad especializada
+          </h2>
+          <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed mb-6">
+            Una empresa de servicios factura, cobra y declara con cierta regularidad. Una constructora, no. Sus ingresos entran por estimaciones que no siempre reflejan el avance real. Sus costos se acumulan por etapas durante meses. Sus subcontratistas generan obligaciones de retención que la ley te pone a ti como responsable.
+          </p>
+          <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed">
+            Nosotros ya trabajamos con constructoras en Cancún y la Riviera Maya. Conocemos las particularidades del mercado local, los criterios que el SAT aplica al sector construcción en auditorías, y los errores que se repiten con más frecuencia. Llegamos con experiencia.
+          </p>
         </div>
       </section>
 
-      {/* LO QUE HACEMOS — dark 3-col */}
+      {/* RETOS FISCALES */}
       <section className="bg-camhaji-base py-24 px-5 md:px-10">
-        <div className="max-w-[1100px] mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-baseline mb-16 gap-4">
-            <p className="label-uppercase text-white/30">LO QUE HACEMOS</p>
-            <h2
-              className="font-sans font-bold text-white md:text-right max-w-[450px]"
-              style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em" }}
-            >
-              Servicios especializados para constructoras
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 border-t border-white/[0.08]">
-            {services.map((s, i) => (
-              <div
-                key={s.num}
-                className={`py-10 ${i < 2 ? "md:border-r border-white/[0.06]" : ""} ${i > 0 ? "md:pl-8" : ""} ${i < 2 ? "md:pr-8" : ""}`}
-              >
-                <div className="text-white/40 mb-6">{s.icon}</div>
-                <span className="font-sans text-xs text-white/20 tracking-[0.1em]">{s.num}</span>
-                <h3 className="font-sans font-bold text-white text-lg mt-2 mb-5">{s.title}</h3>
-                <div className="space-y-2.5">
-                  {s.items.map((item) => (
-                    <p key={item} className="font-sans text-sm font-light text-white/50 leading-relaxed">
-                      — {item}
-                    </p>
-                  ))}
-                </div>
+        <div className="max-w-[900px] mx-auto">
+          <p className="label-uppercase text-white/30 mb-4">RETOS FISCALES</p>
+          <h2 className="font-sans font-bold text-white mb-16" style={{ fontSize: "clamp(24px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
+            Los retos fiscales del sector construcción en México
+          </h2>
+          <div className="space-y-10">
+            {retosFiscales.map((r, i) => (
+              <div key={i} className="border-l-2 border-camhaji-accent/40 pl-6">
+                <h3 className="font-sans font-bold text-white text-lg mb-3">{r.title}</h3>
+                <p className="font-sans text-sm font-light text-white/55 leading-relaxed">{r.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* POR QUÉ CAMHAJI */}
-      <section className="bg-surface py-24 px-5 md:px-10">
-        <div className="max-w-[1100px] mx-auto">
-          <p className="label-uppercase text-camhaji-muted mb-4">POR QUÉ CAMHAJI</p>
-          <h2
-            className="font-sans font-bold text-camhaji-text mb-4"
-            style={{ fontSize: "clamp(24px, 3.5vw, 40px)", letterSpacing: "-0.03em" }}
-          >
-            Lo que nos diferencia en el sector
+      {/* LO QUE HACEMOS */}
+      <section className="bg-white py-24 px-5 md:px-10">
+        <div className="max-w-[900px] mx-auto">
+          <p className="label-uppercase text-camhaji-muted mb-4">LO QUE HACEMOS</p>
+          <h2 className="font-sans font-bold text-camhaji-text mb-14" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
+            Lo que Camhaji hace por tu empresa constructora en Cancún
           </h2>
-          <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed mb-14 max-w-[600px]">
-            No somos un despacho genérico que también lleva constructoras. La construcción es nuestra especialización principal.
+          <div className="border-t border-border-subtle">
+            {loQueHacemos.map((item, i) => (
+              <div key={i} className="flex items-start gap-4 py-4 border-b border-border-subtle hover:translate-x-2 transition-transform duration-200">
+                <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0 mt-2" />
+                <span className="font-sans text-[15px] text-camhaji-text leading-relaxed">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* EXPERIENCIA REGIONAL */}
+      <section className="bg-surface py-24 px-5 md:px-10">
+        <div className="max-w-[900px] mx-auto">
+          <p className="label-uppercase text-camhaji-muted mb-4">EXPERIENCIA REGIONAL</p>
+          <h2 className="font-sans font-bold text-camhaji-text mb-8" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
+            Amplia experiencia en el sector construcción en Quintana Roo
+          </h2>
+          <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed mb-6">
+            El sector construcción en Cancún y la Riviera Maya tiene dinámicas propias: proyectos turísticos, desarrollos inmobiliarios, obra civil, obra comercial. El volumen de operaciones, los tipos de contrato y el perfil de los subcontratistas son distintos a los de otras regiones del país.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {differentiators.map((d) => (
-              <div key={d.title} className="bg-white p-8 md:p-10">
-                <div className="w-10 h-10 rounded-sm bg-primary/10 flex items-center justify-center text-primary mb-6">
-                  {d.icon}
+          <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed">
+            Llevamos años trabajando con empresas de este sector en la región. Conocemos las características del mercado local y los criterios que el SAT aplica en revisiones al sector construcción en Quintana Roo.
+          </p>
+          <p className="font-sans font-semibold text-primary mt-8">No aprendemos contigo. Llegamos con experiencia.</p>
+        </div>
+      </section>
+
+      {/* TESTIMONIO */}
+      <section className="bg-camhaji-base py-20 px-5 md:px-10">
+        <div className="max-w-[800px] mx-auto text-center">
+          <span className="font-serif text-[80px] text-white/[0.08] leading-none block -mb-8" aria-hidden="true">"</span>
+          <blockquote className="font-serif italic text-white/80 mb-8" style={{ fontSize: "clamp(18px, 2.5vw, 28px)", lineHeight: 1.5 }}>
+            "Llevábamos meses sin claridad en los costos de obra. Camhaji ordenó todo, separó cada proyecto y por primera vez tuvimos números que realmente reflejaban lo que estaba pasando en la empresa."
+          </blockquote>
+          <p className="font-sans text-[13px] uppercase tracking-[0.15em] text-white/40">Director General, empresa constructora · Cancún, QR</p>
+          <p className="font-sans text-xs text-white/20 mt-4 italic">* Testimonio de referencia — pendiente validación</p>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="bg-white py-24 px-5 md:px-10">
+        <div className="max-w-[840px] mx-auto">
+          <p className="label-uppercase text-camhaji-muted mb-4">PREGUNTAS FRECUENTES</p>
+          <h2 className="font-sans font-bold text-camhaji-text mb-14" style={{ fontSize: "clamp(24px, 3.5vw, 40px)", letterSpacing: "-0.02em" }}>
+            Contabilidad para constructoras en Cancún
+          </h2>
+          <div className="border-t border-border-subtle">
+            {faqs.map((f, i) => (
+              <div key={i} className="border-b border-border-subtle">
+                <button onClick={() => setOpenFaq(openFaq === i ? null : i)} className="w-full flex items-center justify-between py-6 text-left group" aria-expanded={openFaq === i}>
+                  <div className="flex items-baseline gap-4">
+                    <span className="font-sans text-xs text-camhaji-muted/40 tracking-[0.1em]">{String(i + 1).padStart(2, "0")}</span>
+                    <span className="font-sans font-semibold text-[17px] text-camhaji-text group-hover:text-primary transition-colors">{f.q}</span>
+                  </div>
+                  <span className="font-sans text-xl text-camhaji-muted/40 flex-shrink-0 ml-4 transition-transform duration-300" style={{ transform: openFaq === i ? "rotate(45deg)" : "rotate(0)" }}>+</span>
+                </button>
+                <div className="overflow-hidden transition-all duration-300" style={{ maxHeight: openFaq === i ? "300px" : "0", opacity: openFaq === i ? 1 : 0 }}>
+                  <p className="pl-11 pb-6 font-sans text-[15px] text-camhaji-muted leading-relaxed">{f.a}</p>
                 </div>
-                <h3 className="font-sans font-bold text-camhaji-text text-lg mb-3">{d.title}</h3>
-                <p className="font-sans text-sm font-light text-camhaji-muted leading-relaxed">{d.desc}</p>
               </div>
             ))}
           </div>
@@ -214,18 +178,15 @@ export default function SectorConstruccionC() {
 
       {/* CTA */}
       <section className="min-h-[60dvh] bg-primary flex flex-col items-center justify-center text-center px-5 md:px-10 py-20">
-        <p className="label-uppercase text-white/40 mb-6">¿TIENES UNA CONSTRUCTORA?</p>
-        <h2
-          className="font-sans font-bold text-white mb-12"
-          style={{ fontSize: "clamp(36px, 6vw, 80px)", letterSpacing: "-0.04em", lineHeight: 1.0 }}
-        >
+        <p className="label-uppercase text-white/40 mb-6">¿TIENES UNA EMPRESA CONSTRUCTORA EN CANCÚN?</p>
+        <h2 className="font-sans font-bold text-white mb-6" style={{ fontSize: "clamp(36px, 6vw, 80px)", letterSpacing: "-0.04em", lineHeight: 1.0 }}>
           Hablemos de tus proyectos.
         </h2>
-        <a
-          href="/version-c/contacto"
-          className="btn-uppercase border border-white/50 text-white px-10 py-4 hover:bg-white/10 hover:border-white transition-all duration-300 mb-5"
-        >
-          AGENDAR CONSULTA GRATUITA
+        <p className="font-sans text-white/55 max-w-[480px] mx-auto mb-12" style={{ fontSize: "clamp(15px, 1.5vw, 17px)" }}>
+          Cuéntanos cómo está tu contabilidad hoy. Si hay problemas, te decimos cuáles son y cómo resolverlos.
+        </p>
+        <a href="/version-c/contacto" className="btn-uppercase border border-white/50 text-white px-10 py-4 hover:bg-white/10 hover:border-white transition-all duration-300 mb-5">
+          ESCRÍBENOS POR WHATSAPP
         </a>
         <div className="flex items-center gap-2">
           <Phone className="w-3.5 h-3.5 text-white/40" />

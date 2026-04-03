@@ -19,6 +19,11 @@ import ServicioContabilidadC from "./pages/c/ServicioContabilidadC.tsx";
 import SectorConstruccionC from "./pages/c/SectorConstruccionC.tsx";
 import NosotrosC from "./pages/c/NosotrosC.tsx";
 import ContactoC from "./pages/c/ContactoC.tsx";
+import ServicioFiscalC from "./pages/c/ServicioFiscalC.tsx";
+import ServicioNominaC from "./pages/c/ServicioNominaC.tsx";
+import ServicioFacturacionC from "./pages/c/ServicioFacturacionC.tsx";
+import SectorComercialC from "./pages/c/SectorComercialC.tsx";
+import SectorInmobiliarioC from "./pages/c/SectorInmobiliarioC.tsx";
 import PropuestaSEO from "./pages/PropuestaSEO.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
@@ -45,7 +50,12 @@ const App = () => (
           <Route path="/version-b/contacto" element={<ContactoB />} />
           <Route path="/version-c" element={<VersionC />} />
           <Route path="/version-c/servicios/contabilidad" element={<ServicioContabilidadC />} />
+          <Route path="/version-c/servicios/fiscal" element={<ServicioFiscalC />} />
+          <Route path="/version-c/servicios/nomina" element={<ServicioNominaC />} />
+          <Route path="/version-c/servicios/facturacion" element={<ServicioFacturacionC />} />
           <Route path="/version-c/sectores/construccion" element={<SectorConstruccionC />} />
+          <Route path="/version-c/sectores/comercial" element={<SectorComercialC />} />
+          <Route path="/version-c/sectores/inmobiliario" element={<SectorInmobiliarioC />} />
           <Route path="/version-c/nosotros" element={<NosotrosC />} />
           <Route path="/version-c/contacto" element={<ContactoC />} />
           <Route path="*" element={<NotFound />} />
