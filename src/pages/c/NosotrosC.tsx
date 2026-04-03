@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Navbar } from "@/components/Navbar";
 import { FooterC } from "@/components/FooterC";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
@@ -6,11 +5,11 @@ import { ClientLogos } from "@/components/ClientLogos";
 import { Phone } from "lucide-react";
 
 const principles = [
-  { num: "01", name: "Cumplir la palabra", desc: "Si lo decimos, lo hacemos. Sin pretextos ni excusas." },
-  { num: "02", name: "Honestidad", desc: "Decimos lo que pensamos aunque no sea lo esperado." },
-  { num: "03", name: "Transparencia", desc: "No hay letra chica. Tu contabilidad es tuya." },
-  { num: "04", name: "Responsabilidad", desc: "Nos hacemos cargo siempre, sin condiciones." },
-  { num: "05", name: "Empatía", desc: "Nos adaptamos a cada cliente y su realidad específica." },
+  { num: "01", name: "Cumplimos lo que prometemos", desc: "Si decimos que tu declaración estará lista el día 15, estará lista el día 15. La confianza se construye en los detalles." },
+  { num: "02", name: "Honestidad sobre todo", desc: "Si tu situación fiscal es complicada, te lo decimos con claridad. Si algo no es posible, también. No vendemos humo ni prometemos lo que no podemos garantizar." },
+  { num: "03", name: "Transparencia en cada proceso", desc: "Tienes derecho a saber en qué estado está tu contabilidad en cualquier momento. Y nos aseguramos de que siempre puedas preguntarlo y recibir una respuesta clara." },
+  { num: "04", name: "Responsabilidad sin excusas", desc: "Tu empresa tiene obligaciones con fechas. Esas fechas son nuestras fechas. El SAT no espera y nosotros tampoco." },
+  { num: "05", name: "Empatía con el cliente", desc: "Para muchos empresarios, el mundo fiscal es opaco y estresante. No juzgamos el punto de partida. Nos enfocamos en el destino." },
 ];
 
 const milestones = [
@@ -40,18 +39,20 @@ const team = [
   },
 ];
 
+const distingue = [
+  { name: "Respuesta el mismo día", desc: "Cuando tienes una duda urgente o necesitas algo, respondemos — no al día siguiente." },
+  { name: "Adaptabilidad", desc: "Nos comunicamos como el cliente prefiera. Correo, WhatsApp, llamada. Sin rigidez de horario o canal." },
+  { name: "Equipo con nombre", desc: "10 profesionales especializados, cada uno responsable de un área concreta. Sabes con quién hablas." },
+];
+
 export default function NosotrosC() {
   return (
     <div className="min-h-screen">
       <Navbar version="c" />
 
-      {/* HERO — centered with background image */}
+      {/* HERO */}
       <section className="min-h-[70dvh] relative flex items-center justify-center text-center">
-        <img
-          src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1600&h=900&fit=crop"
-          alt="Equipo profesional"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1600&h=900&fit=crop" alt="Equipo profesional" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-camhaji-base/[0.84]" />
         <div className="relative z-10 px-5 md:px-10 pt-24 pb-16 max-w-[900px]">
           <p className="font-sans text-xs text-white/30 mb-10">
@@ -59,14 +60,11 @@ export default function NosotrosC() {
             <span className="text-white/15 mx-2">/</span>Nosotros
           </p>
           <p className="label-uppercase text-white/30 mb-6">NUESTRA FIRMA</p>
-          <h1
-            className="font-serif italic text-white mb-6"
-            style={{ fontSize: "clamp(36px, 6vw, 72px)", letterSpacing: "-0.02em", lineHeight: 1.05 }}
-          >
-            La Firma
+          <h1 className="font-sans font-bold text-white mb-6" style={{ fontSize: "clamp(36px, 6vw, 72px)", letterSpacing: "-0.03em", lineHeight: 1.05 }}>
+            Una Firma Contable Joven con más de 10 Años de Trayectoria
           </h1>
-          <p className="font-sans text-white/50 max-w-[560px] mx-auto" style={{ fontSize: "clamp(16px, 1.8vw, 20px)", lineHeight: 1.6 }}>
-            Contabilidad con compromiso real. Más de 10 años de trayectoria individual respaldan cada decisión que tomamos por tu negocio.
+          <p className="font-sans text-base font-light text-white/50 max-w-[560px] mx-auto" style={{ fontSize: "clamp(16px, 1.8vw, 20px)", lineHeight: 1.6 }}>
+            Hay firmas que se venden con catálogos. Nosotros preferimos contarte quiénes somos.
           </p>
         </div>
       </section>
@@ -78,18 +76,21 @@ export default function NosotrosC() {
         <div className="max-w-[1100px] mx-auto">
           <p className="label-uppercase text-camhaji-muted mb-16">NUESTRA HISTORIA</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-20">
-            <blockquote
-              className="font-serif italic text-camhaji-text"
-              style={{ fontSize: "clamp(22px, 3vw, 32px)", lineHeight: 1.4, letterSpacing: "-0.01em" }}
-            >
-              "Somos una firma joven con más de 10 años de trayectoria individual. Nacimos de la convicción de que la contabilidad puede — y debe — hacerse con compromiso real."
-            </blockquote>
+            <h2 className="font-sans font-bold text-camhaji-text" style={{ fontSize: "clamp(22px, 3vw, 32px)", lineHeight: 1.3, letterSpacing: "-0.02em" }}>
+              Cómo nació Camhaji Consultores
+            </h2>
             <div>
               <p className="font-sans text-[16px] text-camhaji-text leading-relaxed mb-5">
-                Camhaji nació de la sociedad entre dos primos con una visión compartida: una firma donde los clientes pudieran confiar de verdad. El equipo tiene más de 10 años de trayectoria en grandes firmas de auditoría, hotelería de alto nivel y contabilidad corporativa.
+                Hace 6 años, dos primos con trayectorias distintas dentro del mundo contable se sentaron a hablar de un problema real: sus clientes necesitaban atención fiscal y contable al mismo tiempo, y tenían que ir a dos lugares distintos para conseguirla.
+              </p>
+              <p className="font-sans text-[16px] text-camhaji-text leading-relaxed mb-5">
+                La solución fue sencilla. Uno se hacía cargo de la parte fiscal. El otro, de la parte contable. Juntos, podían ofrecer lo que ninguno podía dar solo: un servicio integral, coordinado, sin huecos.
+              </p>
+              <p className="font-sans text-[16px] text-camhaji-text leading-relaxed mb-5">
+                Así nació Camhaji Consultores.
               </p>
               <p className="font-sans text-[15px] font-light text-camhaji-muted leading-relaxed">
-                Conocemos los estándares de las grandes firmas y los aplicamos con la cercanía de un despacho boutique en Cancún. Hoy atendemos empresas de construcción, comercio y servicios en Quintana Roo con un equipo de 10 profesionales.
+                Desde entonces, hemos crecido a un equipo de 10 personas. Hemos atendido <a href="/version-c/sectores/construccion" className="text-primary hover:underline">empresas de construcción</a>, comercializadoras, <a href="/version-c/sectores/resico" className="text-primary hover:underline">freelancers en RESICO</a>, agentes inmobiliarios y empresarios que llegaron con años de obligaciones atrasadas y salieron con sus finanzas en orden. Cada cliente que se queda lo hace porque cumplimos lo que decimos que vamos a hacer. No más. No menos.
               </p>
             </div>
           </div>
@@ -99,10 +100,7 @@ export default function NosotrosC() {
             {milestones.map((m, i) => (
               <div key={i} className="flex items-center gap-0">
                 <div className="text-center px-8 md:px-12">
-                  <span
-                    className="font-sans font-bold text-primary block"
-                    style={{ fontSize: "clamp(48px, 8vw, 72px)", letterSpacing: "-0.04em", lineHeight: 1 }}
-                  >
+                  <span className="font-sans font-bold text-primary block" style={{ fontSize: "clamp(48px, 8vw, 72px)", letterSpacing: "-0.04em", lineHeight: 1 }}>
                     {m.value}
                   </span>
                   <p className="label-uppercase text-camhaji-muted mt-3 max-w-[180px] mx-auto">{m.label}</p>
@@ -114,45 +112,21 @@ export default function NosotrosC() {
         </div>
       </section>
 
-      {/* MISIÓN / VISIÓN */}
-      <section className="bg-surface py-24 px-5 md:px-10">
-        <div className="max-w-[1100px] mx-auto">
-          <p className="label-uppercase text-camhaji-muted mb-10 text-center">LO QUE NOS MUEVE</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-[3px]">
-            <div className="bg-white p-10 md:p-14">
-              <p className="label-uppercase text-primary mb-6">MISIÓN</p>
-              <p className="font-serif italic text-camhaji-text" style={{ fontSize: "clamp(18px, 2.2vw, 24px)", lineHeight: 1.5 }}>
-                Brindar servicios contables, fiscales y administrativos con compromiso real, adaptándonos a la realidad de cada cliente para darle control y tranquilidad sobre sus finanzas.
-              </p>
-            </div>
-            <div className="bg-white p-10 md:p-14">
-              <p className="label-uppercase text-primary mb-6">VISIÓN</p>
-              <p className="font-serif italic text-camhaji-text" style={{ fontSize: "clamp(18px, 2.2vw, 24px)", lineHeight: 1.5 }}>
-                Ser la firma de referencia en Quintana Roo para empresas que buscan contabilidad profesional con trato cercano, transparente y sin letra chica.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* FILOSOFÍA */}
       <section className="bg-primary py-24 px-5 md:px-10">
         <div className="max-w-[1100px] mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-baseline mb-16 gap-4">
+          <div className="flex flex-col md:flex-row justify-between items-baseline mb-6 gap-4">
             <p className="label-uppercase text-white/30">NUESTRA FILOSOFÍA</p>
-            <h2
-              className="font-sans font-bold text-white md:text-right max-w-[400px]"
-              style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em" }}
-            >
-              Los principios que nos definen
+            <h2 className="font-sans font-bold text-white md:text-right max-w-[400px]" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
+              Nuestra filosofía de trabajo
             </h2>
           </div>
+          <p className="font-sans text-white/60 leading-relaxed mb-12 max-w-[700px]" style={{ fontSize: "clamp(15px, 1.5vw, 17px)" }}>
+            No tenemos un slogan corporativo enmarcado en la pared. Tenemos cinco principios que aplicamos en cada proceso, con cada cliente:
+          </p>
           <div className="border-t border-white/[0.08]">
             {principles.map((p) => (
-              <div
-                key={p.num}
-                className="flex items-start gap-6 py-6 border-b border-white/[0.06] transition-transform duration-300 hover:translate-x-2.5 cursor-default"
-              >
+              <div key={p.num} className="flex items-start gap-6 py-6 border-b border-white/[0.06] transition-transform duration-300 hover:translate-x-2.5 cursor-default">
                 <span className="font-sans text-sm text-white/20 mt-1 w-8 flex-shrink-0">{p.num}</span>
                 <div>
                   <h3 className="font-sans font-bold text-white text-lg mb-1">{p.name}</h3>
@@ -164,15 +138,49 @@ export default function NosotrosC() {
         </div>
       </section>
 
-      {/* EQUIPO */}
+      {/* VISIÓN */}
+      <section className="bg-surface py-24 px-5 md:px-10">
+        <div className="max-w-[1100px] mx-auto">
+          <p className="label-uppercase text-camhaji-muted mb-10 text-center">NUESTRA VISIÓN</p>
+          <div className="max-w-[800px] mx-auto text-center">
+            <h2 className="font-sans font-bold text-camhaji-text mb-8" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
+              Nuestra visión
+            </h2>
+            <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed mb-6">
+              Queremos que Camhaji Consultores sea reconocida como la firma de referencia en Cancún para empresarios que quieren hacer las cosas bien. No por publicidad, sino por resultados comprobables.
+            </p>
+            <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed">
+              Una firma donde los clientes saben que sus números están en orden, donde el equipo tiene nombre y apellido, y donde el compromiso no es una palabra en un folleto.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* LO QUE NOS DISTINGUE */}
       <section className="bg-white py-24 px-5 md:px-10">
+        <div className="max-w-[1100px] mx-auto">
+          <p className="label-uppercase text-camhaji-muted mb-4">DIFERENCIADORES</p>
+          <h2 className="font-sans font-bold text-camhaji-text mb-12" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
+            Lo que nos distingue como despacho contable en Cancún
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            {distingue.map((d) => (
+              <div key={d.name}>
+                <div className="w-6 h-px bg-primary mb-5" />
+                <h3 className="font-sans font-bold text-camhaji-text text-lg mb-3">{d.name}</h3>
+                <p className="font-sans text-sm font-light text-camhaji-muted leading-relaxed">{d.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* EQUIPO */}
+      <section className="bg-surface py-24 px-5 md:px-10">
         <div className="max-w-[1100px] mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-baseline mb-16 gap-4">
             <p className="label-uppercase text-camhaji-muted">NUESTRO EQUIPO</p>
-            <h2
-              className="font-sans font-bold text-camhaji-text md:text-right max-w-[350px]"
-              style={{ fontSize: "clamp(20px, 2.5vw, 32px)", letterSpacing: "-0.02em" }}
-            >
+            <h2 className="font-sans font-bold text-camhaji-text md:text-right max-w-[350px]" style={{ fontSize: "clamp(20px, 2.5vw, 32px)", letterSpacing: "-0.02em" }}>
               Las personas detrás del compromiso
             </h2>
           </div>
@@ -180,11 +188,7 @@ export default function NosotrosC() {
             {team.map((m) => (
               <div key={m.name}>
                 <div className="aspect-[3/4] overflow-hidden mb-6">
-                  <img
-                    src={m.img}
-                    alt={m.name}
-                    className="w-full h-full object-cover grayscale-[15%]"
-                  />
+                  <img src={m.img} alt={m.name} className="w-full h-full object-cover grayscale-[15%]" loading="lazy" />
                 </div>
                 <div className="w-8 h-px bg-camhaji-accent mb-4" />
                 <h3 className="font-sans font-bold text-lg text-camhaji-text mb-1">{m.name}</h3>
@@ -199,19 +203,15 @@ export default function NosotrosC() {
       {/* CTA */}
       <section className="min-h-[60dvh] bg-primary flex flex-col items-center justify-center text-center px-5 md:px-10 py-20">
         <p className="label-uppercase text-white/40 mb-6">DA EL SIGUIENTE PASO</p>
-        <h2
-          className="font-sans font-bold text-white mb-12"
-          style={{ fontSize: "clamp(36px, 6vw, 80px)", letterSpacing: "-0.04em", lineHeight: 1.0 }}
-        >
+        <h2 className="font-sans font-bold text-white mb-12" style={{ fontSize: "clamp(36px, 6vw, 80px)", letterSpacing: "-0.04em", lineHeight: 1.0 }}>
           Hablemos de tu negocio.
         </h2>
-        <a
-          href="/version-c/contacto"
-          className="btn-uppercase border border-white/50 text-white px-10 py-4 hover:bg-white/10 hover:border-white transition-all duration-300 mb-5"
-        >
-          AGENDAR CONSULTA GRATUITA
-        </a>
-        <div className="flex items-center gap-2">
+        <div className="flex gap-4 flex-wrap justify-center">
+          <a href="/version-c/contacto" className="btn-uppercase border border-white/50 text-white px-10 py-4 hover:bg-white/10 hover:border-white transition-all duration-300">
+            ESCRÍBENOS POR WHATSAPP
+          </a>
+        </div>
+        <div className="flex items-center gap-2 mt-6">
           <Phone className="w-3.5 h-3.5 text-white/40" />
           <span className="font-sans text-sm text-white/50">(998) 123-4567</span>
         </div>

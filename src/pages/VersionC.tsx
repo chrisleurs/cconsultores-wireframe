@@ -3,37 +3,40 @@ import { Navbar } from "@/components/Navbar";
 import { FooterC } from "@/components/FooterC";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { ClientLogos } from "@/components/ClientLogos";
-import { BarChart3, Shield, Users, FileText, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
 
 import heroBg from "@/assets/hero-cancun-skyline.jpg";
 import sectorConstruccion from "@/assets/sector-construccion.jpg";
 import sectorComercial from "@/assets/sector-comercial.jpg";
 
+const serviceBgs = [
+  "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1920&q=80&fit=crop",
+  "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1920&q=80&fit=crop",
+  "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1920&q=80&fit=crop",
+  "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=1920&q=80&fit=crop",
+];
+
 const services = [
   {
     num: "01",
-    icon: BarChart3,
     title: "Contabilidad y Administración",
     desc: "Registro mensual, conciliación bancaria, declaraciones y control administrativo integral. Para que tus números siempre reflejen lo que realmente está pasando en tu empresa.",
     href: "/version-c/servicios/contabilidad",
   },
   {
     num: "02",
-    icon: Shield,
     title: "Estrategia Fiscal",
     desc: "Cumplimiento correcto de tus obligaciones ante el SAT. No prometemos magia fiscal. Prometemos que no habrá sorpresas.",
     href: "/version-c/servicios/fiscal",
   },
   {
     num: "03",
-    icon: Users,
     title: "Nómina Empresarial",
     desc: "Cálculo de nómina, altas y bajas ante el IMSS y CFDI de nómina con CONTPAQi. Sin errores, sin multas, sin retrasos.",
     href: "/version-c/servicios/nomina",
   },
   {
     num: "04",
-    icon: FileText,
     title: "Facturación CFDI",
     desc: "Emisión, timbrado y administración de facturas electrónicas para tu empresa. Que ningún comprobante salga mal ni te cueste una deducción.",
     href: "/version-c/servicios/facturacion",
@@ -41,9 +44,9 @@ const services = [
 ];
 
 const stats = [
-  { value: 10, suffix: "+", label: "AÑOS DE TRAYECTORIA", context: "Antes de ser firma,\nya éramos expertos." },
-  { value: 6, suffix: "", label: "AÑOS COMO FIRMA", context: "Una sociedad construida\npara durar." },
-  { value: 10, suffix: "", label: "PROFESIONALES", context: "Cada expediente,\ncon nombre propio." },
+  { value: 10, suffix: "+", label: "AÑOS DE TRAYECTORIA", context: "Antes de ser firma, ya éramos expertos." },
+  { value: 6, suffix: "", label: "AÑOS COMO FIRMA", context: "Una sociedad construida para durar." },
+  { value: 10, suffix: "", label: "PROFESIONALES", context: "Cada expediente, con nombre propio." },
 ];
 
 const principles = [
@@ -90,7 +93,7 @@ const sectorCards = [
   {
     name: "RESICO y Prestadores de Servicios",
     desc: "Freelancers, consultores, profesionistas independientes y agentes inmobiliarios. Si tributas en el Régimen Simplificado de Confianza o quieres hacerlo, aquí encuentras a tu contador en Cancún.",
-    href: "/version-c/sectores/inmobiliario",
+    href: "/version-c/sectores/resico",
   },
   {
     name: "Agentes Inmobiliarios",
@@ -124,11 +127,6 @@ const testimonials = [
   {
     quote: "Llevábamos años sin claridad en nuestros números. En pocos meses ya sabíamos exactamente cómo estaba la empresa — y dejamos de tenerle miedo al SAT.",
     author: "Director General, empresa comercial",
-    location: "Cancún, QR",
-  },
-  {
-    quote: "Cuando tuve dudas a mitad de mes, respondieron ese mismo día. Eso no lo encontraba en el despacho anterior.",
-    author: "Propietario, empresa constructora",
     location: "Cancún, QR",
   },
 ];
@@ -172,6 +170,7 @@ function useCountUp(target: number, duration = 1400) {
           const start = performance.now();
           const easeOut = (t: number) => 1 - Math.pow(1 - t, 3);
           function step(ts: number) {
+            if (!start) return;
             const progress = Math.min((ts - start) / duration, 1);
             setCount(Math.floor(easeOut(progress) * target));
             if (progress < 1) requestAnimationFrame(step);
@@ -198,29 +197,30 @@ function CifraCell({ value, suffix, label, context }: { value: number; suffix: s
         {suffix && <span className="text-[0.55em] tracking-tight">{suffix}</span>}
       </div>
       <p className="label-uppercase text-camhaji-muted mt-4 mb-2.5">{label}</p>
-      <p className="font-serif italic text-sm text-[#9A9589] leading-relaxed whitespace-pre-line">{context}</p>
+      <p className="font-sans text-sm font-light text-[#9A9589] leading-relaxed">{context}</p>
     </div>
   );
 }
 
 export default function VersionC() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [hoveredService, setHoveredService] = useState(0);
 
   return (
     <div className="min-h-screen">
       <Navbar version="c" />
 
-      {/* ══ HERO — centered, full-screen ══ */}
+      {/* ══ HERO — centered, full-screen, arc-group style ══ */}
       <section className="min-h-[100dvh] relative flex flex-col items-center justify-center text-center overflow-hidden" style={{ padding: "120px 40px 80px" }}>
-        <img src={heroBg} alt="Cancún skyline zona hotelera" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
+        <img src={heroBg} alt="Cancún skyline zona hotelera" className="absolute inset-0 w-full h-full object-cover object-top" width={1920} height={1080} />
         <div className="absolute inset-0" style={{ background: "rgba(12, 28, 24, 0.84)" }} />
         <div className="relative z-10 flex flex-col items-center">
           <p className="label-uppercase text-white/35 mb-12">DESPACHO CONTABLE · CANCÚN, MÉXICO</p>
           <h1 className="font-sans font-bold text-white mb-8" style={{ fontSize: "clamp(52px, 8vw, 100px)", letterSpacing: "-0.04em", lineHeight: 0.95 }}>
-            Despacho Contable<br />en Cancún con<br />Compromiso Real.
+            Contabilidad<br />con Compromiso<br />Real.
           </h1>
-          <p className="font-serif italic text-white/50 mb-12 max-w-[480px]" style={{ fontSize: "clamp(16px, 2vw, 20px)" }}>
-            Llevamos la contabilidad, el fiscal y la administración de tu empresa para que tú te dediques a lo que sabes hacer. Sin sorpresas con el SAT.
+          <p className="font-sans text-base font-light text-white/50 mb-12 max-w-[480px]" style={{ fontSize: "clamp(16px, 2vw, 20px)", lineHeight: 1.6 }}>
+            Más de 10 años de trayectoria. Una sola promesa: cumplir.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
             <a href="/version-c/contacto" className="btn-uppercase border border-white/50 text-white px-8 py-3.5 hover:bg-white/[0.08] hover:border-white transition-all duration-300">
@@ -242,8 +242,8 @@ export default function VersionC() {
       {/* ══ STATEMENT — full-screen white, quote + principles ══ */}
       <section className="min-h-[100dvh] bg-white flex flex-col items-center justify-center text-center px-5 md:px-10 py-20">
         <p className="label-uppercase text-camhaji-muted mb-12">LO QUE NOS DIFERENCIA</p>
-        <blockquote className="font-serif italic text-camhaji-text max-w-[840px] mb-16" style={{ fontSize: "clamp(28px, 4.5vw, 56px)", letterSpacing: "-0.01em", lineHeight: 1.25 }}>
-          "Lo que nos diferencia de otros despachos contables en Cancún"
+        <blockquote className="font-sans font-bold text-camhaji-text max-w-[840px] mb-16" style={{ fontSize: "clamp(28px, 4.5vw, 56px)", letterSpacing: "-0.02em", lineHeight: 1.25 }}>
+          Lo que nos diferencia de otros despachos contables en Cancún
         </blockquote>
         <div className="flex gap-0 justify-center flex-wrap border-t border-border-subtle pt-8 max-w-[840px] w-full items-center">
           {["Atención Inmediata", "Todo en un Solo Lugar", "Compromiso Real"].map((p, i) => (
@@ -255,7 +255,7 @@ export default function VersionC() {
         </div>
       </section>
 
-      {/* ══ DIFERENCIADORES — 3-col grid below statement ══ */}
+      {/* ══ DIFERENCIADORES — 3-col grid ══ */}
       <section className="bg-white pb-24 px-5 md:px-10">
         <div className="max-w-[1000px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
           {differentiators.map((d) => (
@@ -268,26 +268,44 @@ export default function VersionC() {
         </div>
       </section>
 
-      {/* ══ SERVICIOS — dark grid ══ */}
-      <section id="servicios" className="min-h-[100dvh] bg-camhaji-base flex flex-col">
-        <div className="flex flex-col md:flex-row justify-between items-baseline max-w-[1200px] mx-auto w-full px-5 md:px-10 pt-20 mb-20 gap-4">
-          <p className="label-uppercase text-white/35">NUESTROS SERVICIOS CONTABLES EN CANCÚN</p>
-          <p className="font-sans text-base font-light text-white/50 max-w-[360px] md:text-right leading-relaxed">Todo lo que tu empresa necesita en un solo lugar</p>
-        </div>
-        <div className="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-[1200px] mx-auto w-full">
-          {services.map((s, i) => (
-            <div key={i} className={`group flex flex-col justify-end p-10 hover:bg-white/[0.02] transition-colors duration-300 ${i < services.length - 1 ? "lg:border-r border-white/[0.07]" : ""} border-b lg:border-b-0 border-white/[0.07]`}>
-              <span className="font-sans text-xs text-white/[0.18] uppercase tracking-[0.22em] mb-12">{s.num}</span>
-              <s.icon className="w-8 h-8 text-white/50 mb-7" strokeWidth={1} />
-              <h3 className="font-sans font-bold text-white mb-4 group-hover:text-camhaji-accent transition-colors duration-200" style={{ fontSize: "clamp(20px, 3vw, 36px)", letterSpacing: "-0.02em", lineHeight: 1.1 }}>
-                {s.title}
-              </h3>
-              <p className="font-sans text-[15px] font-light text-white/55 leading-relaxed max-w-[280px] mb-8">{s.desc}</p>
-              <a href={s.href} className="label-uppercase text-white/35 hover:text-white/80 transition-colors border-b border-white/15 pb-0.5 self-start">
-                CONOCER MÁS →
-              </a>
-            </div>
-          ))}
+      {/* ══ SERVICIOS — dark with background photo that changes on hover ══ */}
+      <section id="servicios" className="min-h-[100dvh] relative flex flex-col overflow-hidden">
+        {/* Background images — one per service, crossfade */}
+        {serviceBgs.map((bg, i) => (
+          <img
+            key={i}
+            src={bg}
+            alt=""
+            aria-hidden="true"
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${hoveredService === i ? "opacity-100" : "opacity-0"}`}
+            loading={i === 0 ? "eager" : "lazy"}
+          />
+        ))}
+        <div className="absolute inset-0 bg-camhaji-base/[0.88]" />
+
+        <div className="relative z-10 flex flex-col flex-1">
+          <div className="flex flex-col md:flex-row justify-between items-baseline max-w-[1200px] mx-auto w-full px-5 md:px-10 pt-20 mb-20 gap-4">
+            <p className="label-uppercase text-white/35">NUESTROS SERVICIOS CONTABLES EN CANCÚN</p>
+            <p className="font-sans text-base font-light text-white/50 max-w-[360px] md:text-right leading-relaxed">Todo lo que tu empresa necesita en un solo lugar</p>
+          </div>
+          <div className="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-[1200px] mx-auto w-full">
+            {services.map((s, i) => (
+              <div
+                key={i}
+                className={`group flex flex-col justify-start p-10 hover:bg-white/[0.04] transition-colors duration-300 ${i < services.length - 1 ? "lg:border-r border-white/[0.07]" : ""} border-b lg:border-b-0 border-white/[0.07]`}
+                onMouseEnter={() => setHoveredService(i)}
+              >
+                <span className="font-sans text-xs text-white/[0.18] uppercase tracking-[0.22em] mb-8">{s.num}</span>
+                <h3 className="font-sans font-bold text-white mb-4 group-hover:text-camhaji-accent transition-colors duration-200" style={{ fontSize: "clamp(20px, 3vw, 36px)", letterSpacing: "-0.02em", lineHeight: 1.1 }}>
+                  {s.title}
+                </h3>
+                <p className="font-sans text-[15px] font-light text-white/55 leading-relaxed max-w-[280px] mb-8">{s.desc}</p>
+                <a href={s.href} className="label-uppercase text-white/35 hover:text-white/80 transition-colors border-b border-white/15 pb-0.5 self-start mt-auto">
+                  CONOCER MÁS →
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -318,7 +336,6 @@ export default function VersionC() {
             </h2>
           </div>
 
-          {/* Narrative block */}
           <div className="max-w-[800px] mb-16">
             <p className="font-sans text-white/60 leading-relaxed mb-8" style={{ fontSize: "clamp(15px, 1.5vw, 17px)" }}>
               Camhaji Consultores nació hace 6 años de una idea simple pero poderosa: un despacho donde el área fiscal y el área contable trabajan juntos, bajo el mismo techo, para el mismo cliente. Antes de la firma, nuestro equipo acumuló más de 10 años de trayectoria en grandes firmas, auditoría y administración de empresas en Cancún y la Riviera Maya.
@@ -331,7 +348,6 @@ export default function VersionC() {
             </a>
           </div>
 
-          {/* Principles list */}
           <div className="border-t border-white/10">
             {principles.map((p) => (
               <div key={p.name} className="flex flex-col md:flex-row justify-between md:items-center py-7 border-b border-white/[0.08] hover:translate-x-2.5 transition-transform duration-200 gap-2">
@@ -365,7 +381,6 @@ export default function VersionC() {
             </div>
           ))}
         </div>
-        {/* Additional sector cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 border-t border-white/[0.06]">
           {sectorCards.map((s) => (
             <a key={s.name} href={s.href} className="group p-8 md:p-12 border-b md:border-b-0 md:first:border-r border-white/[0.06] hover:bg-white/[0.03] transition-colors">
@@ -408,13 +423,13 @@ export default function VersionC() {
       <section className="min-h-[100dvh] bg-surface flex flex-col items-center justify-center text-center px-5 md:px-10 py-20">
         <p className="label-uppercase text-primary/60 mb-16">LO QUE DICEN NUESTROS CLIENTES EN CANCÚN</p>
         <span className="font-serif text-[120px] text-primary/[0.08] leading-none block -mb-12" aria-hidden="true">"</span>
-        <blockquote className="font-serif italic text-camhaji-text max-w-[820px] mb-12" style={{ fontSize: "clamp(20px, 3.5vw, 40px)", lineHeight: 1.5, letterSpacing: "-0.01em" }}>
+        <blockquote className="font-sans font-light text-camhaji-text max-w-[820px] mb-12" style={{ fontSize: "clamp(20px, 3.5vw, 40px)", lineHeight: 1.5, letterSpacing: "-0.01em" }}>
           "{testimonials[0].quote}"
         </blockquote>
         <div className="w-8 h-px bg-border-subtle mb-6" />
         <p className="font-sans text-[13px] font-medium uppercase tracking-[0.15em] text-camhaji-text mb-1">{testimonials[0].author}</p>
         <p className="font-sans text-[13px] font-light text-camhaji-muted">{testimonials[0].location}</p>
-        <p className="font-sans text-xs text-camhaji-muted/50 mt-8 italic">* Testimonio de referencia — pendiente validación</p>
+        <p className="font-sans text-xs text-camhaji-muted/50 mt-8">* Testimonio de referencia — pendiente validación</p>
       </section>
 
       {/* ══ CTA — solid primary ══ */}
