@@ -74,31 +74,34 @@ const differentiators = [
 
 const sectors = [
   {
-    badge: "ESPECIALIZACIÓN PRINCIPAL",
     name: "Construcción",
-    desc: "Las constructoras no pueden trabajar con contabilidad genérica. Costos de obra, estimaciones, subcontratistas, retenciones. Llevamos años en el sector y conocemos las particularidades del mercado en Cancún y la Riviera Maya.",
+    desc: "Costos de obra, estimaciones, subcontratistas, retenciones. Llevamos años en el sector.",
     href: "/version-c/sectores/construccion",
     img: sectorConstruccion,
   },
   {
-    badge: "ESPECIALIZACIÓN",
     name: "Empresas Comerciales",
-    desc: "Distribuidoras, comercializadoras y empresas de venta: control de inventarios, facturación a clientes, cuentas por cobrar y por pagar, todo bajo un proceso mensual ordenado.",
+    desc: "Distribuidoras, comercializadoras y empresas de venta bajo un proceso mensual ordenado.",
     href: "/version-c/sectores/comercial",
     img: sectorComercial,
   },
-];
-
-const sectorCards = [
   {
-    name: "RESICO y Prestadores de Servicios",
-    desc: "Freelancers, consultores, profesionistas independientes y agentes inmobiliarios. Si tributas en el Régimen Simplificado de Confianza o quieres hacerlo, aquí encuentras a tu contador en Cancún.",
+    name: "RESICO",
+    desc: "Freelancers, consultores e independientes. Régimen Simplificado de Confianza con acompañamiento real.",
     href: "/version-c/sectores/resico",
+    img: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=960&q=80&fit=crop",
   },
   {
     name: "Agentes Inmobiliarios",
-    desc: "Las comisiones inmobiliarias tienen reglas fiscales específicas. Desde el CFDI correcto hasta el régimen que más te conviene — sin sorpresas con el SAT.",
+    desc: "Comisiones inmobiliarias con reglas fiscales específicas. CFDI correcto y régimen óptimo.",
     href: "/version-c/sectores/inmobiliario",
+    img: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=960&q=80&fit=crop",
+  },
+  {
+    name: "Pequeños Negocios",
+    desc: "Tienda, taller, restaurante o venta en línea. Si facturas como persona física, te ayudamos.",
+    href: "/version-c/sectores/pequenos-negocios",
+    img: "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=960&q=80&fit=crop",
   },
 ];
 
