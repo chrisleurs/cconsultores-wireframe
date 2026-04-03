@@ -216,18 +216,18 @@ export default function VersionC() {
         <div className="absolute inset-0" style={{ background: "rgba(12, 28, 24, 0.84)" }} />
         <div className="relative z-10 flex flex-col items-center">
           <p className="label-uppercase text-white/35 mb-12">DESPACHO CONTABLE · CANCÚN, MÉXICO</p>
-          <h1 className="font-sans font-bold text-white mb-8" style={{ fontSize: "clamp(52px, 8vw, 100px)", letterSpacing: "-0.04em", lineHeight: 0.95 }}>
-            Contabilidad<br />con Compromiso<br />Real.
+          <h1 className="font-sans font-bold text-white mb-8" style={{ fontSize: "clamp(48px, 8vw, 96px)", letterSpacing: "-0.04em", lineHeight: 0.95 }}>
+            Despacho Contable<br />en Cancún con<br />Compromiso Real.
           </h1>
-          <p className="font-sans text-base font-light text-white/50 mb-12 max-w-[480px]" style={{ fontSize: "clamp(16px, 2vw, 20px)", lineHeight: 1.6 }}>
-            Más de 10 años de trayectoria. Una sola promesa: cumplir.
+          <p className="font-sans text-base font-light text-white/50 mb-12 max-w-[540px]" style={{ fontSize: "clamp(16px, 2vw, 20px)", lineHeight: 1.6 }}>
+            Llevamos la contabilidad, el fiscal y la administración de tu empresa para que tú te dediques a lo que sabes hacer. Sin sorpresas con el SAT. Sin desorden. Sin promesas vacías.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <a href="/version-c/contacto" className="btn-uppercase border border-white/50 text-white px-8 py-3.5 hover:bg-white/[0.08] hover:border-white transition-all duration-300">
-              AGENDAR CONSULTA GRATUITA
+            <a href="https://wa.me/529981234567" target="_blank" rel="noopener noreferrer" className="btn-uppercase border border-white/50 text-white px-8 py-3.5 hover:bg-white/[0.08] hover:border-white transition-all duration-300">
+              ESCRÍBENOS POR WHATSAPP
             </a>
             <a href="#servicios" className="btn-uppercase text-white/40 hover:text-white/80 transition-colors duration-300 px-4 py-3.5">
-              NUESTROS SERVICIOS
+              CONOCE NUESTROS SERVICIOS
             </a>
           </div>
         </div>
