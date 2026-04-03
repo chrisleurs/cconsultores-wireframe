@@ -129,6 +129,16 @@ const testimonials = [
     author: "Director General, empresa comercial",
     location: "Cancún, QR",
   },
+  {
+    quote: "Cuando tuve dudas a mitad de mes, respondieron ese mismo día. Eso no lo encontraba en el despacho anterior.",
+    author: "Propietario, empresa constructora",
+    location: "Cancún, QR",
+  },
+  {
+    quote: "Me explicaron el RESICO en términos que entendí. Por primera vez sé cuánto voy a pagar antes de que llegue el 17.",
+    author: "Consultora independiente",
+    location: "Cancún, QR",
+  },
 ];
 
 const faqs = [
