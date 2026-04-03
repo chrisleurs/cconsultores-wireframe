@@ -20,21 +20,27 @@ const milestones = [
 
 const team = [
   {
-    name: "Rogelio R. Moo Ruiz",
+    name: "[Fundador — PENDIENTE]",
+    role: "Fundador y Director",
+    bio: "[Biografía pendiente — solicitar al cliente: origen profesional, motivación para fundar el despacho, especialidad o sector de mayor experiencia.]",
+    img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&h=800&fit=crop&crop=face",
+  },
+  {
+    name: "Rogelio Ramón Moo Ruiz",
     role: "Gerente General",
-    bio: "Contador con más de 10 años de trayectoria. Experiencia en grandes firmas de auditoría, contabilidad hotelera de alto nivel y gestión fiscal corporativa en Cancún. Fundador del despacho en 2019.",
+    bio: "Contador con trayectoria en grandes firmas del sector auditoría y en empresas del ramo hotelero, donde se desempeñó como contralor. Es la mano derecha de la dirección y el responsable de que la operación del despacho funcione con precisión. Comprometido con la firma desde sus primeros años.",
     img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=800&fit=crop&crop=face",
   },
   {
     name: "Karen Rosado Ortiz",
     role: "Supervisora Administrativa",
-    bio: "Especialista en administración empresarial. Coordina cuentas por pagar/cobrar, tesorería y recursos humanos para los clientes del despacho.",
+    bio: "Contadora con amplia experiencia en la administración de empresas medianas y grandes. Ha trabajado en firmas reconocidas a nivel nacional. En Camhaji es responsable de cuentas por pagar, cuentas por cobrar y recursos humanos. Su orden y método son dos de los pilares operativos del despacho.",
     img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=800&fit=crop&crop=face",
   },
   {
-    name: "Marlon R. Chávez Sánchez",
-    role: "Supervisor Nómina & Facturación",
-    bio: "Referente en nómina y contribuciones de seguridad social. Especialista en CONTPAQi y en nóminas del sector construcción en Quintana Roo.",
+    name: "Marlon Rafael Chávez Sánchez",
+    role: "Supervisor de Nómina y Facturación",
+    bio: "Especialista en nómina, ley laboral y contribuciones de seguridad social. Domina CONTPAQi con una profundidad que pocos logran. Es el referente interno cuando hay una duda compleja sobre IMSS, Infonavit o el CFDI de nómina. Lo que no sabe Marlon sobre nómina en México, probablemente no exista.",
     img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=800&fit=crop&crop=face",
   },
 ];
@@ -61,10 +67,10 @@ export default function NosotrosC() {
           </p>
           <p className="label-uppercase text-white/30 mb-6">NUESTRA FIRMA</p>
           <h1 className="font-sans font-bold text-white mb-6" style={{ fontSize: "clamp(36px, 6vw, 72px)", letterSpacing: "-0.03em", lineHeight: 1.05 }}>
-            Una Firma Contable Joven con más de 10 Años de Trayectoria
+            El Equipo que Respalda tu Tranquilidad Financiera
           </h1>
-          <p className="font-sans text-base font-light text-white/50 max-w-[560px] mx-auto" style={{ fontSize: "clamp(16px, 1.8vw, 20px)", lineHeight: 1.6 }}>
-            Hay firmas que se venden con catálogos. Nosotros preferimos contarte quiénes somos.
+          <p className="font-sans text-base font-light text-white/50 max-w-[600px] mx-auto" style={{ fontSize: "clamp(16px, 1.8vw, 20px)", lineHeight: 1.6 }}>
+            Detrás de cada declaración, cada nómina y cada conciliación hay una persona con nombre, experiencia y responsabilidad clara. Estos son algunos de ellos.
           </p>
         </div>
       </section>
@@ -90,12 +96,11 @@ export default function NosotrosC() {
                 Así nació Camhaji Consultores.
               </p>
               <p className="font-sans text-[15px] font-light text-camhaji-muted leading-relaxed">
-                Desde entonces, hemos crecido a un equipo de 10 personas. Hemos atendido <a href="/version-c/sectores/construccion" className="text-primary hover:underline">empresas de construcción</a>, comercializadoras, <a href="/version-c/sectores/resico" className="text-primary hover:underline">freelancers en RESICO</a>, agentes inmobiliarios y empresarios que llegaron con años de obligaciones atrasadas y salieron con sus finanzas en orden. Cada cliente que se queda lo hace porque cumplimos lo que decimos que vamos a hacer. No más. No menos.
+                Desde entonces, hemos crecido a un equipo de 10 personas. Hemos atendido <a href="/version-c/sectores/construccion" className="text-primary hover:underline">empresas de construcción</a>, comercializadoras, <a href="/version-c/sectores/resico" className="text-primary hover:underline">freelancers en RESICO</a>, agentes inmobiliarios y empresarios que llegaron con años de obligaciones atrasadas y salieron con sus finanzas en orden.
               </p>
             </div>
           </div>
 
-          {/* Milestones */}
           <div className="mt-20 pt-12 border-t border-border-subtle flex flex-col md:flex-row items-center justify-center gap-12 md:gap-0">
             {milestones.map((m, i) => (
               <div key={i} className="flex items-center gap-0">
@@ -108,6 +113,49 @@ export default function NosotrosC() {
                 {i < milestones.length - 1 && <div className="hidden md:block w-px h-16 bg-border-subtle" />}
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* DIRECCIÓN Y GERENCIA */}
+      <section className="bg-surface py-24 px-5 md:px-10">
+        <div className="max-w-[1100px] mx-auto">
+          <div className="flex flex-col md:flex-row justify-between items-baseline mb-6 gap-4">
+            <p className="label-uppercase text-camhaji-muted">DIRECCIÓN Y GERENCIA</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
+            {team.slice(0, 2).map((m) => (
+              <div key={m.name}>
+                <div className="aspect-[3/4] overflow-hidden mb-6">
+                  <img src={m.img} alt={m.name} className="w-full h-full object-cover grayscale-[15%]" loading="lazy" />
+                </div>
+                <div className="w-8 h-px bg-camhaji-accent mb-4" />
+                <h3 className="font-sans font-bold text-lg text-camhaji-text mb-1">{m.name}</h3>
+                <p className="label-uppercase text-primary mb-3">{m.role}</p>
+                <p className="font-sans text-sm font-light text-camhaji-muted leading-relaxed">{m.bio}</p>
+              </div>
+            ))}
+          </div>
+
+          <p className="label-uppercase text-camhaji-muted mb-10">ADMINISTRACIÓN, NÓMINA Y FACTURACIÓN</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            {team.slice(2).map((m) => (
+              <div key={m.name}>
+                <div className="aspect-[3/4] overflow-hidden mb-6">
+                  <img src={m.img} alt={m.name} className="w-full h-full object-cover grayscale-[15%]" loading="lazy" />
+                </div>
+                <div className="w-8 h-px bg-camhaji-accent mb-4" />
+                <h3 className="font-sans font-bold text-lg text-camhaji-text mb-1">{m.name}</h3>
+                <p className="label-uppercase text-primary mb-3">{m.role}</p>
+                <p className="font-sans text-sm font-light text-camhaji-muted leading-relaxed">{m.bio}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-16 p-8 bg-white border border-border-subtle rounded-sm text-center">
+            <p className="font-sans text-camhaji-text leading-relaxed">
+              El equipo completo de Camhaji Consultores está integrado por <strong>10 profesionales especializados</strong>. Cada área tiene un responsable con nombre, experiencia y comunicación directa con el cliente.
+            </p>
           </div>
         </div>
       </section>
@@ -175,31 +223,6 @@ export default function NosotrosC() {
         </div>
       </section>
 
-      {/* EQUIPO */}
-      <section className="bg-surface py-24 px-5 md:px-10">
-        <div className="max-w-[1100px] mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-baseline mb-16 gap-4">
-            <p className="label-uppercase text-camhaji-muted">NUESTRO EQUIPO</p>
-            <h2 className="font-sans font-bold text-camhaji-text md:text-right max-w-[350px]" style={{ fontSize: "clamp(20px, 2.5vw, 32px)", letterSpacing: "-0.02em" }}>
-              Las personas detrás del compromiso
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            {team.map((m) => (
-              <div key={m.name}>
-                <div className="aspect-[3/4] overflow-hidden mb-6">
-                  <img src={m.img} alt={m.name} className="w-full h-full object-cover grayscale-[15%]" loading="lazy" />
-                </div>
-                <div className="w-8 h-px bg-camhaji-accent mb-4" />
-                <h3 className="font-sans font-bold text-lg text-camhaji-text mb-1">{m.name}</h3>
-                <p className="label-uppercase text-primary mb-3">{m.role}</p>
-                <p className="font-sans text-sm font-light text-camhaji-muted leading-relaxed">{m.bio}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="min-h-[60dvh] bg-primary flex flex-col items-center justify-center text-center px-5 md:px-10 py-20">
         <p className="label-uppercase text-white/40 mb-6">DA EL SIGUIENTE PASO</p>
@@ -207,8 +230,11 @@ export default function NosotrosC() {
           Hablemos de tu negocio.
         </h2>
         <div className="flex gap-4 flex-wrap justify-center">
-          <a href="/version-c/contacto" className="btn-uppercase border border-white/50 text-white px-10 py-4 hover:bg-white/10 hover:border-white transition-all duration-300">
+          <a href="https://wa.me/529981234567" target="_blank" rel="noopener noreferrer" className="btn-uppercase border border-white/50 text-white px-10 py-4 hover:bg-white/10 hover:border-white transition-all duration-300">
             ESCRÍBENOS POR WHATSAPP
+          </a>
+          <a href="/version-c/servicios/contabilidad" className="btn-uppercase border border-white/30 text-white/60 px-10 py-4 hover:text-white hover:border-white/60 transition-all duration-300">
+            CONOCE CÓMO TRABAJAMOS →
           </a>
         </div>
         <div className="flex items-center gap-2 mt-6">

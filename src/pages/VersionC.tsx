@@ -372,34 +372,39 @@ export default function VersionC() {
         </div>
       </section>
 
-      {/* ══ SECTORES — dark full-bleed ══ */}
-      <section className="min-h-[100dvh] bg-camhaji-base flex flex-col">
+      {/* ══ SECTORES — dark full-bleed, all 5 visible ══ */}
+      <section className="bg-camhaji-base">
         <div className="max-w-[1200px] mx-auto w-full px-5 md:px-10 pt-20 pb-10">
           <div className="flex flex-col md:flex-row justify-between items-baseline gap-4">
             <p className="label-uppercase text-white/35">EXPERIENCIA EN LOS SECTORES QUE MÁS IMPORTAN</p>
             <p className="font-sans text-[15px] font-light text-white/50">Cada sector tiene sus propias reglas</p>
           </div>
         </div>
-        <div className="flex-1 grid grid-cols-1 md:grid-cols-2">
-          {sectors.map((s) => (
-            <div key={s.name} className="relative min-h-[480px] md:min-h-[50dvh] flex items-end group cursor-pointer overflow-hidden border-r border-white/[0.06] last:border-r-0 max-md:border-r-0">
-              <img src={s.img} alt={s.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy" width={960} height={1080} />
+        {/* Top row: 3 sectors */}
+        <div className="grid grid-cols-1 md:grid-cols-3">
+          {sectors.slice(0, 3).map((s, i) => (
+            <a key={s.name} href={s.href} className={`relative min-h-[400px] md:min-h-[45dvh] flex items-end group overflow-hidden ${i < 2 ? "md:border-r border-white/[0.06]" : ""}`}>
+              <img src={s.img} alt={s.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy" />
               <div className="absolute inset-0 bg-gradient-to-t from-camhaji-base/[0.92] via-camhaji-base/40 to-transparent group-hover:from-camhaji-base/[0.96] group-hover:via-camhaji-base/[0.65] transition-all duration-300" />
-              <div className="relative z-10 p-10 md:p-12">
-                <span className="inline-block border border-white/25 rounded-sm px-2.5 py-1 label-uppercase text-[10px] text-white/60 mb-4">{s.badge}</span>
-                <h3 className="font-sans font-bold text-white mb-2" style={{ fontSize: "clamp(22px, 3.5vw, 40px)", letterSpacing: "-0.02em", lineHeight: 1.1 }}>{s.name}</h3>
-                <p className="font-sans text-sm font-light text-white/55 mb-5 leading-relaxed">{s.desc}</p>
-                <a href={s.href} className="label-uppercase text-white/40 hover:text-white transition-colors">VER ESPECIALIZACIÓN →</a>
+              <div className="relative z-10 p-8 md:p-10">
+                <h3 className="font-sans font-bold text-white mb-2 group-hover:text-camhaji-accent transition-colors" style={{ fontSize: "clamp(20px, 3vw, 32px)", letterSpacing: "-0.02em", lineHeight: 1.1 }}>{s.name}</h3>
+                <p className="font-sans text-sm font-light text-white/55 mb-4 leading-relaxed max-w-[320px]">{s.desc}</p>
+                <span className="label-uppercase text-white/40 group-hover:text-white transition-colors">VER ESPECIALIZACIÓN →</span>
               </div>
-            </div>
+            </a>
           ))}
         </div>
+        {/* Bottom row: 2 sectors */}
         <div className="grid grid-cols-1 md:grid-cols-2 border-t border-white/[0.06]">
-          {sectorCards.map((s) => (
-            <a key={s.name} href={s.href} className="group p-8 md:p-12 border-b md:border-b-0 md:first:border-r border-white/[0.06] hover:bg-white/[0.03] transition-colors">
-              <h3 className="font-sans font-bold text-white text-xl mb-3 group-hover:text-camhaji-accent transition-colors">{s.name}</h3>
-              <p className="font-sans text-sm font-light text-white/50 leading-relaxed mb-4 max-w-[400px]">{s.desc}</p>
-              <span className="label-uppercase text-white/30 group-hover:text-white/60 transition-colors">VER DETALLE →</span>
+          {sectors.slice(3).map((s, i) => (
+            <a key={s.name} href={s.href} className={`relative min-h-[360px] md:min-h-[40dvh] flex items-end group overflow-hidden ${i === 0 ? "md:border-r border-white/[0.06]" : ""}`}>
+              <img src={s.img} alt={s.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy" />
+              <div className="absolute inset-0 bg-gradient-to-t from-camhaji-base/[0.92] via-camhaji-base/40 to-transparent group-hover:from-camhaji-base/[0.96] group-hover:via-camhaji-base/[0.65] transition-all duration-300" />
+              <div className="relative z-10 p-8 md:p-10">
+                <h3 className="font-sans font-bold text-white mb-2 group-hover:text-camhaji-accent transition-colors" style={{ fontSize: "clamp(20px, 3vw, 32px)", letterSpacing: "-0.02em", lineHeight: 1.1 }}>{s.name}</h3>
+                <p className="font-sans text-sm font-light text-white/55 mb-4 leading-relaxed max-w-[400px]">{s.desc}</p>
+                <span className="label-uppercase text-white/40 group-hover:text-white transition-colors">VER ESPECIALIZACIÓN →</span>
+              </div>
             </a>
           ))}
         </div>
