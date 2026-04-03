@@ -432,14 +432,20 @@ export default function VersionC() {
       {/* ══ TESTIMONIAL — light surface, centered ══ */}
       <section className="min-h-[100dvh] bg-surface flex flex-col items-center justify-center text-center px-5 md:px-10 py-20">
         <p className="label-uppercase text-primary/60 mb-16">LO QUE DICEN NUESTROS CLIENTES EN CANCÚN</p>
-        <span className="font-serif text-[120px] text-primary/[0.08] leading-none block -mb-12" aria-hidden="true">"</span>
-        <blockquote className="font-sans font-light text-camhaji-text max-w-[820px] mb-12" style={{ fontSize: "clamp(20px, 3.5vw, 40px)", lineHeight: 1.5, letterSpacing: "-0.01em" }}>
-          "{testimonials[0].quote}"
-        </blockquote>
-        <div className="w-8 h-px bg-border-subtle mb-6" />
-        <p className="font-sans text-[13px] font-medium uppercase tracking-[0.15em] text-camhaji-text mb-1">{testimonials[0].author}</p>
-        <p className="font-sans text-[13px] font-light text-camhaji-muted">{testimonials[0].location}</p>
-        <p className="font-sans text-xs text-camhaji-muted/50 mt-8">* Testimonio de referencia — pendiente validación</p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-[1200px] w-full">
+          {testimonials.map((t, i) => (
+            <div key={i} className="text-center md:text-left">
+              <span className="font-serif text-[64px] text-primary/[0.08] leading-none block -mb-4" aria-hidden="true">"</span>
+              <blockquote className="font-sans font-light text-camhaji-text mb-6" style={{ fontSize: "clamp(16px, 2vw, 22px)", lineHeight: 1.6 }}>
+                "{t.quote}"
+              </blockquote>
+              <div className="w-6 h-px bg-border-subtle mb-4 mx-auto md:mx-0" />
+              <p className="font-sans text-[13px] font-medium uppercase tracking-[0.15em] text-camhaji-text mb-1">{t.author}</p>
+              <p className="font-sans text-[13px] font-light text-camhaji-muted">{t.location}</p>
+            </div>
+          ))}
+        </div>
+        <p className="font-sans text-xs text-camhaji-muted/50 mt-12">* Testimonios de referencia — pendientes de validación</p>
       </section>
 
       {/* ══ CTA — solid primary ══ */}
