@@ -223,11 +223,11 @@ export default function VersionC() {
     <div className="min-h-screen">
       <Navbar version="c" />
 
-      {/* ══ HERO — centered, full-screen, arc-group style ══ */}
-      <section className="min-h-[100dvh] relative flex flex-col items-center justify-center text-center overflow-hidden" style={{ padding: "120px 40px 80px" }}>
+      {/* ══ HERO — left-aligned, full-screen, arc-group style ══ */}
+      <section className="min-h-[100dvh] relative flex flex-col items-start justify-center overflow-hidden" style={{ padding: "120px 40px 80px" }}>
         <img src={heroBg} alt="Cancún skyline zona hotelera" className="absolute inset-0 w-full h-full object-cover object-top" width={1920} height={1080} />
         <div className="absolute inset-0" style={{ background: "rgba(12, 28, 24, 0.84)" }} />
-        <div className="relative z-10 flex flex-col items-center">
+        <div className="relative z-10 flex flex-col items-start max-w-[1200px] mx-auto w-full px-5 md:px-10">
           <p className="label-uppercase text-white/35 mb-12">DESPACHO CONTABLE · CANCÚN, MÉXICO</p>
           <h1 className="font-sans font-bold text-white mb-8" style={{ fontSize: "clamp(48px, 8vw, 96px)", letterSpacing: "-0.04em", lineHeight: 0.95 }}>
             Despacho Contable<br />en Cancún con<br />Compromiso Real.
@@ -235,11 +235,11 @@ export default function VersionC() {
           <p className="font-sans text-base font-light text-white/50 mb-12 max-w-[540px]" style={{ fontSize: "clamp(16px, 2vw, 20px)", lineHeight: 1.6 }}>
             Llevamos la contabilidad, el fiscal y la administración de tu empresa para que tú te dediques a lo que sabes hacer. Sin sorpresas con el SAT. Sin desorden. Sin promesas vacías.
           </p>
-          <div className="flex gap-4 justify-center flex-wrap">
+          <div className="flex gap-4 flex-wrap">
             <a href="https://wa.me/529981234567" target="_blank" rel="noopener noreferrer" className="btn-uppercase border border-white/50 text-white px-8 py-3.5 hover:bg-white/[0.08] hover:border-white transition-all duration-300">
               ESCRÍBENOS POR WHATSAPP
             </a>
-            <a href="#servicios" className="btn-uppercase text-white/40 hover:text-white/80 transition-colors duration-300 px-4 py-3.5">
+            <a href="#servicios" className="btn-uppercase border border-white/30 text-white/60 hover:text-white hover:border-white/60 transition-all duration-300 px-8 py-3.5">
               CONOCE NUESTROS SERVICIOS
             </a>
           </div>
