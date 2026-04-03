@@ -2,7 +2,18 @@ import { useState } from "react";
 import { Navbar } from "@/components/Navbar";
 import { FooterC } from "@/components/FooterC";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
-import { MapPin, Mail, Clock, Loader2 } from "lucide-react";
+import { MapPin, Mail, Clock, Loader2, Phone } from "lucide-react";
+
+const serviceOptions = [
+  "Contabilidad",
+  "Fiscal",
+  "Nómina",
+  "Facturación",
+  "Sector Construcción",
+  "RESICO",
+  "Agentes Inmobiliarios",
+  "Otro",
+];
 
 export default function ContactoC() {
   const [formState, setFormState] = useState<"idle" | "sending" | "sent">("idle");
@@ -16,107 +27,94 @@ export default function ContactoC() {
   const inputClass =
     "w-full border-0 border-b border-border-subtle rounded-none bg-transparent px-0 py-2.5 font-sans text-base text-camhaji-text placeholder:text-camhaji-muted/40 focus:outline-none focus:border-primary transition-colors";
 
-  const cities = ["CANCÚN", "PLAYA DEL CARMEN", "TULUM", "CHETUMAL", "Q.ROO"];
-
   return (
     <div className="min-h-screen">
       <Navbar version="c" />
 
       {/* HERO */}
       <section className="min-h-[50dvh] bg-camhaji-base flex flex-col items-center justify-center text-center px-5 md:px-10 pt-20">
-        <p className="label-uppercase text-white/30 mb-8">HABLEMOS</p>
-        <h1 className="font-sans font-bold text-white mb-5" style={{ fontSize: "clamp(36px, 6vw, 80px)", letterSpacing: "-0.04em", lineHeight: 1.0 }}>
-          Agenda tu Consulta Gratuita
-        </h1>
-        <p className="font-serif italic text-white/45" style={{ fontSize: "clamp(16px, 2vw, 20px)" }}>
-          30 minutos. Sin costo. Sin compromiso.
+        <p className="font-sans text-xs text-white/30 mb-6">
+          <a href="/version-c" className="hover:text-white/50 transition-colors">Inicio</a>
+          <span className="text-white/15 mx-2">/</span>Contacto
         </p>
+        <p className="label-uppercase text-white/30 mb-6">CONTACTO</p>
+        <h1 className="font-sans font-bold text-white mb-5" style={{ fontSize: "clamp(36px, 6vw, 72px)", letterSpacing: "-0.04em", lineHeight: 1.0 }}>
+          Hablemos de tu Negocio
+        </h1>
+        <p className="font-sans text-base font-light text-white/50 max-w-[600px] mx-auto" style={{ fontSize: "clamp(16px, 2vw, 20px)", lineHeight: 1.6 }}>
+          Sin compromisos. Sin formularios interminables. Solo una conversación para entender en qué punto está tu empresa y cómo podemos ayudarte.
+        </p>
+        <a
+          href="https://wa.me/529981234567"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-uppercase border border-white/50 text-white px-10 py-4 hover:bg-white/10 hover:border-white transition-all duration-300 mt-10"
+        >
+          ESCRÍBENOS POR WHATSAPP
+        </a>
       </section>
 
-      {/* MAIN BLOCK */}
+      {/* FORM SECTION */}
       <section className="bg-camhaji-base py-20 px-5 md:px-10">
         <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-[1fr_400px] gap-16 items-start">
           {/* FORM */}
           <div className="bg-white rounded-sm p-10 md:p-14">
             <h2 className="font-sans font-bold text-camhaji-text mb-2" style={{ fontSize: "clamp(22px, 2.5vw, 30px)", letterSpacing: "-0.02em" }}>
-              Cuéntanos sobre tu empresa
+              O déjanos tus datos y te contactamos
             </h2>
-            <p className="font-sans text-sm font-light text-camhaji-muted mb-10">
-              Respondemos en menos de 24 horas en días hábiles.
-            </p>
-            <div className="border-b border-border-subtle mb-10" />
+            <div className="border-b border-border-subtle mb-10 mt-6" />
 
             <form onSubmit={handleSubmit}>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-8 mb-8">
+              <div className="space-y-8 mb-8">
                 <div>
                   <label className="label-uppercase text-camhaji-muted mb-2.5 block">NOMBRE COMPLETO</label>
                   <input type="text" autoComplete="name" placeholder="Tu nombre" className={inputClass} required />
                 </div>
                 <div>
-                  <label className="label-uppercase text-camhaji-muted mb-2.5 block">EMPRESA</label>
+                  <label className="label-uppercase text-camhaji-muted mb-2.5 block">EMPRESA <span className="text-camhaji-muted/40">(opcional)</span></label>
                   <input type="text" autoComplete="organization" placeholder="Nombre de tu empresa" className={inputClass} />
                 </div>
                 <div>
-                  <label className="label-uppercase text-camhaji-muted mb-2.5 block">TELÉFONO</label>
-                  <input type="tel" autoComplete="tel" placeholder="(998) 000-0000" className={inputClass} />
-                  <p className="font-sans text-xs text-camhaji-muted mt-1.5">Podemos contactarte por WhatsApp</p>
+                  <label className="label-uppercase text-camhaji-muted mb-2.5 block">SERVICIO DE INTERÉS</label>
+                  <select className={`${inputClass} appearance-none cursor-pointer`} required>
+                    <option value="">Selecciona un servicio...</option>
+                    {serviceOptions.map((s) => (
+                      <option key={s}>{s}</option>
+                    ))}
+                  </select>
                 </div>
                 <div>
-                  <label className="label-uppercase text-camhaji-muted mb-2.5 block">CORREO</label>
-                  <input type="email" autoComplete="email" placeholder="correo@empresa.com" className={inputClass} required />
+                  <label className="label-uppercase text-camhaji-muted mb-2.5 block">MENSAJE</label>
+                  <textarea rows={3} placeholder="Cuéntanos brevemente tu situación..." className={`${inputClass} resize-none`} />
                 </div>
               </div>
 
-              <div className="mb-8">
-                <label className="label-uppercase text-camhaji-muted mb-2.5 block">SOBRE QUÉ NECESITAS ASESORÍA</label>
-                <select className={`${inputClass} appearance-none cursor-pointer`} required>
-                  <option value="">Selecciona un tema...</option>
-                  <option>Contabilidad y administración</option>
-                  <option>Estrategia fiscal</option>
-                  <option>Nómina y facturación</option>
-                  <option>Sector construcción</option>
-                  <option>Tengo atrasos con el SAT</option>
-                  <option>Otro</option>
-                </select>
-              </div>
-
-              <div className="mb-8">
-                <label className="label-uppercase text-camhaji-muted mb-2.5 block">MENSAJE</label>
-                <textarea rows={3} placeholder="Cuéntanos brevemente tu situación..." className={`${inputClass} resize-none`} />
-              </div>
-
-              <div className="border-t border-border-subtle pt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                <label className="flex items-start gap-2.5 cursor-pointer max-w-[320px]">
-                  <input type="checkbox" required className="mt-1 w-3.5 h-3.5 rounded-sm border-border-subtle accent-primary flex-shrink-0" />
-                  <span className="font-sans text-xs text-camhaji-muted leading-relaxed">
-                    Acepto que Camhaji Consultores me contacte para dar seguimiento a esta solicitud.
+              <button
+                type="submit"
+                disabled={formState !== "idle"}
+                className={`btn-uppercase w-full px-8 py-4 transition-all duration-300 ${
+                  formState === "sent"
+                    ? "bg-green-800 text-white"
+                    : "bg-primary text-white hover:bg-primary-hover"
+                }`}
+              >
+                {formState === "idle" && "ENVIAR MENSAJE"}
+                {formState === "sending" && (
+                  <span className="flex items-center justify-center gap-2">
+                    <Loader2 className="w-4 h-4 animate-spin" /> ENVIANDO...
                   </span>
-                </label>
+                )}
+                {formState === "sent" && "¡ENVIADO! ✓"}
+              </button>
 
-                <button
-                  type="submit"
-                  disabled={formState !== "idle"}
-                  className={`btn-uppercase px-8 py-3.5 whitespace-nowrap transition-all duration-300 ${
-                    formState === "sent"
-                      ? "bg-green-800 text-white"
-                      : "bg-primary text-white hover:bg-primary-hover"
-                  }`}
-                >
-                  {formState === "idle" && "ENVIAR MENSAJE"}
-                  {formState === "sending" && (
-                    <span className="flex items-center gap-2">
-                      <Loader2 className="w-4 h-4 animate-spin" /> ENVIANDO...
-                    </span>
-                  )}
-                  {formState === "sent" && "¡ENVIADO! ✓"}
-                </button>
-              </div>
+              <p className="font-sans text-xs text-camhaji-muted mt-4 text-center leading-relaxed">
+                Respondemos el mismo día en horario de oficina. Si es urgente, escríbenos directamente por WhatsApp.
+              </p>
             </form>
           </div>
 
-          {/* PANEL DERECHO */}
+          {/* RIGHT PANEL */}
           <div className="md:sticky md:top-[100px] space-y-px">
-            {/* WhatsApp block */}
             <div className="bg-primary rounded-sm p-8">
               <p className="label-uppercase text-white/40 mb-4">RESPUESTA INMEDIATA</p>
               <div className="flex items-center gap-3 mb-4">
@@ -138,71 +136,17 @@ export default function ContactoC() {
               </a>
             </div>
 
-            {/* Datos adicionales */}
             <div className="bg-white/[0.04] rounded-sm p-7 space-y-4">
               {[
                 { icon: MapPin, text: "Cancún, Quintana Roo, México" },
-                { icon: Mail, text: "contacto@camhajiconsultores.mx" },
-                { icon: Clock, text: "Lun–Vie: 9:00 – 18:00 hrs" },
+                { icon: Phone, text: "[Teléfono — PENDIENTE]" },
+                { icon: Mail, text: "[Correo — PENDIENTE]" },
+                { icon: Clock, text: "Lunes a Viernes · [Horario — PENDIENTE]" },
               ].map((d) => (
                 <div key={d.text} className="flex items-start gap-3">
                   <d.icon className="w-4 h-4 text-white/35 flex-shrink-0 mt-0.5" />
                   <span className="font-sans text-sm text-white/65">{d.text}</span>
                 </div>
-              ))}
-              <div className="border-t border-white/[0.07] pt-5 mt-5">
-                <p className="font-sans text-xs text-white/30 leading-relaxed">
-                  Atendemos empresas en todo Cancún, Playa del Carmen, Tulum, Chetumal y el estado de Quintana Roo.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* DATOS */}
-      <section className="bg-surface py-20 px-5 md:px-10">
-        <div className="max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-0">
-          {/* Horarios */}
-          <div className="md:px-10 first:md:pl-0">
-            <p className="label-uppercase text-camhaji-muted mb-5">ATENCIÓN</p>
-            <div className="space-y-2.5">
-              {[
-                { day: "Lun – Vie", time: "9:00 – 18:00" },
-                { day: "Sábado", time: "Citas previas" },
-                { day: "Domingo", time: "Cerrado" },
-              ].map((h) => (
-                <div key={h.day} className="flex justify-between">
-                  <span className="font-sans text-sm text-camhaji-text">{h.day}</span>
-                  <span className="font-sans text-sm font-light text-camhaji-muted">{h.time}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Ubicación */}
-          <div className="md:px-10 md:border-l border-border-subtle">
-            <p className="label-uppercase text-camhaji-muted mb-5">UBICACIÓN</p>
-            <p className="font-sans font-semibold text-base text-camhaji-text">Cancún</p>
-            <p className="font-sans text-sm font-light text-camhaji-muted">Quintana Roo, México</p>
-            <p className="font-sans text-[13px] font-light text-camhaji-muted mt-3">Atendemos todo Q.Roo</p>
-          </div>
-
-          {/* Contacto */}
-          <div className="md:px-10 md:border-l border-border-subtle">
-            <p className="label-uppercase text-camhaji-muted mb-5">CONTACTO</p>
-            <p className="font-sans font-semibold text-base text-camhaji-text">(998) 123-4567</p>
-            <p className="font-sans text-[13px] font-light text-camhaji-muted mt-2 break-all">contacto@camhajiconsultores.mx</p>
-          </div>
-
-          {/* Cobertura */}
-          <div className="md:px-10 md:border-l border-border-subtle">
-            <p className="label-uppercase text-camhaji-muted mb-5">COBERTURA</p>
-            <div className="flex flex-wrap gap-1.5">
-              {cities.map((c) => (
-                <span key={c} className="font-sans text-[11px] uppercase tracking-[0.1em] border border-border-subtle rounded-sm px-2.5 py-1 text-camhaji-muted">
-                  {c}
-                </span>
               ))}
             </div>
           </div>

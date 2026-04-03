@@ -74,31 +74,34 @@ const differentiators = [
 
 const sectors = [
   {
-    badge: "ESPECIALIZACIÓN PRINCIPAL",
     name: "Construcción",
-    desc: "Las constructoras no pueden trabajar con contabilidad genérica. Costos de obra, estimaciones, subcontratistas, retenciones. Llevamos años en el sector y conocemos las particularidades del mercado en Cancún y la Riviera Maya.",
+    desc: "Costos de obra, estimaciones, subcontratistas, retenciones. Llevamos años en el sector.",
     href: "/version-c/sectores/construccion",
     img: sectorConstruccion,
   },
   {
-    badge: "ESPECIALIZACIÓN",
     name: "Empresas Comerciales",
-    desc: "Distribuidoras, comercializadoras y empresas de venta: control de inventarios, facturación a clientes, cuentas por cobrar y por pagar, todo bajo un proceso mensual ordenado.",
+    desc: "Distribuidoras, comercializadoras y empresas de venta bajo un proceso mensual ordenado.",
     href: "/version-c/sectores/comercial",
     img: sectorComercial,
   },
-];
-
-const sectorCards = [
   {
-    name: "RESICO y Prestadores de Servicios",
-    desc: "Freelancers, consultores, profesionistas independientes y agentes inmobiliarios. Si tributas en el Régimen Simplificado de Confianza o quieres hacerlo, aquí encuentras a tu contador en Cancún.",
+    name: "RESICO",
+    desc: "Freelancers, consultores e independientes. Régimen Simplificado de Confianza con acompañamiento real.",
     href: "/version-c/sectores/resico",
+    img: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=960&q=80&fit=crop",
   },
   {
     name: "Agentes Inmobiliarios",
-    desc: "Las comisiones inmobiliarias tienen reglas fiscales específicas. Desde el CFDI correcto hasta el régimen que más te conviene — sin sorpresas con el SAT.",
+    desc: "Comisiones inmobiliarias con reglas fiscales específicas. CFDI correcto y régimen óptimo.",
     href: "/version-c/sectores/inmobiliario",
+    img: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=960&q=80&fit=crop",
+  },
+  {
+    name: "Pequeños Negocios",
+    desc: "Tienda, taller, restaurante o venta en línea. Si facturas como persona física, te ayudamos.",
+    href: "/version-c/sectores/pequenos-negocios",
+    img: "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=960&q=80&fit=crop",
   },
 ];
 
@@ -220,11 +223,11 @@ export default function VersionC() {
     <div className="min-h-screen">
       <Navbar version="c" />
 
-      {/* ══ HERO — centered, full-screen, arc-group style ══ */}
-      <section className="min-h-[100dvh] relative flex flex-col items-center justify-center text-center overflow-hidden" style={{ padding: "120px 40px 80px" }}>
+      {/* ══ HERO — left-aligned, full-screen, arc-group style ══ */}
+      <section className="min-h-[100dvh] relative flex flex-col items-start justify-center overflow-hidden" style={{ padding: "120px 40px 80px" }}>
         <img src={heroBg} alt="Cancún skyline zona hotelera" className="absolute inset-0 w-full h-full object-cover object-top" width={1920} height={1080} />
         <div className="absolute inset-0" style={{ background: "rgba(12, 28, 24, 0.84)" }} />
-        <div className="relative z-10 flex flex-col items-center">
+        <div className="relative z-10 flex flex-col items-start max-w-[1200px] mx-auto w-full px-5 md:px-10">
           <p className="label-uppercase text-white/35 mb-12">DESPACHO CONTABLE · CANCÚN, MÉXICO</p>
           <h1 className="font-sans font-bold text-white mb-8" style={{ fontSize: "clamp(48px, 8vw, 96px)", letterSpacing: "-0.04em", lineHeight: 0.95 }}>
             Despacho Contable<br />en Cancún con<br />Compromiso Real.
@@ -232,11 +235,11 @@ export default function VersionC() {
           <p className="font-sans text-base font-light text-white/50 mb-12 max-w-[540px]" style={{ fontSize: "clamp(16px, 2vw, 20px)", lineHeight: 1.6 }}>
             Llevamos la contabilidad, el fiscal y la administración de tu empresa para que tú te dediques a lo que sabes hacer. Sin sorpresas con el SAT. Sin desorden. Sin promesas vacías.
           </p>
-          <div className="flex gap-4 justify-center flex-wrap">
+          <div className="flex gap-4 flex-wrap">
             <a href="https://wa.me/529981234567" target="_blank" rel="noopener noreferrer" className="btn-uppercase border border-white/50 text-white px-8 py-3.5 hover:bg-white/[0.08] hover:border-white transition-all duration-300">
               ESCRÍBENOS POR WHATSAPP
             </a>
-            <a href="#servicios" className="btn-uppercase text-white/40 hover:text-white/80 transition-colors duration-300 px-4 py-3.5">
+            <a href="#servicios" className="btn-uppercase border border-white/30 text-white/60 hover:text-white hover:border-white/60 transition-all duration-300 px-8 py-3.5">
               CONOCE NUESTROS SERVICIOS
             </a>
           </div>
@@ -369,34 +372,39 @@ export default function VersionC() {
         </div>
       </section>
 
-      {/* ══ SECTORES — dark full-bleed ══ */}
-      <section className="min-h-[100dvh] bg-camhaji-base flex flex-col">
+      {/* ══ SECTORES — dark full-bleed, all 5 visible ══ */}
+      <section className="bg-camhaji-base">
         <div className="max-w-[1200px] mx-auto w-full px-5 md:px-10 pt-20 pb-10">
           <div className="flex flex-col md:flex-row justify-between items-baseline gap-4">
             <p className="label-uppercase text-white/35">EXPERIENCIA EN LOS SECTORES QUE MÁS IMPORTAN</p>
             <p className="font-sans text-[15px] font-light text-white/50">Cada sector tiene sus propias reglas</p>
           </div>
         </div>
-        <div className="flex-1 grid grid-cols-1 md:grid-cols-2">
-          {sectors.map((s) => (
-            <div key={s.name} className="relative min-h-[480px] md:min-h-[50dvh] flex items-end group cursor-pointer overflow-hidden border-r border-white/[0.06] last:border-r-0 max-md:border-r-0">
-              <img src={s.img} alt={s.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy" width={960} height={1080} />
+        {/* Top row: 3 sectors */}
+        <div className="grid grid-cols-1 md:grid-cols-3">
+          {sectors.slice(0, 3).map((s, i) => (
+            <a key={s.name} href={s.href} className={`relative min-h-[400px] md:min-h-[45dvh] flex items-end group overflow-hidden ${i < 2 ? "md:border-r border-white/[0.06]" : ""}`}>
+              <img src={s.img} alt={s.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy" />
               <div className="absolute inset-0 bg-gradient-to-t from-camhaji-base/[0.92] via-camhaji-base/40 to-transparent group-hover:from-camhaji-base/[0.96] group-hover:via-camhaji-base/[0.65] transition-all duration-300" />
-              <div className="relative z-10 p-10 md:p-12">
-                <span className="inline-block border border-white/25 rounded-sm px-2.5 py-1 label-uppercase text-[10px] text-white/60 mb-4">{s.badge}</span>
-                <h3 className="font-sans font-bold text-white mb-2" style={{ fontSize: "clamp(22px, 3.5vw, 40px)", letterSpacing: "-0.02em", lineHeight: 1.1 }}>{s.name}</h3>
-                <p className="font-sans text-sm font-light text-white/55 mb-5 leading-relaxed">{s.desc}</p>
-                <a href={s.href} className="label-uppercase text-white/40 hover:text-white transition-colors">VER ESPECIALIZACIÓN →</a>
+              <div className="relative z-10 p-8 md:p-10">
+                <h3 className="font-sans font-bold text-white mb-2 group-hover:text-camhaji-accent transition-colors" style={{ fontSize: "clamp(20px, 3vw, 32px)", letterSpacing: "-0.02em", lineHeight: 1.1 }}>{s.name}</h3>
+                <p className="font-sans text-sm font-light text-white/55 mb-4 leading-relaxed max-w-[320px]">{s.desc}</p>
+                <span className="label-uppercase text-white/40 group-hover:text-white transition-colors">VER ESPECIALIZACIÓN →</span>
               </div>
-            </div>
+            </a>
           ))}
         </div>
+        {/* Bottom row: 2 sectors */}
         <div className="grid grid-cols-1 md:grid-cols-2 border-t border-white/[0.06]">
-          {sectorCards.map((s) => (
-            <a key={s.name} href={s.href} className="group p-8 md:p-12 border-b md:border-b-0 md:first:border-r border-white/[0.06] hover:bg-white/[0.03] transition-colors">
-              <h3 className="font-sans font-bold text-white text-xl mb-3 group-hover:text-camhaji-accent transition-colors">{s.name}</h3>
-              <p className="font-sans text-sm font-light text-white/50 leading-relaxed mb-4 max-w-[400px]">{s.desc}</p>
-              <span className="label-uppercase text-white/30 group-hover:text-white/60 transition-colors">VER DETALLE →</span>
+          {sectors.slice(3).map((s, i) => (
+            <a key={s.name} href={s.href} className={`relative min-h-[360px] md:min-h-[40dvh] flex items-end group overflow-hidden ${i === 0 ? "md:border-r border-white/[0.06]" : ""}`}>
+              <img src={s.img} alt={s.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy" />
+              <div className="absolute inset-0 bg-gradient-to-t from-camhaji-base/[0.92] via-camhaji-base/40 to-transparent group-hover:from-camhaji-base/[0.96] group-hover:via-camhaji-base/[0.65] transition-all duration-300" />
+              <div className="relative z-10 p-8 md:p-10">
+                <h3 className="font-sans font-bold text-white mb-2 group-hover:text-camhaji-accent transition-colors" style={{ fontSize: "clamp(20px, 3vw, 32px)", letterSpacing: "-0.02em", lineHeight: 1.1 }}>{s.name}</h3>
+                <p className="font-sans text-sm font-light text-white/55 mb-4 leading-relaxed max-w-[400px]">{s.desc}</p>
+                <span className="label-uppercase text-white/40 group-hover:text-white transition-colors">VER ESPECIALIZACIÓN →</span>
+              </div>
             </a>
           ))}
         </div>

@@ -25,6 +25,7 @@ import ServicioFacturacionC from "./pages/c/ServicioFacturacionC.tsx";
 import SectorComercialC from "./pages/c/SectorComercialC.tsx";
 import SectorInmobiliarioC from "./pages/c/SectorInmobiliarioC.tsx";
 import SectorResicoC from "./pages/c/SectorResicoC.tsx";
+import SectorPequenosNegociosC from "./pages/c/SectorPequenosNegociosC.tsx";
 import PropuestaSEO from "./pages/PropuestaSEO.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
@@ -58,6 +59,7 @@ const App = () => (
           <Route path="/version-c/sectores/comercial" element={<SectorComercialC />} />
           <Route path="/version-c/sectores/inmobiliario" element={<SectorInmobiliarioC />} />
           <Route path="/version-c/sectores/resico" element={<SectorResicoC />} />
+          <Route path="/version-c/sectores/pequenos-negocios" element={<SectorPequenosNegociosC />} />
           <Route path="/version-c/nosotros" element={<NosotrosC />} />
           <Route path="/version-c/contacto" element={<ContactoC />} />
           <Route path="*" element={<NotFound />} />
