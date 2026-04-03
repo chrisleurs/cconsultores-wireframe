@@ -129,6 +129,16 @@ const testimonials = [
     author: "Director General, empresa comercial",
     location: "Cancún, QR",
   },
+  {
+    quote: "Cuando tuve dudas a mitad de mes, respondieron ese mismo día. Eso no lo encontraba en el despacho anterior.",
+    author: "Propietario, empresa constructora",
+    location: "Cancún, QR",
+  },
+  {
+    quote: "Me explicaron el RESICO en términos que entendí. Por primera vez sé cuánto voy a pagar antes de que llegue el 17.",
+    author: "Consultora independiente",
+    location: "Cancún, QR",
+  },
 ];
 
 const faqs = [
@@ -216,18 +226,18 @@ export default function VersionC() {
         <div className="absolute inset-0" style={{ background: "rgba(12, 28, 24, 0.84)" }} />
         <div className="relative z-10 flex flex-col items-center">
           <p className="label-uppercase text-white/35 mb-12">DESPACHO CONTABLE · CANCÚN, MÉXICO</p>
-          <h1 className="font-sans font-bold text-white mb-8" style={{ fontSize: "clamp(52px, 8vw, 100px)", letterSpacing: "-0.04em", lineHeight: 0.95 }}>
-            Contabilidad<br />con Compromiso<br />Real.
+          <h1 className="font-sans font-bold text-white mb-8" style={{ fontSize: "clamp(48px, 8vw, 96px)", letterSpacing: "-0.04em", lineHeight: 0.95 }}>
+            Despacho Contable<br />en Cancún con<br />Compromiso Real.
           </h1>
-          <p className="font-sans text-base font-light text-white/50 mb-12 max-w-[480px]" style={{ fontSize: "clamp(16px, 2vw, 20px)", lineHeight: 1.6 }}>
-            Más de 10 años de trayectoria. Una sola promesa: cumplir.
+          <p className="font-sans text-base font-light text-white/50 mb-12 max-w-[540px]" style={{ fontSize: "clamp(16px, 2vw, 20px)", lineHeight: 1.6 }}>
+            Llevamos la contabilidad, el fiscal y la administración de tu empresa para que tú te dediques a lo que sabes hacer. Sin sorpresas con el SAT. Sin desorden. Sin promesas vacías.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <a href="/version-c/contacto" className="btn-uppercase border border-white/50 text-white px-8 py-3.5 hover:bg-white/[0.08] hover:border-white transition-all duration-300">
-              AGENDAR CONSULTA GRATUITA
+            <a href="https://wa.me/529981234567" target="_blank" rel="noopener noreferrer" className="btn-uppercase border border-white/50 text-white px-8 py-3.5 hover:bg-white/[0.08] hover:border-white transition-all duration-300">
+              ESCRÍBENOS POR WHATSAPP
             </a>
             <a href="#servicios" className="btn-uppercase text-white/40 hover:text-white/80 transition-colors duration-300 px-4 py-3.5">
-              NUESTROS SERVICIOS
+              CONOCE NUESTROS SERVICIOS
             </a>
           </div>
         </div>
@@ -422,24 +432,33 @@ export default function VersionC() {
       {/* ══ TESTIMONIAL — light surface, centered ══ */}
       <section className="min-h-[100dvh] bg-surface flex flex-col items-center justify-center text-center px-5 md:px-10 py-20">
         <p className="label-uppercase text-primary/60 mb-16">LO QUE DICEN NUESTROS CLIENTES EN CANCÚN</p>
-        <span className="font-serif text-[120px] text-primary/[0.08] leading-none block -mb-12" aria-hidden="true">"</span>
-        <blockquote className="font-sans font-light text-camhaji-text max-w-[820px] mb-12" style={{ fontSize: "clamp(20px, 3.5vw, 40px)", lineHeight: 1.5, letterSpacing: "-0.01em" }}>
-          "{testimonials[0].quote}"
-        </blockquote>
-        <div className="w-8 h-px bg-border-subtle mb-6" />
-        <p className="font-sans text-[13px] font-medium uppercase tracking-[0.15em] text-camhaji-text mb-1">{testimonials[0].author}</p>
-        <p className="font-sans text-[13px] font-light text-camhaji-muted">{testimonials[0].location}</p>
-        <p className="font-sans text-xs text-camhaji-muted/50 mt-8">* Testimonio de referencia — pendiente validación</p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-[1200px] w-full">
+          {testimonials.map((t, i) => (
+            <div key={i} className="text-center md:text-left">
+              <span className="font-serif text-[64px] text-primary/[0.08] leading-none block -mb-4" aria-hidden="true">"</span>
+              <blockquote className="font-sans font-light text-camhaji-text mb-6" style={{ fontSize: "clamp(16px, 2vw, 22px)", lineHeight: 1.6 }}>
+                "{t.quote}"
+              </blockquote>
+              <div className="w-6 h-px bg-border-subtle mb-4 mx-auto md:mx-0" />
+              <p className="font-sans text-[13px] font-medium uppercase tracking-[0.15em] text-camhaji-text mb-1">{t.author}</p>
+              <p className="font-sans text-[13px] font-light text-camhaji-muted">{t.location}</p>
+            </div>
+          ))}
+        </div>
+        <p className="font-sans text-xs text-camhaji-muted/50 mt-12">* Testimonios de referencia — pendientes de validación</p>
       </section>
 
       {/* ══ CTA — solid primary ══ */}
       <section className="min-h-[60dvh] bg-primary flex flex-col items-center justify-center text-center px-5 md:px-10 py-20">
         <p className="label-uppercase text-white/40 mb-6">HABLEMOS DE TU NEGOCIO</p>
-        <h2 className="font-sans font-bold text-white mb-12" style={{ fontSize: "clamp(36px, 6vw, 80px)", letterSpacing: "-0.04em", lineHeight: 1.0 }}>
+        <h2 className="font-sans font-bold text-white mb-6" style={{ fontSize: "clamp(36px, 6vw, 80px)", letterSpacing: "-0.04em", lineHeight: 1.0 }}>
           Hablemos de tu negocio.
         </h2>
-        <a href="/version-c/contacto" className="btn-uppercase border border-white/50 text-white px-10 py-4 hover:bg-white/10 hover:border-white transition-all duration-300 mb-5 inline-block">
-          AGENDAR CONSULTA GRATUITA
+        <p className="font-sans text-white/55 max-w-[480px] mx-auto mb-12" style={{ fontSize: "clamp(15px, 1.5vw, 17px)" }}>
+          Si llevas tiempo postergando el orden en tu contabilidad, o quieres un despacho que de verdad responda cuando lo necesitas, es buen momento para hablar.
+        </p>
+        <a href="https://wa.me/529981234567" target="_blank" rel="noopener noreferrer" className="btn-uppercase border border-white/50 text-white px-10 py-4 hover:bg-white/10 hover:border-white transition-all duration-300 mb-5 inline-block">
+          ESCRÍBENOS POR WHATSAPP
         </a>
         <div className="flex items-center gap-2 justify-center mt-5">
           <Phone className="w-3.5 h-3.5 text-white/50" />
