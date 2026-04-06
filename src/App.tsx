@@ -27,6 +27,7 @@ import SectorInmobiliarioC from "./pages/c/SectorInmobiliarioC.tsx";
 import SectorResicoC from "./pages/c/SectorResicoC.tsx";
 import SectorPequenosNegociosC from "./pages/c/SectorPequenosNegociosC.tsx";
 import PropuestaSEO from "./pages/PropuestaSEO.tsx";
+import RevisionTextos from "./pages/RevisionTextos.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
