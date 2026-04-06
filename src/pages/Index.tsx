@@ -14,7 +14,7 @@ export default function Index() {
           Selecciona una propuesta para visualizar.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-lg mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
           <Link
             to="/version-c"
             className="block bg-camhaji-base border border-white/[0.08] rounded-sm p-8 hover:border-white/20 transition-colors group"
@@ -42,6 +42,21 @@ export default function Index() {
             </span>
             <p className="font-sans text-xs text-white/40 mt-3">
               Keywords · Clusters · Schemas
+            </p>
+          </Link>
+
+          <Link
+            to="/revision-textos"
+            className="block bg-camhaji-base border border-white/[0.08] rounded-sm p-8 hover:border-white/20 transition-colors group"
+          >
+            <span className="label-uppercase text-white/40 mb-2 block">
+              REVISIÓN
+            </span>
+            <span className="font-sans text-xl font-bold text-white group-hover:text-camhaji-accent transition-colors">
+              Textos del Sitio
+            </span>
+            <p className="font-sans text-xs text-white/40 mt-3">
+              12 Páginas · Aprobación
             </p>
           </Link>
         </div>
