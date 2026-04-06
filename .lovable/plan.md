@@ -1,55 +1,50 @@
 
 
-## Plan: Homepage Adjustments + Contacto/Nosotros Updates + New Sector Page
+## Plan: Panel de Revisión de Textos — Documentos por Página
 
-### 1. Homepage fixes (`src/pages/VersionC.tsx`)
+Crear una nueva sección accesible desde el Index (`/`) que lleve a una página `/revision-textos` con una experiencia tipo "visor de documentos Word". Cada página del sitio web tiene su propio documento con todo el texto SEO, presentado en formato limpio para que el cliente lo lea y apruebe.
 
-**Hero — left-aligned text**: Change the hero from `items-center text-center` to `items-start text-left`. Move content to left side with max-width constraint.
+### Concepto UX
 
-**"Conoce nuestros servicios" button — add border outline**: Add `border border-white/50` to match the WhatsApp button style.
+- Desde el Index, se añade una tercera tarjeta: "Revisión de Textos"
+- La ruta `/revision-textos` muestra una barra lateral (izquierda) con la lista de 12 páginas del sitio, como pestañas de un Excel
+- Al seleccionar una, el panel derecho muestra el contenido completo de esa página en formato "documento Word": fondo blanco, márgenes amplios, tipografía serif, jerarquía clara con H1/H2/H3, párrafos bien espaciados
+- Cada documento tiene un encabezado con el nombre de la página y un estado (Pendiente / Aprobado)
+- Botón "Aprobar texto" que cambia el estado visualmente (estado local, sin backend)
 
-**Sectores — show all 5 sectors visibly**: Merge the current `sectors` (2 with images) and `sectorCards` (2 text-only) arrays into a single visible grid. Add the new "Pequeños Negocios" sector as the 5th. Options:
-- Use a 3+2 grid or a 5-column layout with images for all
-- All sectors get equal visual treatment (image + overlay + text)
+### Documentos (12 páginas)
 
-### 2. Update Contacto (`src/pages/c/ContactoC.tsx`)
-Replace current text with `copy-contacto-2.md`:
-- H1: "Hablemos de tu Negocio"
-- Subtitle updated
-- Form fields: Nombre, Empresa (optional), Servicio de interés (dropdown with 8 options), Mensaje
-- Button: "Enviar mensaje"
-- Note below form about same-day response
-- NAP section with pending placeholders
+| # | Documento | Fuente de texto |
+|---|-----------|----------------|
+| 1 | Homepage | Texto extraído de `VersionC.tsx` |
+| 2 | Nosotros | Texto de `NosotrosC.tsx` |
+| 3 | Contacto | Texto de `ContactoC.tsx` |
+| 4 | Servicio: Contabilidad | Texto de `ServicioContabilidadC.tsx` |
+| 5 | Servicio: Fiscal | Texto de `ServicioFiscalC.tsx` |
+| 6 | Servicio: Nómina | Texto de `ServicioNominaC.tsx` |
+| 7 | Servicio: Facturación | Texto de `ServicioFacturacionC.tsx` |
+| 8 | Sector: Construcción | Texto de `SectorConstruccionC.tsx` |
+| 9 | Sector: Comercial | Texto de `SectorComercialC.tsx` |
+| 10 | Sector: Inmobiliario | Texto de `SectorInmobiliarioC.tsx` |
+| 11 | Sector: RESICO | Texto de `SectorResicoC.tsx` |
+| 12 | Sector: Pequeños Negocios | Texto de `SectorPequenosNegociosC.tsx` |
 
-### 3. Update Nosotros (`src/pages/c/NosotrosC.tsx`)
-Merge `copy-equipo-2.md` content into the existing Nosotros page:
-- Update team bios with the detailed copy (Rogelio, Karen, Marlon)
-- Add founder placeholder
-- Add "10 profesionales especializados" note
-- Keep existing design/layout
+### Diseño del visor
 
-### 4. New page: Pequeños Negocios (`src/pages/c/SectorPequenosNegociosC.tsx`)
-Full sector page following Version C HiFi pattern:
-- Hero: "Contador para tu Pequeño Negocio en Cancún"
-- A quién va: 5 H3 subsections (comercio, servicios, restaurantes, venta en línea, contratistas)
-- El problema real
-- Obligaciones (ISR, IVA, CFDI, anual)
-- RESICO vs Régimen General comparison
-- Lo que hacemos (7 bullet points)
-- Experiencia regional
-- Testimonio
-- FAQ (5 questions)
-- CTA final
+- **Sidebar izquierdo**: Lista vertical con los 12 documentos, agrupados por categoría (General, Servicios, Sectores). Indicador visual de estado (punto verde = aprobado, gris = pendiente)
+- **Panel principal**: Simula una hoja de documento — `max-w-[816px]` (ancho carta), `bg-white`, `shadow-lg`, padding generoso, tipografía serif para cuerpo, sans para títulos
+- **Header del documento**: Nombre de página, breadcrumb de sección, estado, botón aprobar
+- **Contenido**: Todo el texto de la página organizado por secciones (Hero, Servicios, FAQ, etc.) con separadores visuales entre bloques
 
-### 5. Routing & Nav
-- Add route `/version-c/sectores/pequenos-negocios` in `App.tsx`
-- Add "Pequeños Negocios" to Navbar sectores dropdown
+### Archivos a crear/modificar
 
-### Files to modify/create
-1. `src/pages/VersionC.tsx` — hero left-align, button outline, sectors grid
-2. `src/pages/c/ContactoC.tsx` — updated copy
-3. `src/pages/c/NosotrosC.tsx` — team bios from equipo doc
-4. **Create** `src/pages/c/SectorPequenosNegociosC.tsx`
-5. `src/App.tsx` — new route
-6. `src/components/Navbar.tsx` — new dropdown item
+1. **Crear** `src/pages/RevisionTextos.tsx` — Página completa con sidebar + visor de documentos
+2. **Modificar** `src/pages/Index.tsx` — Añadir tercera tarjeta "Revisión de Textos"
+3. **Modificar** `src/App.tsx` — Añadir ruta `/revision-textos`
+
+### Notas técnicas
+- El texto de cada página se hardcodea como objetos estructurados dentro de `RevisionTextos.tsx` (secciones con título y párrafos)
+- Estado de aprobación se maneja con `useState` (se pierde al recargar — solo visual)
+- Los textos se extraen directamente de los componentes actuales de cada página
+- Responsive: en mobile el sidebar se convierte en un selector/dropdown superior
 
