@@ -913,7 +913,12 @@ export default function RevisionTextos() {
                   ) : (
                     <span className="w-2 h-2 rounded-full bg-camhaji-muted/20 flex-shrink-0" />
                   )}
-                  {p.name}
+                  <span className="flex-1">{p.name}</span>
+                  {getPageCommentCount(p.id) > 0 && (
+                    <span className="font-sans text-[10px] font-semibold bg-amber-100 text-amber-700 rounded-full px-1.5 py-0.5 flex-shrink-0">
+                      {getPageCommentCount(p.id)}
+                    </span>
+                  )}
                 </button>
               ))}
             </div>
