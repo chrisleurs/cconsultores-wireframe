@@ -942,6 +942,7 @@ export default function RevisionTextos() {
                       </span>
                     )}
                   </div>
+                </div>
                 <button
                   onClick={() => toggleApproval(activeDoc.id)}
                   className={`flex items-center gap-2 px-4 py-2 rounded-sm font-sans text-xs font-semibold uppercase tracking-[0.1em] transition-all duration-200 ${
