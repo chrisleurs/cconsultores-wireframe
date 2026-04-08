@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Check, ChevronDown, FileText, ArrowLeft } from "lucide-react";
+import { Check, ChevronDown, FileText, ArrowLeft, MessageSquare, Send, X } from "lucide-react";
 
 interface Section {
   title: string;
