@@ -28,7 +28,7 @@ export default function SectorComercialC() {
             <span className="text-white/15 mx-2">/</span><span>Sectores</span>
             <span className="text-white/15 mx-2">/</span><span>Comercial</span>
           </p>
-          <p className="label-uppercase text-camhaji-accent/70 mb-6">SECTOR</p>
+          <p className="label-uppercase text-camhaji-accent/70 mb-6">CONTABILIDAD PARA EMPRESAS COMERCIALES</p>
           <h1 className="font-sans font-bold text-white" style={{ fontSize: "clamp(40px, 7vw, 88px)", letterSpacing: "-0.04em", lineHeight: 0.95 }}>
             Contabilidad para Empresas<br />Comerciales en Cancún
           </h1>
@@ -41,7 +41,7 @@ export default function SectorComercialC() {
       {/* LO QUE NECESITA */}
       <section className="bg-white py-24 px-5 md:px-10">
         <div className="max-w-[900px] mx-auto">
-          <p className="label-uppercase text-camhaji-muted mb-4">EL SECTOR</p>
+          <p className="label-uppercase text-camhaji-muted mb-4">SECTOR COMERCIAL EN QUINTANA ROO</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-8" style={{ fontSize: "clamp(24px, 3.5vw, 40px)", letterSpacing: "-0.03em" }}>
             Lo que necesita una empresa comercial para estar en regla
           </h2>
@@ -63,7 +63,7 @@ export default function SectorComercialC() {
       <section className="grid grid-cols-1 md:grid-cols-2 gap-0">
         <div className="flex items-center bg-surface px-8 md:px-16 py-16 order-2 md:order-1">
           <div>
-            <p className="label-uppercase text-camhaji-muted mb-4">OPERACIÓN COMERCIAL</p>
+            <p className="label-uppercase text-camhaji-muted mb-4">CONTABILIDAD PARA DISTRIBUIDORAS EN CANCÚN</p>
             <h2 className="font-sans font-bold text-camhaji-text mb-6" style={{ fontSize: "clamp(22px, 2.5vw, 32px)", letterSpacing: "-0.02em" }}>
               El volumen de transacciones exige orden contable permanente
             </h2>
@@ -80,7 +80,7 @@ export default function SectorComercialC() {
       {/* LO QUE HACEMOS */}
       <section className="bg-camhaji-base py-24 px-5 md:px-10">
         <div className="max-w-[900px] mx-auto">
-          <p className="label-uppercase text-white/30 mb-4">LO QUE HACEMOS</p>
+          <p className="label-uppercase text-white/30 mb-4">SERVICIOS CONTABLES PARA COMERCIALIZADORAS</p>
           <h2 className="font-sans font-bold text-white mb-16" style={{ fontSize: "clamp(24px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
             Nuestro servicio para empresas comerciales en Quintana Roo
           </h2>
@@ -98,7 +98,7 @@ export default function SectorComercialC() {
       {/* EXPERIENCIA */}
       <section className="bg-surface py-24 px-5 md:px-10">
         <div className="max-w-[900px] mx-auto">
-          <p className="label-uppercase text-camhaji-muted mb-4">EXPERIENCIA</p>
+          <p className="label-uppercase text-camhaji-muted mb-4">EXPERIENCIA EN EL SECTOR COMERCIAL</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-8" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
             Experiencia en el sector comercial de Cancún
           </h2>
@@ -114,7 +114,7 @@ export default function SectorComercialC() {
         <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1600&h=800&fit=crop" alt="Centro comercial en Cancún" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-camhaji-base/70" />
         <div className="relative z-10 px-5 md:px-10 py-16 max-w-[700px]">
-          <p className="label-uppercase text-camhaji-accent/60 mb-4">EXPERIENCIA REGIONAL</p>
+          <p className="label-uppercase text-camhaji-accent/60 mb-4">COMERCIALIZADORAS EN QUINTANA ROO</p>
           <p className="font-sans font-bold text-white" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em", lineHeight: 1.2 }}>
             Distribuidoras, comercializadoras y ventas al mayoreo en Quintana Roo.
           </p>
@@ -135,7 +135,7 @@ export default function SectorComercialC() {
 
       {/* CTA */}
       <section className="min-h-[60dvh] bg-primary flex flex-col items-center justify-center text-center px-5 md:px-10 py-20">
-        <p className="label-uppercase text-white/40 mb-6">¿TU EMPRESA COMERCIAL NECESITA CONTABILIDAD ORDENADA?</p>
+        <p className="label-uppercase text-white/40 mb-6">CONTRATA CONTABILIDAD PARA TU EMPRESA COMERCIAL</p>
         <h2 className="font-sans font-bold text-white mb-6" style={{ fontSize: "clamp(36px, 6vw, 80px)", letterSpacing: "-0.04em", lineHeight: 1.0 }}>
           Hablemos de tu operación.
         </h2>
