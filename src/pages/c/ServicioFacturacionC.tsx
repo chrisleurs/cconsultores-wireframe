@@ -36,7 +36,7 @@ export default function ServicioFacturacionC() {
             <span className="text-white/15 mx-2">/</span><span>Servicios</span>
             <span className="text-white/15 mx-2">/</span><span>Facturación</span>
           </p>
-          <p className="label-uppercase text-camhaji-accent/70 mb-6">SERVICIO 04</p>
+          <p className="label-uppercase text-camhaji-accent/70 mb-6">FACTURACIÓN CFDI EN CANCÚN</p>
           <h1 className="font-sans font-bold text-white mb-6" style={{ fontSize: "clamp(32px, 5.5vw, 64px)", letterSpacing: "-0.03em", lineHeight: 1.0 }}>
             Facturación CFDI para tu Empresa en Cancún
           </h1>
@@ -49,7 +49,7 @@ export default function ServicioFacturacionC() {
       {/* POR QUÉ TERCERIZAR */}
       <section className="bg-white py-24 px-5 md:px-10">
         <div className="max-w-[900px] mx-auto">
-          <p className="label-uppercase text-camhaji-muted mb-4">POR QUÉ TERCERIZAR</p>
+          <p className="label-uppercase text-camhaji-muted mb-4">OUTSOURCING DE FACTURACIÓN CFDI</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-8" style={{ fontSize: "clamp(24px, 3.5vw, 40px)", letterSpacing: "-0.03em" }}>
             Por qué tercerizar tu facturación CFDI
           </h2>
@@ -66,7 +66,7 @@ export default function ServicioFacturacionC() {
       <section className="grid grid-cols-1 md:grid-cols-2 gap-0">
         <div className="flex items-center bg-surface px-8 md:px-16 py-16 order-2 md:order-1">
           <div>
-            <p className="label-uppercase text-camhaji-muted mb-4">PRECISIÓN EN CADA CFDI</p>
+            <p className="label-uppercase text-camhaji-muted mb-4">FACTURACIÓN ELECTRÓNICA SIN ERRORES</p>
             <h2 className="font-sans font-bold text-camhaji-text mb-6" style={{ fontSize: "clamp(22px, 2.5vw, 32px)", letterSpacing: "-0.02em" }}>
               Una factura bien emitida protege a tu empresa y a tu cliente
             </h2>
@@ -83,7 +83,7 @@ export default function ServicioFacturacionC() {
       {/* QUÉ INCLUYE */}
       <section className="bg-camhaji-base py-24 px-5 md:px-10">
         <div className="max-w-[900px] mx-auto">
-          <p className="label-uppercase text-white/30 mb-4">QUÉ INCLUYE</p>
+          <p className="label-uppercase text-white/30 mb-4">SERVICIO DE FACTURACIÓN CFDI</p>
           <h2 className="font-sans font-bold text-white mb-16" style={{ fontSize: "clamp(24px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
             Qué incluye nuestro servicio de facturación CFDI
           </h2>
@@ -104,7 +104,7 @@ export default function ServicioFacturacionC() {
       {/* CONTPAQi */}
       <section className="bg-surface py-24 px-5 md:px-10">
         <div className="max-w-[900px] mx-auto">
-          <p className="label-uppercase text-camhaji-muted mb-4">TECNOLOGÍA</p>
+          <p className="label-uppercase text-camhaji-muted mb-4">FACTURACIÓN CON CONTPAQi</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-8" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
             CONTPAQi Facturación: el estándar en México
           </h2>
@@ -119,7 +119,7 @@ export default function ServicioFacturacionC() {
         <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&h=800&fit=crop" alt="Oficina tecnológica moderna" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-camhaji-base/70" />
         <div className="relative z-10 px-5 md:px-10 py-16 max-w-[700px]">
-          <p className="label-uppercase text-camhaji-accent/60 mb-4">CONTPAQi FACTURACIÓN</p>
+          <p className="label-uppercase text-camhaji-accent/60 mb-4">CFDI CON CONTPAQi — TIMBRADO DIRECTO AL SAT</p>
           <p className="font-sans font-bold text-white" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em", lineHeight: 1.2 }}>
             El estándar en México. Timbrado directo con el SAT, archivo organizado y reportes listos para cualquier revisión.
           </p>
@@ -129,7 +129,7 @@ export default function ServicioFacturacionC() {
       {/* FAQ */}
       <section className="bg-white py-24 px-5 md:px-10">
         <div className="max-w-[840px] mx-auto">
-          <p className="label-uppercase text-camhaji-muted mb-4">PREGUNTAS FRECUENTES</p>
+          <p className="label-uppercase text-camhaji-muted mb-4">FACTURACIÓN CFDI — PREGUNTAS FRECUENTES</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-14" style={{ fontSize: "clamp(24px, 3.5vw, 40px)", letterSpacing: "-0.02em" }}>
             Sobre facturación CFDI
           </h2>
@@ -154,7 +154,7 @@ export default function ServicioFacturacionC() {
 
       {/* CTA */}
       <section className="min-h-[60dvh] bg-primary flex flex-col items-center justify-center text-center px-5 md:px-10 py-20">
-        <p className="label-uppercase text-white/40 mb-6">¿BUSCAS FACTURACIÓN CFDI EN CANCÚN?</p>
+        <p className="label-uppercase text-white/40 mb-6">CONTRATA TU SERVICIO DE FACTURACIÓN EN CANCÚN</p>
         <h2 className="font-sans font-bold text-white mb-6" style={{ fontSize: "clamp(36px, 6vw, 80px)", letterSpacing: "-0.04em", lineHeight: 1.0 }}>
           Hablemos de tu facturación.
         </h2>

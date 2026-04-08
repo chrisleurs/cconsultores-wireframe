@@ -65,7 +65,7 @@ export default function NosotrosC() {
             <a href="/version-c" className="hover:text-white/50 transition-colors">Inicio</a>
             <span className="text-white/15 mx-2">/</span>Nosotros
           </p>
-          <p className="label-uppercase text-white/30 mb-6">NUESTRA FIRMA</p>
+          <p className="label-uppercase text-white/30 mb-6">DESPACHO CONTABLE EN CANCÚN</p>
           <h1 className="font-sans font-bold text-white mb-6" style={{ fontSize: "clamp(36px, 6vw, 72px)", letterSpacing: "-0.03em", lineHeight: 1.05 }}>
             El Equipo que Respalda tu Tranquilidad Financiera
           </h1>
@@ -80,7 +80,7 @@ export default function NosotrosC() {
       {/* HISTORIA */}
       <section className="bg-white py-24 px-5 md:px-10">
         <div className="max-w-[1100px] mx-auto">
-          <p className="label-uppercase text-camhaji-muted mb-16">NUESTRA HISTORIA</p>
+          <p className="label-uppercase text-camhaji-muted mb-16">HISTORIA DE CAMHAJI CONSULTORES</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-20">
             <h2 className="font-sans font-bold text-camhaji-text" style={{ fontSize: "clamp(22px, 3vw, 32px)", lineHeight: 1.3, letterSpacing: "-0.02em" }}>
               Cómo nació Camhaji Consultores
@@ -121,7 +121,7 @@ export default function NosotrosC() {
       <section className="bg-surface py-24 px-5 md:px-10">
         <div className="max-w-[1100px] mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-baseline mb-6 gap-4">
-            <p className="label-uppercase text-camhaji-muted">DIRECCIÓN Y GERENCIA</p>
+            <p className="label-uppercase text-camhaji-muted">LIDERAZGO DEL DESPACHO CONTABLE</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
             {team.slice(0, 2).map((m) => (
@@ -137,7 +137,7 @@ export default function NosotrosC() {
             ))}
           </div>
 
-          <p className="label-uppercase text-camhaji-muted mb-10">ADMINISTRACIÓN, NÓMINA Y FACTURACIÓN</p>
+          <p className="label-uppercase text-camhaji-muted mb-10">EQUIPO DE NÓMINA Y FACTURACIÓN</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {team.slice(2).map((m) => (
               <div key={m.name}>
@@ -164,7 +164,7 @@ export default function NosotrosC() {
       <section className="bg-primary py-24 px-5 md:px-10">
         <div className="max-w-[1100px] mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-baseline mb-6 gap-4">
-            <p className="label-uppercase text-white/30">NUESTRA FILOSOFÍA</p>
+            <p className="label-uppercase text-white/30">VALORES DE CAMHAJI CONSULTORES</p>
             <h2 className="font-sans font-bold text-white md:text-right max-w-[400px]" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
               Nuestra filosofía de trabajo
             </h2>
@@ -189,7 +189,7 @@ export default function NosotrosC() {
       {/* VISIÓN */}
       <section className="bg-surface py-24 px-5 md:px-10">
         <div className="max-w-[1100px] mx-auto">
-          <p className="label-uppercase text-camhaji-muted mb-10 text-center">NUESTRA VISIÓN</p>
+          <p className="label-uppercase text-camhaji-muted mb-10 text-center">VISIÓN DEL DESPACHO EN CANCÚN</p>
           <div className="max-w-[800px] mx-auto text-center">
             <h2 className="font-sans font-bold text-camhaji-text mb-8" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
               Nuestra visión
@@ -207,7 +207,7 @@ export default function NosotrosC() {
       {/* LO QUE NOS DISTINGUE */}
       <section className="bg-white py-24 px-5 md:px-10">
         <div className="max-w-[1100px] mx-auto">
-          <p className="label-uppercase text-camhaji-muted mb-4">DIFERENCIADORES</p>
+          <p className="label-uppercase text-camhaji-muted mb-4">POR QUÉ ELEGIR CAMHAJI EN CANCÚN</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-12" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
             Lo que nos distingue como despacho contable en Cancún
           </h2>
@@ -225,7 +225,7 @@ export default function NosotrosC() {
 
       {/* CTA */}
       <section className="min-h-[60dvh] bg-primary flex flex-col items-center justify-center text-center px-5 md:px-10 py-20">
-        <p className="label-uppercase text-white/40 mb-6">DA EL SIGUIENTE PASO</p>
+        <p className="label-uppercase text-white/40 mb-6">CONTACTA A CAMHAJI CONSULTORES</p>
         <h2 className="font-sans font-bold text-white mb-12" style={{ fontSize: "clamp(36px, 6vw, 80px)", letterSpacing: "-0.04em", lineHeight: 1.0 }}>
           Hablemos de tu negocio.
         </h2>

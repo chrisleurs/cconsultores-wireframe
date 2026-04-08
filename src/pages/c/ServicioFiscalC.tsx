@@ -36,7 +36,7 @@ export default function ServicioFiscalC() {
             <span className="text-white/15 mx-2">/</span><span>Servicios</span>
             <span className="text-white/15 mx-2">/</span><span>Fiscal</span>
           </p>
-          <p className="label-uppercase text-camhaji-accent/70 mb-6">SERVICIO 02</p>
+          <p className="label-uppercase text-camhaji-accent/70 mb-6">ASESORÍA FISCAL EN CANCÚN</p>
           <h1 className="font-sans font-bold text-white mb-6" style={{ fontSize: "clamp(32px, 5.5vw, 64px)", letterSpacing: "-0.03em", lineHeight: 1.0 }}>
             Asesoría Fiscal en Cancún: Cumple, no Improvises
           </h1>
@@ -49,7 +49,7 @@ export default function ServicioFiscalC() {
       {/* EL PROBLEMA */}
       <section className="bg-white py-24 px-5 md:px-10">
         <div className="max-w-[900px] mx-auto">
-          <p className="label-uppercase text-camhaji-muted mb-4">EL PROBLEMA</p>
+          <p className="label-uppercase text-camhaji-muted mb-4">RIESGOS FISCALES PARA EMPRESAS EN CANCÚN</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-8" style={{ fontSize: "clamp(24px, 3.5vw, 40px)", letterSpacing: "-0.03em" }}>
             El problema más común que vemos en empresas de Cancún
           </h2>
@@ -66,7 +66,7 @@ export default function ServicioFiscalC() {
       <section className="grid grid-cols-1 md:grid-cols-2 gap-0">
         <div className="flex items-center bg-surface px-8 md:px-16 py-16 order-2 md:order-1">
           <div>
-            <p className="label-uppercase text-camhaji-muted mb-4">DIAGNÓSTICO</p>
+            <p className="label-uppercase text-camhaji-muted mb-4">DIAGNÓSTICO FISCAL PERSONALIZADO</p>
             <h2 className="font-sans font-bold text-camhaji-text mb-6" style={{ fontSize: "clamp(22px, 2.5vw, 32px)", letterSpacing: "-0.02em" }}>
               Primero entendemos tu situación. Después actuamos.
             </h2>
@@ -83,7 +83,7 @@ export default function ServicioFiscalC() {
       {/* ENFOQUE */}
       <section className="bg-surface py-24 px-5 md:px-10">
         <div className="max-w-[900px] mx-auto">
-          <p className="label-uppercase text-camhaji-muted mb-4">NUESTRO ENFOQUE</p>
+          <p className="label-uppercase text-camhaji-muted mb-4">CUMPLIMIENTO FISCAL SIN ATAJOS</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-8" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
             Cumplimiento correcto, sin atajos
           </h2>
@@ -99,7 +99,7 @@ export default function ServicioFiscalC() {
       {/* QUÉ INCLUYE */}
       <section className="bg-camhaji-base py-24 px-5 md:px-10">
         <div className="max-w-[900px] mx-auto">
-          <p className="label-uppercase text-white/30 mb-4">QUÉ INCLUYE</p>
+          <p className="label-uppercase text-white/30 mb-4">SERVICIOS DE ASESORÍA FISCAL</p>
           <h2 className="font-sans font-bold text-white mb-16" style={{ fontSize: "clamp(24px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
             Lo que incluye nuestra asesoría fiscal
           </h2>
@@ -120,7 +120,7 @@ export default function ServicioFiscalC() {
       {/* POR QUÉ CAMHAJI */}
       <section className="bg-white py-24 px-5 md:px-10">
         <div className="max-w-[900px] mx-auto">
-          <p className="label-uppercase text-camhaji-muted mb-4">POR QUÉ CAMHAJI</p>
+          <p className="label-uppercase text-camhaji-muted mb-4">EXPERIENCIA FISCAL EN CANCÚN</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-8" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
             ¿Por qué confiar en Camhaji para tu estrategia fiscal?
           </h2>
@@ -135,7 +135,7 @@ export default function ServicioFiscalC() {
         <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&h=800&fit=crop" alt="Edificios corporativos" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-camhaji-base/70" />
         <div className="relative z-10 px-5 md:px-10 py-16 max-w-[700px]">
-          <p className="label-uppercase text-camhaji-accent/60 mb-4">TRAYECTORIA</p>
+          <p className="label-uppercase text-camhaji-accent/60 mb-4">ASESORES FISCALES CON TRAYECTORIA</p>
           <p className="font-sans font-bold text-white" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em", lineHeight: 1.2 }}>
             Más de 10 años de experiencia fiscal — en grandes firmas y en la operación directa con clientes.
           </p>
@@ -145,7 +145,7 @@ export default function ServicioFiscalC() {
       {/* FAQ */}
       <section className="bg-surface py-24 px-5 md:px-10">
         <div className="max-w-[840px] mx-auto">
-          <p className="label-uppercase text-camhaji-muted mb-4">PREGUNTAS FRECUENTES</p>
+          <p className="label-uppercase text-camhaji-muted mb-4">ASESORÍA FISCAL — PREGUNTAS FRECUENTES</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-14" style={{ fontSize: "clamp(24px, 3.5vw, 40px)", letterSpacing: "-0.02em" }}>
             Sobre asesoría fiscal en Cancún
           </h2>
@@ -170,7 +170,7 @@ export default function ServicioFiscalC() {
 
       {/* CTA */}
       <section className="min-h-[60dvh] bg-primary flex flex-col items-center justify-center text-center px-5 md:px-10 py-20">
-        <p className="label-uppercase text-white/40 mb-6">¿TU EMPRESA TIENE ALGO PENDIENTE CON EL SAT?</p>
+        <p className="label-uppercase text-white/40 mb-6">REGULARIZA TU SITUACIÓN FISCAL EN CANCÚN</p>
         <h2 className="font-sans font-bold text-white mb-6" style={{ fontSize: "clamp(36px, 6vw, 80px)", letterSpacing: "-0.04em", lineHeight: 1.0 }}>
           Hablemos de tu situación fiscal.
         </h2>

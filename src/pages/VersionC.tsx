@@ -254,7 +254,7 @@ export default function VersionC() {
 
       {/* ══ STATEMENT — full-screen white, quote + principles ══ */}
       <section className="min-h-[100dvh] bg-white flex flex-col items-center justify-center text-center px-5 md:px-10 py-20">
-        <p className="label-uppercase text-camhaji-muted mb-12">LO QUE NOS DIFERENCIA</p>
+        <p className="label-uppercase text-camhaji-muted mb-12">DESPACHO CONTABLE EN CANCÚN</p>
         <blockquote className="font-sans font-bold text-camhaji-text max-w-[840px] mb-16" style={{ fontSize: "clamp(28px, 4.5vw, 56px)", letterSpacing: "-0.02em", lineHeight: 1.25 }}>
           Lo que nos diferencia de otros despachos contables en Cancún
         </blockquote>
@@ -326,7 +326,7 @@ export default function VersionC() {
       <section className="bg-surface py-24 px-5 md:px-10">
         <div className="max-w-[1200px] mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end mb-[72px] border-b border-border-subtle pb-10 gap-4">
-            <p className="label-uppercase text-camhaji-muted">LA EXPERIENCIA EN NÚMEROS</p>
+            <p className="label-uppercase text-camhaji-muted">CONTADORES CON TRAYECTORIA EN CANCÚN</p>
             <h2 className="font-sans font-bold text-camhaji-text max-w-[340px] md:text-right" style={{ fontSize: "clamp(18px, 2.2vw, 26px)", letterSpacing: "-0.02em", lineHeight: 1.3 }}>
               Más de una década de trabajo<br />se traduce en esto
             </h2>
@@ -343,7 +343,7 @@ export default function VersionC() {
       <section className="min-h-[100dvh] bg-primary flex items-center">
         <div className="max-w-[1200px] mx-auto px-5 md:px-10 py-20 w-full">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
-            <p className="label-uppercase text-white/40">NUESTRA HISTORIA</p>
+            <p className="label-uppercase text-white/40">FIRMA CONTABLE CON HISTORIA</p>
             <h2 className="font-sans font-bold text-white max-w-[360px] md:text-right" style={{ fontSize: "clamp(20px, 2.5vw, 28px)", letterSpacing: "-0.02em", lineHeight: 1.3 }}>
               Una firma con historia y equipo profesional
             </h2>
@@ -376,7 +376,7 @@ export default function VersionC() {
       <section className="bg-camhaji-base">
         <div className="max-w-[1200px] mx-auto w-full px-5 md:px-10 pt-20 pb-10">
           <div className="flex flex-col md:flex-row justify-between items-baseline gap-4">
-            <p className="label-uppercase text-white/35">EXPERIENCIA EN LOS SECTORES QUE MÁS IMPORTAN</p>
+            <p className="label-uppercase text-white/35">SECTORES QUE ATENDEMOS EN QUINTANA ROO</p>
             <p className="font-sans text-[15px] font-light text-white/50">Cada sector tiene sus propias reglas</p>
           </div>
         </div>
@@ -414,7 +414,7 @@ export default function VersionC() {
       <section className="min-h-[100dvh] bg-white flex flex-col">
         <div className="max-w-[1200px] mx-auto w-full px-5 md:px-10 pt-20 mb-12">
           <div className="flex flex-col md:flex-row justify-between items-baseline gap-4">
-            <p className="label-uppercase text-camhaji-muted">NUESTRO EQUIPO</p>
+            <p className="label-uppercase text-camhaji-muted">EQUIPO CONTABLE EN CANCÚN</p>
             <h2 className="font-sans font-bold text-camhaji-text max-w-[280px] md:text-right" style={{ fontSize: "clamp(18px, 2vw, 26px)", letterSpacing: "-0.02em", lineHeight: 1.3 }}>
               El equipo que respalda tu tranquilidad financiera
             </h2>
@@ -458,7 +458,7 @@ export default function VersionC() {
 
       {/* ══ CTA — solid primary ══ */}
       <section className="min-h-[60dvh] bg-primary flex flex-col items-center justify-center text-center px-5 md:px-10 py-20">
-        <p className="label-uppercase text-white/40 mb-6">HABLEMOS DE TU NEGOCIO</p>
+        <p className="label-uppercase text-white/40 mb-6">CONTACTA A TU CONTADOR EN CANCÚN</p>
         <h2 className="font-sans font-bold text-white mb-6" style={{ fontSize: "clamp(36px, 6vw, 80px)", letterSpacing: "-0.04em", lineHeight: 1.0 }}>
           Hablemos de tu negocio.
         </h2>
@@ -478,7 +478,7 @@ export default function VersionC() {
       <section className="bg-white py-24 px-5 md:px-10">
         <div className="max-w-[1200px] mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start mb-16 gap-4">
-            <p className="label-uppercase text-camhaji-muted">PREGUNTAS FRECUENTES</p>
+            <p className="label-uppercase text-camhaji-muted">CONTABILIDAD EN CANCÚN — PREGUNTAS FRECUENTES</p>
             <h2 className="font-sans font-bold text-camhaji-text" style={{ fontSize: "clamp(28px, 3.5vw, 40px)", letterSpacing: "-0.02em" }}>
               Sobre nuestro despacho contable en Cancún
             </h2>

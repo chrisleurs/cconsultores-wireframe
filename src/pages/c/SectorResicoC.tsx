@@ -90,7 +90,7 @@ export default function SectorResicoC() {
             <span className="text-white/15 mx-2">/</span><span>Sectores</span>
             <span className="text-white/15 mx-2">/</span><span>RESICO</span>
           </p>
-          <p className="label-uppercase text-camhaji-accent/70 mb-6">SECTOR</p>
+          <p className="label-uppercase text-camhaji-accent/70 mb-6">CONTADOR PARA RESICO EN CANCÚN</p>
           <h1 className="font-sans font-bold text-white" style={{ fontSize: "clamp(40px, 7vw, 88px)", letterSpacing: "-0.04em", lineHeight: 0.95 }}>
             Contador para RESICO<br />en Cancún
           </h1>
@@ -103,7 +103,7 @@ export default function SectorResicoC() {
       {/* QUÉ ES */}
       <section className="bg-white py-24 px-5 md:px-10">
         <div className="max-w-[900px] mx-auto">
-          <p className="label-uppercase text-camhaji-muted mb-4">EL RÉGIMEN</p>
+          <p className="label-uppercase text-camhaji-muted mb-4">RÉGIMEN SIMPLIFICADO DE CONFIANZA</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-8" style={{ fontSize: "clamp(24px, 3.5vw, 40px)", letterSpacing: "-0.03em" }}>
             ¿Qué es el RESICO y a quién aplica?
           </h2>
@@ -122,7 +122,7 @@ export default function SectorResicoC() {
       {/* OBLIGACIONES */}
       <section className="bg-camhaji-base py-24 px-5 md:px-10">
         <div className="max-w-[900px] mx-auto">
-          <p className="label-uppercase text-white/30 mb-4">OBLIGACIONES FISCALES</p>
+          <p className="label-uppercase text-white/30 mb-4">OBLIGACIONES FISCALES DEL RESICO</p>
           <h2 className="font-sans font-bold text-white mb-16" style={{ fontSize: "clamp(24px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
             Las obligaciones fiscales en el RESICO
           </h2>
@@ -141,7 +141,7 @@ export default function SectorResicoC() {
       <section className="grid grid-cols-1 md:grid-cols-2 gap-0">
         <div className="flex items-center bg-surface px-8 md:px-16 py-16 order-2 md:order-1">
           <div>
-            <p className="label-uppercase text-camhaji-muted mb-4">SIMPLIFICADO, NO AUTOMÁTICO</p>
+            <p className="label-uppercase text-camhaji-muted mb-4">RESICO: TASAS BAJAS, OBLIGACIONES REALES</p>
             <h2 className="font-sans font-bold text-camhaji-text mb-6" style={{ fontSize: "clamp(22px, 2.5vw, 32px)", letterSpacing: "-0.02em" }}>
               El RESICO simplifica las tasas, pero las obligaciones siguen siendo tuyas
             </h2>
@@ -158,7 +158,7 @@ export default function SectorResicoC() {
       {/* LO QUE HACEMOS */}
       <section className="bg-surface py-24 px-5 md:px-10">
         <div className="max-w-[900px] mx-auto">
-          <p className="label-uppercase text-camhaji-muted mb-4">NUESTRO SERVICIO</p>
+          <p className="label-uppercase text-camhaji-muted mb-4">SERVICIO CONTABLE PARA RESICO</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-6" style={{ fontSize: "clamp(24px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
             Lo que Camhaji hace por ti si estás en RESICO
           </h2>
@@ -180,7 +180,7 @@ export default function SectorResicoC() {
       {/* A QUIÉN ATENDEMOS */}
       <section className="bg-white py-24 px-5 md:px-10">
         <div className="max-w-[900px] mx-auto">
-          <p className="label-uppercase text-camhaji-muted mb-4">PERFILES</p>
+          <p className="label-uppercase text-camhaji-muted mb-4">PROFESIONISTAS EN RESICO EN CANCÚN</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-12" style={{ fontSize: "clamp(24px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
             ¿A quién atendemos?
           </h2>
@@ -201,7 +201,7 @@ export default function SectorResicoC() {
         <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1600&h=800&fit=crop" alt="Calle comercial en Cancún" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-camhaji-base/70" />
         <div className="relative z-10 px-5 md:px-10 py-16 max-w-[700px]">
-          <p className="label-uppercase text-camhaji-accent/60 mb-4">FREELANCERS Y PROFESIONISTAS</p>
+          <p className="label-uppercase text-camhaji-accent/60 mb-4">PROFESIONISTAS INDEPENDIENTES EN CANCÚN</p>
           <p className="font-sans font-bold text-white" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em", lineHeight: 1.2 }}>
             Consultores, diseñadores, médicos, agentes inmobiliarios — todos en orden con el SAT.
           </p>
@@ -223,7 +223,7 @@ export default function SectorResicoC() {
       {/* FAQ */}
       <section className="bg-white py-24 px-5 md:px-10">
         <div className="max-w-[900px] mx-auto">
-          <p className="label-uppercase text-camhaji-muted mb-4">PREGUNTAS FRECUENTES</p>
+          <p className="label-uppercase text-camhaji-muted mb-4">RESICO — PREGUNTAS FRECUENTES</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-12" style={{ fontSize: "clamp(24px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
             Preguntas frecuentes sobre el RESICO
           </h2>

@@ -49,7 +49,7 @@ export default function ServicioContabilidadC() {
             <span className="text-white/15 mx-2">/</span><span>Servicios</span>
             <span className="text-white/15 mx-2">/</span><span>Contabilidad</span>
           </p>
-          <p className="label-uppercase text-camhaji-accent/70 mb-6">SERVICIO 01</p>
+          <p className="label-uppercase text-camhaji-accent/70 mb-6">CONTABILIDAD EMPRESARIAL EN CANCÚN</p>
           <h1 className="font-sans font-bold text-white mb-6" style={{ fontSize: "clamp(32px, 5.5vw, 64px)", letterSpacing: "-0.03em", lineHeight: 1.0 }}>
             Contabilidad y Administración para tu Empresa en Cancún
           </h1>
@@ -62,7 +62,7 @@ export default function ServicioContabilidadC() {
       {/* ADAPTABILIDAD */}
       <section className="bg-white py-24 px-5 md:px-10">
         <div className="max-w-[900px] mx-auto">
-          <p className="label-uppercase text-camhaji-muted mb-4">ADAPTABILIDAD</p>
+          <p className="label-uppercase text-camhaji-muted mb-4">CONTABILIDAD PARA PYMES EN QUINTANA ROO</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-8" style={{ fontSize: "clamp(24px, 3.5vw, 40px)", letterSpacing: "-0.03em" }}>
             Un servicio que se adapta a tu empresa
           </h2>
@@ -78,7 +78,7 @@ export default function ServicioContabilidadC() {
       {/* PROCESO MENSUAL */}
       <section className="bg-camhaji-base py-24 px-5 md:px-10">
         <div className="max-w-[900px] mx-auto">
-          <p className="label-uppercase text-white/30 mb-4">PROCESO CONTABLE MENSUAL</p>
+          <p className="label-uppercase text-white/30 mb-4">PROCESO DE CONTABILIDAD MENSUAL</p>
           <h2 className="font-sans font-bold text-white mb-16" style={{ fontSize: "clamp(24px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
             Así es nuestro proceso contable mensual
           </h2>
@@ -104,7 +104,7 @@ export default function ServicioContabilidadC() {
         <img src="https://images.unsplash.com/photo-1510097467424-192d713fd8b2?w=1600&h=800&fit=crop" alt="Zona hotelera de Cancún vista aérea" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-camhaji-base/70" />
         <div className="relative z-10 px-5 md:px-10 py-16 max-w-[700px]">
-          <p className="label-uppercase text-camhaji-accent/60 mb-4">CANCÚN, QUINTANA ROO</p>
+          <p className="label-uppercase text-camhaji-accent/60 mb-4">CONTADORES EN CANCÚN Y RIVIERA MAYA</p>
           <p className="font-sans font-bold text-white" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em", lineHeight: 1.2 }}>
             Más de una década ordenando la contabilidad de empresas en la región.
           </p>
@@ -114,7 +114,7 @@ export default function ServicioContabilidadC() {
       {/* GESTIÓN ADMINISTRATIVA */}
       <section className="bg-white py-24 px-5 md:px-10">
         <div className="max-w-[900px] mx-auto">
-          <p className="label-uppercase text-camhaji-muted mb-4">GESTIÓN ADMINISTRATIVA</p>
+          <p className="label-uppercase text-camhaji-muted mb-4">ADMINISTRACIÓN EMPRESARIAL EN CANCÚN</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-6" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
             Gestión administrativa completa para tu negocio
           </h2>
@@ -140,7 +140,7 @@ export default function ServicioContabilidadC() {
         </div>
         <div className="flex items-center bg-surface px-8 md:px-16 py-16">
           <div>
-            <p className="label-uppercase text-camhaji-muted mb-4">MÉTODO DE TRABAJO</p>
+            <p className="label-uppercase text-camhaji-muted mb-4">CONTABILIDAD ORDENADA Y TRANSPARENTE</p>
             <h2 className="font-sans font-bold text-camhaji-text mb-6" style={{ fontSize: "clamp(22px, 2.5vw, 32px)", letterSpacing: "-0.02em" }}>
               Orden, proceso y transparencia en cada paso
             </h2>
@@ -154,7 +154,7 @@ export default function ServicioContabilidadC() {
       {/* PARA QUIÉN */}
       <section className="bg-surface py-24 px-5 md:px-10">
         <div className="max-w-[1100px] mx-auto">
-          <p className="label-uppercase text-camhaji-muted mb-4">¿PARA QUIÉN ES ESTE SERVICIO?</p>
+          <p className="label-uppercase text-camhaji-muted mb-4">CONTABILIDAD POR SECTOR EN CANCÚN</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-14" style={{ fontSize: "clamp(24px, 3.5vw, 40px)", letterSpacing: "-0.03em" }}>
             ¿Para qué tipo de empresas es este servicio?
           </h2>
@@ -174,7 +174,7 @@ export default function ServicioContabilidadC() {
       {/* FAQ */}
       <section className="bg-white py-24 px-5 md:px-10">
         <div className="max-w-[840px] mx-auto">
-          <p className="label-uppercase text-camhaji-muted mb-4">PREGUNTAS FRECUENTES</p>
+          <p className="label-uppercase text-camhaji-muted mb-4">CONTABILIDAD EMPRESARIAL — PREGUNTAS FRECUENTES</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-14" style={{ fontSize: "clamp(24px, 3.5vw, 40px)", letterSpacing: "-0.02em" }}>
             Sobre contabilidad empresarial en Cancún
           </h2>
@@ -200,7 +200,7 @@ export default function ServicioContabilidadC() {
       {/* OTROS SERVICIOS */}
       <section className="bg-surface py-20 px-5 md:px-10">
         <div className="max-w-[1100px] mx-auto">
-          <p className="label-uppercase text-camhaji-muted text-center mb-10">OTROS SERVICIOS</p>
+          <p className="label-uppercase text-camhaji-muted text-center mb-10">MÁS SERVICIOS CONTABLES EN CANCÚN</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {[
               { num: "02", name: "Estrategia Fiscal", desc: "Cumplimiento SAT sin sorpresas.", href: "/version-c/servicios/fiscal" },
@@ -221,7 +221,7 @@ export default function ServicioContabilidadC() {
 
       {/* CTA */}
       <section className="min-h-[60dvh] bg-primary flex flex-col items-center justify-center text-center px-5 md:px-10 py-20">
-        <p className="label-uppercase text-white/40 mb-6">¿TU EMPRESA NECESITA CONTABILIDAD ORDENADA?</p>
+        <p className="label-uppercase text-white/40 mb-6">CONTRATA TU SERVICIO CONTABLE EN CANCÚN</p>
         <h2 className="font-sans font-bold text-white mb-6" style={{ fontSize: "clamp(36px, 6vw, 80px)", letterSpacing: "-0.04em", lineHeight: 1.0 }}>
           Hablemos de tu contabilidad.
         </h2>
