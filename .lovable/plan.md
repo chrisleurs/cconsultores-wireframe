@@ -1,81 +1,151 @@
 
 
-## Plan: Añadir Secciones con Imágenes a Páginas de Servicios y Sectores
+## Plan: Reemplazar Labels Genéricos por Labels SEO Contextuales
 
-Todas las páginas interiores de Versión C tienen el mismo patrón: Hero con imagen → secciones de puro texto alternando fondos → FAQ → CTA. Se añadirán **secciones con imágenes full-bleed** entre los bloques de texto para dar ritmo visual, coherentes con cada tema y con Cancún.
+Cambiar todos los `label-uppercase` genéricos (EL RIESGO, EL SECTOR, NUESTRO ENFOQUE, QUÉ INCLUYE, PREGUNTAS FRECUENTES, etc.) por labels con palabras clave SEO relevantes para cada página, coherentes con el tono profesional del despacho.
 
-### Tipo de sección a insertar
+### Cambios por archivo (10 archivos)
 
-Dos formatos visuales que se alternan:
+#### `VersionC.tsx`
+| Actual | Nuevo |
+|--------|-------|
+| LO QUE NOS DIFERENCIA | DESPACHO CONTABLE EN CANCÚN |
+| NUESTROS SERVICIOS CONTABLES EN CANCÚN | *(se mantiene — ya es SEO)* |
+| LA EXPERIENCIA EN NÚMEROS | CONTADORES CON TRAYECTORIA EN CANCÚN |
+| NUESTRA HISTORIA | FIRMA CONTABLE CON HISTORIA |
+| EXPERIENCIA EN LOS SECTORES QUE MÁS IMPORTAN | SECTORES QUE ATENDEMOS EN QUINTANA ROO |
+| NUESTRO EQUIPO | EQUIPO CONTABLE EN CANCÚN |
+| LO QUE DICEN NUESTROS CLIENTES EN CANCÚN | *(se mantiene)* |
+| HABLEMOS DE TU NEGOCIO | CONTACTA A TU CONTADOR EN CANCÚN |
+| PREGUNTAS FRECUENTES | CONTABILIDAD EN CANCÚN — PREGUNTAS FRECUENTES |
 
-1. **Split image + text** (50/50): imagen a un lado, texto al otro. Grid 2 columnas, colapsa a stack en mobile.
-2. **Full-bleed image band**: imagen ancho completo con overlay oscuro y texto superpuesto (estilo hero pero más corto, ~40vh).
+#### `ServicioContabilidadC.tsx`
+| Actual | Nuevo |
+|--------|-------|
+| SERVICIO 01 | CONTABILIDAD EMPRESARIAL EN CANCÚN |
+| ADAPTABILIDAD | CONTABILIDAD PARA PYMES EN QUINTANA ROO |
+| PROCESO CONTABLE MENSUAL | PROCESO DE CONTABILIDAD MENSUAL |
+| CANCÚN, QUINTANA ROO *(band)* | CONTADORES EN CANCÚN Y RIVIERA MAYA |
+| GESTIÓN ADMINISTRATIVA | ADMINISTRACIÓN EMPRESARIAL EN CANCÚN |
+| MÉTODO DE TRABAJO *(split)* | CONTABILIDAD ORDENADA Y TRANSPARENTE |
+| ¿PARA QUIÉN ES ESTE SERVICIO? | CONTABILIDAD POR SECTOR EN CANCÚN |
+| PREGUNTAS FRECUENTES | CONTABILIDAD EMPRESARIAL — PREGUNTAS FRECUENTES |
+| OTROS SERVICIOS | MÁS SERVICIOS CONTABLES EN CANCÚN |
+| ¿TU EMPRESA NECESITA CONTABILIDAD ORDENADA? | CONTRATA TU SERVICIO CONTABLE EN CANCÚN |
 
-### Ubicación y contenido por página
+#### `ServicioFiscalC.tsx`
+| Actual | Nuevo |
+|--------|-------|
+| SERVICIO 02 | ASESORÍA FISCAL EN CANCÚN |
+| EL PROBLEMA | RIESGOS FISCALES PARA EMPRESAS EN CANCÚN |
+| DIAGNÓSTICO *(split)* | DIAGNÓSTICO FISCAL PERSONALIZADO |
+| NUESTRO ENFOQUE | CUMPLIMIENTO FISCAL SIN ATAJOS |
+| QUÉ INCLUYE | SERVICIOS DE ASESORÍA FISCAL |
+| POR QUÉ CAMHAJI | EXPERIENCIA FISCAL EN CANCÚN |
+| TRAYECTORIA *(band)* | ASESORES FISCALES CON TRAYECTORIA |
+| PREGUNTAS FRECUENTES | ASESORÍA FISCAL — PREGUNTAS FRECUENTES |
+| ¿TU EMPRESA TIENE ALGO PENDIENTE CON EL SAT? | REGULARIZA TU SITUACIÓN FISCAL EN CANCÚN |
 
-#### Servicios (4 páginas)
+#### `ServicioNominaC.tsx`
+| Actual | Nuevo |
+|--------|-------|
+| SERVICIO 03 | NÓMINA EMPRESARIAL EN CANCÚN |
+| EL RIESGO | RIESGOS DE NÓMINA MAL CALCULADA |
+| TU EQUIPO, NUESTRA RESPONSABILIDAD *(split)* | GESTIÓN DE IMSS E INFONAVIT EN CANCÚN |
+| SERVICIO DE NÓMINA | SERVICIO DE NÓMINA CON CONTPAQi |
+| NUESTRO ESPECIALISTA | ESPECIALISTA EN NÓMINA EN CANCÚN |
+| CONTPAQi NÓMINA *(band)* | NÓMINA CON CONTPAQi — ESTÁNDAR EN MÉXICO |
+| PREGUNTAS FRECUENTES | NÓMINA EMPRESARIAL — PREGUNTAS FRECUENTES |
+| ¿BUSCAS UN SERVICIO DE NÓMINA CONFIABLE? | CONTRATA TU SERVICIO DE NÓMINA EN CANCÚN |
 
-| Página | Dónde | Formato | Imagen (Unsplash) |
-|--------|-------|---------|-------------------|
-| **Contabilidad** | Entre "Proceso mensual" y FAQ | Split | Oficina moderna con documentos y laptop en Cancún |
-| **Contabilidad** | Entre "Por qué Camhaji" y "Proceso" | Full-bleed band | Vista aérea zona hotelera Cancún (contexto local) |
-| **Fiscal** | Entre "El problema" y "Enfoque" | Split | Reunión profesional, documentos fiscales |
-| **Fiscal** | Entre "Por qué Camhaji" y FAQ | Full-bleed band | Edificios corporativos Cancún |
-| **Nómina** | Entre "El problema" y "Qué incluye" | Split | Equipo de trabajo en oficina |
-| **Nómina** | Entre "CONTPAQi" y FAQ | Full-bleed band | Trabajadores en entorno laboral |
-| **Facturación** | Entre "Por qué tercerizar" y "Qué incluye" | Split | Pantalla con sistema de facturación |
-| **Facturación** | Entre "CONTPAQi" y FAQ | Full-bleed band | Oficina con equipo tecnológico |
+#### `ServicioFacturacionC.tsx`
+| Actual | Nuevo |
+|--------|-------|
+| SERVICIO 04 | FACTURACIÓN CFDI EN CANCÚN |
+| POR QUÉ TERCERIZAR | OUTSOURCING DE FACTURACIÓN CFDI |
+| PRECISIÓN EN CADA CFDI *(split)* | FACTURACIÓN ELECTRÓNICA SIN ERRORES |
+| QUÉ INCLUYE | SERVICIO DE FACTURACIÓN CFDI |
+| TECNOLOGÍA | FACTURACIÓN CON CONTPAQi |
+| CONTPAQi FACTURACIÓN *(band)* | CFDI CON CONTPAQi — TIMBRADO DIRECTO AL SAT |
+| PREGUNTAS FRECUENTES | FACTURACIÓN CFDI — PREGUNTAS FRECUENTES |
+| ¿BUSCAS FACTURACIÓN CFDI EN CANCÚN? | CONTRATA TU SERVICIO DE FACTURACIÓN EN CANCÚN |
 
-#### Sectores (5 páginas)
+#### `SectorConstruccionC.tsx`
+| Actual | Nuevo |
+|--------|-------|
+| ESPECIALIZACIÓN PRINCIPAL | CONTABILIDAD PARA CONSTRUCTORAS EN CANCÚN |
+| EL SECTOR | SECTOR CONSTRUCCIÓN EN QUINTANA ROO |
+| ESPECIALIZACIÓN *(split)* | CONTABILIDAD ESPECIALIZADA EN OBRA |
+| RETOS FISCALES | RETOS FISCALES DEL SECTOR CONSTRUCCIÓN |
+| LO QUE HACEMOS | SERVICIOS CONTABLES PARA CONSTRUCTORAS |
+| EXPERIENCIA REGIONAL | CONSTRUCTORAS EN CANCÚN Y RIVIERA MAYA |
+| QUINTANA ROO *(band)* | CONTADORES PARA CONSTRUCTORAS EN QUINTANA ROO |
+| PREGUNTAS FRECUENTES | CONSTRUCTORAS EN CANCÚN — PREGUNTAS FRECUENTES |
+| ¿TIENES UNA EMPRESA CONSTRUCTORA EN CANCÚN? | CONTRATA CONTABILIDAD PARA TU CONSTRUCTORA |
 
-| Página | Dónde | Formato | Imagen |
-|--------|-------|---------|--------|
-| **Construcción** | Entre "Por qué especializada" y "Retos" | Split | Obra en construcción en zona costera |
-| **Construcción** | Entre "Experiencia regional" y "Testimonio" | Full-bleed band | Desarrollo inmobiliario Riviera Maya |
-| **Comercial** | Entre "Lo que necesita" y "Lo que hacemos" | Split | Almacén/tienda comercial |
-| **Comercial** | Entre "Experiencia" y "Testimonio" | Full-bleed band | Centro comercial Cancún |
-| **Inmobiliario** | Entre "Impuestos" y "Lo que hacemos" | Split | Agente inmobiliario mostrando propiedad |
-| **Inmobiliario** | Entre "Experiencia" y FAQ | Full-bleed band | Condominios frente al mar Cancún |
-| **RESICO** | Entre "Obligaciones" y "Lo que hacemos" | Split | Emprendedor en negocio pequeño |
-| **RESICO** | Entre "Experiencia" y FAQ | Full-bleed band | Calle comercial de Cancún |
-| **Pequeños Negocios** | Entre "Obligaciones" y "Lo que hacemos" | Split | Tienda local / restaurante |
-| **Pequeños Negocios** | Entre "Experiencia" y FAQ | Full-bleed band | Mercado o zona comercial local |
+#### `SectorComercialC.tsx`
+| Actual | Nuevo |
+|--------|-------|
+| SECTOR | CONTABILIDAD PARA EMPRESAS COMERCIALES |
+| EL SECTOR | SECTOR COMERCIAL EN QUINTANA ROO |
+| + remaining generic labels → SEO equivalents with "comercial", "Cancún" |
 
-### Implementación técnica
+#### `SectorInmobiliarioC.tsx`
+| Actual | Nuevo |
+|--------|-------|
+| SECTOR | CONTABILIDAD PARA AGENTES INMOBILIARIOS |
+| OBLIGACIONES FISCALES | IMPUESTOS PARA AGENTES INMOBILIARIOS EN MÉXICO |
+| COMISIONES EN REGLA *(split)* | FACTURACIÓN DE COMISIONES INMOBILIARIAS |
+| CFDI | CFDI PARA COMISIONES INMOBILIARIAS |
+| RESICO | RESICO PARA AGENTES INMOBILIARIOS |
+| LO QUE HACEMOS | SERVICIOS CONTABLES PARA INMOBILIARIOS |
+| CANCÚN Y RIVIERA MAYA *(band)* | MERCADO INMOBILIARIO EN CANCÚN |
+| PREGUNTAS FRECUENTES | AGENTES INMOBILIARIOS — PREGUNTAS FRECUENTES |
+| ¿ERES AGENTE INMOBILIARIO EN CANCÚN? | CONTRATA TU CONTADOR INMOBILIARIO EN CANCÚN |
 
-**Split section (reutilizable)**:
-```text
-┌─────────────────────┬─────────────────────┐
-│                     │  LABEL UPPERCASE     │
-│     IMAGEN          │  Título H2           │
-│     object-cover    │  Párrafo descriptivo │
-│     aspect-[4/3]    │                      │
-│                     │                      │
-└─────────────────────┴─────────────────────┘
-```
-- Grid `grid-cols-1 md:grid-cols-2`, gap-0
-- Imagen: `aspect-[4/3] object-cover w-full h-full`
-- Texto: padding generoso, centrado verticalmente con `flex items-center`
-- Alterna lado de la imagen (izquierda/derecha) entre apariciones
+#### `SectorResicoC.tsx`
+| Actual | Nuevo |
+|--------|-------|
+| SECTOR | CONTADOR PARA RESICO EN CANCÚN |
+| EL RÉGIMEN | RÉGIMEN SIMPLIFICADO DE CONFIANZA |
+| OBLIGACIONES FISCALES | OBLIGACIONES FISCALES DEL RESICO |
+| SIMPLIFICADO, NO AUTOMÁTICO *(split)* | RESICO: TASAS BAJAS, OBLIGACIONES REALES |
+| NUESTRO SERVICIO | SERVICIO CONTABLE PARA RESICO |
+| PERFILES | PROFESIONISTAS EN RESICO EN CANCÚN |
+| FREELANCERS Y PROFESIONISTAS *(band)* | PROFESIONISTAS INDEPENDIENTES EN CANCÚN |
+| PREGUNTAS FRECUENTES | RESICO — PREGUNTAS FRECUENTES |
 
-**Full-bleed band**:
-- `min-h-[40vh]` con `<img>` absolute + overlay `bg-camhaji-base/70`
-- Texto centrado superpuesto: frase corta o dato de contexto
-- No repite contenido — añade una línea editorial o dato relevante del sector/servicio
+#### `SectorPequenosNegociosC.tsx`
+| Actual | Nuevo |
+|--------|-------|
+| SECTOR | CONTADOR PARA PEQUEÑOS NEGOCIOS |
+| ¿ESTE SERVICIO ES PARA TI? | NEGOCIOS QUE ATENDEMOS EN CANCÚN |
+| EL PROBLEMA REAL | ERRORES FISCALES EN PEQUEÑOS NEGOCIOS |
+| OBLIGACIONES FISCALES | OBLIGACIONES DEL SAT PARA PERSONA FÍSICA |
+| NEGOCIOS REALES *(split)* | CONTABILIDAD PARA NEGOCIOS EN CANCÚN |
+| COMPARATIVA | RESICO VS RÉGIMEN GENERAL EN MÉXICO |
+| NUESTRO SERVICIO | SERVICIO CONTABLE PARA TU NEGOCIO |
+| EXPERIENCIA REGIONAL | PEQUEÑOS NEGOCIOS EN QUINTANA ROO |
+| CANCÚN, QUINTANA ROO *(band)* | CONTADORES PARA PYMES EN CANCÚN |
+| PREGUNTAS FRECUENTES | PEQUEÑOS NEGOCIOS — PREGUNTAS FRECUENTES |
 
-### Archivos a modificar (9)
-1. `src/pages/c/ServicioContabilidadC.tsx`
-2. `src/pages/c/ServicioFiscalC.tsx`
-3. `src/pages/c/ServicioNominaC.tsx`
-4. `src/pages/c/ServicioFacturacionC.tsx`
-5. `src/pages/c/SectorConstruccionC.tsx`
-6. `src/pages/c/SectorComercialC.tsx`
-7. `src/pages/c/SectorInmobiliarioC.tsx`
-8. `src/pages/c/SectorResicoC.tsx`
-9. `src/pages/c/SectorPequenosNegociosC.tsx`
+#### `NosotrosC.tsx`
+| Actual | Nuevo |
+|--------|-------|
+| NUESTRA FIRMA | DESPACHO CONTABLE EN CANCÚN |
+| NUESTRA HISTORIA | HISTORIA DE CAMHAJI CONSULTORES |
+| DIRECCIÓN Y GERENCIA | LIDERAZGO DEL DESPACHO CONTABLE |
+| ADMINISTRACIÓN, NÓMINA Y FACTURACIÓN | EQUIPO DE NÓMINA Y FACTURACIÓN |
+| NUESTRA FILOSOFÍA | VALORES DE CAMHAJI CONSULTORES |
+| NUESTRA VISIÓN | VISIÓN DEL DESPACHO EN CANCÚN |
+| DIFERENCIADORES | POR QUÉ ELEGIR CAMHAJI EN CANCÚN |
+| DA EL SIGUIENTE PASO | CONTACTA A CAMHAJI CONSULTORES |
 
 ### Notas
-- Sin texto nuevo SEO — las secciones con imagen usan frases ya existentes o datos de contexto breves
-- Imágenes de Unsplash con parámetros `w=1200&h=800&fit=crop`
-- Todas responsive: split colapsa a imagen arriba + texto abajo en mobile
+- Solo se cambian los strings de los labels. No se modifica ningún H1, H2, H3 ni párrafo
+- Los labels se optimizan con keywords del sector + ubicación (Cancún, Quintana Roo)
+- Se mantiene el tono profesional y directo de la marca
+
+### Archivos a modificar (10)
+`VersionC.tsx`, `ServicioContabilidadC.tsx`, `ServicioFiscalC.tsx`, `ServicioNominaC.tsx`, `ServicioFacturacionC.tsx`, `SectorConstruccionC.tsx`, `SectorComercialC.tsx`, `SectorInmobiliarioC.tsx`, `SectorResicoC.tsx`, `SectorPequenosNegociosC.tsx`, `NosotrosC.tsx`
 
