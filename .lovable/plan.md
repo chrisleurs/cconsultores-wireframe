@@ -1,50 +1,81 @@
 
 
-## Plan: Panel de Revisión de Textos — Documentos por Página
+## Plan: Añadir Secciones con Imágenes a Páginas de Servicios y Sectores
 
-Crear una nueva sección accesible desde el Index (`/`) que lleve a una página `/revision-textos` con una experiencia tipo "visor de documentos Word". Cada página del sitio web tiene su propio documento con todo el texto SEO, presentado en formato limpio para que el cliente lo lea y apruebe.
+Todas las páginas interiores de Versión C tienen el mismo patrón: Hero con imagen → secciones de puro texto alternando fondos → FAQ → CTA. Se añadirán **secciones con imágenes full-bleed** entre los bloques de texto para dar ritmo visual, coherentes con cada tema y con Cancún.
 
-### Concepto UX
+### Tipo de sección a insertar
 
-- Desde el Index, se añade una tercera tarjeta: "Revisión de Textos"
-- La ruta `/revision-textos` muestra una barra lateral (izquierda) con la lista de 12 páginas del sitio, como pestañas de un Excel
-- Al seleccionar una, el panel derecho muestra el contenido completo de esa página en formato "documento Word": fondo blanco, márgenes amplios, tipografía serif, jerarquía clara con H1/H2/H3, párrafos bien espaciados
-- Cada documento tiene un encabezado con el nombre de la página y un estado (Pendiente / Aprobado)
-- Botón "Aprobar texto" que cambia el estado visualmente (estado local, sin backend)
+Dos formatos visuales que se alternan:
 
-### Documentos (12 páginas)
+1. **Split image + text** (50/50): imagen a un lado, texto al otro. Grid 2 columnas, colapsa a stack en mobile.
+2. **Full-bleed image band**: imagen ancho completo con overlay oscuro y texto superpuesto (estilo hero pero más corto, ~40vh).
 
-| # | Documento | Fuente de texto |
-|---|-----------|----------------|
-| 1 | Homepage | Texto extraído de `VersionC.tsx` |
-| 2 | Nosotros | Texto de `NosotrosC.tsx` |
-| 3 | Contacto | Texto de `ContactoC.tsx` |
-| 4 | Servicio: Contabilidad | Texto de `ServicioContabilidadC.tsx` |
-| 5 | Servicio: Fiscal | Texto de `ServicioFiscalC.tsx` |
-| 6 | Servicio: Nómina | Texto de `ServicioNominaC.tsx` |
-| 7 | Servicio: Facturación | Texto de `ServicioFacturacionC.tsx` |
-| 8 | Sector: Construcción | Texto de `SectorConstruccionC.tsx` |
-| 9 | Sector: Comercial | Texto de `SectorComercialC.tsx` |
-| 10 | Sector: Inmobiliario | Texto de `SectorInmobiliarioC.tsx` |
-| 11 | Sector: RESICO | Texto de `SectorResicoC.tsx` |
-| 12 | Sector: Pequeños Negocios | Texto de `SectorPequenosNegociosC.tsx` |
+### Ubicación y contenido por página
 
-### Diseño del visor
+#### Servicios (4 páginas)
 
-- **Sidebar izquierdo**: Lista vertical con los 12 documentos, agrupados por categoría (General, Servicios, Sectores). Indicador visual de estado (punto verde = aprobado, gris = pendiente)
-- **Panel principal**: Simula una hoja de documento — `max-w-[816px]` (ancho carta), `bg-white`, `shadow-lg`, padding generoso, tipografía serif para cuerpo, sans para títulos
-- **Header del documento**: Nombre de página, breadcrumb de sección, estado, botón aprobar
-- **Contenido**: Todo el texto de la página organizado por secciones (Hero, Servicios, FAQ, etc.) con separadores visuales entre bloques
+| Página | Dónde | Formato | Imagen (Unsplash) |
+|--------|-------|---------|-------------------|
+| **Contabilidad** | Entre "Proceso mensual" y FAQ | Split | Oficina moderna con documentos y laptop en Cancún |
+| **Contabilidad** | Entre "Por qué Camhaji" y "Proceso" | Full-bleed band | Vista aérea zona hotelera Cancún (contexto local) |
+| **Fiscal** | Entre "El problema" y "Enfoque" | Split | Reunión profesional, documentos fiscales |
+| **Fiscal** | Entre "Por qué Camhaji" y FAQ | Full-bleed band | Edificios corporativos Cancún |
+| **Nómina** | Entre "El problema" y "Qué incluye" | Split | Equipo de trabajo en oficina |
+| **Nómina** | Entre "CONTPAQi" y FAQ | Full-bleed band | Trabajadores en entorno laboral |
+| **Facturación** | Entre "Por qué tercerizar" y "Qué incluye" | Split | Pantalla con sistema de facturación |
+| **Facturación** | Entre "CONTPAQi" y FAQ | Full-bleed band | Oficina con equipo tecnológico |
 
-### Archivos a crear/modificar
+#### Sectores (5 páginas)
 
-1. **Crear** `src/pages/RevisionTextos.tsx` — Página completa con sidebar + visor de documentos
-2. **Modificar** `src/pages/Index.tsx` — Añadir tercera tarjeta "Revisión de Textos"
-3. **Modificar** `src/App.tsx` — Añadir ruta `/revision-textos`
+| Página | Dónde | Formato | Imagen |
+|--------|-------|---------|--------|
+| **Construcción** | Entre "Por qué especializada" y "Retos" | Split | Obra en construcción en zona costera |
+| **Construcción** | Entre "Experiencia regional" y "Testimonio" | Full-bleed band | Desarrollo inmobiliario Riviera Maya |
+| **Comercial** | Entre "Lo que necesita" y "Lo que hacemos" | Split | Almacén/tienda comercial |
+| **Comercial** | Entre "Experiencia" y "Testimonio" | Full-bleed band | Centro comercial Cancún |
+| **Inmobiliario** | Entre "Impuestos" y "Lo que hacemos" | Split | Agente inmobiliario mostrando propiedad |
+| **Inmobiliario** | Entre "Experiencia" y FAQ | Full-bleed band | Condominios frente al mar Cancún |
+| **RESICO** | Entre "Obligaciones" y "Lo que hacemos" | Split | Emprendedor en negocio pequeño |
+| **RESICO** | Entre "Experiencia" y FAQ | Full-bleed band | Calle comercial de Cancún |
+| **Pequeños Negocios** | Entre "Obligaciones" y "Lo que hacemos" | Split | Tienda local / restaurante |
+| **Pequeños Negocios** | Entre "Experiencia" y FAQ | Full-bleed band | Mercado o zona comercial local |
 
-### Notas técnicas
-- El texto de cada página se hardcodea como objetos estructurados dentro de `RevisionTextos.tsx` (secciones con título y párrafos)
-- Estado de aprobación se maneja con `useState` (se pierde al recargar — solo visual)
-- Los textos se extraen directamente de los componentes actuales de cada página
-- Responsive: en mobile el sidebar se convierte en un selector/dropdown superior
+### Implementación técnica
+
+**Split section (reutilizable)**:
+```text
+┌─────────────────────┬─────────────────────┐
+│                     │  LABEL UPPERCASE     │
+│     IMAGEN          │  Título H2           │
+│     object-cover    │  Párrafo descriptivo │
+│     aspect-[4/3]    │                      │
+│                     │                      │
+└─────────────────────┴─────────────────────┘
+```
+- Grid `grid-cols-1 md:grid-cols-2`, gap-0
+- Imagen: `aspect-[4/3] object-cover w-full h-full`
+- Texto: padding generoso, centrado verticalmente con `flex items-center`
+- Alterna lado de la imagen (izquierda/derecha) entre apariciones
+
+**Full-bleed band**:
+- `min-h-[40vh]` con `<img>` absolute + overlay `bg-camhaji-base/70`
+- Texto centrado superpuesto: frase corta o dato de contexto
+- No repite contenido — añade una línea editorial o dato relevante del sector/servicio
+
+### Archivos a modificar (9)
+1. `src/pages/c/ServicioContabilidadC.tsx`
+2. `src/pages/c/ServicioFiscalC.tsx`
+3. `src/pages/c/ServicioNominaC.tsx`
+4. `src/pages/c/ServicioFacturacionC.tsx`
+5. `src/pages/c/SectorConstruccionC.tsx`
+6. `src/pages/c/SectorComercialC.tsx`
+7. `src/pages/c/SectorInmobiliarioC.tsx`
+8. `src/pages/c/SectorResicoC.tsx`
+9. `src/pages/c/SectorPequenosNegociosC.tsx`
+
+### Notas
+- Sin texto nuevo SEO — las secciones con imagen usan frases ya existentes o datos de contexto breves
+- Imágenes de Unsplash con parámetros `w=1200&h=800&fit=crop`
+- Todas responsive: split colapsa a imagen arriba + texto abajo en mobile
 
