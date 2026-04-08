@@ -29,14 +29,14 @@ const pages: PageDoc[] = [
         ],
       },
       {
-        title: "Lo que nos diferencia",
+        title: "Despacho contable en Cancún",
         content: [
           "Lo que nos diferencia de otros despachos contables en Cancún",
           "Atención Inmediata · Todo en un Solo Lugar · Compromiso Real",
         ],
       },
       {
-        title: "Diferenciadores",
+        title: "Despacho contable en Cancún — Diferenciadores",
         content: [
           "Atención Inmediata — Cuando tienes una duda urgente sobre el SAT o necesitas una factura hoy, no puedes esperar tres días. Respondemos el mismo día — por correo o WhatsApp, como prefieras.",
           "Todo en un Solo Lugar — Contabilidad, fiscal, nómina, facturación y administración. Un solo equipo que conoce tu negocio de arriba a abajo.",
@@ -61,7 +61,7 @@ const pages: PageDoc[] = [
         ],
       },
       {
-        title: "Nuestra historia",
+        title: "Firma contable con historia",
         content: [
           "Camhaji Consultores nació hace 6 años de una idea simple pero poderosa: un despacho donde el área fiscal y el área contable trabajan juntos, bajo el mismo techo, para el mismo cliente. Antes de la firma, nuestro equipo acumuló más de 10 años de trayectoria en grandes firmas, auditoría y administración de empresas en Cancún y la Riviera Maya.",
           "Hoy somos un equipo de 10 profesionales comprometidos con algo concreto: cumplir lo que decimos que vamos a hacer. No más. No menos.",
@@ -96,7 +96,7 @@ const pages: PageDoc[] = [
         ],
       },
       {
-        title: "FAQ",
+        title: "Contabilidad en Cancún — Preguntas frecuentes",
         content: [
           "¿Cuánto cobra un contador en Cancún? — El costo varía según los servicios requeridos. La contabilidad básica para una empresa pequeña puede empezar desde $2,000–$4,000 MXN/mes. Para empresas medianas con nómina y facturación incluidas, el rango es de $5,000–$15,000 MXN/mes. En Camhaji hacemos una cotización personalizada sin costo — cuéntanos tu operación y te damos un número real.",
           "¿Cómo elegir un buen despacho contable en Cancún? — Busca un despacho con equipo certificado, experiencia en tu sector, uso de software actualizado y comunicación clara y accesible. Que te expliquen lo que hacen — no solo que te manden el comprobante de declaración.",
@@ -122,13 +122,13 @@ const pages: PageDoc[] = [
       {
         title: "Hero",
         content: [
-          "NUESTRA FIRMA",
+          "DESPACHO CONTABLE EN CANCÚN",
           "El Equipo que Respalda tu Tranquilidad Financiera",
           "Detrás de cada declaración, cada nómina y cada conciliación hay una persona con nombre, experiencia y responsabilidad clara. Estos son algunos de ellos.",
         ],
       },
       {
-        title: "Historia",
+        title: "Historia de Camhaji Consultores",
         content: [
           "Cómo nació Camhaji Consultores",
           "Hace 6 años, dos primos con trayectorias distintas dentro del mundo contable se sentaron a hablar de un problema real: sus clientes necesitaban atención fiscal y contable al mismo tiempo, y tenían que ir a dos lugares distintos para conseguirla.",
@@ -146,21 +146,21 @@ const pages: PageDoc[] = [
         ],
       },
       {
-        title: "Equipo — Dirección y Gerencia",
+        title: "Liderazgo del despacho contable",
         content: [
           "[Fundador — PENDIENTE] · Fundador y Director — [Biografía pendiente — solicitar al cliente: origen profesional, motivación para fundar el despacho, especialidad o sector de mayor experiencia.]",
           "Rogelio Ramón Moo Ruiz · Gerente General — Contador con trayectoria en grandes firmas del sector auditoría y en empresas del ramo hotelero, donde se desempeñó como contralor. Es la mano derecha de la dirección y el responsable de que la operación del despacho funcione con precisión. Comprometido con la firma desde sus primeros años.",
         ],
       },
       {
-        title: "Equipo — Administración, Nómina y Facturación",
+        title: "Equipo de nómina y facturación",
         content: [
           "Karen Rosado Ortiz · Supervisora Administrativa — Contadora con amplia experiencia en la administración de empresas medianas y grandes. Ha trabajado en firmas reconocidas a nivel nacional. En Camhaji es responsable de cuentas por pagar, cuentas por cobrar y recursos humanos. Su orden y método son dos de los pilares operativos del despacho.",
           "Marlon Rafael Chávez Sánchez · Supervisor de Nómina y Facturación — Especialista en nómina, ley laboral y contribuciones de seguridad social. Domina CONTPAQi con una profundidad que pocos logran. Es el referente interno cuando hay una duda compleja sobre IMSS, Infonavit o el CFDI de nómina. Lo que no sabe Marlon sobre nómina en México, probablemente no exista.",
         ],
       },
       {
-        title: "Filosofía",
+        title: "Valores de Camhaji Consultores",
         content: [
           "No tenemos un slogan corporativo enmarcado en la pared. Tenemos cinco principios que aplicamos en cada proceso, con cada cliente:",
           "01 — Cumplimos lo que prometemos: Si decimos que tu declaración estará lista el día 15, estará lista el día 15. La confianza se construye en los detalles.",
@@ -171,14 +171,14 @@ const pages: PageDoc[] = [
         ],
       },
       {
-        title: "Visión",
+        title: "Visión del despacho en Cancún",
         content: [
           "Queremos que Camhaji Consultores sea reconocida como la firma de referencia en Cancún para empresarios que quieren hacer las cosas bien. No por publicidad, sino por resultados comprobables.",
           "Una firma donde los clientes saben que sus números están en orden, donde el equipo tiene nombre y apellido, y donde el compromiso no es una palabra en un folleto.",
         ],
       },
       {
-        title: "Diferenciadores",
+        title: "Por qué elegir Camhaji en Cancún",
         content: [
           "Respuesta el mismo día — Cuando tienes una duda urgente o necesitas algo, respondemos — no al día siguiente.",
           "Adaptabilidad — Nos comunicamos como el cliente prefiera. Correo, WhatsApp, llamada. Sin rigidez de horario o canal.",
@@ -228,13 +228,13 @@ const pages: PageDoc[] = [
       {
         title: "Hero",
         content: [
-          "SERVICIO 01",
+          "CONTABILIDAD EMPRESARIAL EN CANCÚN",
           "Contabilidad y Administración para tu Empresa en Cancún",
           "Muchos empresarios llegan con la misma frase: \"Sé que algo está mal, pero no sé qué.\" El resultado es siempre el mismo: incertidumbre y riesgo fiscal.",
         ],
       },
       {
-        title: "Adaptabilidad",
+        title: "Contabilidad para pymes en Quintana Roo",
         content: [
           "Un servicio que se adapta a tu empresa",
           "Atendemos desde negocios en etapa temprana hasta empresas medianas con operaciones complejas. Tenemos experiencia particular en el sector construcción y en empresas de comercialización en Quintana Roo.",
@@ -242,7 +242,7 @@ const pages: PageDoc[] = [
         ],
       },
       {
-        title: "Proceso contable mensual",
+        title: "Proceso de contabilidad mensual",
         content: [
           "01 — Solicitud de documentación (Día 1–5): A principios de cada mes te pedimos la documentación del periodo anterior por el canal que tú elijas: correo electrónico o WhatsApp. Nos adaptamos a cómo trabaja tu empresa, no al revés.",
           "02 — Revisión y validación (Día 5–10): Revisamos que la documentación esté completa y correcta antes de registrar cualquier cosa. Un error en el origen genera problemas en cascada — lo prevenimos desde aquí.",
@@ -253,7 +253,7 @@ const pages: PageDoc[] = [
         ],
       },
       {
-        title: "Gestión administrativa",
+        title: "Administración empresarial en Cancún",
         content: [
           "Gestión administrativa completa para tu negocio",
           "Tesorería centralizada y control de flujo de efectivo",
@@ -264,7 +264,7 @@ const pages: PageDoc[] = [
         ],
       },
       {
-        title: "¿Para quién es este servicio?",
+        title: "Contabilidad por sector en Cancún",
         content: [
           "Empresas del sector construcción en Cancún — Costos de obra, subcontratistas, estimaciones y retenciones. Tenemos página dedicada con detalle completo.",
           "Empresas de comercialización en Quintana Roo — Control de inventarios, facturación a clientes, cuentas por cobrar y por pagar para distribuidoras y comercializadoras.",
@@ -272,7 +272,7 @@ const pages: PageDoc[] = [
         ],
       },
       {
-        title: "FAQ",
+        title: "Contabilidad empresarial — Preguntas frecuentes",
         content: [
           "¿Qué incluye el servicio de contabilidad mensual? — Solicitud y revisión de documentos, registro contable completo, conciliación bancaria, cálculo de impuestos, llenado de declaraciones y envío al cliente para autorizar el pago. Nos adaptamos al canal de comunicación que prefiere el cliente — correo o WhatsApp.",
           "¿Por qué tercerizar la contabilidad de mi empresa? — Tercerizar la contabilidad significa tener a un equipo especializado que conoce la normatividad vigente, que detecta errores antes de que lleguen al SAT y que te explica lo que pasa con tus números. Es más económico que un contador interno con las mismas capacidades y elimina el riesgo de errores por falta de actualización.",
@@ -289,13 +289,13 @@ const pages: PageDoc[] = [
       {
         title: "Hero",
         content: [
-          "SERVICIO 02",
+          "ASESORÍA FISCAL EN CANCÚN",
           "Asesoría Fiscal en Cancún: Cumple, no Improvises",
           "El SAT no espera. No negocia plazos informales ni acepta excusas. No los juzgamos. Los resolvemos.",
         ],
       },
       {
-        title: "El problema",
+        title: "Riesgos fiscales para empresas en Cancún",
         content: [
           "El problema más común que vemos en empresas de Cancún",
           "Hay un patrón que se repite: el empresario sabe que algo está mal con su situación fiscal, pero no sabe exactamente qué. A veces llegó con años de declaraciones sin presentar. Otras veces tiene un crédito fiscal en el portal del SAT que apareció sin que lo esperara.",
@@ -303,7 +303,7 @@ const pages: PageDoc[] = [
         ],
       },
       {
-        title: "Enfoque",
+        title: "Cumplimiento fiscal sin atajos",
         content: [
           "Cumplimiento correcto, sin atajos",
           "Nuestra asesoría fiscal en Cancún no se centra en pagar lo mínimo posible. Se centra en pagar lo justo — ni más, ni menos — cumpliendo correctamente con todas las obligaciones que la ley establece para tu empresa.",
@@ -311,7 +311,7 @@ const pages: PageDoc[] = [
         ],
       },
       {
-        title: "Qué incluye",
+        title: "Servicios de asesoría fiscal",
         content: [
           "01 — Diagnóstico inicial de situación fiscal: Antes de cualquier cosa, revisamos el estado real de tu empresa ante el SAT: obligaciones vigentes, declaraciones presentadas, créditos fiscales pendientes y cumplimiento por régimen. Sin diagnóstico no hay estrategia.",
           "02 — Cumplimiento de obligaciones mensuales: IVA, ISR, IMSS, declaraciones informativas. Cada obligación en su fecha, correctamente calculada y presentada.",
@@ -321,13 +321,13 @@ const pages: PageDoc[] = [
         ],
       },
       {
-        title: "Por qué Camhaji",
+        title: "Experiencia fiscal en Cancún",
         content: [
           "Más de 10 años de trayectoria en el ámbito fiscal — en grandes firmas de auditoría y en la operación directa con clientes de distintos sectores en Cancún. Nuestro equipo conoce cómo funciona el SAT, qué revisa y qué espera. Eso nos permite protegerte con precisión, no con suposiciones.",
         ],
       },
       {
-        title: "FAQ",
+        title: "Asesoría fiscal — Preguntas frecuentes",
         content: [
           "¿Qué pasa si tengo obligaciones fiscales atrasadas? — Es más común de lo que imaginas. El primer paso es un diagnóstico: saber exactamente cuánto tiempo llevas atrasado, qué obligaciones están pendientes y cuál es la deuda acumulada con recargos. A partir de ahí trazamos un plan de regularización ordenado, empezando por lo más urgente.",
           "¿Puedo reducir legalmente lo que pago de impuestos? — Sí, dentro de lo que la ley permite: deducciones autorizadas, regímenes adecuados para tu tipo de empresa y estructura correcta de operaciones. Lo que no hacemos es usar esquemas que trasladan el problema al futuro o que te ponen en riesgo ante una auditoría.",
@@ -345,13 +345,13 @@ const pages: PageDoc[] = [
       {
         title: "Hero",
         content: [
-          "SERVICIO 03",
+          "NÓMINA EMPRESARIAL EN CANCÚN",
           "Nómina Empresarial en Cancún: Sin Errores, sin Retrasos",
           "La nómina parece un proceso operativo — hasta que falla. Un error en las cuotas patronales puede derivar en una diferencia con el IMSS que aparece meses después, con recargos incluidos.",
         ],
       },
       {
-        title: "El costo de equivocarse",
+        title: "Riesgos de nómina mal calculada",
         content: [
           "El costo real de equivocarse en nómina",
           "Multas por diferencias con el IMSS. Conflictos laborales por finiquitos mal calculados. Trabajadores con recibos que no sirven para nada porque el CFDI tiene errores. Los tres casos tienen una causa común: nómina hecha sin el nivel de especialización que requiere.",
@@ -359,7 +359,7 @@ const pages: PageDoc[] = [
         ],
       },
       {
-        title: "Qué incluye",
+        title: "Servicio de nómina con CONTPAQi",
         content: [
           "Cálculo de nómina mensual o quincenal",
           "Altas y bajas ante el IMSS e Infonavit",
@@ -370,13 +370,13 @@ const pages: PageDoc[] = [
         ],
       },
       {
-        title: "CONTPAQi Nómina",
+        title: "Nómina con CONTPAQi — estándar en México",
         content: [
           "Usamos CONTPAQi para nómina — el sistema más utilizado en México y reconocido por el SAT y el IMSS. Los cálculos son correctos, los CFDI se timbran sin error y los reportes son compatibles con cualquier revisión o auditoría.",
         ],
       },
       {
-        title: "Especialista",
+        title: "Especialista en nómina en Cancún",
         content: [
           "Marlon Rafael Chávez Sánchez · Supervisor de Nómina y Facturación",
           "Especialista en nómina, ley laboral y contribuciones de seguridad social. Domina CONTPAQi con una profundidad que pocos alcanzan y conoce la Ley Federal del Trabajo con la precisión de quien la aplica cada semana. Cuando contratas nuestro servicio de nómina en Cancún, tienes a Marlon y su equipo trabajando para que ningún número esté mal.",
@@ -390,7 +390,7 @@ const pages: PageDoc[] = [
         ],
       },
       {
-        title: "FAQ",
+        title: "Nómina empresarial — Preguntas frecuentes",
         content: [
           "¿Cuánto cuesta el servicio de nómina para mi empresa? — El costo depende del número de empleados, la frecuencia de pago (quincenal o mensual) y la complejidad de la operación. Hacemos una cotización personalizada sin costo.",
           "¿Qué pasa si pago mal la nómina en México? — Las consecuencias más comunes son: diferencias con el IMSS por cuotas patronales incorrectas, multas por CFDI de nómina con errores, conflictos laborales por finiquitos mal calculados, y observaciones del IMSS en caso de auditoría.",
@@ -407,13 +407,13 @@ const pages: PageDoc[] = [
       {
         title: "Hero",
         content: [
-          "SERVICIO 04",
+          "FACTURACIÓN CFDI EN CANCÚN",
           "Facturación CFDI para tu Empresa en Cancún",
           "Un CFDI mal emitido no es solo un problema técnico. Es una factura que el SAT no reconoce, una deducción que tu cliente pierde y una multa que llega meses después.",
         ],
       },
       {
-        title: "Por qué tercerizar",
+        title: "Outsourcing de facturación CFDI",
         content: [
           "Por qué tercerizar tu facturación CFDI",
           "Las empresas que facturan por su cuenta cometen los mismos errores una y otra vez: datos del receptor incorrectos, uso del CFDI equivocado, complementos de pago que no cuadran, cancelaciones hechas fuera de tiempo. Ninguno es grave por sí solo. El problema es cuando se acumulan.",
@@ -431,14 +431,14 @@ const pages: PageDoc[] = [
         ],
       },
       {
-        title: "Tecnología",
+        title: "Facturación con CONTPAQi",
         content: [
           "CONTPAQi Facturación: el estándar en México",
           "CONTPAQi es el software de facturación más utilizado en México y está integrado directamente con el SAT. Lo usamos porque garantiza compatibilidad, trazabilidad y reportes que funcionan en cualquier revisión.",
         ],
       },
       {
-        title: "FAQ",
+        title: "Facturación CFDI — Preguntas frecuentes",
         content: [
           "¿Qué es el CFDI 4.0 y qué cambió? — El CFDI 4.0 es la versión vigente de la factura electrónica en México desde 2022. Los cambios más relevantes: el código postal del receptor es obligatorio, el régimen fiscal del receptor debe declararse en cada factura, y el uso del CFDI es verificado automáticamente por el SAT.",
           "¿Cómo emitir una factura CFDI correctamente? — Verifica que el RFC del receptor esté activo en el SAT, confirma su código postal y régimen fiscal, selecciona el uso del CFDI adecuado para la operación, indica si el pago es inmediato (PUE) o en crédito (PPD), y emite el complemento de pago cuando se liquide.",
@@ -456,13 +456,13 @@ const pages: PageDoc[] = [
       {
         title: "Hero",
         content: [
-          "ESPECIALIZACIÓN PRINCIPAL",
+          "CONTABILIDAD PARA CONSTRUCTORAS EN CANCÚN",
           "Contabilidad para Constructoras en Cancún",
           "La contabilidad de una constructora no funciona igual que la de cualquier otra empresa. Si tu contador no conoce el sector, tarde o temprano lo vas a notar — y no de buena manera.",
         ],
       },
       {
-        title: "El sector",
+        title: "Sector construcción en Quintana Roo",
         content: [
           "Por qué la construcción necesita contabilidad especializada",
           "Una empresa de servicios factura, cobra y declara con cierta regularidad. Una constructora, no. Sus ingresos entran por estimaciones que no siempre reflejan el avance real. Sus costos se acumulan por etapas durante meses. Sus subcontratistas generan obligaciones de retención que la ley te pone a ti como responsable.",
@@ -470,7 +470,7 @@ const pages: PageDoc[] = [
         ],
       },
       {
-        title: "Retos fiscales",
+        title: "Retos fiscales del sector construcción",
         content: [
           "Facturación de estimaciones y anticipos — Las constructoras facturan por avance de obra, anticipos y estimaciones. Cada uno tiene un tratamiento fiscal distinto en IVA e ISR. Un error de clasificación genera diferencias que el SAT detecta — y cobra con recargos.",
           "Retenciones a subcontratistas — Cuando contratas subcontratistas para obra, la ley te obliga a retenerles el 6% de IVA sobre los servicios de construcción. Si no lo haces correctamente, la responsabilidad es tuya — no del subcontratista.",
@@ -479,7 +479,7 @@ const pages: PageDoc[] = [
         ],
       },
       {
-        title: "Lo que hacemos",
+        title: "Servicios contables para constructoras",
         content: [
           "Contabilidad mensual adaptada al ciclo de obra y tipo de contrato",
           "Registro y control de costos por proyecto (directos e indirectos)",
@@ -492,7 +492,7 @@ const pages: PageDoc[] = [
         ],
       },
       {
-        title: "Experiencia regional",
+        title: "Constructoras en Cancún y Riviera Maya",
         content: [
           "El sector construcción en Cancún y la Riviera Maya tiene dinámicas propias: proyectos turísticos, desarrollos inmobiliarios, obra civil, obra comercial. El volumen de operaciones, los tipos de contrato y el perfil de los subcontratistas son distintos a los de otras regiones del país.",
           "Llevamos años trabajando con empresas de este sector en la región. Conocemos las características del mercado local y los criterios que el SAT aplica en revisiones al sector construcción en Quintana Roo.",
@@ -507,7 +507,7 @@ const pages: PageDoc[] = [
         ],
       },
       {
-        title: "FAQ",
+        title: "Constructoras en Cancún — Preguntas frecuentes",
         content: [
           "¿Qué régimen fiscal usan las constructoras en México? — Las constructoras persona moral usan el Régimen General. Las micro-constructoras persona física pueden tributar en RESICO si sus ingresos no superan $35 millones.",
           "¿Cómo se llevan los costos de obra en contabilidad? — Se clasifican en directos e indirectos y se registran por proyecto. Se reconocen como gasto conforme avanza la obra o al momento de la estimación.",
@@ -526,13 +526,13 @@ const pages: PageDoc[] = [
       {
         title: "Hero",
         content: [
-          "SECTOR",
+          "CONTABILIDAD PARA EMPRESAS COMERCIALES",
           "Contabilidad para Empresas Comerciales en Cancún",
           "Si tu empresa compra, vende y distribuye, tienes operaciones constantes que necesitan orden, registro y control puntual.",
         ],
       },
       {
-        title: "Lo que necesita una empresa comercial",
+        title: "Sector comercial en Quintana Roo",
         content: [
           "Las empresas de comercialización tienen un volumen alto de transacciones: facturas a clientes, facturas de proveedores, pagos, cobros, devoluciones, notas de crédito. Sin un proceso contable sólido, ese volumen se convierte en desorden — y el desorden en riesgo fiscal.",
           "Declaración mensual de IVA e ISR",
@@ -542,7 +542,7 @@ const pages: PageDoc[] = [
         ],
       },
       {
-        title: "Lo que hacemos",
+        title: "Servicios contables para comercializadoras",
         content: [
           "Contabilidad mensual con registro de todas las operaciones del periodo",
           "Control de cuentas por cobrar y cuentas por pagar",
@@ -554,7 +554,7 @@ const pages: PageDoc[] = [
         ],
       },
       {
-        title: "Experiencia",
+        title: "Experiencia en el sector comercial",
         content: [
           "Hemos trabajado con distribuidoras, comercializadoras y empresas de venta al mayoreo y menudeo en Quintana Roo. Conocemos los ritmos de temporada del mercado local, la dinámica con proveedores regionales y las particularidades fiscales del sector.",
           "No empezamos a aprender con cada cliente nuevo. Llegamos con experiencia acumulada.",
@@ -577,13 +577,13 @@ const pages: PageDoc[] = [
       {
         title: "Hero",
         content: [
-          "SECTOR",
+          "CONTABILIDAD PARA AGENTES INMOBILIARIOS",
           "Contabilidad para Agentes Inmobiliarios en Cancún",
           "El mercado inmobiliario de Cancún mueve comisiones altas. Pero muchos agentes llegan a nosotros cuando el SAT ya les mandó una carta.",
         ],
       },
       {
-        title: "Obligaciones fiscales",
+        title: "Impuestos para agentes inmobiliarios en México",
         content: [
           "ISR sobre comisiones — Cada comisión que recibes es un ingreso gravado. Dependiendo de tu régimen, la tasa puede ir del 1% al 2.5% en RESICO o hasta el 35% en régimen general.",
           "IVA — Si cobras comisiones por intermediación, en la mayoría de los casos el servicio está gravado con IVA al 16%.",
@@ -592,7 +592,7 @@ const pages: PageDoc[] = [
         ],
       },
       {
-        title: "CFDI por comisiones",
+        title: "CFDI para comisiones inmobiliarias",
         content: [
           "La factura de una comisión inmobiliaria no es igual a la de cualquier servicio. El uso del CFDI, la clave de producto y la forma de pago tienen que ser correctos para que sea deducible para tu cliente y válida para ti.",
           "Los errores más comunes: régimen fiscal incorrecto, clave de servicio equivocada, IVA mal calculado cuando hay retención parcial, y cancelaciones hechas fuera de tiempo.",
@@ -607,7 +607,7 @@ const pages: PageDoc[] = [
         ],
       },
       {
-        title: "Lo que hacemos",
+        title: "Servicios contables para inmobiliarios",
         content: [
           "Diagnóstico de tu situación fiscal actual (régimen, obligaciones, historial)",
           "Emisión correcta de CFDI por cada comisión",
@@ -618,7 +618,7 @@ const pages: PageDoc[] = [
         ],
       },
       {
-        title: "FAQ",
+        title: "Agentes inmobiliarios — Preguntas frecuentes",
         content: [
           "¿Qué impuestos paga un agente inmobiliario en México? — En RESICO, entre 1% y 2.5% de ISR. En Régimen General, hasta 35% pero con más deducciones. Más IVA del 16%.",
           "¿Cómo facturar comisiones inmobiliarias con CFDI? — Emitir CFDI por el monto de la comisión con concepto de 'servicios de intermediación inmobiliaria'. Incluir retenciones si aplica.",
@@ -635,13 +635,13 @@ const pages: PageDoc[] = [
       {
         title: "Hero",
         content: [
-          "SECTOR",
+          "CONTADOR PARA RESICO EN CANCÚN",
           "Contador para RESICO en Cancún",
           "El RESICO existe para simplificar tus obligaciones fiscales. Pero muchos freelancers, consultores y profesionistas independientes llegan con meses de declaraciones sin presentar, CFDI emitidos con el régimen incorrecto o sin saber si el RESICO realmente les conviene. Nosotros resolvemos eso.",
         ],
       },
       {
-        title: "¿Qué es el RESICO?",
+        title: "Régimen Simplificado de Confianza",
         content: [
           "El Régimen Simplificado de Confianza es una opción fiscal para personas físicas con actividad empresarial o ingresos por servicios profesionales que no superen los 3.5 millones de pesos al año. Ofrece tasas de ISR más bajas que el régimen general y una mecánica de declaración más simple.",
           "Pueden tributar en RESICO: freelancers, consultores, diseñadores, arquitectos, médicos, abogados, agentes inmobiliarios y cualquier persona física que preste servicios de forma independiente y cumpla con el límite de ingresos.",
@@ -649,7 +649,7 @@ const pages: PageDoc[] = [
         ],
       },
       {
-        title: "Obligaciones fiscales",
+        title: "Obligaciones fiscales del RESICO",
         content: [
           "Declaraciones mensuales — ISR antes del día 17 de cada mes, tasas entre 1% y 2.5%.",
           "Declaración anual — En abril, consolidando el ISR del ejercicio.",
@@ -658,7 +658,7 @@ const pages: PageDoc[] = [
         ],
       },
       {
-        title: "Lo que hacemos",
+        title: "Servicio contable para RESICO",
         content: [
           "Cálculo mensual del ISR y presentación de la declaración a tiempo",
           "Emisión correcta de CFDI con régimen fiscal y claves adecuadas",
@@ -668,7 +668,7 @@ const pages: PageDoc[] = [
         ],
       },
       {
-        title: "Perfiles que atendemos",
+        title: "Profesionistas en RESICO en Cancún",
         content: [
           "Freelancers y consultores independientes — Diseñadores, desarrolladores, redactores, fotógrafos, consultores de cualquier especialidad.",
           "Agentes inmobiliarios en Cancún — Comisiones con tratamiento fiscal propio.",
@@ -684,7 +684,7 @@ const pages: PageDoc[] = [
         ],
       },
       {
-        title: "FAQ",
+        title: "RESICO — Preguntas frecuentes",
         content: [
           "¿Qué es el RESICO y quién puede tributar en él? — Personas físicas con ingresos anuales hasta $3.5M: freelancers, consultores, profesionistas independientes, agentes inmobiliarios. Personas morales también bajo otras condiciones.",
           "¿Cuánto se paga de impuestos en el RESICO? — Tasas de 1% a 2.5% mensual sobre ingresos cobrados. Considerablemente menor que el Régimen General (hasta 35%).",
@@ -703,13 +703,13 @@ const pages: PageDoc[] = [
       {
         title: "Hero",
         content: [
-          "SECTOR",
+          "CONTADOR PARA PEQUEÑOS NEGOCIOS",
           "Contador para tu Pequeño Negocio en Cancún",
           "Tienes un negocio. Trabajas duro. Y en algún momento el SAT, las facturas y los impuestos se volvieron algo que pospones porque no sabes bien por dónde empezar. Eso tiene solución.",
         ],
       },
       {
-        title: "¿Este servicio es para ti?",
+        title: "Negocios que atendemos en Cancún",
         content: [
           "Si tienes un negocio propio y facturas como persona física",
           "Comercio y venta de productos — Tienda de abarrotes, ferretería, papelería, distribuidora pequeña, venta de ropa, tianguis con RFC.",
@@ -720,14 +720,14 @@ const pages: PageDoc[] = [
         ],
       },
       {
-        title: "El problema real",
+        title: "Errores fiscales en pequeños negocios",
         content: [
           "El patrón es siempre parecido. El negocio arranca bien, crece poco a poco, y las obligaciones fiscales se van postergando — porque nadie las explicó, porque parecen complicadas, o porque el día a día no deja tiempo para nada más.",
           "Hasta que llega un requerimiento del SAT, un crédito fiscal que apareció \"de la nada\", o un cliente importante que exige facturas en regla para seguir comprando. Regularizar a tiempo es siempre más económico que hacerlo cuando ya hay presión.",
         ],
       },
       {
-        title: "Obligaciones fiscales",
+        title: "Obligaciones del SAT para persona física",
         content: [
           "Declaración mensual de ISR — El impuesto sobre la renta se calcula y se declara cada mes. En RESICO, la tasa va del 1% al 2.5% sobre los ingresos.",
           "IVA mensual — Si vendes productos o servicios gravados con IVA, tienes que cobrarlo, declararlo y pagar la diferencia.",
@@ -736,7 +736,7 @@ const pages: PageDoc[] = [
         ],
       },
       {
-        title: "RESICO vs Régimen de Actividades Empresariales",
+        title: "RESICO vs Régimen General en México",
         content: [
           "No hay respuesta universal — depende de cuánto factura tu negocio, qué tipo de gastos tienes y cómo está proyectado crecer.",
           "RESICO Personas Físicas — Si tus ingresos anuales no superan los $3.5 millones, pagas ISR a tasas de entre el 1% y el 2.5%, con un proceso de declaración simplificado.",
@@ -744,7 +744,7 @@ const pages: PageDoc[] = [
         ],
       },
       {
-        title: "Lo que hacemos",
+        title: "Servicio contable para tu negocio",
         content: [
           "Diagnóstico inicial: régimen correcto, historial ante el SAT, obligaciones vigentes y pendientes",
           "Regularización de declaraciones atrasadas si las hay",
@@ -756,7 +756,7 @@ const pages: PageDoc[] = [
         ],
       },
       {
-        title: "Experiencia regional",
+        title: "Pequeños negocios en Quintana Roo",
         content: [
           "Hemos trabajado con dueños de negocios de distintos giros en Quintana Roo — desde comerciantes con una sola tienda hasta contratistas con varios proyectos simultáneos. Conocemos las preguntas que se repiten, los errores más comunes y las situaciones que el SAT revisa con más frecuencia en este segmento. No empezamos a aprender con cada cliente nuevo. Llegamos con experiencia y con respuestas concretas.",
         ],
@@ -769,7 +769,7 @@ const pages: PageDoc[] = [
         ],
       },
       {
-        title: "FAQ",
+        title: "Pequeños negocios — Preguntas frecuentes",
         content: [
           "¿Puede una persona física tener empleados en México? — Sí. Tener empleados no obliga a constituir una sociedad, pero implica cumplir con obligaciones patronales: IMSS, Infonavit, ISN estatal y nómina correcta.",
           "¿Qué régimen fiscal debo usar si tengo un negocio pequeño? — Para la mayoría, el RESICO personas físicas con tasas de 1% a 2.5%. Si tus gastos deducibles son significativos, puede convenir el Régimen de Actividades Empresariales.",
