@@ -62,6 +62,24 @@ export default function ServicioFiscalC() {
         </div>
       </section>
 
+      {/* SPLIT IMAGE — REUNIÓN FISCAL */}
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-0">
+        <div className="flex items-center bg-surface px-8 md:px-16 py-16 order-2 md:order-1">
+          <div>
+            <p className="label-uppercase text-camhaji-muted mb-4">DIAGNÓSTICO</p>
+            <h2 className="font-sans font-bold text-camhaji-text mb-6" style={{ fontSize: "clamp(22px, 2.5vw, 32px)", letterSpacing: "-0.02em" }}>
+              Primero entendemos tu situación. Después actuamos.
+            </h2>
+            <p className="font-sans text-[15px] font-light text-camhaji-muted leading-relaxed">
+              No tomamos decisiones a ciegas. Cada caso empieza con una revisión completa de tu historial ante el SAT — obligaciones, declaraciones, créditos, alertas. Solo así podemos actuar con precisión.
+            </p>
+          </div>
+        </div>
+        <div className="order-1 md:order-2">
+          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1200&h=800&fit=crop" alt="Reunión profesional de asesoría fiscal" className="w-full h-full object-cover aspect-[4/3]" />
+        </div>
+      </section>
+
       {/* ENFOQUE */}
       <section className="bg-surface py-24 px-5 md:px-10">
         <div className="max-w-[900px] mx-auto">
@@ -108,6 +126,18 @@ export default function ServicioFiscalC() {
           </h2>
           <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed">
             Más de 10 años de trayectoria en el ámbito fiscal — en grandes firmas de auditoría y en la operación directa con clientes de distintos sectores en Cancún. Nuestro equipo conoce cómo funciona el SAT, qué revisa y qué espera. Eso nos permite protegerte con precisión, no con suposiciones.
+          </p>
+        </div>
+      </section>
+
+      {/* FULL-BLEED BAND — EDIFICIOS */}
+      <section className="min-h-[40vh] relative flex items-center justify-center text-center">
+        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&h=800&fit=crop" alt="Edificios corporativos" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-camhaji-base/70" />
+        <div className="relative z-10 px-5 md:px-10 py-16 max-w-[700px]">
+          <p className="label-uppercase text-camhaji-accent/60 mb-4">TRAYECTORIA</p>
+          <p className="font-sans font-bold text-white" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em", lineHeight: 1.2 }}>
+            Más de 10 años de experiencia fiscal — en grandes firmas y en la operación directa con clientes.
           </p>
         </div>
       </section>

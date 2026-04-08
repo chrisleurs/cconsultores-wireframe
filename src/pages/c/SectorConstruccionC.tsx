@@ -85,6 +85,24 @@ export default function SectorConstruccionC() {
         </div>
       </section>
 
+      {/* SPLIT IMAGE — OBRA COSTERA */}
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-0">
+        <div>
+          <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1200&h=800&fit=crop" alt="Obra de construcción en zona costera" className="w-full h-full object-cover aspect-[4/3]" />
+        </div>
+        <div className="flex items-center bg-surface px-8 md:px-16 py-16">
+          <div>
+            <p className="label-uppercase text-camhaji-muted mb-4">ESPECIALIZACIÓN</p>
+            <h2 className="font-sans font-bold text-camhaji-text mb-6" style={{ fontSize: "clamp(22px, 2.5vw, 32px)", letterSpacing: "-0.02em" }}>
+              Conocemos el ciclo de obra desde los cimientos hasta la entrega
+            </h2>
+            <p className="font-sans text-[15px] font-light text-camhaji-muted leading-relaxed">
+              Anticipos, estimaciones, subcontratistas, trabajadores eventuales. Cada etapa tiene implicaciones contables y fiscales que solo se manejan bien con experiencia en el sector.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* RETOS FISCALES */}
       <section className="bg-camhaji-base py-24 px-5 md:px-10">
         <div className="max-w-[900px] mx-auto">
@@ -135,6 +153,18 @@ export default function SectorConstruccionC() {
             Llevamos años trabajando con empresas de este sector en la región. Conocemos las características del mercado local y los criterios que el SAT aplica en revisiones al sector construcción en Quintana Roo.
           </p>
           <p className="font-sans font-semibold text-primary mt-8">No aprendemos contigo. Llegamos con experiencia.</p>
+        </div>
+      </section>
+
+      {/* FULL-BLEED BAND — DESARROLLO RIVIERA MAYA */}
+      <section className="min-h-[40vh] relative flex items-center justify-center text-center">
+        <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=1600&h=800&fit=crop" alt="Desarrollo inmobiliario en Riviera Maya" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-camhaji-base/70" />
+        <div className="relative z-10 px-5 md:px-10 py-16 max-w-[700px]">
+          <p className="label-uppercase text-camhaji-accent/60 mb-4">QUINTANA ROO</p>
+          <p className="font-sans font-bold text-white" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em", lineHeight: 1.2 }}>
+            Años de experiencia con constructoras en Cancún y la Riviera Maya.
+          </p>
         </div>
       </section>
 

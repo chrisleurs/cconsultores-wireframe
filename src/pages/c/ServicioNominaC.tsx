@@ -62,6 +62,24 @@ export default function ServicioNominaC() {
         </div>
       </section>
 
+      {/* SPLIT IMAGE — EQUIPO DE TRABAJO */}
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-0">
+        <div>
+          <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&h=800&fit=crop" alt="Equipo de trabajo en oficina" className="w-full h-full object-cover aspect-[4/3]" />
+        </div>
+        <div className="flex items-center bg-surface px-8 md:px-16 py-16">
+          <div>
+            <p className="label-uppercase text-camhaji-muted mb-4">TU EQUIPO, NUESTRA RESPONSABILIDAD</p>
+            <h2 className="font-sans font-bold text-camhaji-text mb-6" style={{ fontSize: "clamp(22px, 2.5vw, 32px)", letterSpacing: "-0.02em" }}>
+              Cada empleado bien registrado es un problema menos
+            </h2>
+            <p className="font-sans text-[15px] font-light text-camhaji-muted leading-relaxed">
+              Altas, bajas, cuotas patronales, finiquitos. Cada movimiento de tu plantilla tiene implicaciones en IMSS, Infonavit e ISR. Lo hacemos bien desde el primer día.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* QUÉ INCLUYE */}
       <section className="bg-camhaji-base py-24 px-5 md:px-10">
         <div className="max-w-[900px] mx-auto">
@@ -105,6 +123,18 @@ export default function ServicioNominaC() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* FULL-BLEED BAND — TRABAJADORES */}
+      <section className="min-h-[40vh] relative flex items-center justify-center text-center">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1600&h=800&fit=crop" alt="Ambiente laboral profesional" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-camhaji-base/70" />
+        <div className="relative z-10 px-5 md:px-10 py-16 max-w-[700px]">
+          <p className="label-uppercase text-camhaji-accent/60 mb-4">CONTPAQi NÓMINA</p>
+          <p className="font-sans font-bold text-white" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em", lineHeight: 1.2 }}>
+            El sistema más utilizado en México. Cálculos correctos, CFDI sin error, reportes compatibles con cualquier auditoría.
+          </p>
         </div>
       </section>
 
