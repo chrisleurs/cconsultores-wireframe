@@ -55,7 +55,7 @@ export default function SectorPequenosNegociosC() {
             <a href="/version-c/sectores/construccion" className="hover:text-white/50 transition-colors">Sectores</a>
             <span className="text-white/15 mx-2">/</span>Pequeños Negocios
           </p>
-          <p className="label-uppercase text-white/30 mb-6">SECTOR</p>
+          <p className="label-uppercase text-white/30 mb-6">CONTADOR PARA PEQUEÑOS NEGOCIOS</p>
           <h1 className="font-sans font-bold text-white mb-6 max-w-[700px]" style={{ fontSize: "clamp(36px, 6vw, 72px)", letterSpacing: "-0.03em", lineHeight: 1.05 }}>
             Contador para tu Pequeño Negocio en Cancún
           </h1>
@@ -71,7 +71,7 @@ export default function SectorPequenosNegociosC() {
       {/* ¿ESTE SERVICIO ES PARA TI? */}
       <section className="bg-white py-24 px-5 md:px-10">
         <div className="max-w-[1100px] mx-auto">
-          <p className="label-uppercase text-camhaji-muted mb-4">¿ESTE SERVICIO ES PARA TI?</p>
+          <p className="label-uppercase text-camhaji-muted mb-4">NEGOCIOS QUE ATENDEMOS EN CANCÚN</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-6" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
             Si tienes un negocio propio y facturas como persona física
           </h2>
@@ -94,7 +94,7 @@ export default function SectorPequenosNegociosC() {
       <section className="bg-surface py-24 px-5 md:px-10">
         <div className="max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
           <div>
-            <p className="label-uppercase text-camhaji-muted mb-4">EL PROBLEMA REAL</p>
+            <p className="label-uppercase text-camhaji-muted mb-4">ERRORES FISCALES EN PEQUEÑOS NEGOCIOS</p>
             <h2 className="font-sans font-bold text-camhaji-text" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em", lineHeight: 1.3 }}>
               Por qué muchos pequeños negocios terminan con problemas con el SAT
             </h2>
@@ -113,7 +113,7 @@ export default function SectorPequenosNegociosC() {
       {/* OBLIGACIONES */}
       <section className="bg-white py-24 px-5 md:px-10">
         <div className="max-w-[1100px] mx-auto">
-          <p className="label-uppercase text-camhaji-muted mb-4">OBLIGACIONES FISCALES</p>
+          <p className="label-uppercase text-camhaji-muted mb-4">OBLIGACIONES DEL SAT PARA PERSONA FÍSICA</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-12" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
             Lo que un pequeño negocio persona física necesita cumplir
           </h2>
@@ -136,7 +136,7 @@ export default function SectorPequenosNegociosC() {
         </div>
         <div className="flex items-center bg-surface px-8 md:px-16 py-16">
           <div>
-            <p className="label-uppercase text-camhaji-muted mb-4">NEGOCIOS REALES</p>
+            <p className="label-uppercase text-camhaji-muted mb-4">CONTABILIDAD PARA NEGOCIOS EN CANCÚN</p>
             <h2 className="font-sans font-bold text-camhaji-text mb-6" style={{ fontSize: "clamp(22px, 2.5vw, 32px)", letterSpacing: "-0.02em" }}>
               No necesitas ser grande para necesitar un buen contador
             </h2>
@@ -150,7 +150,7 @@ export default function SectorPequenosNegociosC() {
       {/* RESICO VS RÉGIMEN */}
       <section className="bg-camhaji-base py-24 px-5 md:px-10">
         <div className="max-w-[1100px] mx-auto">
-          <p className="label-uppercase text-white/30 mb-4">COMPARATIVA</p>
+          <p className="label-uppercase text-white/30 mb-4">RESICO VS RÉGIMEN GENERAL EN MÉXICO</p>
           <h2 className="font-sans font-bold text-white mb-8" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
             ¿RESICO o Régimen de Actividades Empresariales?
           </h2>
@@ -179,7 +179,7 @@ export default function SectorPequenosNegociosC() {
       {/* LO QUE HACEMOS */}
       <section className="bg-white py-24 px-5 md:px-10">
         <div className="max-w-[1100px] mx-auto">
-          <p className="label-uppercase text-camhaji-muted mb-4">NUESTRO SERVICIO</p>
+          <p className="label-uppercase text-camhaji-muted mb-4">SERVICIO CONTABLE PARA TU NEGOCIO</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-10" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
             Lo que Camhaji hace por tu negocio en Cancún
           </h2>
@@ -198,7 +198,7 @@ export default function SectorPequenosNegociosC() {
       {/* EXPERIENCIA REGIONAL */}
       <section className="bg-surface py-24 px-5 md:px-10">
         <div className="max-w-[800px] mx-auto text-center">
-          <p className="label-uppercase text-camhaji-muted mb-6">EXPERIENCIA REGIONAL</p>
+          <p className="label-uppercase text-camhaji-muted mb-6">PEQUEÑOS NEGOCIOS EN QUINTANA ROO</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-8" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
             Conocemos los negocios pequeños de Cancún
           </h2>
@@ -213,7 +213,7 @@ export default function SectorPequenosNegociosC() {
         <img src="https://images.unsplash.com/photo-1533900298318-6b8da08a523e?w=1600&h=800&fit=crop" alt="Mercado y zona comercial local en Cancún" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-camhaji-base/70" />
         <div className="relative z-10 px-5 md:px-10 py-16 max-w-[700px]">
-          <p className="label-uppercase text-camhaji-accent/60 mb-4">CANCÚN, QUINTANA ROO</p>
+          <p className="label-uppercase text-camhaji-accent/60 mb-4">CONTADORES PARA PYMES EN CANCÚN</p>
           <p className="font-sans font-bold text-white" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em", lineHeight: 1.2 }}>
             Conocemos los negocios pequeños de la región — sus preguntas, sus errores comunes y lo que el SAT revisa con más frecuencia.
           </p>
@@ -238,7 +238,7 @@ export default function SectorPequenosNegociosC() {
       <section className="bg-white py-24 px-5 md:px-10">
         <div className="max-w-[1100px] mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start mb-16 gap-4">
-            <p className="label-uppercase text-camhaji-muted">PREGUNTAS FRECUENTES</p>
+            <p className="label-uppercase text-camhaji-muted">PEQUEÑOS NEGOCIOS — PREGUNTAS FRECUENTES</p>
             <h2 className="font-sans font-bold text-camhaji-text" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
               Pequeños negocios y persona física
             </h2>
@@ -265,7 +265,7 @@ export default function SectorPequenosNegociosC() {
 
       {/* CTA */}
       <section className="min-h-[60dvh] bg-primary flex flex-col items-center justify-center text-center px-5 md:px-10 py-20">
-        <p className="label-uppercase text-white/40 mb-6">DA EL SIGUIENTE PASO</p>
+        <p className="label-uppercase text-white/40 mb-6">CONTRATA TU CONTADOR EN CANCÚN</p>
         <h2 className="font-sans font-bold text-white mb-6" style={{ fontSize: "clamp(28px, 5vw, 64px)", letterSpacing: "-0.04em", lineHeight: 1.0 }}>
           ¿Tienes un negocio en Cancún y no sabes bien cómo estás con el SAT?
         </h2>

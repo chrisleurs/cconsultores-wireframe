@@ -36,7 +36,7 @@ export default function ServicioNominaC() {
             <span className="text-white/15 mx-2">/</span><span>Servicios</span>
             <span className="text-white/15 mx-2">/</span><span>Nómina</span>
           </p>
-          <p className="label-uppercase text-camhaji-accent/70 mb-6">SERVICIO 03</p>
+          <p className="label-uppercase text-camhaji-accent/70 mb-6">NÓMINA EMPRESARIAL EN CANCÚN</p>
           <h1 className="font-sans font-bold text-white mb-6" style={{ fontSize: "clamp(32px, 5.5vw, 64px)", letterSpacing: "-0.03em", lineHeight: 1.0 }}>
             Nómina Empresarial en Cancún: Sin Errores, sin Retrasos
           </h1>
@@ -49,7 +49,7 @@ export default function ServicioNominaC() {
       {/* EL COSTO DE EQUIVOCARSE */}
       <section className="bg-white py-24 px-5 md:px-10">
         <div className="max-w-[900px] mx-auto">
-          <p className="label-uppercase text-camhaji-muted mb-4">EL RIESGO</p>
+          <p className="label-uppercase text-camhaji-muted mb-4">RIESGOS DE NÓMINA MAL CALCULADA</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-8" style={{ fontSize: "clamp(24px, 3.5vw, 40px)", letterSpacing: "-0.03em" }}>
             El costo real de equivocarse en nómina
           </h2>
@@ -69,7 +69,7 @@ export default function ServicioNominaC() {
         </div>
         <div className="flex items-center bg-surface px-8 md:px-16 py-16">
           <div>
-            <p className="label-uppercase text-camhaji-muted mb-4">TU EQUIPO, NUESTRA RESPONSABILIDAD</p>
+            <p className="label-uppercase text-camhaji-muted mb-4">GESTIÓN DE IMSS E INFONAVIT EN CANCÚN</p>
             <h2 className="font-sans font-bold text-camhaji-text mb-6" style={{ fontSize: "clamp(22px, 2.5vw, 32px)", letterSpacing: "-0.02em" }}>
               Cada empleado bien registrado es un problema menos
             </h2>
@@ -83,7 +83,7 @@ export default function ServicioNominaC() {
       {/* QUÉ INCLUYE */}
       <section className="bg-camhaji-base py-24 px-5 md:px-10">
         <div className="max-w-[900px] mx-auto">
-          <p className="label-uppercase text-white/30 mb-4">SERVICIO DE NÓMINA</p>
+          <p className="label-uppercase text-white/30 mb-4">SERVICIO DE NÓMINA CON CONTPAQi</p>
           <h2 className="font-sans font-bold text-white mb-16" style={{ fontSize: "clamp(24px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
             ¿Qué incluye?
           </h2>
@@ -107,7 +107,7 @@ export default function ServicioNominaC() {
       {/* ESPECIALISTA */}
       <section className="bg-surface py-24 px-5 md:px-10">
         <div className="max-w-[900px] mx-auto">
-          <p className="label-uppercase text-camhaji-muted mb-4">NUESTRO ESPECIALISTA</p>
+          <p className="label-uppercase text-camhaji-muted mb-4">ESPECIALISTA EN NÓMINA EN CANCÚN</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-8" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
             Nuestro especialista en nómina
           </h2>
@@ -131,7 +131,7 @@ export default function ServicioNominaC() {
         <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1600&h=800&fit=crop" alt="Ambiente laboral profesional" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-camhaji-base/70" />
         <div className="relative z-10 px-5 md:px-10 py-16 max-w-[700px]">
-          <p className="label-uppercase text-camhaji-accent/60 mb-4">CONTPAQi NÓMINA</p>
+          <p className="label-uppercase text-camhaji-accent/60 mb-4">NÓMINA CON CONTPAQi — ESTÁNDAR EN MÉXICO</p>
           <p className="font-sans font-bold text-white" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em", lineHeight: 1.2 }}>
             El sistema más utilizado en México. Cálculos correctos, CFDI sin error, reportes compatibles con cualquier auditoría.
           </p>
@@ -153,7 +153,7 @@ export default function ServicioNominaC() {
       {/* FAQ */}
       <section className="bg-white py-24 px-5 md:px-10">
         <div className="max-w-[840px] mx-auto">
-          <p className="label-uppercase text-camhaji-muted mb-4">PREGUNTAS FRECUENTES</p>
+          <p className="label-uppercase text-camhaji-muted mb-4">NÓMINA EMPRESARIAL — PREGUNTAS FRECUENTES</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-14" style={{ fontSize: "clamp(24px, 3.5vw, 40px)", letterSpacing: "-0.02em" }}>
             Sobre nómina empresarial
           </h2>
@@ -178,7 +178,7 @@ export default function ServicioNominaC() {
 
       {/* CTA */}
       <section className="min-h-[60dvh] bg-primary flex flex-col items-center justify-center text-center px-5 md:px-10 py-20">
-        <p className="label-uppercase text-white/40 mb-6">¿BUSCAS UN SERVICIO DE NÓMINA CONFIABLE?</p>
+        <p className="label-uppercase text-white/40 mb-6">CONTRATA TU SERVICIO DE NÓMINA EN CANCÚN</p>
         <h2 className="font-sans font-bold text-white mb-6" style={{ fontSize: "clamp(36px, 6vw, 80px)", letterSpacing: "-0.04em", lineHeight: 1.0 }}>
           Hablemos de tu nómina.
         </h2>
