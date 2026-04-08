@@ -1,151 +1,32 @@
 
 
-## Plan: Reemplazar Labels Genéricos por Labels SEO Contextuales
+## Plan: Limpiar Proyecto — Solo Versión C, SEO HiFi y Revisión de Textos
 
-Cambiar todos los `label-uppercase` genéricos (EL RIESGO, EL SECTOR, NUESTRO ENFOQUE, QUÉ INCLUYE, PREGUNTAS FRECUENTES, etc.) por labels con palabras clave SEO relevantes para cada página, coherentes con el tono profesional del despacho.
+### Resumen
+Eliminar todos los archivos y rutas de las versiones A y B, y los componentes que solo ellas usan. Mantener: Versión C (todas sus páginas), PropuestaSEO, RevisionTextos, Index y NotFound.
 
-### Cambios por archivo (10 archivos)
+### Archivos a eliminar (10)
+- `src/pages/VersionA.tsx`
+- `src/pages/VersionB.tsx`
+- `src/pages/a/ContactoA.tsx`
+- `src/pages/a/NosotrosA.tsx`
+- `src/pages/a/SectorConstruccionA.tsx`
+- `src/pages/a/ServicioContabilidadA.tsx`
+- `src/pages/b/ContactoB.tsx`
+- `src/pages/b/NosotrosB.tsx`
+- `src/pages/b/SectorConstruccionB.tsx`
+- `src/pages/b/ServicioContabilidadB.tsx`
+- `src/components/Footer.tsx` (solo usado por A y B; C usa FooterC)
 
-#### `VersionC.tsx`
-| Actual | Nuevo |
-|--------|-------|
-| LO QUE NOS DIFERENCIA | DESPACHO CONTABLE EN CANCÚN |
-| NUESTROS SERVICIOS CONTABLES EN CANCÚN | *(se mantiene — ya es SEO)* |
-| LA EXPERIENCIA EN NÚMEROS | CONTADORES CON TRAYECTORIA EN CANCÚN |
-| NUESTRA HISTORIA | FIRMA CONTABLE CON HISTORIA |
-| EXPERIENCIA EN LOS SECTORES QUE MÁS IMPORTAN | SECTORES QUE ATENDEMOS EN QUINTANA ROO |
-| NUESTRO EQUIPO | EQUIPO CONTABLE EN CANCÚN |
-| LO QUE DICEN NUESTROS CLIENTES EN CANCÚN | *(se mantiene)* |
-| HABLEMOS DE TU NEGOCIO | CONTACTA A TU CONTADOR EN CANCÚN |
-| PREGUNTAS FRECUENTES | CONTABILIDAD EN CANCÚN — PREGUNTAS FRECUENTES |
+### Archivos a modificar (3)
 
-#### `ServicioContabilidadC.tsx`
-| Actual | Nuevo |
-|--------|-------|
-| SERVICIO 01 | CONTABILIDAD EMPRESARIAL EN CANCÚN |
-| ADAPTABILIDAD | CONTABILIDAD PARA PYMES EN QUINTANA ROO |
-| PROCESO CONTABLE MENSUAL | PROCESO DE CONTABILIDAD MENSUAL |
-| CANCÚN, QUINTANA ROO *(band)* | CONTADORES EN CANCÚN Y RIVIERA MAYA |
-| GESTIÓN ADMINISTRATIVA | ADMINISTRACIÓN EMPRESARIAL EN CANCÚN |
-| MÉTODO DE TRABAJO *(split)* | CONTABILIDAD ORDENADA Y TRANSPARENTE |
-| ¿PARA QUIÉN ES ESTE SERVICIO? | CONTABILIDAD POR SECTOR EN CANCÚN |
-| PREGUNTAS FRECUENTES | CONTABILIDAD EMPRESARIAL — PREGUNTAS FRECUENTES |
-| OTROS SERVICIOS | MÁS SERVICIOS CONTABLES EN CANCÚN |
-| ¿TU EMPRESA NECESITA CONTABILIDAD ORDENADA? | CONTRATA TU SERVICIO CONTABLE EN CANCÚN |
+1. **`src/App.tsx`** — Eliminar imports y rutas de version-a y version-b (lines 7-8, 10-17, 45-54). Eliminar import de Footer no usado.
 
-#### `ServicioFiscalC.tsx`
-| Actual | Nuevo |
-|--------|-------|
-| SERVICIO 02 | ASESORÍA FISCAL EN CANCÚN |
-| EL PROBLEMA | RIESGOS FISCALES PARA EMPRESAS EN CANCÚN |
-| DIAGNÓSTICO *(split)* | DIAGNÓSTICO FISCAL PERSONALIZADO |
-| NUESTRO ENFOQUE | CUMPLIMIENTO FISCAL SIN ATAJOS |
-| QUÉ INCLUYE | SERVICIOS DE ASESORÍA FISCAL |
-| POR QUÉ CAMHAJI | EXPERIENCIA FISCAL EN CANCÚN |
-| TRAYECTORIA *(band)* | ASESORES FISCALES CON TRAYECTORIA |
-| PREGUNTAS FRECUENTES | ASESORÍA FISCAL — PREGUNTAS FRECUENTES |
-| ¿TU EMPRESA TIENE ALGO PENDIENTE CON EL SAT? | REGULARIZA TU SITUACIÓN FISCAL EN CANCÚN |
+2. **`src/pages/Index.tsx`** — Ya solo muestra Propuesta C, SEO y Revisión de Textos. Sin cambios necesarios (A y B ya fueron retiradas anteriormente).
 
-#### `ServicioNominaC.tsx`
-| Actual | Nuevo |
-|--------|-------|
-| SERVICIO 03 | NÓMINA EMPRESARIAL EN CANCÚN |
-| EL RIESGO | RIESGOS DE NÓMINA MAL CALCULADA |
-| TU EQUIPO, NUESTRA RESPONSABILIDAD *(split)* | GESTIÓN DE IMSS E INFONAVIT EN CANCÚN |
-| SERVICIO DE NÓMINA | SERVICIO DE NÓMINA CON CONTPAQi |
-| NUESTRO ESPECIALISTA | ESPECIALISTA EN NÓMINA EN CANCÚN |
-| CONTPAQi NÓMINA *(band)* | NÓMINA CON CONTPAQi — ESTÁNDAR EN MÉXICO |
-| PREGUNTAS FRECUENTES | NÓMINA EMPRESARIAL — PREGUNTAS FRECUENTES |
-| ¿BUSCAS UN SERVICIO DE NÓMINA CONFIABLE? | CONTRATA TU SERVICIO DE NÓMINA EN CANCÚN |
+3. **`src/components/Navbar.tsx`** — Eliminar la lógica de `version="a"` y `version="b"` si existe, dejando solo `version="c"` como variante.
 
-#### `ServicioFacturacionC.tsx`
-| Actual | Nuevo |
-|--------|-------|
-| SERVICIO 04 | FACTURACIÓN CFDI EN CANCÚN |
-| POR QUÉ TERCERIZAR | OUTSOURCING DE FACTURACIÓN CFDI |
-| PRECISIÓN EN CADA CFDI *(split)* | FACTURACIÓN ELECTRÓNICA SIN ERRORES |
-| QUÉ INCLUYE | SERVICIO DE FACTURACIÓN CFDI |
-| TECNOLOGÍA | FACTURACIÓN CON CONTPAQi |
-| CONTPAQi FACTURACIÓN *(band)* | CFDI CON CONTPAQi — TIMBRADO DIRECTO AL SAT |
-| PREGUNTAS FRECUENTES | FACTURACIÓN CFDI — PREGUNTAS FRECUENTES |
-| ¿BUSCAS FACTURACIÓN CFDI EN CANCÚN? | CONTRATA TU SERVICIO DE FACTURACIÓN EN CANCÚN |
-
-#### `SectorConstruccionC.tsx`
-| Actual | Nuevo |
-|--------|-------|
-| ESPECIALIZACIÓN PRINCIPAL | CONTABILIDAD PARA CONSTRUCTORAS EN CANCÚN |
-| EL SECTOR | SECTOR CONSTRUCCIÓN EN QUINTANA ROO |
-| ESPECIALIZACIÓN *(split)* | CONTABILIDAD ESPECIALIZADA EN OBRA |
-| RETOS FISCALES | RETOS FISCALES DEL SECTOR CONSTRUCCIÓN |
-| LO QUE HACEMOS | SERVICIOS CONTABLES PARA CONSTRUCTORAS |
-| EXPERIENCIA REGIONAL | CONSTRUCTORAS EN CANCÚN Y RIVIERA MAYA |
-| QUINTANA ROO *(band)* | CONTADORES PARA CONSTRUCTORAS EN QUINTANA ROO |
-| PREGUNTAS FRECUENTES | CONSTRUCTORAS EN CANCÚN — PREGUNTAS FRECUENTES |
-| ¿TIENES UNA EMPRESA CONSTRUCTORA EN CANCÚN? | CONTRATA CONTABILIDAD PARA TU CONSTRUCTORA |
-
-#### `SectorComercialC.tsx`
-| Actual | Nuevo |
-|--------|-------|
-| SECTOR | CONTABILIDAD PARA EMPRESAS COMERCIALES |
-| EL SECTOR | SECTOR COMERCIAL EN QUINTANA ROO |
-| + remaining generic labels → SEO equivalents with "comercial", "Cancún" |
-
-#### `SectorInmobiliarioC.tsx`
-| Actual | Nuevo |
-|--------|-------|
-| SECTOR | CONTABILIDAD PARA AGENTES INMOBILIARIOS |
-| OBLIGACIONES FISCALES | IMPUESTOS PARA AGENTES INMOBILIARIOS EN MÉXICO |
-| COMISIONES EN REGLA *(split)* | FACTURACIÓN DE COMISIONES INMOBILIARIAS |
-| CFDI | CFDI PARA COMISIONES INMOBILIARIAS |
-| RESICO | RESICO PARA AGENTES INMOBILIARIOS |
-| LO QUE HACEMOS | SERVICIOS CONTABLES PARA INMOBILIARIOS |
-| CANCÚN Y RIVIERA MAYA *(band)* | MERCADO INMOBILIARIO EN CANCÚN |
-| PREGUNTAS FRECUENTES | AGENTES INMOBILIARIOS — PREGUNTAS FRECUENTES |
-| ¿ERES AGENTE INMOBILIARIO EN CANCÚN? | CONTRATA TU CONTADOR INMOBILIARIO EN CANCÚN |
-
-#### `SectorResicoC.tsx`
-| Actual | Nuevo |
-|--------|-------|
-| SECTOR | CONTADOR PARA RESICO EN CANCÚN |
-| EL RÉGIMEN | RÉGIMEN SIMPLIFICADO DE CONFIANZA |
-| OBLIGACIONES FISCALES | OBLIGACIONES FISCALES DEL RESICO |
-| SIMPLIFICADO, NO AUTOMÁTICO *(split)* | RESICO: TASAS BAJAS, OBLIGACIONES REALES |
-| NUESTRO SERVICIO | SERVICIO CONTABLE PARA RESICO |
-| PERFILES | PROFESIONISTAS EN RESICO EN CANCÚN |
-| FREELANCERS Y PROFESIONISTAS *(band)* | PROFESIONISTAS INDEPENDIENTES EN CANCÚN |
-| PREGUNTAS FRECUENTES | RESICO — PREGUNTAS FRECUENTES |
-
-#### `SectorPequenosNegociosC.tsx`
-| Actual | Nuevo |
-|--------|-------|
-| SECTOR | CONTADOR PARA PEQUEÑOS NEGOCIOS |
-| ¿ESTE SERVICIO ES PARA TI? | NEGOCIOS QUE ATENDEMOS EN CANCÚN |
-| EL PROBLEMA REAL | ERRORES FISCALES EN PEQUEÑOS NEGOCIOS |
-| OBLIGACIONES FISCALES | OBLIGACIONES DEL SAT PARA PERSONA FÍSICA |
-| NEGOCIOS REALES *(split)* | CONTABILIDAD PARA NEGOCIOS EN CANCÚN |
-| COMPARATIVA | RESICO VS RÉGIMEN GENERAL EN MÉXICO |
-| NUESTRO SERVICIO | SERVICIO CONTABLE PARA TU NEGOCIO |
-| EXPERIENCIA REGIONAL | PEQUEÑOS NEGOCIOS EN QUINTANA ROO |
-| CANCÚN, QUINTANA ROO *(band)* | CONTADORES PARA PYMES EN CANCÚN |
-| PREGUNTAS FRECUENTES | PEQUEÑOS NEGOCIOS — PREGUNTAS FRECUENTES |
-
-#### `NosotrosC.tsx`
-| Actual | Nuevo |
-|--------|-------|
-| NUESTRA FIRMA | DESPACHO CONTABLE EN CANCÚN |
-| NUESTRA HISTORIA | HISTORIA DE CAMHAJI CONSULTORES |
-| DIRECCIÓN Y GERENCIA | LIDERAZGO DEL DESPACHO CONTABLE |
-| ADMINISTRACIÓN, NÓMINA Y FACTURACIÓN | EQUIPO DE NÓMINA Y FACTURACIÓN |
-| NUESTRA FILOSOFÍA | VALORES DE CAMHAJI CONSULTORES |
-| NUESTRA VISIÓN | VISIÓN DEL DESPACHO EN CANCÚN |
-| DIFERENCIADORES | POR QUÉ ELEGIR CAMHAJI EN CANCÚN |
-| DA EL SIGUIENTE PASO | CONTACTA A CAMHAJI CONSULTORES |
-
-### Notas
-- Solo se cambian los strings de los labels. No se modifica ningún H1, H2, H3 ni párrafo
-- Los labels se optimizan con keywords del sector + ubicación (Cancún, Quintana Roo)
-- Se mantiene el tono profesional y directo de la marca
-
-### Archivos a modificar (10)
-`VersionC.tsx`, `ServicioContabilidadC.tsx`, `ServicioFiscalC.tsx`, `ServicioNominaC.tsx`, `ServicioFacturacionC.tsx`, `SectorConstruccionC.tsx`, `SectorComercialC.tsx`, `SectorInmobiliarioC.tsx`, `SectorResicoC.tsx`, `SectorPequenosNegociosC.tsx`, `NosotrosC.tsx`
+### Directorios a eliminar
+- `src/pages/a/` (vacío tras eliminar archivos)
+- `src/pages/b/` (vacío tras eliminar archivos)
 
