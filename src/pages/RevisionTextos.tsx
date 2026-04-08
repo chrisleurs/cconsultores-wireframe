@@ -788,12 +788,42 @@ export default function RevisionTextos() {
   const [activeId, setActiveId] = useState("home");
   const [approvals, setApprovals] = useState<Record<string, boolean>>({});
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [comments, setComments] = useState<Record<string, Record<number, string[]>>>({});
+  const [openCommentBox, setOpenCommentBox] = useState<string | null>(null);
+  const [commentDraft, setCommentDraft] = useState("");
 
   const activeDoc = pages.find((p) => p.id === activeId)!;
   const approvedCount = Object.values(approvals).filter(Boolean).length;
 
   const toggleApproval = (id: string) => {
     setApprovals((prev) => ({ ...prev, [id]: !prev[id] }));
+  };
+
+  const addComment = (pageId: string, sectionIdx: number) => {
+    if (!commentDraft.trim()) return;
+    setComments((prev) => {
+      const pc = prev[pageId] || {};
+      const sc = pc[sectionIdx] || [];
+      return { ...prev, [pageId]: { ...pc, [sectionIdx]: [...sc, commentDraft.trim()] } };
+    });
+    setCommentDraft("");
+  };
+
+  const removeComment = (pageId: string, sectionIdx: number, commentIdx: number) => {
+    setComments((prev) => {
+      const pc = prev[pageId] || {};
+      const sc = [...(pc[sectionIdx] || [])];
+      sc.splice(commentIdx, 1);
+      return { ...prev, [pageId]: { ...pc, [sectionIdx]: sc } };
+    });
+  };
+
+  const getSectionComments = (pageId: string, sectionIdx: number) =>
+    (comments[pageId] || {})[sectionIdx] || [];
+
+  const getPageCommentCount = (pageId: string) => {
+    const pc = comments[pageId] || {};
+    return Object.values(pc).reduce((sum, arr) => sum + arr.length, 0);
   };
 
   return (
