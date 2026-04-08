@@ -967,6 +967,66 @@ export default function RevisionTextos() {
                         </p>
                       ))}
                     </div>
+
+                    {/* Existing comments */}
+                    {getSectionComments(activeDoc.id, si).length > 0 && (
+                      <div className="mt-4 space-y-2">
+                        {getSectionComments(activeDoc.id, si).map((comment, ci) => (
+                          <div key={ci} className="flex items-start gap-2 bg-amber-50 border border-amber-200/60 rounded px-3 py-2.5 group/comment">
+                            <MessageSquare className="w-3.5 h-3.5 text-amber-500 mt-0.5 flex-shrink-0" />
+                            <p className="font-sans text-[13px] text-amber-900 leading-relaxed flex-1">{comment}</p>
+                            <button
+                              onClick={() => removeComment(activeDoc.id, si, ci)}
+                              className="opacity-0 group-hover/comment:opacity-100 transition-opacity p-0.5 hover:bg-amber-200/50 rounded"
+                            >
+                              <X className="w-3 h-3 text-amber-500" />
+                            </button>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
+                    {/* Add comment toggle & input */}
+                    {openCommentBox === `${activeDoc.id}-${si}` ? (
+                      <div className="mt-3 flex gap-2">
+                        <textarea
+                          value={commentDraft}
+                          onChange={(e) => setCommentDraft(e.target.value)}
+                          placeholder="Escribe tu comentario o cambio sugerido…"
+                          className="flex-1 font-sans text-[13px] text-camhaji-text bg-white border border-border-subtle rounded px-3 py-2 min-h-[60px] resize-y focus:outline-none focus:ring-1 focus:ring-primary/30 focus:border-primary/40 placeholder:text-camhaji-muted/40"
+                          autoFocus
+                          onKeyDown={(e) => {
+                            if (e.key === "Enter" && (e.metaKey || e.ctrlKey)) {
+                              addComment(activeDoc.id, si);
+                            }
+                          }}
+                        />
+                        <div className="flex flex-col gap-1.5">
+                          <button
+                            onClick={() => addComment(activeDoc.id, si)}
+                            className="p-2 bg-primary text-white rounded hover:bg-primary/90 transition-colors"
+                            title="Enviar comentario"
+                          >
+                            <Send className="w-3.5 h-3.5" />
+                          </button>
+                          <button
+                            onClick={() => { setOpenCommentBox(null); setCommentDraft(""); }}
+                            className="p-2 bg-surface text-camhaji-muted rounded hover:bg-border-subtle transition-colors"
+                            title="Cancelar"
+                          >
+                            <X className="w-3.5 h-3.5" />
+                          </button>
+                        </div>
+                      </div>
+                    ) : (
+                      <button
+                        onClick={() => { setOpenCommentBox(`${activeDoc.id}-${si}`); setCommentDraft(""); }}
+                        className="mt-3 flex items-center gap-1.5 font-sans text-[12px] text-camhaji-muted/50 hover:text-primary transition-colors"
+                      >
+                        <MessageSquare className="w-3 h-3" />
+                        Añadir comentario
+                      </button>
+                    )}
                   </div>
                 ))}
               </div>
