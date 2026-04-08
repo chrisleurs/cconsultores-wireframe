@@ -25,40 +25,30 @@ export function Navbar({ version }: NavbarProps) {
   const base = version ? `/version-${version}` : "";
 
   const getNavLinks = (): NavLink[] => {
-    if (version === "c") {
-      return [
-        { label: "Home", href: base },
-        { label: "Nosotros", href: `${base}/nosotros` },
-        {
-          label: "Servicios",
-          href: `${base}/servicios/contabilidad`,
-          dropdown: [
-            { label: "Contabilidad", href: `${base}/servicios/contabilidad` },
-            { label: "Estrategia Fiscal", href: `${base}/servicios/fiscal` },
-            { label: "Nómina", href: `${base}/servicios/nomina` },
-            { label: "Facturación CFDI", href: `${base}/servicios/facturacion` },
-          ],
-        },
-        {
-          label: "Sectores",
-          href: `${base}/sectores/construccion`,
-          dropdown: [
-            { label: "Construcción", href: `${base}/sectores/construccion` },
-            { label: "Comercial", href: `${base}/sectores/comercial` },
-            { label: "Inmobiliario", href: `${base}/sectores/inmobiliario` },
-            { label: "RESICO", href: `${base}/sectores/resico` },
-            { label: "Pequeños Negocios", href: `${base}/sectores/pequenos-negocios` },
-          ],
-        },
-        { label: "Contacto", href: `${base}/contacto` },
-      ];
-    }
-
     return [
-      ...(version ? [{ label: "Home", href: base }] : []),
+      { label: "Home", href: base },
       { label: "Nosotros", href: `${base}/nosotros` },
-      { label: "Servicios", href: `${base}/servicios/contabilidad` },
-      { label: "Sectores", href: `${base}/sectores/construccion` },
+      {
+        label: "Servicios",
+        href: `${base}/servicios/contabilidad`,
+        dropdown: [
+          { label: "Contabilidad", href: `${base}/servicios/contabilidad` },
+          { label: "Estrategia Fiscal", href: `${base}/servicios/fiscal` },
+          { label: "Nómina", href: `${base}/servicios/nomina` },
+          { label: "Facturación CFDI", href: `${base}/servicios/facturacion` },
+        ],
+      },
+      {
+        label: "Sectores",
+        href: `${base}/sectores/construccion`,
+        dropdown: [
+          { label: "Construcción", href: `${base}/sectores/construccion` },
+          { label: "Comercial", href: `${base}/sectores/comercial` },
+          { label: "Inmobiliario", href: `${base}/sectores/inmobiliario` },
+          { label: "RESICO", href: `${base}/sectores/resico` },
+          { label: "Pequeños Negocios", href: `${base}/sectores/pequenos-negocios` },
+        ],
+      },
       { label: "Contacto", href: `${base}/contacto` },
     ];
   };
