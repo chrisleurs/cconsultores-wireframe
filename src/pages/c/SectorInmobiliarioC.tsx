@@ -72,6 +72,24 @@ export default function SectorInmobiliarioC() {
         </div>
       </section>
 
+      {/* SPLIT IMAGE — AGENTE INMOBILIARIO */}
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-0">
+        <div>
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1200&h=800&fit=crop" alt="Agente inmobiliario mostrando propiedad" className="w-full h-full object-cover aspect-[4/3]" />
+        </div>
+        <div className="flex items-center bg-surface px-8 md:px-16 py-16">
+          <div>
+            <p className="label-uppercase text-camhaji-muted mb-4">COMISIONES EN REGLA</p>
+            <h2 className="font-sans font-bold text-camhaji-text mb-6" style={{ fontSize: "clamp(22px, 2.5vw, 32px)", letterSpacing: "-0.02em" }}>
+              Cada comisión bien facturada es una deducción que tu cliente conserva
+            </h2>
+            <p className="font-sans text-[15px] font-light text-camhaji-muted leading-relaxed">
+              El mercado inmobiliario de Cancún mueve comisiones altas. Un CFDI incorrecto no solo te afecta a ti — también le quita la deducción a tu cliente.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* CFDI */}
       <section className="bg-surface py-24 px-5 md:px-10">
         <div className="max-w-[900px] mx-auto">
@@ -121,6 +139,18 @@ export default function SectorInmobiliarioC() {
             ))}
           </div>
           <p className="font-sans text-sm font-light text-camhaji-muted mt-6 italic">Sin pendientes acumulados. Sin facturas mal emitidas. Sin sorpresas.</p>
+        </div>
+      </section>
+
+      {/* FULL-BLEED BAND — CONDOMINIOS FRENTE AL MAR */}
+      <section className="min-h-[40vh] relative flex items-center justify-center text-center">
+        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1600&h=800&fit=crop" alt="Condominios frente al mar en Cancún" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-camhaji-base/70" />
+        <div className="relative z-10 px-5 md:px-10 py-16 max-w-[700px]">
+          <p className="label-uppercase text-camhaji-accent/60 mb-4">CANCÚN Y RIVIERA MAYA</p>
+          <p className="font-sans font-bold text-white" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em", lineHeight: 1.2 }}>
+            El mercado inmobiliario más activo de México — y uno de los más fiscalizados.
+          </p>
         </div>
       </section>
 

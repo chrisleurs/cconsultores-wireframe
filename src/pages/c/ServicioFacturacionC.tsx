@@ -62,6 +62,24 @@ export default function ServicioFacturacionC() {
         </div>
       </section>
 
+      {/* SPLIT IMAGE — FACTURACIÓN */}
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-0">
+        <div className="flex items-center bg-surface px-8 md:px-16 py-16 order-2 md:order-1">
+          <div>
+            <p className="label-uppercase text-camhaji-muted mb-4">PRECISIÓN EN CADA CFDI</p>
+            <h2 className="font-sans font-bold text-camhaji-text mb-6" style={{ fontSize: "clamp(22px, 2.5vw, 32px)", letterSpacing: "-0.02em" }}>
+              Una factura bien emitida protege a tu empresa y a tu cliente
+            </h2>
+            <p className="font-sans text-[15px] font-light text-camhaji-muted leading-relaxed">
+              Datos del receptor verificados, uso del CFDI correcto, complementos de pago en tiempo. Cada detalle importa cuando el SAT cruza información automáticamente.
+            </p>
+          </div>
+        </div>
+        <div className="order-1 md:order-2">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=800&fit=crop" alt="Sistema de facturación digital" className="w-full h-full object-cover aspect-[4/3]" />
+        </div>
+      </section>
+
       {/* QUÉ INCLUYE */}
       <section className="bg-camhaji-base py-24 px-5 md:px-10">
         <div className="max-w-[900px] mx-auto">
@@ -92,6 +110,18 @@ export default function ServicioFacturacionC() {
           </h2>
           <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed">
             CONTPAQi es el software de facturación más utilizado en México y está integrado directamente con el SAT. Lo usamos porque garantiza compatibilidad, trazabilidad y reportes que funcionan en cualquier revisión. Si el SAT pide tu historial de CFDI, no tendrás que explicar cómo está hecha tu facturación — estará en orden.
+          </p>
+        </div>
+      </section>
+
+      {/* FULL-BLEED BAND — TECNOLOGÍA */}
+      <section className="min-h-[40vh] relative flex items-center justify-center text-center">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&h=800&fit=crop" alt="Oficina tecnológica moderna" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-camhaji-base/70" />
+        <div className="relative z-10 px-5 md:px-10 py-16 max-w-[700px]">
+          <p className="label-uppercase text-camhaji-accent/60 mb-4">CONTPAQi FACTURACIÓN</p>
+          <p className="font-sans font-bold text-white" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em", lineHeight: 1.2 }}>
+            El estándar en México. Timbrado directo con el SAT, archivo organizado y reportes listos para cualquier revisión.
           </p>
         </div>
       </section>

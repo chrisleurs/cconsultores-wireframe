@@ -99,6 +99,18 @@ export default function ServicioContabilidadC() {
         </div>
       </section>
 
+      {/* FULL-BLEED BAND — CANCÚN */}
+      <section className="min-h-[40vh] relative flex items-center justify-center text-center">
+        <img src="https://images.unsplash.com/photo-1510097467424-192d713fd8b2?w=1600&h=800&fit=crop" alt="Zona hotelera de Cancún vista aérea" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-camhaji-base/70" />
+        <div className="relative z-10 px-5 md:px-10 py-16 max-w-[700px]">
+          <p className="label-uppercase text-camhaji-accent/60 mb-4">CANCÚN, QUINTANA ROO</p>
+          <p className="font-sans font-bold text-white" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em", lineHeight: 1.2 }}>
+            Más de una década ordenando la contabilidad de empresas en la región.
+          </p>
+        </div>
+      </section>
+
       {/* GESTIÓN ADMINISTRATIVA */}
       <section className="bg-white py-24 px-5 md:px-10">
         <div className="max-w-[900px] mx-auto">
@@ -118,6 +130,24 @@ export default function ServicioContabilidadC() {
             ))}
           </div>
           <p className="font-sans text-sm font-light text-camhaji-muted mt-6 italic">Un solo despacho. Un solo proceso. Todo en orden.</p>
+        </div>
+      </section>
+
+      {/* SPLIT IMAGE — OFICINA */}
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-0">
+        <div>
+          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=800&fit=crop" alt="Oficina con documentos contables" className="w-full h-full object-cover aspect-[4/3]" />
+        </div>
+        <div className="flex items-center bg-surface px-8 md:px-16 py-16">
+          <div>
+            <p className="label-uppercase text-camhaji-muted mb-4">MÉTODO DE TRABAJO</p>
+            <h2 className="font-sans font-bold text-camhaji-text mb-6" style={{ fontSize: "clamp(22px, 2.5vw, 32px)", letterSpacing: "-0.02em" }}>
+              Orden, proceso y transparencia en cada paso
+            </h2>
+            <p className="font-sans text-[15px] font-light text-camhaji-muted leading-relaxed">
+              Cada mes seguimos el mismo proceso. Cada número tiene respaldo. Cada declaración se revisa antes de presentarse. Así funciona una contabilidad que protege a tu empresa.
+            </p>
+          </div>
         </div>
       </section>
 

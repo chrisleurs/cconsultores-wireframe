@@ -137,6 +137,24 @@ export default function SectorResicoC() {
         </div>
       </section>
 
+      {/* SPLIT IMAGE — EMPRENDEDOR */}
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-0">
+        <div className="flex items-center bg-surface px-8 md:px-16 py-16 order-2 md:order-1">
+          <div>
+            <p className="label-uppercase text-camhaji-muted mb-4">SIMPLIFICADO, NO AUTOMÁTICO</p>
+            <h2 className="font-sans font-bold text-camhaji-text mb-6" style={{ fontSize: "clamp(22px, 2.5vw, 32px)", letterSpacing: "-0.02em" }}>
+              El RESICO simplifica las tasas, pero las obligaciones siguen siendo tuyas
+            </h2>
+            <p className="font-sans text-[15px] font-light text-camhaji-muted leading-relaxed">
+              Declaraciones mensuales, CFDI por cada ingreso, retenciones cuando aplican. Lo simple es pagarle menos al SAT — no dejar de cumplir.
+            </p>
+          </div>
+        </div>
+        <div className="order-1 md:order-2">
+          <img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?w=1200&h=800&fit=crop" alt="Emprendedor independiente trabajando" className="w-full h-full object-cover aspect-[4/3]" />
+        </div>
+      </section>
+
       {/* LO QUE HACEMOS */}
       <section className="bg-surface py-24 px-5 md:px-10">
         <div className="max-w-[900px] mx-auto">
@@ -175,6 +193,18 @@ export default function SectorResicoC() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* FULL-BLEED BAND — CALLE COMERCIAL */}
+      <section className="min-h-[40vh] relative flex items-center justify-center text-center">
+        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1600&h=800&fit=crop" alt="Calle comercial en Cancún" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-camhaji-base/70" />
+        <div className="relative z-10 px-5 md:px-10 py-16 max-w-[700px]">
+          <p className="label-uppercase text-camhaji-accent/60 mb-4">FREELANCERS Y PROFESIONISTAS</p>
+          <p className="font-sans font-bold text-white" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em", lineHeight: 1.2 }}>
+            Consultores, diseñadores, médicos, agentes inmobiliarios — todos en orden con el SAT.
+          </p>
         </div>
       </section>
 

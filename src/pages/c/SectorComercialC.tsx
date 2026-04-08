@@ -59,6 +59,24 @@ export default function SectorComercialC() {
         </div>
       </section>
 
+      {/* SPLIT IMAGE — ALMACÉN */}
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-0">
+        <div className="flex items-center bg-surface px-8 md:px-16 py-16 order-2 md:order-1">
+          <div>
+            <p className="label-uppercase text-camhaji-muted mb-4">OPERACIÓN COMERCIAL</p>
+            <h2 className="font-sans font-bold text-camhaji-text mb-6" style={{ fontSize: "clamp(22px, 2.5vw, 32px)", letterSpacing: "-0.02em" }}>
+              El volumen de transacciones exige orden contable permanente
+            </h2>
+            <p className="font-sans text-[15px] font-light text-camhaji-muted leading-relaxed">
+              Facturas a clientes, facturas de proveedores, pagos, cobros, devoluciones, notas de crédito. Sin un proceso contable sólido, el volumen se convierte en desorden.
+            </p>
+          </div>
+        </div>
+        <div className="order-1 md:order-2">
+          <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&h=800&fit=crop" alt="Almacén comercial organizado" className="w-full h-full object-cover aspect-[4/3]" />
+        </div>
+      </section>
+
       {/* LO QUE HACEMOS */}
       <section className="bg-camhaji-base py-24 px-5 md:px-10">
         <div className="max-w-[900px] mx-auto">
@@ -88,6 +106,18 @@ export default function SectorComercialC() {
             Hemos trabajado con distribuidoras, comercializadoras y empresas de venta al mayoreo y menudeo en Quintana Roo. Conocemos los ritmos de temporada del mercado local, la dinámica con proveedores regionales y las particularidades fiscales del sector.
           </p>
           <p className="font-sans font-semibold text-primary">No empezamos a aprender con cada cliente nuevo. Llegamos con experiencia acumulada.</p>
+        </div>
+      </section>
+
+      {/* FULL-BLEED BAND — CANCÚN COMERCIAL */}
+      <section className="min-h-[40vh] relative flex items-center justify-center text-center">
+        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1600&h=800&fit=crop" alt="Centro comercial en Cancún" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-camhaji-base/70" />
+        <div className="relative z-10 px-5 md:px-10 py-16 max-w-[700px]">
+          <p className="label-uppercase text-camhaji-accent/60 mb-4">EXPERIENCIA REGIONAL</p>
+          <p className="font-sans font-bold text-white" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em", lineHeight: 1.2 }}>
+            Distribuidoras, comercializadoras y ventas al mayoreo en Quintana Roo.
+          </p>
         </div>
       </section>
 

@@ -129,6 +129,24 @@ export default function SectorPequenosNegociosC() {
         </div>
       </section>
 
+      {/* SPLIT IMAGE — TIENDA LOCAL */}
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-0">
+        <div>
+          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&h=800&fit=crop" alt="Tienda local en Cancún" className="w-full h-full object-cover aspect-[4/3]" />
+        </div>
+        <div className="flex items-center bg-surface px-8 md:px-16 py-16">
+          <div>
+            <p className="label-uppercase text-camhaji-muted mb-4">NEGOCIOS REALES</p>
+            <h2 className="font-sans font-bold text-camhaji-text mb-6" style={{ fontSize: "clamp(22px, 2.5vw, 32px)", letterSpacing: "-0.02em" }}>
+              No necesitas ser grande para necesitar un buen contador
+            </h2>
+            <p className="font-sans text-[15px] font-light text-camhaji-muted leading-relaxed">
+              Tiendas, talleres, restaurantes, ventas en línea. Si tienes un negocio y un RFC, tienes obligaciones. Y cumplirlas bien desde el inicio te ahorra problemas después.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* RESICO VS RÉGIMEN */}
       <section className="bg-camhaji-base py-24 px-5 md:px-10">
         <div className="max-w-[1100px] mx-auto">
@@ -186,6 +204,18 @@ export default function SectorPequenosNegociosC() {
           </h2>
           <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed">
             Hemos trabajado con dueños de negocios de distintos giros en Quintana Roo — desde comerciantes con una sola tienda hasta contratistas con varios proyectos simultáneos. Conocemos las preguntas que se repiten, los errores más comunes y las situaciones que el SAT revisa con más frecuencia en este segmento. No empezamos a aprender con cada cliente nuevo. Llegamos con experiencia y con respuestas concretas.
+          </p>
+        </div>
+      </section>
+
+      {/* FULL-BLEED BAND — MERCADO LOCAL */}
+      <section className="min-h-[40vh] relative flex items-center justify-center text-center">
+        <img src="https://images.unsplash.com/photo-1533900298318-6b8da08a523e?w=1600&h=800&fit=crop" alt="Mercado y zona comercial local en Cancún" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-camhaji-base/70" />
+        <div className="relative z-10 px-5 md:px-10 py-16 max-w-[700px]">
+          <p className="label-uppercase text-camhaji-accent/60 mb-4">CANCÚN, QUINTANA ROO</p>
+          <p className="font-sans font-bold text-white" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em", lineHeight: 1.2 }}>
+            Conocemos los negocios pequeños de la región — sus preguntas, sus errores comunes y lo que el SAT revisa con más frecuencia.
           </p>
         </div>
       </section>
