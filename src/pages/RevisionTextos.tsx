@@ -934,8 +934,14 @@ export default function RevisionTextos() {
               <div className="border-b border-border-subtle px-8 md:px-14 py-6 flex items-center justify-between">
                 <div>
                   <p className="font-sans text-[10px] font-bold uppercase tracking-[0.18em] text-camhaji-muted/50 mb-1">{activeDoc.category}</p>
-                  <h2 className="font-sans text-lg font-bold text-camhaji-text" style={{ letterSpacing: "-0.02em" }}>{activeDoc.name}</h2>
-                </div>
+                  <div className="flex items-center gap-2">
+                    <h2 className="font-sans text-lg font-bold text-camhaji-text" style={{ letterSpacing: "-0.02em" }}>{activeDoc.name}</h2>
+                    {getPageCommentCount(activeDoc.id) > 0 && (
+                      <span className="font-sans text-[10px] font-semibold bg-amber-100 text-amber-700 rounded-full px-2 py-0.5">
+                        {getPageCommentCount(activeDoc.id)} {getPageCommentCount(activeDoc.id) === 1 ? "comentario" : "comentarios"}
+                      </span>
+                    )}
+                  </div>
                 <button
                   onClick={() => toggleApproval(activeDoc.id)}
                   className={`flex items-center gap-2 px-4 py-2 rounded-sm font-sans text-xs font-semibold uppercase tracking-[0.1em] transition-all duration-200 ${
