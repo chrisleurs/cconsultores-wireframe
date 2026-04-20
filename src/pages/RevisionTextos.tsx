@@ -791,6 +791,9 @@ export default function RevisionTextos() {
   const [comments, setComments] = useState<Record<string, Record<number, string[]>>>({});
   const [openCommentBox, setOpenCommentBox] = useState<string | null>(null);
   const [commentDraft, setCommentDraft] = useState("");
+  const [edits, setEdits] = useState<Record<string, Record<number, Record<number, string>>>>({});
+  const [editingKey, setEditingKey] = useState<string | null>(null);
+  const [editDraft, setEditDraft] = useState("");
 
   const activeDoc = pages.find((p) => p.id === activeId)!;
   const approvedCount = Object.values(approvals).filter(Boolean).length;
@@ -824,6 +827,34 @@ export default function RevisionTextos() {
   const getPageCommentCount = (pageId: string) => {
     const pc = comments[pageId] || {};
     return Object.values(pc).reduce((sum, arr) => sum + arr.length, 0);
+  };
+
+  const getLineText = (pageId: string, sectionIdx: number, lineIdx: number, original: string) => {
+    return edits[pageId]?.[sectionIdx]?.[lineIdx] ?? original;
+  };
+
+  const isLineEdited = (pageId: string, sectionIdx: number, lineIdx: number) => {
+    return edits[pageId]?.[sectionIdx]?.[lineIdx] !== undefined;
+  };
+
+  const saveEdit = (pageId: string, sectionIdx: number, lineIdx: number) => {
+    setEdits((prev) => {
+      const pc = prev[pageId] || {};
+      const sc = pc[sectionIdx] || {};
+      return { ...prev, [pageId]: { ...pc, [sectionIdx]: { ...sc, [lineIdx]: editDraft } } };
+    });
+    setEditingKey(null);
+    setEditDraft("");
+  };
+
+  const resetEdit = (pageId: string, sectionIdx: number, lineIdx: number) => {
+    setEdits((prev) => {
+      const pc = { ...(prev[pageId] || {}) };
+      const sc = { ...(pc[sectionIdx] || {}) };
+      delete sc[lineIdx];
+      pc[sectionIdx] = sc;
+      return { ...prev, [pageId]: pc };
+    });
   };
 
   return (
