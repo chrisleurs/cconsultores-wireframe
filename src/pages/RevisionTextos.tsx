@@ -1004,11 +1004,76 @@ export default function RevisionTextos() {
                       {section.title}
                     </h3>
                     <div className="space-y-3">
-                      {section.content.map((line, li) => (
-                        <p key={li} className="font-sans text-[15px] text-camhaji-muted leading-[1.75]">
-                          {line}
-                        </p>
-                      ))}
+                      {section.content.map((line, li) => {
+                        const editKey = `${activeDoc.id}-${si}-${li}`;
+                        const isEditing = editingKey === editKey;
+                        const currentText = getLineText(activeDoc.id, si, li, line);
+                        const edited = isLineEdited(activeDoc.id, si, li);
+                        if (isEditing) {
+                          return (
+                            <div key={li} className="flex gap-2 items-start">
+                              <textarea
+                                value={editDraft}
+                                onChange={(e) => setEditDraft(e.target.value)}
+                                className="flex-1 font-sans text-[15px] text-camhaji-text bg-white border border-primary/40 rounded px-3 py-2 leading-[1.75] resize-y min-h-[60px] focus:outline-none focus:ring-1 focus:ring-primary/30"
+                                autoFocus
+                                onKeyDown={(e) => {
+                                  if (e.key === "Enter" && (e.metaKey || e.ctrlKey)) saveEdit(activeDoc.id, si, li);
+                                  if (e.key === "Escape") { setEditingKey(null); setEditDraft(""); }
+                                }}
+                              />
+                              <div className="flex flex-col gap-1.5">
+                                <button
+                                  onClick={() => saveEdit(activeDoc.id, si, li)}
+                                  className="p-2 bg-primary text-white rounded hover:bg-primary/90 transition-colors"
+                                  title="Guardar (⌘+Enter)"
+                                >
+                                  <Check className="w-3.5 h-3.5" />
+                                </button>
+                                <button
+                                  onClick={() => { setEditingKey(null); setEditDraft(""); }}
+                                  className="p-2 bg-surface text-camhaji-muted rounded hover:bg-border-subtle transition-colors"
+                                  title="Cancelar (Esc)"
+                                >
+                                  <X className="w-3.5 h-3.5" />
+                                </button>
+                              </div>
+                            </div>
+                          );
+                        }
+                        return (
+                          <div key={li} className="group/line relative flex gap-2 items-start">
+                            <p
+                              className={`font-sans text-[15px] leading-[1.75] flex-1 ${edited ? "text-camhaji-text bg-emerald-50/60 border-l-2 border-emerald-400 pl-3 -ml-3 py-1 rounded-r" : "text-camhaji-muted"}`}
+                            >
+                              {currentText}
+                              {edited && (
+                                <span className="ml-2 font-sans text-[10px] font-semibold uppercase tracking-wider text-emerald-600">
+                                  editado
+                                </span>
+                              )}
+                            </p>
+                            <div className="opacity-0 group-hover/line:opacity-100 transition-opacity flex gap-1 flex-shrink-0">
+                              <button
+                                onClick={() => { setEditingKey(editKey); setEditDraft(currentText); }}
+                                className="p-1.5 text-camhaji-muted/60 hover:text-primary hover:bg-surface rounded transition-colors"
+                                title="Editar texto"
+                              >
+                                <Pencil className="w-3 h-3" />
+                              </button>
+                              {edited && (
+                                <button
+                                  onClick={() => resetEdit(activeDoc.id, si, li)}
+                                  className="p-1.5 text-camhaji-muted/60 hover:text-amber-600 hover:bg-surface rounded transition-colors"
+                                  title="Restaurar original"
+                                >
+                                  <RotateCcw className="w-3 h-3" />
+                                </button>
+                              )}
+                            </div>
+                          </div>
+                        );
+                      })}
                     </div>
 
                     {/* Existing comments */}
