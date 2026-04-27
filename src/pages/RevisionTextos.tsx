@@ -1074,15 +1074,41 @@ export default function RevisionTextos() {
           </div>
         </div>
         <div className="flex items-center gap-4">
-          <span className="font-sans text-xs text-white/40">
+          <div className="hidden sm:flex items-center gap-2 text-white/50 font-sans text-xs">
+            <User className="w-3.5 h-3.5" />
+            <span className="max-w-[140px] truncate">{author || "Anónimo"}</span>
+            <button
+              onClick={() => { localStorage.removeItem("revision-author"); setAuthor(""); setNameDraft(""); setAskName(true); }}
+              className="text-white/30 hover:text-white/70 transition-colors underline underline-offset-2"
+              title="Cambiar nombre"
+            >
+              cambiar
+            </button>
+          </div>
+          <div className="hidden md:flex items-center gap-1.5 text-white/40 font-sans text-[11px]">
+            {loading ? (
+              <><Loader2 className="w-3 h-3 animate-spin" /> cargando…</>
+            ) : dirty ? (
+              <><CloudOff className="w-3 h-3 text-amber-400" /> <span className="text-amber-300">sin guardar</span></>
+            ) : (
+              <><Cloud className="w-3 h-3 text-emerald-400" /> guardado</>
+            )}
+          </div>
+          <span className="hidden lg:inline font-sans text-xs text-white/40">
             {approvedCount}/{pages.length} aprobadas
           </span>
-          <div className="w-24 h-1.5 bg-white/[0.08] rounded-full overflow-hidden">
-            <div
-              className="h-full bg-camhaji-accent rounded-full transition-all duration-500"
-              style={{ width: `${(approvedCount / pages.length) * 100}%` }}
-            />
-          </div>
+          <button
+            onClick={saveAll}
+            disabled={!dirty || saving}
+            className={`flex items-center gap-2 px-4 py-2 rounded-sm font-sans text-xs font-semibold uppercase tracking-[0.1em] transition-all ${
+              dirty && !saving
+                ? "bg-camhaji-accent text-white hover:bg-camhaji-accent/90"
+                : "bg-white/[0.06] text-white/30 cursor-not-allowed"
+            }`}
+          >
+            {saving ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <Save className="w-3.5 h-3.5" />}
+            {saving ? "Guardando" : "Guardar cambios"}
+          </button>
         </div>
       </header>
 
