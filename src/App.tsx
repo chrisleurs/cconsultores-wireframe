@@ -19,6 +19,7 @@ import SectorPequenosNegociosC from "./pages/c/SectorPequenosNegociosC.tsx";
 import PropuestaSEO from "./pages/PropuestaSEO.tsx";
 import RevisionTextos from "./pages/RevisionTextos.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import SectionReveal from "./components/SectionReveal";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <SectionReveal />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/propuesta-seo" element={<PropuestaSEO />} />
