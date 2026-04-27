@@ -373,42 +373,7 @@ export default function VersionC() {
       </section>
 
       {/* ══ SECTORES — dark full-bleed, all 5 visible ══ */}
-      <section className="bg-camhaji-base">
-        <div className="max-w-[1200px] mx-auto w-full px-5 md:px-10 pt-20 pb-10">
-          <div className="flex flex-col md:flex-row justify-between items-baseline gap-4">
-            <p className="label-uppercase text-white/35">SECTORES QUE ATENDEMOS EN QUINTANA ROO</p>
-            <p className="font-sans text-[15px] font-light text-white/50">Cada sector tiene sus propias reglas</p>
-          </div>
-        </div>
-        {/* Top row: 3 sectors */}
-        <div className="grid grid-cols-1 md:grid-cols-3">
-          {sectors.slice(0, 3).map((s, i) => (
-            <a key={s.name} href={s.href} className={`relative min-h-[400px] md:min-h-[45dvh] flex items-end group overflow-hidden ${i < 2 ? "md:border-r border-white/[0.06]" : ""}`}>
-              <img src={s.img} alt={s.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy" />
-              <div className="absolute inset-0 bg-gradient-to-t from-camhaji-base/[0.92] via-camhaji-base/40 to-transparent group-hover:from-camhaji-base/[0.96] group-hover:via-camhaji-base/[0.65] transition-all duration-300" />
-              <div className="relative z-10 p-8 md:p-10">
-                <h3 className="font-sans font-bold text-white mb-2 group-hover:text-camhaji-accent transition-colors" style={{ fontSize: "clamp(20px, 3vw, 32px)", letterSpacing: "-0.02em", lineHeight: 1.1 }}>{s.name}</h3>
-                <p className="font-sans text-sm font-light text-white/55 mb-4 leading-relaxed max-w-[320px]">{s.desc}</p>
-                <span className="label-uppercase text-white/40 group-hover:text-white transition-colors">VER ESPECIALIZACIÓN →</span>
-              </div>
-            </a>
-          ))}
-        </div>
-        {/* Bottom row: 2 sectors */}
-        <div className="grid grid-cols-1 md:grid-cols-2 border-t border-white/[0.06]">
-          {sectors.slice(3).map((s, i) => (
-            <a key={s.name} href={s.href} className={`relative min-h-[360px] md:min-h-[40dvh] flex items-end group overflow-hidden ${i === 0 ? "md:border-r border-white/[0.06]" : ""}`}>
-              <img src={s.img} alt={s.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy" />
-              <div className="absolute inset-0 bg-gradient-to-t from-camhaji-base/[0.92] via-camhaji-base/40 to-transparent group-hover:from-camhaji-base/[0.96] group-hover:via-camhaji-base/[0.65] transition-all duration-300" />
-              <div className="relative z-10 p-8 md:p-10">
-                <h3 className="font-sans font-bold text-white mb-2 group-hover:text-camhaji-accent transition-colors" style={{ fontSize: "clamp(20px, 3vw, 32px)", letterSpacing: "-0.02em", lineHeight: 1.1 }}>{s.name}</h3>
-                <p className="font-sans text-sm font-light text-white/55 mb-4 leading-relaxed max-w-[400px]">{s.desc}</p>
-                <span className="label-uppercase text-white/40 group-hover:text-white transition-colors">VER ESPECIALIZACIÓN →</span>
-              </div>
-            </a>
-          ))}
-        </div>
-      </section>
+      <SectoresCarousel sectors={sectors} />
 
       {/* ══ EQUIPO — full cards with photos ══ */}
       <section className="min-h-[100dvh] bg-white flex flex-col">
