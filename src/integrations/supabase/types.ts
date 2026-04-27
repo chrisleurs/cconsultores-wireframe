@@ -14,7 +14,66 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      revision_comments: {
+        Row: {
+          author: string | null
+          comment: string
+          created_at: string
+          id: string
+          page_id: string
+          section_idx: number
+        }
+        Insert: {
+          author?: string | null
+          comment: string
+          created_at?: string
+          id?: string
+          page_id: string
+          section_idx: number
+        }
+        Update: {
+          author?: string | null
+          comment?: string
+          created_at?: string
+          id?: string
+          page_id?: string
+          section_idx?: number
+        }
+        Relationships: []
+      }
+      revision_edits: {
+        Row: {
+          author: string | null
+          created_at: string
+          id: string
+          line_idx: number
+          new_text: string
+          page_id: string
+          section_idx: number
+          updated_at: string
+        }
+        Insert: {
+          author?: string | null
+          created_at?: string
+          id?: string
+          line_idx: number
+          new_text: string
+          page_id: string
+          section_idx: number
+          updated_at?: string
+        }
+        Update: {
+          author?: string | null
+          created_at?: string
+          id?: string
+          line_idx?: number
+          new_text?: string
+          page_id?: string
+          section_idx?: number
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
