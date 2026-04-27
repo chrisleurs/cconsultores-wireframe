@@ -3,7 +3,7 @@ import { Navbar } from "@/components/Navbar";
 import { FooterC } from "@/components/FooterC";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { ClientLogos } from "@/components/ClientLogos";
-import { Phone } from "lucide-react";
+import { Phone, ChevronLeft, ChevronRight } from "lucide-react";
 
 import heroBg from "@/assets/hero-cancun-skyline.jpg";
 import sectorConstruccion from "@/assets/sector-construccion.jpg";
