@@ -375,30 +375,27 @@ export default function VersionC() {
       {/* ══ SECTORES — dark full-bleed, all 5 visible ══ */}
       <SectoresCarousel sectors={sectors} />
 
-      {/* ══ EQUIPO — full cards with photos ══ */}
-      <section className="min-h-[100dvh] bg-white flex flex-col">
-        <div className="max-w-[1200px] mx-auto w-full px-5 md:px-10 pt-20 mb-12">
-          <div className="flex flex-col md:flex-row justify-between items-baseline gap-4">
+      {/* ══ EQUIPO — minimal compact ══ */}
+      <section className="bg-white py-20 md:py-24 px-5 md:px-10">
+        <div className="max-w-[1100px] mx-auto">
+          <div className="flex flex-col md:flex-row justify-between items-baseline gap-3 mb-12">
             <p className="label-uppercase text-camhaji-muted">EQUIPO CONTABLE EN CANCÚN</p>
-            <h2 className="font-sans font-bold text-camhaji-text max-w-[280px] md:text-right" style={{ fontSize: "clamp(18px, 2vw, 26px)", letterSpacing: "-0.02em", lineHeight: 1.3 }}>
+            <h2 className="font-sans font-bold text-camhaji-text max-w-[320px] md:text-right" style={{ fontSize: "clamp(16px, 1.6vw, 20px)", letterSpacing: "-0.01em", lineHeight: 1.3 }}>
               El equipo que respalda tu tranquilidad financiera
             </h2>
           </div>
-        </div>
-        <div className="flex-1 grid grid-cols-1 md:grid-cols-3">
-          {team.map((m, i) => (
-            <div key={i} className={`flex flex-col ${i < team.length - 1 ? "md:border-r border-border-subtle" : ""} max-md:border-b max-md:border-border-subtle`}>
-              <div className="aspect-[3/4] bg-surface overflow-hidden min-h-[280px]">
-                <img src={m.photo} alt={m.name} className="w-full h-full object-cover object-top grayscale-[15%]" loading="lazy" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
+            {team.map((m, i) => (
+              <div key={i} className="flex flex-col items-start">
+                <div className="w-20 h-20 rounded-full overflow-hidden bg-surface mb-4">
+                  <img src={m.photo} alt={m.name} className="w-full h-full object-cover object-top grayscale-[15%]" loading="lazy" />
+                </div>
+                <h3 className="font-sans font-bold text-[15px] text-camhaji-text mb-0.5">{m.name}</h3>
+                <p className="label-uppercase text-primary text-[11px] mb-2">{m.role}</p>
+                <p className="font-sans text-[13px] font-light text-camhaji-muted leading-relaxed">{m.bio}</p>
               </div>
-              <div className="p-6 md:p-10 pb-12">
-                <div className="w-6 h-px bg-primary mb-4" />
-                <h3 className="font-sans font-bold text-[17px] text-camhaji-text mb-1">{m.name}</h3>
-                <p className="label-uppercase text-primary mb-3">{m.role}</p>
-                <p className="font-sans text-sm font-light text-camhaji-muted leading-relaxed">{m.bio}</p>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
