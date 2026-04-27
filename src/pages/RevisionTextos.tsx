@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
-import { Check, ChevronDown, FileText, ArrowLeft, MessageSquare, Send, X, Pencil, RotateCcw } from "lucide-react";
+import { Check, ChevronDown, FileText, ArrowLeft, MessageSquare, Send, X, Pencil, RotateCcw, Save, Cloud, CloudOff, Loader2, User } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/hooks/use-toast";
 
 interface Section {
   title: string;
