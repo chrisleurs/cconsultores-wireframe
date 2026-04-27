@@ -109,18 +109,21 @@ const team = [
   {
     name: "Rogelio R. Moo Ruiz",
     role: "Gerente General",
+    location: "Cancún, México",
     bio: "Contador con trayectoria en grandes firmas del sector auditoría y en empresas del ramo hotelero. Es la mano derecha de la dirección y el responsable de que la operación del despacho funcione con precisión.",
     photo: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=800&q=80&fit=crop",
   },
   {
     name: "Karen Rosado Ortiz",
     role: "Supervisora Administrativa",
+    location: "Cancún, México",
     bio: "Contadora con amplia experiencia en la administración de empresas medianas y grandes. Responsable de cuentas por pagar, cuentas por cobrar y recursos humanos.",
     photo: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&h=800&q=80&fit=crop",
   },
   {
     name: "Marlon R. Chávez Sánchez",
     role: "Supervisor Nómina y Facturación",
+    location: "Cancún, México",
     bio: "Especialista en nómina, ley laboral y contribuciones de seguridad social. Domina CONTPAQi con una profundidad que pocos logran.",
     photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=800&q=80&fit=crop",
   },
@@ -376,23 +379,26 @@ export default function VersionC() {
       <SectoresCarousel sectors={sectors} />
 
       {/* ══ EQUIPO — minimal compact ══ */}
-      <section className="bg-white py-20 md:py-24 px-5 md:px-10">
-        <div className="max-w-[1100px] mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-baseline gap-3 mb-12">
-            <p className="label-uppercase text-camhaji-muted">EQUIPO CONTABLE EN CANCÚN</p>
-            <h2 className="font-sans font-bold text-camhaji-text max-w-[320px] md:text-right" style={{ fontSize: "clamp(16px, 1.6vw, 20px)", letterSpacing: "-0.01em", lineHeight: 1.3 }}>
-              El equipo que respalda tu tranquilidad financiera
+      <section className="bg-camhaji-base py-20 md:py-28 px-5 md:px-10">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="mb-12 md:mb-16 max-w-[560px]">
+            <p className="label-uppercase text-white/40 mb-4">EQUIPO CONTABLE EN CANCÚN</p>
+            <h2 className="font-sans font-bold text-white mb-4" style={{ fontSize: "clamp(34px, 4.5vw, 56px)", letterSpacing: "-0.03em", lineHeight: 1.05 }}>
+              Nuestro equipo
             </h2>
+            <p className="font-sans font-light text-white/55" style={{ fontSize: "clamp(15px, 1.4vw, 17px)", lineHeight: 1.6 }}>
+              El equipo que respalda tu tranquilidad financiera — contadores con trayectoria en grandes firmas, comprometidos con cumplir lo que decimos.
+            </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
             {team.map((m, i) => (
-              <div key={i} className="flex flex-col items-start">
-                <div className="w-20 h-20 rounded-full overflow-hidden bg-surface mb-4">
-                  <img src={m.photo} alt={m.name} className="w-full h-full object-cover object-top grayscale-[15%]" loading="lazy" />
+              <div key={i} className="flex flex-col">
+                <div className="aspect-square w-full rounded-2xl overflow-hidden bg-white/5 mb-4">
+                  <img src={m.photo} alt={m.name} className="w-full h-full object-cover" loading="lazy" />
                 </div>
-                <h3 className="font-sans font-bold text-[15px] text-camhaji-text mb-0.5">{m.name}</h3>
-                <p className="label-uppercase text-primary text-[11px] mb-2">{m.role}</p>
-                <p className="font-sans text-[13px] font-light text-camhaji-muted leading-relaxed">{m.bio}</p>
+                <h3 className="font-sans font-bold text-[15px] text-white mb-1">{m.name}</h3>
+                <p className="font-sans text-[13px] text-white/70 mb-1">{m.role}</p>
+                <p className="font-sans text-[12px] text-camhaji-accent">{m.location}</p>
               </div>
             ))}
           </div>
