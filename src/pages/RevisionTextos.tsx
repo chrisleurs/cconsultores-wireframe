@@ -790,37 +790,167 @@ export default function RevisionTextos() {
   const [activeId, setActiveId] = useState("home");
   const [approvals, setApprovals] = useState<Record<string, boolean>>({});
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [comments, setComments] = useState<Record<string, Record<number, string[]>>>({});
+  // comments now store objects { id, text, author, created_at }
+  const [comments, setComments] = useState<Record<string, Record<number, Array<{ id: string; text: string; author: string | null; created_at: string }>>>>({});
   const [openCommentBox, setOpenCommentBox] = useState<string | null>(null);
   const [commentDraft, setCommentDraft] = useState("");
   const [edits, setEdits] = useState<Record<string, Record<number, Record<number, string>>>>({});
   const [editingKey, setEditingKey] = useState<string | null>(null);
   const [editDraft, setEditDraft] = useState("");
 
+  // Author / save state
+  const [author, setAuthor] = useState<string>(() => localStorage.getItem("revision-author") || "");
+  const [askName, setAskName] = useState<boolean>(() => !localStorage.getItem("revision-author"));
+  const [nameDraft, setNameDraft] = useState("");
+  const [loading, setLoading] = useState(true);
+  const [saving, setSaving] = useState(false);
+  const [dirty, setDirty] = useState(false);
+  const [lastSavedAt, setLastSavedAt] = useState<Date | null>(null);
+
+  // Track which edits are local (not yet saved) per pageId-section-line
+  const [localEditKeys, setLocalEditKeys] = useState<Set<string>>(new Set());
+  const [localCommentDrafts, setLocalCommentDrafts] = useState<
+    Array<{ pageId: string; sectionIdx: number; text: string; localId: string }>
+  >([]);
+
   const activeDoc = pages.find((p) => p.id === activeId)!;
   const approvedCount = Object.values(approvals).filter(Boolean).length;
+
+  // ---------------- Load from backend ----------------
+  const loadAll = useCallback(async () => {
+    setLoading(true);
+    const [editsRes, commentsRes] = await Promise.all([
+      supabase.from("revision_edits").select("*"),
+      supabase.from("revision_comments").select("*").order("created_at", { ascending: true }),
+    ]);
+    if (editsRes.error) {
+      toast({ title: "Error al cargar ediciones", description: editsRes.error.message, variant: "destructive" });
+    } else {
+      const next: Record<string, Record<number, Record<number, string>>> = {};
+      for (const row of editsRes.data || []) {
+        next[row.page_id] ??= {};
+        next[row.page_id][row.section_idx] ??= {};
+        next[row.page_id][row.section_idx][row.line_idx] = row.new_text;
+      }
+      setEdits(next);
+    }
+    if (commentsRes.error) {
+      toast({ title: "Error al cargar comentarios", description: commentsRes.error.message, variant: "destructive" });
+    } else {
+      const next: Record<string, Record<number, Array<{ id: string; text: string; author: string | null; created_at: string }>>> = {};
+      for (const row of commentsRes.data || []) {
+        next[row.page_id] ??= {};
+        next[row.page_id][row.section_idx] ??= [];
+        next[row.page_id][row.section_idx].push({ id: row.id, text: row.comment, author: row.author, created_at: row.created_at });
+      }
+      setComments(next);
+    }
+    setLocalEditKeys(new Set());
+    setLocalCommentDrafts([]);
+    setDirty(false);
+    setLoading(false);
+    setLastSavedAt(new Date());
+  }, []);
+
+  useEffect(() => {
+    if (!askName) loadAll();
+  }, [askName, loadAll]);
+
+  // Realtime subscription so the agency sees client changes live
+  useEffect(() => {
+    if (askName) return;
+    const channel = supabase
+      .channel("revision-live")
+      .on("postgres_changes", { event: "*", schema: "public", table: "revision_edits" }, () => loadAll())
+      .on("postgres_changes", { event: "*", schema: "public", table: "revision_comments" }, () => loadAll())
+      .subscribe();
+    return () => { supabase.removeChannel(channel); };
+  }, [askName, loadAll]);
+
+  // Warn before leaving if unsaved
+  useEffect(() => {
+    const handler = (e: BeforeUnloadEvent) => {
+      if (dirty) { e.preventDefault(); e.returnValue = ""; }
+    };
+    window.addEventListener("beforeunload", handler);
+    return () => window.removeEventListener("beforeunload", handler);
+  }, [dirty]);
+
+  // ---------------- Save ----------------
+  const saveAll = async () => {
+    if (saving) return;
+    setSaving(true);
+    try {
+      // Upsert local edits
+      const editsPayload: Array<{ page_id: string; section_idx: number; line_idx: number; new_text: string; author: string | null; updated_at: string }> = [];
+      for (const key of localEditKeys) {
+        const [pageId, siStr, liStr] = key.split("|");
+        const si = Number(siStr);
+        const li = Number(liStr);
+        const text = edits[pageId]?.[si]?.[li];
+        if (text === undefined) continue;
+        editsPayload.push({ page_id: pageId, section_idx: si, line_idx: li, new_text: text, author: author || null, updated_at: new Date().toISOString() });
+      }
+      if (editsPayload.length > 0) {
+        const { error } = await supabase
+          .from("revision_edits")
+          .upsert(editsPayload, { onConflict: "page_id,section_idx,line_idx" });
+        if (error) throw error;
+      }
+
+      // Insert local comments
+      if (localCommentDrafts.length > 0) {
+        const { error } = await supabase
+          .from("revision_comments")
+          .insert(localCommentDrafts.map((c) => ({ page_id: c.pageId, section_idx: c.sectionIdx, comment: c.text, author: author || null })));
+        if (error) throw error;
+      }
+
+      toast({ title: "Cambios guardados", description: "Tus cambios quedaron registrados." });
+      await loadAll();
+    } catch (e: unknown) {
+      const msg = e instanceof Error ? e.message : "Error desconocido";
+      toast({ title: "No se pudieron guardar los cambios", description: msg, variant: "destructive" });
+    } finally {
+      setSaving(false);
+    }
+  };
 
   const toggleApproval = (id: string) => {
     setApprovals((prev) => ({ ...prev, [id]: !prev[id] }));
   };
 
   const addComment = (pageId: string, sectionIdx: number) => {
-    if (!commentDraft.trim()) return;
+    const text = commentDraft.trim();
+    if (!text) return;
+    const localId = `local-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`;
     setComments((prev) => {
       const pc = prev[pageId] || {};
       const sc = pc[sectionIdx] || [];
-      return { ...prev, [pageId]: { ...pc, [sectionIdx]: [...sc, commentDraft.trim()] } };
+      return { ...prev, [pageId]: { ...pc, [sectionIdx]: [...sc, { id: localId, text, author: author || null, created_at: new Date().toISOString() }] } };
     });
+    setLocalCommentDrafts((prev) => [...prev, { pageId, sectionIdx, text, localId }]);
     setCommentDraft("");
+    setOpenCommentBox(null);
+    setDirty(true);
   };
 
-  const removeComment = (pageId: string, sectionIdx: number, commentIdx: number) => {
+  const removeComment = async (pageId: string, sectionIdx: number, commentId: string) => {
+    // Optimistic remove
     setComments((prev) => {
       const pc = prev[pageId] || {};
-      const sc = [...(pc[sectionIdx] || [])];
-      sc.splice(commentIdx, 1);
+      const sc = (pc[sectionIdx] || []).filter((c) => c.id !== commentId);
       return { ...prev, [pageId]: { ...pc, [sectionIdx]: sc } };
     });
+    if (commentId.startsWith("local-")) {
+      setLocalCommentDrafts((prev) => prev.filter((c) => c.localId !== commentId));
+      return;
+    }
+    const { error } = await supabase.from("revision_comments").delete().eq("id", commentId);
+    if (error) {
+      toast({ title: "No se pudo eliminar", description: error.message, variant: "destructive" });
+      loadAll();
+    }
   };
 
   const getSectionComments = (pageId: string, sectionIdx: number) =>
@@ -845,11 +975,15 @@ export default function RevisionTextos() {
       const sc = pc[sectionIdx] || {};
       return { ...prev, [pageId]: { ...pc, [sectionIdx]: { ...sc, [lineIdx]: editDraft } } };
     });
+    setLocalEditKeys((prev) => new Set(prev).add(`${pageId}|${sectionIdx}|${lineIdx}`));
     setEditingKey(null);
     setEditDraft("");
+    setDirty(true);
   };
 
-  const resetEdit = (pageId: string, sectionIdx: number, lineIdx: number) => {
+  const resetEdit = async (pageId: string, sectionIdx: number, lineIdx: number) => {
+    const key = `${pageId}|${sectionIdx}|${lineIdx}`;
+    const wasLocal = localEditKeys.has(key);
     setEdits((prev) => {
       const pc = { ...(prev[pageId] || {}) };
       const sc = { ...(pc[sectionIdx] || {}) };
@@ -857,7 +991,71 @@ export default function RevisionTextos() {
       pc[sectionIdx] = sc;
       return { ...prev, [pageId]: pc };
     });
+    setLocalEditKeys((prev) => {
+      const next = new Set(prev); next.delete(key); return next;
+    });
+    if (!wasLocal) {
+      const { error } = await supabase
+        .from("revision_edits")
+        .delete()
+        .eq("page_id", pageId)
+        .eq("section_idx", sectionIdx)
+        .eq("line_idx", lineIdx);
+      if (error) {
+        toast({ title: "No se pudo restaurar", description: error.message, variant: "destructive" });
+        loadAll();
+      }
+    }
   };
+
+  // ---------------- Name gate ----------------
+  if (askName) {
+    return (
+      <div className="min-h-screen bg-[#F5F3EF] flex items-center justify-center px-4">
+        <div className="bg-white rounded-sm shadow-[0_8px_30px_rgba(0,0,0,0.08)] max-w-md w-full p-8">
+          <div className="w-10 h-10 bg-primary rounded-sm flex items-center justify-center mb-4">
+            <span className="font-serif text-base font-bold text-white">CC</span>
+          </div>
+          <h1 className="font-sans text-xl font-bold text-camhaji-text mb-2" style={{ letterSpacing: "-0.02em" }}>
+            Revisión de textos
+          </h1>
+          <p className="font-sans text-sm text-camhaji-muted mb-6 leading-relaxed">
+            Antes de empezar, dinos tu nombre. Lo usaremos para identificar tus comentarios y cambios.
+          </p>
+          <input
+            type="text"
+            value={nameDraft}
+            onChange={(e) => setNameDraft(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" && nameDraft.trim()) {
+                const n = nameDraft.trim().slice(0, 80);
+                localStorage.setItem("revision-author", n);
+                setAuthor(n);
+                setAskName(false);
+              }
+            }}
+            placeholder="Tu nombre"
+            className="w-full font-sans text-[15px] text-camhaji-text bg-white border border-border-subtle rounded px-4 py-3 mb-4 focus:outline-none focus:ring-1 focus:ring-primary/30 focus:border-primary/40"
+            autoFocus
+            maxLength={80}
+          />
+          <button
+            onClick={() => {
+              const n = nameDraft.trim().slice(0, 80);
+              if (!n) return;
+              localStorage.setItem("revision-author", n);
+              setAuthor(n);
+              setAskName(false);
+            }}
+            disabled={!nameDraft.trim()}
+            className="w-full bg-primary text-white font-sans text-sm font-semibold uppercase tracking-[0.1em] py-3 rounded-sm hover:bg-primary/90 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+          >
+            Entrar a la revisión
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-[#F5F3EF] flex flex-col">
