@@ -1279,12 +1279,20 @@ export default function RevisionTextos() {
                     {/* Existing comments */}
                     {getSectionComments(activeDoc.id, si).length > 0 && (
                       <div className="mt-4 space-y-2">
-                        {getSectionComments(activeDoc.id, si).map((comment, ci) => (
-                          <div key={ci} className="flex items-start gap-2 bg-amber-50 border border-amber-200/60 rounded px-3 py-2.5 group/comment">
+                        {getSectionComments(activeDoc.id, si).map((comment) => (
+                          <div key={comment.id} className="flex items-start gap-2 bg-amber-50 border border-amber-200/60 rounded px-3 py-2.5 group/comment">
                             <MessageSquare className="w-3.5 h-3.5 text-amber-500 mt-0.5 flex-shrink-0" />
-                            <p className="font-sans text-[13px] text-amber-900 leading-relaxed flex-1">{comment}</p>
+                            <div className="flex-1 min-w-0">
+                              <p className="font-sans text-[13px] text-amber-900 leading-relaxed whitespace-pre-wrap">{comment.text}</p>
+                              {(comment.author || comment.id.startsWith("local-")) && (
+                                <p className="font-sans text-[10px] text-amber-700/70 mt-1 uppercase tracking-wider">
+                                  {comment.author || "Anónimo"}
+                                  {comment.id.startsWith("local-") && " · sin guardar"}
+                                </p>
+                              )}
+                            </div>
                             <button
-                              onClick={() => removeComment(activeDoc.id, si, ci)}
+                              onClick={() => removeComment(activeDoc.id, si, comment.id)}
                               className="opacity-0 group-hover/comment:opacity-100 transition-opacity p-0.5 hover:bg-amber-200/50 rounded"
                             >
                               <X className="w-3 h-3 text-amber-500" />
