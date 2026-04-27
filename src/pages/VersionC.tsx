@@ -3,7 +3,7 @@ import { Navbar } from "@/components/Navbar";
 import { FooterC } from "@/components/FooterC";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { ClientLogos } from "@/components/ClientLogos";
-import { Phone } from "lucide-react";
+import { Phone, ChevronLeft, ChevronRight } from "lucide-react";
 
 import heroBg from "@/assets/hero-cancun-skyline.jpg";
 import sectorConstruccion from "@/assets/sector-construccion.jpg";
@@ -373,42 +373,7 @@ export default function VersionC() {
       </section>
 
       {/* ══ SECTORES — dark full-bleed, all 5 visible ══ */}
-      <section className="bg-camhaji-base">
-        <div className="max-w-[1200px] mx-auto w-full px-5 md:px-10 pt-20 pb-10">
-          <div className="flex flex-col md:flex-row justify-between items-baseline gap-4">
-            <p className="label-uppercase text-white/35">SECTORES QUE ATENDEMOS EN QUINTANA ROO</p>
-            <p className="font-sans text-[15px] font-light text-white/50">Cada sector tiene sus propias reglas</p>
-          </div>
-        </div>
-        {/* Top row: 3 sectors */}
-        <div className="grid grid-cols-1 md:grid-cols-3">
-          {sectors.slice(0, 3).map((s, i) => (
-            <a key={s.name} href={s.href} className={`relative min-h-[400px] md:min-h-[45dvh] flex items-end group overflow-hidden ${i < 2 ? "md:border-r border-white/[0.06]" : ""}`}>
-              <img src={s.img} alt={s.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy" />
-              <div className="absolute inset-0 bg-gradient-to-t from-camhaji-base/[0.92] via-camhaji-base/40 to-transparent group-hover:from-camhaji-base/[0.96] group-hover:via-camhaji-base/[0.65] transition-all duration-300" />
-              <div className="relative z-10 p-8 md:p-10">
-                <h3 className="font-sans font-bold text-white mb-2 group-hover:text-camhaji-accent transition-colors" style={{ fontSize: "clamp(20px, 3vw, 32px)", letterSpacing: "-0.02em", lineHeight: 1.1 }}>{s.name}</h3>
-                <p className="font-sans text-sm font-light text-white/55 mb-4 leading-relaxed max-w-[320px]">{s.desc}</p>
-                <span className="label-uppercase text-white/40 group-hover:text-white transition-colors">VER ESPECIALIZACIÓN →</span>
-              </div>
-            </a>
-          ))}
-        </div>
-        {/* Bottom row: 2 sectors */}
-        <div className="grid grid-cols-1 md:grid-cols-2 border-t border-white/[0.06]">
-          {sectors.slice(3).map((s, i) => (
-            <a key={s.name} href={s.href} className={`relative min-h-[360px] md:min-h-[40dvh] flex items-end group overflow-hidden ${i === 0 ? "md:border-r border-white/[0.06]" : ""}`}>
-              <img src={s.img} alt={s.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" loading="lazy" />
-              <div className="absolute inset-0 bg-gradient-to-t from-camhaji-base/[0.92] via-camhaji-base/40 to-transparent group-hover:from-camhaji-base/[0.96] group-hover:via-camhaji-base/[0.65] transition-all duration-300" />
-              <div className="relative z-10 p-8 md:p-10">
-                <h3 className="font-sans font-bold text-white mb-2 group-hover:text-camhaji-accent transition-colors" style={{ fontSize: "clamp(20px, 3vw, 32px)", letterSpacing: "-0.02em", lineHeight: 1.1 }}>{s.name}</h3>
-                <p className="font-sans text-sm font-light text-white/55 mb-4 leading-relaxed max-w-[400px]">{s.desc}</p>
-                <span className="label-uppercase text-white/40 group-hover:text-white transition-colors">VER ESPECIALIZACIÓN →</span>
-              </div>
-            </a>
-          ))}
-        </div>
-      </section>
+      <SectoresCarousel sectors={sectors} />
 
       {/* ══ EQUIPO — full cards with photos ══ */}
       <section className="min-h-[100dvh] bg-white flex flex-col">
@@ -512,5 +477,110 @@ export default function VersionC() {
       <FooterC />
       <WhatsAppButton />
     </div>
+  );
+}
+
+// ── Sectores Carousel ───────────────────────────────────────────
+type Sector = { name: string; desc: string; href: string; img: string };
+
+function SectoresCarousel({ sectors }: { sectors: Sector[] }) {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [canLeft, setCanLeft] = useState(false);
+  const [canRight, setCanRight] = useState(true);
+
+  const check = () => {
+    const el = scrollRef.current;
+    if (!el) return;
+    setCanLeft(el.scrollLeft > 4);
+    setCanRight(el.scrollLeft < el.scrollWidth - el.clientWidth - 4);
+  };
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    check();
+    el.addEventListener("scroll", check, { passive: true });
+    window.addEventListener("resize", check);
+    return () => {
+      el.removeEventListener("scroll", check);
+      window.removeEventListener("resize", check);
+    };
+  }, []);
+
+  const scroll = (dir: "left" | "right") => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const amount = el.clientWidth * 0.8;
+    el.scrollBy({ left: dir === "left" ? -amount : amount, behavior: "smooth" });
+  };
+
+  return (
+    <section className="bg-camhaji-base py-20">
+      <div className="max-w-[1200px] mx-auto w-full px-5 md:px-10 mb-10">
+        <div className="flex flex-col md:flex-row justify-between md:items-end gap-6">
+          <div>
+            <p className="label-uppercase text-white/35 mb-3">SECTORES QUE ATENDEMOS EN QUINTANA ROO</p>
+            <h2 className="font-sans font-bold text-white max-w-[640px]" style={{ fontSize: "clamp(24px, 3vw, 38px)", letterSpacing: "-0.02em", lineHeight: 1.15 }}>
+              Cada sector tiene sus propias reglas
+            </h2>
+          </div>
+          <div className="flex items-center gap-2">
+            <button
+              type="button"
+              onClick={() => scroll("left")}
+              disabled={!canLeft}
+              aria-label="Anterior"
+              className="p-3 rounded-full border border-white/15 bg-white/[0.03] text-white transition-all duration-300 disabled:opacity-25 disabled:cursor-not-allowed hover:bg-camhaji-accent hover:border-camhaji-accent hover:text-camhaji-base"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            <button
+              type="button"
+              onClick={() => scroll("right")}
+              disabled={!canRight}
+              aria-label="Siguiente"
+              className="p-3 rounded-full border border-white/15 bg-white/[0.03] text-white transition-all duration-300 disabled:opacity-25 disabled:cursor-not-allowed hover:bg-camhaji-accent hover:border-camhaji-accent hover:text-camhaji-base"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        ref={scrollRef}
+        className="flex gap-5 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 px-5 md:px-10 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+      >
+        {sectors.map((s) => (
+          <a
+            key={s.name}
+            href={s.href}
+            className="group relative flex-shrink-0 snap-start overflow-hidden rounded-sm w-[78vw] sm:w-[55vw] md:w-[420px] lg:w-[460px] h-[520px] md:h-[560px] flex items-end"
+          >
+            <img
+              src={s.img}
+              alt={s.name}
+              loading="lazy"
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.05]"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-camhaji-base/[0.95] via-camhaji-base/45 to-transparent group-hover:from-camhaji-base/[0.97] group-hover:via-camhaji-base/[0.65] transition-all duration-300" />
+            <div className="relative z-10 p-8 md:p-10">
+              <h3
+                className="font-sans font-bold text-white mb-3 group-hover:text-camhaji-accent transition-colors"
+                style={{ fontSize: "clamp(22px, 2.4vw, 30px)", letterSpacing: "-0.02em", lineHeight: 1.1 }}
+              >
+                {s.name}
+              </h3>
+              <p className="font-sans text-sm font-light text-white/60 mb-5 leading-relaxed max-w-[340px]">
+                {s.desc}
+              </p>
+              <span className="label-uppercase text-white/45 group-hover:text-white transition-colors">
+                VER ESPECIALIZACIÓN →
+              </span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
   );
 }
