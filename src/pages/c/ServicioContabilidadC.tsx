@@ -16,6 +16,13 @@ const proceso = [
   { num: "06", title: "Envío al cliente para pago", desc: "Te enviamos el resumen del periodo con el monto a pagar, las declaraciones y cualquier observación relevante. Tú autorizas y pagas. Sin sorpresas de último minuto.", days: "Día 20–25" },
 ];
 
+const stats = [
+  { num: "10+", label: "Años ordenando contabilidades en Quintana Roo" },
+  { num: "6", label: "Pasos definidos cada mes, sin excepciones" },
+  { num: "25", label: "Días promedio de ciclo de cierre mensual" },
+  { num: "100%", label: "Declaraciones revisadas antes de presentarse" },
+];
+
 const gestionAdmin = [
   "Tesorería centralizada y control de flujo de efectivo",
   "Gestiones y trámites ante autoridades (SAT, IMSS, Infonavit)",
@@ -83,6 +90,28 @@ export default function ServicioContabilidadC() {
           <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed">
             El proceso es el mismo en todos los casos: ordenado, mensual y transparente. Lo que cambia es la profundidad y el volumen de operaciones — no el nivel de atención.
           </p>
+        </div>
+      </section>
+
+      {/* STATS BAR — números grandes, mínimo texto */}
+      <section className="bg-surface py-20 px-5 md:px-10 border-y border-border-subtle">
+        <div className="max-w-[1200px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
+          {stats.map((s, i) => (
+            <div
+              key={i}
+              className="text-center md:text-left md:px-6 md:border-r md:last:border-r-0 md:border-border-subtle"
+            >
+              <div
+                className="font-serif text-camhaji-base mb-3"
+                style={{ fontSize: "clamp(40px, 5.5vw, 68px)", letterSpacing: "-0.03em", lineHeight: 1 }}
+              >
+                {s.num}
+              </div>
+              <p className="font-sans text-xs uppercase tracking-[0.12em] text-camhaji-muted leading-relaxed">
+                {s.label}
+              </p>
+            </div>
+          ))}
         </div>
       </section>
 
