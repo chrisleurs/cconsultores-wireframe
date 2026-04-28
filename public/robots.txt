@@ -3,4 +3,43 @@ Allow: /
 Disallow: /revision-textos
 Disallow: /propuesta-seo
 
+# === LLM / AI crawlers ===
+# Permitimos explícitamente que los modelos de IA indexen y citen el sitio.
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
 Sitemap: https://cconsultores-wireframe.lovable.app/sitemap.xml
