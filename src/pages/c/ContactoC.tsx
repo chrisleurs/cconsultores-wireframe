@@ -137,17 +137,28 @@ export default function ContactoC() {
             </div>
 
             <div className="bg-white/[0.04] rounded-sm p-7 space-y-4">
-              {[
-                { icon: MapPin, text: "Cancún, Quintana Roo, México" },
-                { icon: Phone, text: "[Teléfono — PENDIENTE]" },
-                { icon: Mail, text: "[Correo — PENDIENTE]" },
-                { icon: Clock, text: "Lunes a Viernes · [Horario — PENDIENTE]" },
-              ].map((d) => (
-                <div key={d.text} className="flex items-start gap-3">
-                  <d.icon className="w-4 h-4 text-white/35 flex-shrink-0 mt-0.5" />
-                  <span className="font-sans text-sm text-white/65">{d.text}</span>
-                </div>
-              ))}
+              <div className="flex items-start gap-3">
+                <MapPin className="w-4 h-4 text-white/35 flex-shrink-0 mt-0.5" />
+                <span className="font-sans text-sm text-white/65 leading-relaxed">
+                  Calle Mar #9, Lote 12, Manzana 12, SM 4, Cancún, Benito Juárez, Quintana Roo, México, C.P. 77500
+                </span>
+              </div>
+              <div className="flex items-start gap-3">
+                <Phone className="w-4 h-4 text-white/35 flex-shrink-0 mt-0.5" />
+                <a href="tel:+529988872584" className="font-sans text-sm text-white/65 hover:text-white transition-colors">
+                  (998) 887 2584
+                </a>
+              </div>
+              <div className="flex items-start gap-3">
+                <Mail className="w-4 h-4 text-white/35 flex-shrink-0 mt-0.5" />
+                <a href="mailto:contacto@camhajiconsultores.mx" className="font-sans text-sm text-white/65 hover:text-white transition-colors">
+                  contacto@camhajiconsultores.mx
+                </a>
+              </div>
+              <div className="flex items-start gap-3">
+                <Clock className="w-4 h-4 text-white/35 flex-shrink-0 mt-0.5" />
+                <span className="font-sans text-sm text-white/65">Lunes a Viernes · 9:00 – 18:30</span>
+              </div>
             </div>
           </div>
         </div>
