@@ -3,6 +3,7 @@ import { Navbar } from "@/components/Navbar";
 import { FooterC } from "@/components/FooterC";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { ClientLogos } from "@/components/ClientLogos";
+import { SEO } from "@/components/SEO";
 import { Phone, ChevronLeft, ChevronRight } from "lucide-react";
 
 import heroBg from "@/assets/hero-cancun-skyline.jpg";
@@ -225,6 +226,11 @@ export default function VersionC() {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Despacho Contable en Cancún — Camhaji Consultores"
+        description="Despacho contable en Cancún con más de 10 años de trayectoria. Contabilidad, fiscal, nómina y facturación para empresas en Quintana Roo. Especialistas en construcción y RESICO."
+        path="/version-c"
+      />
       <Navbar version="c" />
 
       {/* ══ HERO — left-aligned, full-screen, arc-group style ══ */}
