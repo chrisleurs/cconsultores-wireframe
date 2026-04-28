@@ -151,3 +151,28 @@ section.no-reveal,
 @media (prefers-reduced-motion: reduce) {
   [style*="heroDrift"] { animation: none !important; }
 }
+
+/* ═══ Parallax float — subtle vertical drift for illustrations ═══ */
+@keyframes parallaxFloat {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+.parallax-float img {
+  animation: parallaxFloat 7s ease-in-out infinite;
+}
+
+/* ═══ Cycle slow spin — for circular process illustration ═══ */
+@keyframes cycleSpinSlow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.cycle-spin-slow img {
+  animation: cycleSpinSlow 60s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .parallax-float img,
+  .cycle-spin-slow img {
+    animation: none !important;
+  }
+}
