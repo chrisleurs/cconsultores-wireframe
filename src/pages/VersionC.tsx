@@ -258,7 +258,7 @@ export default function VersionC() {
         <div className="absolute inset-0" style={{ background: "rgba(12, 28, 24, 0.84)" }} />
         <div className="relative z-10 flex flex-col items-start max-w-[1200px] mx-auto w-full px-5 md:px-10">
           <p className="label-uppercase text-white/35 mb-12">DESPACHO CONTABLE · CANCÚN, MÉXICO</p>
-          <h1 className="font-sans font-bold text-white mb-8" style={{ fontSize: "clamp(48px, 8vw, 96px)", letterSpacing: "-0.04em", lineHeight: 0.95 }}>
+          <h1 className="font-sans font-bold text-white mb-8" style={{ fontSize: "clamp(34px, 7vw, 96px)", letterSpacing: "-0.04em", lineHeight: 0.95 }}>
             Despacho Contable<br />en Cancún con<br />Compromiso Real.
           </h1>
           <p className="font-sans text-base font-light text-white/50 mb-12 max-w-[540px]" style={{ fontSize: "clamp(16px, 2vw, 20px)", lineHeight: 1.6 }}>
