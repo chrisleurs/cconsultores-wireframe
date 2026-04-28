@@ -230,7 +230,7 @@ export default function NosotrosC() {
           Hablemos de tu negocio.
         </h2>
         <div className="flex gap-4 flex-wrap justify-center">
-          <a href="https://wa.me/529981234567" target="_blank" rel="noopener noreferrer" className="btn-uppercase border border-white/50 text-white px-10 py-4 hover:bg-white/10 hover:border-white transition-all duration-300">
+          <a href="https://wa.me/5215543587159" target="_blank" rel="noopener noreferrer" className="btn-uppercase border border-white/50 text-white px-10 py-4 hover:bg-white/10 hover:border-white transition-all duration-300">
             ESCRÍBENOS POR WHATSAPP
           </a>
           <a href="/version-c/servicios/contabilidad" className="btn-uppercase border border-white/30 text-white/60 px-10 py-4 hover:text-white hover:border-white/60 transition-all duration-300">
