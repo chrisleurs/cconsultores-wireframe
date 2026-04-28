@@ -130,7 +130,7 @@ export default function ServicioNominaC() {
               <h3 className="font-sans font-bold text-camhaji-text text-xl mb-1">Marlon Rafael Chávez Sánchez</h3>
               <p className="label-uppercase text-primary mb-4">Supervisor de Nómina y Facturación</p>
               <p className="font-sans text-[15px] font-light text-camhaji-muted leading-relaxed">
-                Especialista en nómina, ley laboral y contribuciones de seguridad social. Domina CONTPAQi con una profundidad que pocos alcanzan y conoce la Ley Federal del Trabajo con la precisión de quien la aplica cada semana. Cuando contratas nuestro servicio de nómina en Cancún, tienes a Marlon y su equipo trabajando para que ningún número esté mal.
+                Marlon lleva años calculando nóminas reales — con eventuales, finiquitos complicados y trabajadores por obra. Conoce la Ley Federal del Trabajo con la precisión de quien la aplica cada semana y cuida cada movimiento como si fuera de su propia empresa. Cuando contratas nuestro servicio de nómina en Cancún, tienes a Marlon y su equipo del lado correcto del SAT y del IMSS.
               </p>
             </div>
           </div>
