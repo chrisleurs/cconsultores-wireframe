@@ -1,4 +1,5 @@
 import { Navbar } from "@/components/Navbar";
+import { SEO } from "@/components/SEO";
 import { FooterC } from "@/components/FooterC";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { Phone } from "lucide-react";
@@ -16,6 +17,7 @@ const loQueHacemos = [
 export default function SectorComercialC() {
   return (
     <div className="min-h-screen">
+      <SEO title={`Contabilidad para Comercios en Cancún | Camhaji`} description={`Servicios contables para empresas comerciales en Cancún: inventarios, facturación, fiscal y nómina.`} path="/version-c/sectores/comercial" />
       <Navbar version="c" />
 
       {/* HERO */}

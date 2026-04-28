@@ -1,4 +1,5 @@
 import { Navbar } from "@/components/Navbar";
+import { SEO } from "@/components/SEO";
 import { FooterC } from "@/components/FooterC";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { ClientLogos } from "@/components/ClientLogos";
@@ -54,6 +55,7 @@ const distingue = [
 export default function NosotrosC() {
   return (
     <div className="min-h-screen">
+      <SEO title={`Nosotros — Despacho Contable en Cancún | Camhaji Consultores`} description={`Conoce a Camhaji Consultores: despacho contable en Cancún con más de 10 años de trayectoria. Equipo, valores y compromiso real.`} path="/version-c/nosotros" />
       <Navbar version="c" />
 
       {/* HERO */}

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Navbar } from "@/components/Navbar";
+import { SEO } from "@/components/SEO";
 import { FooterC } from "@/components/FooterC";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { Phone } from "lucide-react";
@@ -42,6 +43,7 @@ export default function SectorPequenosNegociosC() {
 
   return (
     <div className="min-h-screen">
+      <SEO title={`Contabilidad para Pequeños Negocios en Cancún | Camhaji`} description={`Despacho contable para pequeños negocios en Cancún. Plan accesible, atención cercana y cumplimiento fiscal puntual.`} path="/version-c/sectores/pequenos-negocios" />
       <Navbar version="c" />
 
       {/* HERO */}

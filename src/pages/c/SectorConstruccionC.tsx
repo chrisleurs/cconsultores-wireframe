@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Navbar } from "@/components/Navbar";
+import { SEO } from "@/components/SEO";
 import { FooterC } from "@/components/FooterC";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { Phone } from "lucide-react";
@@ -47,6 +48,7 @@ export default function SectorConstruccionC() {
 
   return (
     <div className="min-h-screen">
+      <SEO title={`Contabilidad para Constructoras en Cancún | Camhaji`} description={`Despacho contable especializado en el sector construcción en Cancún y Riviera Maya. Estimaciones, IVA, retenciones y CONTPAQi.`} path="/version-c/sectores/construccion" />
       <Navbar version="c" />
 
       {/* HERO */}

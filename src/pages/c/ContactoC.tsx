@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Navbar } from "@/components/Navbar";
+import { SEO } from "@/components/SEO";
 import { FooterC } from "@/components/FooterC";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { MapPin, Mail, Clock, Loader2, Phone } from "lucide-react";
@@ -29,6 +30,7 @@ export default function ContactoC() {
 
   return (
     <div className="min-h-screen">
+      <SEO title={`Contacto — Despacho Contable en Cancún | Camhaji`} description={`Habla con Camhaji Consultores. Despacho contable en Cancún. WhatsApp, teléfono y formulario. Lun–Vie 9:00–18:30.`} path="/version-c/contacto" />
       <Navbar version="c" />
 
       {/* HERO */}

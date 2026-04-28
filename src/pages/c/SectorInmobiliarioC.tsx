@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Navbar } from "@/components/Navbar";
+import { SEO } from "@/components/SEO";
 import { FooterC } from "@/components/FooterC";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { Phone } from "lucide-react";
@@ -31,6 +32,7 @@ export default function SectorInmobiliarioC() {
 
   return (
     <div className="min-h-screen">
+      <SEO title={`Contabilidad para Agentes Inmobiliarios en Cancún | Camhaji`} description={`Servicios contables y fiscales para agentes inmobiliarios y desarrolladoras en Cancún y Riviera Maya.`} path="/version-c/sectores/inmobiliario" />
       <Navbar version="c" />
 
       {/* HERO */}

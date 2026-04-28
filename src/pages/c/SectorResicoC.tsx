@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Navbar } from "@/components/Navbar";
+import { SEO } from "@/components/SEO";
 import { FooterC } from "@/components/FooterC";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { Phone } from "lucide-react";
@@ -78,6 +79,7 @@ export default function SectorResicoC() {
 
   return (
     <div className="min-h-screen">
+      <SEO title={`Régimen RESICO en Cancún | Camhaji Consultores`} description={`Asesoría y contabilidad RESICO en Cancún. Cumple con el SAT bajo el Régimen Simplificado de Confianza sin complicaciones.`} path="/version-c/sectores/resico" />
       <Navbar version="c" />
 
       {/* HERO */}

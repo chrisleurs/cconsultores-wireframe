@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Navbar } from "@/components/Navbar";
+import { SEO } from "@/components/SEO";
 import { FooterC } from "@/components/FooterC";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { Phone } from "lucide-react";
@@ -37,6 +38,7 @@ export default function ServicioContabilidadC() {
 
   return (
     <div className="min-h-screen">
+      <SEO title={`Contabilidad y Administración en Cancún | Camhaji`} description={`Servicio de contabilidad y administración para empresas en Cancún. Registro mensual, conciliaciones, declaraciones y control administrativo integral.`} path="/version-c/servicios/contabilidad" />
       <Navbar version="c" />
 
       {/* HERO */}
