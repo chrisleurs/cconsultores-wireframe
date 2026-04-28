@@ -590,7 +590,7 @@ export default function PropuestaSEO() {
             Implementemos esta estrategia juntos.
           </p>
           <a
-            href="https://wa.me/529981234567"
+            href="https://wa.me/5215543587159"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block font-sans text-xs uppercase tracking-[0.2em] border border-white/30 text-white px-8 py-3 rounded-sm hover:bg-white hover:text-primary transition-colors"

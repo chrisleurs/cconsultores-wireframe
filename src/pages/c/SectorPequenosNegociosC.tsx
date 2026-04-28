@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Navbar } from "@/components/Navbar";
+import { SEO } from "@/components/SEO";
 import { FooterC } from "@/components/FooterC";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { Phone } from "lucide-react";
@@ -42,6 +43,7 @@ export default function SectorPequenosNegociosC() {
 
   return (
     <div className="min-h-screen">
+      <SEO title={`Contabilidad para Pequeños Negocios en Cancún | Camhaji`} description={`Despacho contable para pequeños negocios en Cancún. Plan accesible, atención cercana y cumplimiento fiscal puntual.`} path="/version-c/sectores/pequenos-negocios" />
       <Navbar version="c" />
 
       {/* HERO */}
@@ -62,7 +64,7 @@ export default function SectorPequenosNegociosC() {
           <p className="font-sans text-base font-light text-white/50 max-w-[560px]" style={{ fontSize: "clamp(16px, 1.8vw, 20px)", lineHeight: 1.6 }}>
             Tienes un negocio. Trabajas duro. Y en algún momento el SAT, las facturas y los impuestos se volvieron algo que pospones porque no sabes bien por dónde empezar. Eso tiene solución.
           </p>
-          <a href="https://wa.me/529981234567" target="_blank" rel="noopener noreferrer" className="btn-uppercase border border-white/50 text-white px-10 py-4 hover:bg-white/10 hover:border-white transition-all duration-300 mt-10 inline-block">
+          <a href="https://wa.me/5215543587159" target="_blank" rel="noopener noreferrer" className="btn-uppercase border border-white/50 text-white px-10 py-4 hover:bg-white/10 hover:border-white transition-all duration-300 mt-10 inline-block">
             ESCRÍBENOS POR WHATSAPP
           </a>
         </div>
@@ -273,7 +275,7 @@ export default function SectorPequenosNegociosC() {
           Cuéntanos qué tipo de negocio tienes y en qué punto está tu situación fiscal hoy. La primera conversación no tiene costo.
         </p>
         <div className="flex gap-4 flex-wrap justify-center">
-          <a href="https://wa.me/529981234567" target="_blank" rel="noopener noreferrer" className="btn-uppercase border border-white/50 text-white px-10 py-4 hover:bg-white/10 hover:border-white transition-all duration-300">
+          <a href="https://wa.me/5215543587159" target="_blank" rel="noopener noreferrer" className="btn-uppercase border border-white/50 text-white px-10 py-4 hover:bg-white/10 hover:border-white transition-all duration-300">
             ESCRÍBENOS POR WHATSAPP
           </a>
           <a href="/version-c/contacto" className="btn-uppercase border border-white/30 text-white/60 px-10 py-4 hover:text-white hover:border-white/60 transition-all duration-300">

@@ -3,9 +3,11 @@ import { Navbar } from "@/components/Navbar";
 import { FooterC } from "@/components/FooterC";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { ClientLogos } from "@/components/ClientLogos";
+import { SEO } from "@/components/SEO";
 import { Phone, ChevronLeft, ChevronRight } from "lucide-react";
 
 import heroBg from "@/assets/hero-cancun-skyline.jpg";
+import heroVideo from "@/assets/cancun-hero-loop.mp4.asset.json";
 import sectorConstruccion from "@/assets/sector-construccion.jpg";
 import sectorComercial from "@/assets/sector-comercial.jpg";
 
@@ -224,11 +226,27 @@ export default function VersionC() {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Despacho Contable en Cancún — Camhaji Consultores"
+        description="Despacho contable en Cancún con más de 10 años de trayectoria. Contabilidad, fiscal, nómina y facturación para empresas en Quintana Roo. Especialistas en construcción y RESICO."
+        path="/version-c"
+      />
       <Navbar version="c" />
 
       {/* ══ HERO — left-aligned, full-screen, arc-group style ══ */}
       <section className="min-h-[100dvh] relative flex flex-col items-start justify-center overflow-hidden" style={{ padding: "120px 40px 80px" }}>
-        <img src={heroBg} alt="Cancún skyline zona hotelera" className="absolute inset-0 w-full h-full object-cover object-top" width={1920} height={1080} />
+        <video
+          src={heroVideo.url}
+          poster={heroBg}
+          autoPlay
+          loop
+          muted
+          playsInline
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          style={{ animation: "heroDrift 28s ease-in-out infinite alternate" }}
+        />
+        <img src={heroBg} alt="Skyline de Cancún, despacho contable Camhaji Consultores" className="sr-only" width={1920} height={1080} />
         <div className="absolute inset-0" style={{ background: "rgba(12, 28, 24, 0.84)" }} />
         <div className="relative z-10 flex flex-col items-start max-w-[1200px] mx-auto w-full px-5 md:px-10">
           <p className="label-uppercase text-white/35 mb-12">DESPACHO CONTABLE · CANCÚN, MÉXICO</p>
@@ -239,7 +257,7 @@ export default function VersionC() {
             Llevamos la contabilidad, el fiscal y la administración de tu empresa para que tú te dediques a lo que sabes hacer. Sin sorpresas con el SAT. Sin desorden. Sin promesas vacías.
           </p>
           <div className="flex gap-4 flex-wrap">
-            <a href="https://wa.me/529981234567" target="_blank" rel="noopener noreferrer" className="btn-uppercase border border-white/50 text-white px-8 py-3.5 hover:bg-white/[0.08] hover:border-white transition-all duration-300">
+            <a href="https://wa.me/5215543587159" target="_blank" rel="noopener noreferrer" className="btn-uppercase border border-white/50 text-white px-8 py-3.5 hover:bg-white/[0.08] hover:border-white transition-all duration-300">
               ESCRÍBENOS POR WHATSAPP
             </a>
             <a href="#servicios" className="btn-uppercase border border-white/30 text-white/60 hover:text-white hover:border-white/60 transition-all duration-300 px-8 py-3.5">
@@ -436,12 +454,12 @@ export default function VersionC() {
           <p className="font-sans text-white/55 max-w-[480px] mb-12" style={{ fontSize: "clamp(15px, 1.5vw, 17px)" }}>
             Si llevas tiempo postergando el orden en tu contabilidad, o quieres un despacho que de verdad responda cuando lo necesitas, es buen momento para hablar.
           </p>
-          <a href="https://wa.me/529981234567" target="_blank" rel="noopener noreferrer" className="btn-uppercase border border-white/50 text-white px-10 py-4 hover:bg-white/10 hover:border-white transition-all duration-300 mb-5 inline-block">
+          <a href="https://wa.me/5215543587159" target="_blank" rel="noopener noreferrer" className="btn-uppercase border border-white/50 text-white px-10 py-4 hover:bg-white/10 hover:border-white transition-all duration-300 mb-5 inline-block">
             ESCRÍBENOS POR WHATSAPP
           </a>
           <div className="flex items-center gap-2 mt-5">
             <Phone className="w-3.5 h-3.5 text-white/50" />
-            <span className="font-sans text-sm text-white/50">(998) 123-4567</span>
+            <span className="font-sans text-sm text-white/50">(998) 887-2584</span>
           </div>
         </div>
       </section>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Navbar } from "@/components/Navbar";
+import { SEO } from "@/components/SEO";
 import { FooterC } from "@/components/FooterC";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { Phone } from "lucide-react";
@@ -24,6 +25,7 @@ export default function ServicioNominaC() {
 
   return (
     <div className="min-h-screen">
+      <SEO title={`Nómina Empresarial en Cancún | Camhaji Consultores`} description={`Nómina empresarial en Cancún: cálculo, IMSS, CFDI de nómina con CONTPAQi. Sin errores ni retrasos.`} path="/version-c/servicios/nomina" />
       <Navbar version="c" />
 
       {/* HERO */}

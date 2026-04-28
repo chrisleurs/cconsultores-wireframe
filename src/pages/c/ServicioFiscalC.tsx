@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Navbar } from "@/components/Navbar";
+import { SEO } from "@/components/SEO";
 import { FooterC } from "@/components/FooterC";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { Phone } from "lucide-react";
@@ -24,6 +25,7 @@ export default function ServicioFiscalC() {
 
   return (
     <div className="min-h-screen">
+      <SEO title={`Estrategia Fiscal en Cancún | Camhaji Consultores`} description={`Estrategia fiscal para empresas en Cancún. Cumplimiento ante el SAT, planeación fiscal y asesoría contable sin sorpresas.`} path="/version-c/servicios/fiscal" />
       <Navbar version="c" />
 
       {/* HERO */}
