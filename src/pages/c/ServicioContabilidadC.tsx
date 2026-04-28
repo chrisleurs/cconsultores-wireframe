@@ -6,10 +6,6 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { ServiceExtras, FaqJsonLd, ServiceJsonLd } from "@/components/ServiceExtras";
 import { blogByService, relatedByService } from "@/data/serviceLinks";
 import { Phone } from "lucide-react";
-import illusDesk from "@/assets/illus-desk.png";
-import illusCycle from "@/assets/illus-cycle.png";
-import illusDashboard from "@/assets/illus-dashboard.png";
-import illusSectors from "@/assets/illus-sectors.png";
 
 const proceso = [
   { num: "01", title: "Solicitud de documentación", desc: "A principios de cada mes te pedimos la documentación del periodo anterior por el canal que tú elijas: correo electrónico o WhatsApp. Nos adaptamos a cómo trabaja tu empresa, no al revés.", days: "Día 1–5" },
@@ -81,32 +77,19 @@ export default function ServicioContabilidadC() {
         </div>
       </section>
 
-      {/* ADAPTABILIDAD — split con ilustración isométrica */}
+      {/* ADAPTABILIDAD */}
       <section className="bg-white py-24 px-5 md:px-10">
-        <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
-          <div className="order-2 md:order-1">
-            <p className="label-uppercase text-camhaji-muted mb-4">CONTABILIDAD PARA PYMES EN QUINTANA ROO</p>
-            <h2 className="font-sans font-bold text-camhaji-text mb-8" style={{ fontSize: "clamp(24px, 3.5vw, 40px)", letterSpacing: "-0.03em" }}>
-              Un servicio que se adapta a tu empresa
-            </h2>
-            <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed mb-4">
-              Atendemos desde negocios en etapa temprana hasta empresas medianas con operaciones complejas. Tenemos experiencia particular en el sector construcción y en empresas de comercialización en Quintana Roo.
-            </p>
-            <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed">
-              El proceso es el mismo en todos los casos: ordenado, mensual y transparente. Lo que cambia es la profundidad y el volumen de operaciones — no el nivel de atención.
-            </p>
-          </div>
-          <div className="order-1 md:order-2 relative parallax-float" data-reveal>
-            <div className="absolute -inset-8 bg-camhaji-accent/[0.04] rounded-full blur-3xl" aria-hidden="true" />
-            <img
-              src={illusDesk}
-              alt="Ilustración escritorio contable"
-              loading="lazy"
-              width={1024}
-              height={1024}
-              className="relative w-full max-w-[480px] mx-auto"
-            />
-          </div>
+        <div className="max-w-[900px] mx-auto">
+          <p className="label-uppercase text-camhaji-muted mb-4">CONTABILIDAD PARA PYMES EN QUINTANA ROO</p>
+          <h2 className="font-sans font-bold text-camhaji-text mb-8" style={{ fontSize: "clamp(24px, 3.5vw, 40px)", letterSpacing: "-0.03em" }}>
+            Un servicio que se adapta a tu empresa
+          </h2>
+          <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed mb-4">
+            Atendemos desde negocios en etapa temprana hasta empresas medianas con operaciones complejas. Tenemos experiencia particular en el sector construcción y en empresas de comercialización en Quintana Roo.
+          </p>
+          <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed">
+            El proceso es el mismo en todos los casos: ordenado, mensual y transparente. Lo que cambia es la profundidad y el volumen de operaciones — no el nivel de atención.
+          </p>
         </div>
       </section>
 
@@ -116,9 +99,7 @@ export default function ServicioContabilidadC() {
           {stats.map((s, i) => (
             <div
               key={i}
-              data-reveal
               className="text-center md:text-left md:px-6 md:border-r md:last:border-r-0 md:border-border-subtle"
-              style={{ transitionDelay: `${i * 100}ms` }}
             >
               <div
                 className="font-serif text-camhaji-base mb-3"
@@ -134,50 +115,26 @@ export default function ServicioContabilidadC() {
         </div>
       </section>
 
-      {/* PROCESO MENSUAL — con ilustración del ciclo + hover translate */}
-      <section className="bg-camhaji-base py-24 px-5 md:px-10 overflow-hidden">
-        <div className="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-16 items-start">
-          <div>
-            <p className="label-uppercase text-white/30 mb-4">PROCESO DE CONTABILIDAD MENSUAL</p>
-            <h2 className="font-sans font-bold text-white mb-16" style={{ fontSize: "clamp(24px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
-              Así es nuestro proceso contable mensual
-            </h2>
-            <div className="border-t border-white/[0.08]">
-              {proceso.map((p, i) => (
-                <div
-                  key={p.num}
-                  data-reveal
-                  className="flex items-start gap-6 py-6 border-b border-white/[0.06] transition-all duration-500 hover:translate-x-3 hover:bg-white/[0.02] cursor-default group"
-                  style={{ transitionDelay: `${i * 60}ms` }}
-                >
-                  <span className="font-serif text-3xl text-camhaji-accent/40 mt-1 w-12 flex-shrink-0 group-hover:text-camhaji-accent transition-colors duration-500">{p.num}</span>
-                  <div className="flex-1">
-                    <div className="flex items-baseline justify-between gap-4 mb-1">
-                      <h3 className="font-sans font-bold text-white text-lg">{p.title}</h3>
-                      <span className="font-sans text-[11px] uppercase tracking-[0.12em] text-camhaji-accent/60 flex-shrink-0">{p.days}</span>
-                    </div>
-                    <p className="font-sans text-sm font-light text-white/50 leading-relaxed">{p.desc}</p>
+      {/* PROCESO MENSUAL */}
+      <section className="bg-camhaji-base py-24 px-5 md:px-10">
+        <div className="max-w-[900px] mx-auto">
+          <p className="label-uppercase text-white/30 mb-4">PROCESO DE CONTABILIDAD MENSUAL</p>
+          <h2 className="font-sans font-bold text-white mb-16" style={{ fontSize: "clamp(24px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
+            Así es nuestro proceso contable mensual
+          </h2>
+          <div className="border-t border-white/[0.08]">
+            {proceso.map((p) => (
+              <div key={p.num} className="flex items-start gap-6 py-6 border-b border-white/[0.06] transition-transform duration-300 hover:translate-x-2.5 cursor-default">
+                <span className="font-sans text-sm text-white/20 mt-1 w-8 flex-shrink-0">{p.num}</span>
+                <div className="flex-1">
+                  <div className="flex items-baseline justify-between gap-4 mb-1">
+                    <h3 className="font-sans font-bold text-white text-lg">{p.title}</h3>
+                    <span className="font-sans text-[11px] uppercase tracking-[0.12em] text-camhaji-accent/60 flex-shrink-0">{p.days}</span>
                   </div>
+                  <p className="font-sans text-sm font-light text-white/50 leading-relaxed">{p.desc}</p>
                 </div>
-              ))}
-            </div>
-          </div>
-          {/* Ilustración del ciclo — sticky en desktop */}
-          <div className="hidden lg:block sticky top-32" data-reveal>
-            <div className="relative cycle-spin-slow">
-              <div className="absolute inset-0 bg-camhaji-accent/[0.06] rounded-full blur-3xl" aria-hidden="true" />
-              <img
-                src={illusCycle}
-                alt="Ciclo mensual contable"
-                loading="lazy"
-                width={1024}
-                height={1024}
-                className="relative w-full opacity-90"
-              />
-            </div>
-            <p className="font-sans text-[11px] uppercase tracking-[0.15em] text-white/30 text-center mt-6">
-              Un ciclo · 6 etapas · Cada mes
-            </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -194,77 +151,57 @@ export default function ServicioContabilidadC() {
         </div>
       </section>
 
-      {/* GESTIÓN ADMINISTRATIVA — split con ilustración dashboard */}
+      {/* GESTIÓN ADMINISTRATIVA */}
       <section className="bg-white py-24 px-5 md:px-10">
-        <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
-          <div className="relative parallax-float" data-reveal>
-            <div className="absolute -inset-8 bg-primary/[0.04] rounded-full blur-3xl" aria-hidden="true" />
-            <img
-              src={illusDashboard}
-              alt="Ilustración dashboard administrativo"
-              loading="lazy"
-              width={1024}
-              height={1024}
-              className="relative w-full max-w-[480px] mx-auto"
-            />
+        <div className="max-w-[900px] mx-auto">
+          <p className="label-uppercase text-camhaji-muted mb-4">ADMINISTRACIÓN EMPRESARIAL EN CANCÚN</p>
+          <h2 className="font-sans font-bold text-camhaji-text mb-6" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
+            Gestión administrativa completa para tu negocio
+          </h2>
+          <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed mb-10">
+            El servicio contable puede incluir gestión administrativa si tu empresa lo requiere:
+          </p>
+          <div className="border-t border-border-subtle">
+            {gestionAdmin.map((item) => (
+              <div key={item} className="flex items-start gap-3 py-4 border-b border-border-subtle">
+                <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0 mt-2" />
+                <span className="font-sans text-[15px] text-camhaji-text">{item}</span>
+              </div>
+            ))}
           </div>
+          <p className="font-sans text-sm font-light text-camhaji-muted mt-6 italic">Un solo despacho. Un solo proceso. Todo en orden.</p>
+        </div>
+      </section>
+
+      {/* SPLIT IMAGE — OFICINA */}
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-0">
+        <div>
+          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=800&fit=crop" alt="Oficina con documentos contables" className="w-full h-full object-cover aspect-[4/3]" />
+        </div>
+        <div className="flex items-center bg-surface px-8 md:px-16 py-16">
           <div>
-            <p className="label-uppercase text-camhaji-muted mb-4">ADMINISTRACIÓN EMPRESARIAL EN CANCÚN</p>
-            <h2 className="font-sans font-bold text-camhaji-text mb-6" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
-              Gestión administrativa completa para tu negocio
+            <p className="label-uppercase text-camhaji-muted mb-4">CONTABILIDAD ORDENADA Y TRANSPARENTE</p>
+            <h2 className="font-sans font-bold text-camhaji-text mb-6" style={{ fontSize: "clamp(22px, 2.5vw, 32px)", letterSpacing: "-0.02em" }}>
+              Orden, proceso y transparencia en cada paso
             </h2>
-            <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed mb-8">
-              El servicio contable puede incluir gestión administrativa si tu empresa lo requiere:
+            <p className="font-sans text-[15px] font-light text-camhaji-muted leading-relaxed">
+              Cada mes seguimos el mismo proceso. Cada número tiene respaldo. Cada declaración se revisa antes de presentarse. Así funciona una contabilidad que protege a tu empresa.
             </p>
-            <div className="border-t border-border-subtle">
-              {gestionAdmin.map((item, i) => (
-                <div
-                  key={item}
-                  data-reveal
-                  className="flex items-start gap-3 py-4 border-b border-border-subtle transition-transform duration-300 hover:translate-x-1.5"
-                  style={{ transitionDelay: `${i * 80}ms` }}
-                >
-                  <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0 mt-2" />
-                  <span className="font-sans text-[15px] text-camhaji-text">{item}</span>
-                </div>
-              ))}
-            </div>
-            <p className="font-sans text-sm font-light text-camhaji-muted mt-6 italic">Un solo despacho. Un solo proceso. Todo en orden.</p>
           </div>
         </div>
       </section>
 
-      {/* PARA QUIÉN — con ilustración sectores arriba */}
+      {/* PARA QUIÉN */}
       <section className="bg-surface py-24 px-5 md:px-10">
         <div className="max-w-[1100px] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_280px] gap-10 md:gap-16 items-end mb-14">
-            <div>
-              <p className="label-uppercase text-camhaji-muted mb-4">CONTABILIDAD POR SECTOR EN CANCÚN</p>
-              <h2 className="font-sans font-bold text-camhaji-text" style={{ fontSize: "clamp(24px, 3.5vw, 40px)", letterSpacing: "-0.03em" }}>
-                ¿Para qué tipo de empresas es este servicio?
-              </h2>
-            </div>
-            <div className="hidden md:block parallax-float" data-reveal>
-              <img
-                src={illusSectors}
-                alt="Ilustración sectores empresariales"
-                loading="lazy"
-                width={1024}
-                height={1024}
-                className="w-full max-w-[240px] ml-auto"
-              />
-            </div>
-          </div>
+          <p className="label-uppercase text-camhaji-muted mb-4">CONTABILIDAD POR SECTOR EN CANCÚN</p>
+          <h2 className="font-sans font-bold text-camhaji-text mb-14" style={{ fontSize: "clamp(24px, 3.5vw, 40px)", letterSpacing: "-0.03em" }}>
+            ¿Para qué tipo de empresas es este servicio?
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {paraQuien.map((p, i) => (
-              <a
-                key={p.title}
-                href={p.href}
-                data-reveal
-                className="group bg-white p-8 md:p-10 hover:shadow-lg hover:-translate-y-1 transition-all duration-500"
-                style={{ transitionDelay: `${i * 100}ms` }}
-              >
-                <div className="w-6 h-px bg-primary mb-5 group-hover:w-12 transition-all duration-500" />
+            {paraQuien.map((p) => (
+              <a key={p.title} href={p.href} className="group bg-white p-8 md:p-10 hover:shadow-lg transition-shadow">
+                <div className="w-6 h-px bg-primary mb-5" />
                 <h3 className="font-sans font-bold text-camhaji-text text-lg mb-3 group-hover:text-primary transition-colors">{p.title}</h3>
                 <p className="font-sans text-sm font-light text-camhaji-muted leading-relaxed mb-4">{p.desc}</p>
                 <span className="label-uppercase text-primary/60 group-hover:text-primary transition-colors">VER DETALLE →</span>

@@ -209,12 +209,20 @@ function useCountUp(target: number, duration = 1400) {
 function CifraCell({ value, suffix, label, context }: { value: number; suffix: string; label: string; context: string }) {
   const { count, ref } = useCountUp(value);
   return (
-    <div ref={ref} className="pr-10 border-r border-border-subtle last:border-r-0 last:pr-0 max-md:border-r-0 max-md:pr-0 max-md:border-b max-md:border-border-subtle max-md:pb-10 last:max-md:border-b-0 last:max-md:pb-0">
-      <div className="font-sans font-bold text-primary flex items-baseline gap-0.5" style={{ fontSize: "clamp(64px, 9vw, 112px)", letterSpacing: "-0.04em", lineHeight: 1 }}>
+    <div
+      ref={ref}
+      className="text-center md:text-left md:px-6 md:border-r md:last:border-r-0 md:border-border-subtle"
+    >
+      <div
+        className="font-serif text-camhaji-base mb-3 flex items-baseline justify-center md:justify-start gap-0.5"
+        style={{ fontSize: "clamp(40px, 5.5vw, 68px)", letterSpacing: "-0.03em", lineHeight: 1 }}
+      >
         <span>{count}</span>
-        {suffix && <span className="text-[0.55em] tracking-tight">{suffix}</span>}
+        {suffix && <span className="text-[0.7em]">{suffix}</span>}
       </div>
-      <p className="label-uppercase text-camhaji-muted mt-4 mb-2.5">{label}</p>
+      <p className="font-sans text-xs uppercase tracking-[0.12em] text-camhaji-muted leading-relaxed mb-2">
+        {label}
+      </p>
       <p className="font-sans text-sm font-light text-[#9A9589] leading-relaxed">{context}</p>
     </div>
   );
