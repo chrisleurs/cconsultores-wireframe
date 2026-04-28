@@ -3,6 +3,8 @@ import { Navbar } from "@/components/Navbar";
 import { SEO } from "@/components/SEO";
 import { FooterC } from "@/components/FooterC";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { ServiceExtras, FaqJsonLd, ServiceJsonLd } from "@/components/ServiceExtras";
+import { blogByService, relatedByService } from "@/data/serviceLinks";
 import { Phone } from "lucide-react";
 
 const servicios = [
@@ -26,6 +28,13 @@ export default function ServicioFiscalC() {
   return (
     <div className="min-h-screen">
       <SEO title={`Estrategia Fiscal en Cancún | Camhaji Consultores`} description={`Estrategia fiscal para empresas en Cancún. Cumplimiento ante el SAT, planeación fiscal y asesoría contable sin sorpresas.`} path="/version-c/servicios/fiscal" />
+      <ServiceJsonLd
+        name="Estrategia y Asesoría Fiscal en Cancún"
+        description="Diagnóstico, cumplimiento mensual ante el SAT, declaraciones anuales y respuesta a requerimientos para empresas en Cancún y Quintana Roo."
+        url="https://cconsultores-wireframe.lovable.app/version-c/servicios/fiscal"
+        serviceType="TaxAdvisory"
+      />
+      <FaqJsonLd faqs={faqs} />
       <Navbar version="c" />
 
       {/* HERO */}
@@ -144,6 +153,17 @@ export default function ServicioFiscalC() {
         </div>
       </section>
 
+      {/* TESTIMONIO */}
+      <section className="bg-camhaji-base py-20 px-5 md:px-10">
+        <div className="max-w-[820px] mx-auto">
+          <span className="font-serif text-[80px] text-white/[0.08] leading-none block -mb-8" aria-hidden="true">"</span>
+          <blockquote className="font-serif italic text-white/80 mb-8" style={{ fontSize: "clamp(18px, 2.4vw, 28px)", lineHeight: 1.5 }}>
+            "Llegué con tres años de declaraciones atrasadas y miedo a abrir el buzón tributario. Hicieron el diagnóstico, me explicaron cada paso y hoy duermo tranquilo."
+          </blockquote>
+          <p className="font-sans text-[13px] uppercase tracking-[0.15em] text-white/40">Socio fundador, constructora · Cancún, QR</p>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="bg-surface py-24 px-5 md:px-10">
         <div className="max-w-[840px] mx-auto">
@@ -169,6 +189,12 @@ export default function ServicioFiscalC() {
           </div>
         </div>
       </section>
+
+      <ServiceExtras
+        article={blogByService.fiscal}
+        related={relatedByService.fiscal}
+        serviceLabel="Fiscal"
+      />
 
       {/* CTA */}
       <section className="min-h-[60dvh] bg-primary flex flex-col items-center justify-center text-center px-5 md:px-10 py-20">

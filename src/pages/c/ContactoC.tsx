@@ -35,10 +35,6 @@ export default function ContactoC() {
 
       {/* HERO */}
       <section className="min-h-[50dvh] bg-camhaji-base flex flex-col items-center justify-center text-center px-5 md:px-10 pt-20">
-        <p className="font-sans text-xs text-white/30 mb-6">
-          <a href="/version-c" className="hover:text-white/50 transition-colors">Inicio</a>
-          <span className="text-white/15 mx-2">/</span>Contacto
-        </p>
         <p className="label-uppercase text-white/30 mb-6">CONTACTO</p>
         <h1 className="font-sans font-bold text-white mb-5" style={{ fontSize: "clamp(36px, 6vw, 72px)", letterSpacing: "-0.04em", lineHeight: 1.0 }}>
           Hablemos de tu Negocio

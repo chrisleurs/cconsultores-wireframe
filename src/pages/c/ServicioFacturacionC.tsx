@@ -3,11 +3,13 @@ import { Navbar } from "@/components/Navbar";
 import { SEO } from "@/components/SEO";
 import { FooterC } from "@/components/FooterC";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { ServiceExtras, FaqJsonLd, ServiceJsonLd } from "@/components/ServiceExtras";
+import { blogByService, relatedByService } from "@/data/serviceLinks";
 import { Phone } from "lucide-react";
 
 const servicios = [
   { title: "Emisión de CFDI", desc: "Facturas ordinarias, notas de crédito, complementos de pago, CFDI de nómina. Cada tipo con el uso del CFDI correcto, los datos del receptor verificados y el régimen fiscal bien asignado — que desde CFDI 4.0 es obligatorio declararlo." },
-  { title: "Timbrado ante el SAT en tiempo real", desc: "Usamos CONTPAQi conectado directamente al SAT. El timbrado es inmediato y el comprobante queda registrado desde el primer momento, disponible para el receptor en segundos." },
+  { title: "Timbrado ante el SAT en tiempo real", desc: "El timbrado es inmediato y el comprobante queda registrado desde el primer momento, disponible para el receptor en segundos. Tu cliente recibe su factura sin tener que pedirla dos veces." },
   { title: "Archivo digital y administración de comprobantes", desc: "Todos los CFDI emitidos y recibidos quedan archivados de forma organizada. En cualquier momento puedes solicitar el historial del mes, del trimestre o del año. El SAT exige conservarlos por un mínimo de 5 años." },
   { title: "Verificación de facturas de proveedores", desc: "No solo emitimos — también verificamos que los CFDI que recibes de tus proveedores sean válidos y deducibles. Una factura de proveedor inválida es una deducción perdida." },
   { title: "Cancelaciones y sustituciones", desc: "Cuando hay un error, lo corregimos con el procedimiento correcto conforme a la normatividad del SAT. Sin cancelaciones indebidas que generen observaciones en tu historial fiscal." },
@@ -26,6 +28,13 @@ export default function ServicioFacturacionC() {
   return (
     <div className="min-h-screen">
       <SEO title={`Facturación CFDI en Cancún | Camhaji Consultores`} description={`Emisión, timbrado y administración de facturas CFDI 4.0 para empresas en Cancún y Quintana Roo.`} path="/version-c/servicios/facturacion" />
+      <ServiceJsonLd
+        name="Facturación CFDI 4.0 en Cancún"
+        description="Emisión, timbrado, archivo y verificación de CFDI para empresas en Cancún. Cancelaciones y sustituciones conforme al SAT."
+        url="https://cconsultores-wireframe.lovable.app/version-c/servicios/facturacion"
+        serviceType="InvoicingService"
+      />
+      <FaqJsonLd faqs={faqs} />
       <Navbar version="c" />
 
       {/* HERO */}
@@ -103,28 +112,39 @@ export default function ServicioFacturacionC() {
         </div>
       </section>
 
-      {/* CONTPAQi */}
+      {/* CONFIANZA OPERATIVA */}
       <section className="bg-surface py-24 px-5 md:px-10">
         <div className="max-w-[900px] mx-auto">
-          <p className="label-uppercase text-camhaji-muted mb-4">FACTURACIÓN CON CONTPAQi</p>
+          <p className="label-uppercase text-camhaji-muted mb-4">FACTURACIÓN OPERADA POR EXPERTOS</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-8" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
-            CONTPAQi Facturación: el estándar en México
+            Tu equipo vende. Nosotros facturamos.
           </h2>
           <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed">
-            CONTPAQi es el software de facturación más utilizado en México y está integrado directamente con el SAT. Lo usamos porque garantiza compatibilidad, trazabilidad y reportes que funcionan en cualquier revisión. Si el SAT pide tu historial de CFDI, no tendrás que explicar cómo está hecha tu facturación — estará en orden.
+            Tu equipo no debería perder horas peleándose con datos del receptor, usos del CFDI o complementos de pago. Nosotros emitimos, timbramos, archivamos y revisamos cada comprobante. Si el SAT pide tu historial mañana, lo entregamos hoy — ordenado, completo y sin sobresaltos.
           </p>
         </div>
       </section>
 
-      {/* FULL-BLEED BAND — TECNOLOGÍA */}
+      {/* FULL-BLEED BAND */}
       <section className="min-h-[40vh] relative flex items-center justify-center text-center">
         <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&h=800&fit=crop" alt="Oficina tecnológica moderna" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-camhaji-base/70" />
         <div className="relative z-10 px-5 md:px-10 py-16 max-w-[700px]">
-          <p className="label-uppercase text-camhaji-accent/60 mb-4">CFDI CON CONTPAQi — TIMBRADO DIRECTO AL SAT</p>
+          <p className="label-uppercase text-camhaji-accent/60 mb-4">CFDI 4.0 SIN ERRORES — TIMBRADO INMEDIATO</p>
           <p className="font-sans font-bold text-white" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em", lineHeight: 1.2 }}>
-            El estándar en México. Timbrado directo con el SAT, archivo organizado y reportes listos para cualquier revisión.
+            Cada factura emitida es una factura que protege a tu empresa y a tu cliente.
           </p>
+        </div>
+      </section>
+
+      {/* TESTIMONIO */}
+      <section className="bg-camhaji-base py-20 px-5 md:px-10">
+        <div className="max-w-[820px] mx-auto">
+          <span className="font-serif text-[80px] text-white/[0.08] leading-none block -mb-8" aria-hidden="true">"</span>
+          <blockquote className="font-serif italic text-white/80 mb-8" style={{ fontSize: "clamp(18px, 2.4vw, 28px)", lineHeight: 1.5 }}>
+            "Mi equipo de ventas dejó de pelearse con la facturación. Mando los datos por WhatsApp y la factura llega al cliente en minutos."
+          </blockquote>
+          <p className="font-sans text-[13px] uppercase tracking-[0.15em] text-white/40">Gerente comercial, distribuidora · Cancún, QR</p>
         </div>
       </section>
 
@@ -153,6 +173,12 @@ export default function ServicioFacturacionC() {
           </div>
         </div>
       </section>
+
+      <ServiceExtras
+        article={blogByService.facturacion}
+        related={relatedByService.facturacion}
+        serviceLabel="Facturación"
+      />
 
       {/* CTA */}
       <section className="min-h-[60dvh] bg-primary flex flex-col items-center justify-center text-center px-5 md:px-10 py-20">

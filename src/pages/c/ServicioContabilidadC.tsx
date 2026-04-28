@@ -3,6 +3,8 @@ import { Navbar } from "@/components/Navbar";
 import { SEO } from "@/components/SEO";
 import { FooterC } from "@/components/FooterC";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { ServiceExtras, FaqJsonLd, ServiceJsonLd } from "@/components/ServiceExtras";
+import { blogByService, relatedByService } from "@/data/serviceLinks";
 import { Phone } from "lucide-react";
 
 const proceso = [
@@ -39,6 +41,13 @@ export default function ServicioContabilidadC() {
   return (
     <div className="min-h-screen">
       <SEO title={`Contabilidad y Administración en Cancún | Camhaji`} description={`Servicio de contabilidad y administración para empresas en Cancún. Registro mensual, conciliaciones, declaraciones y control administrativo integral.`} path="/version-c/servicios/contabilidad" />
+      <ServiceJsonLd
+        name="Contabilidad y Administración Empresarial en Cancún"
+        description="Servicio mensual de contabilidad para empresas en Cancún y Quintana Roo: registro, conciliaciones, declaraciones y administración."
+        url="https://cconsultores-wireframe.lovable.app/version-c/servicios/contabilidad"
+        serviceType="Accounting"
+      />
+      <FaqJsonLd faqs={faqs} />
       <Navbar version="c" />
 
       {/* HERO */}
@@ -173,6 +182,17 @@ export default function ServicioContabilidadC() {
         </div>
       </section>
 
+      {/* TESTIMONIO */}
+      <section className="bg-camhaji-base py-20 px-5 md:px-10">
+        <div className="max-w-[820px] mx-auto">
+          <span className="font-serif text-[80px] text-white/[0.08] leading-none block -mb-8" aria-hidden="true">"</span>
+          <blockquote className="font-serif italic text-white/80 mb-8" style={{ fontSize: "clamp(18px, 2.4vw, 28px)", lineHeight: 1.5 }}>
+            "Llevo dos años sin abrir el portal del SAT con miedo. Cada mes recibo el resumen, autorizo el pago y sigo con lo mío. Eso para mí no tiene precio."
+          </blockquote>
+          <p className="font-sans text-[13px] uppercase tracking-[0.15em] text-white/40">Director General, empresa de servicios · Cancún, QR</p>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="bg-white py-24 px-5 md:px-10">
         <div className="max-w-[840px] mx-auto">
@@ -199,27 +219,11 @@ export default function ServicioContabilidadC() {
         </div>
       </section>
 
-      {/* OTROS SERVICIOS */}
-      <section className="bg-surface py-20 px-5 md:px-10">
-        <div className="max-w-[1100px] mx-auto">
-          <p className="label-uppercase text-camhaji-muted text-center mb-10">MÁS SERVICIOS CONTABLES EN CANCÚN</p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {[
-              { num: "02", name: "Estrategia Fiscal", desc: "Cumplimiento SAT sin sorpresas.", href: "/version-c/servicios/fiscal" },
-              { num: "03", name: "Nómina Empresarial", desc: "CFDI, IMSS e Infonavit con CONTPAQi.", href: "/version-c/servicios/nomina" },
-              { num: "04", name: "Facturación CFDI", desc: "Emisión, timbrado y administración de facturas.", href: "/version-c/servicios/facturacion" },
-            ].map((s) => (
-              <a key={s.num} href={s.href} className="group border border-border-subtle bg-white p-8 flex items-start gap-6 hover:border-primary/30 transition-colors">
-                <span className="font-sans font-bold text-[40px] text-primary/10 leading-none" style={{ letterSpacing: "-0.03em" }}>{s.num}</span>
-                <div>
-                  <h3 className="font-sans font-bold text-camhaji-text text-lg mb-1 group-hover:text-primary transition-colors">{s.name}</h3>
-                  <p className="font-sans text-sm font-light text-camhaji-muted">{s.desc}</p>
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ServiceExtras
+        article={blogByService.contabilidad}
+        related={relatedByService.contabilidad}
+        serviceLabel="Contabilidad"
+      />
 
       {/* CTA */}
       <section className="min-h-[60dvh] bg-primary flex flex-col items-center justify-center text-center px-5 md:px-10 py-20">

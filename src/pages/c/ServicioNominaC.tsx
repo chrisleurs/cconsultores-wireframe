@@ -3,6 +3,8 @@ import { Navbar } from "@/components/Navbar";
 import { SEO } from "@/components/SEO";
 import { FooterC } from "@/components/FooterC";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { ServiceExtras, FaqJsonLd, ServiceJsonLd } from "@/components/ServiceExtras";
+import { blogByService, relatedByService } from "@/data/serviceLinks";
 import { Phone } from "lucide-react";
 
 const queIncluye = [
@@ -17,7 +19,7 @@ const queIncluye = [
 const faqs = [
   { q: "¿Cuánto cuesta el servicio de nómina para mi empresa?", a: "El costo depende del número de empleados, la frecuencia de pago (quincenal o mensual) y la complejidad de la operación (eventuales, trabajadores por obra, prestaciones especiales). Hacemos una cotización personalizada sin costo — cuéntanos tu situación y te damos un número real." },
   { q: "¿Qué pasa si pago mal la nómina en México?", a: "Las consecuencias más comunes son: diferencias con el IMSS por cuotas patronales incorrectas (con recargos), multas por CFDI de nómina con errores, conflictos laborales por finiquitos mal calculados, y observaciones del IMSS en caso de auditoría." },
-  { q: "¿Qué incluye el outsourcing de nómina?", a: "Cálculo de nómina, altas y bajas en IMSS e Infonavit, cálculo de cuotas patronales, emisión de CFDI de nómina, finiquitos, liquidaciones, cálculo de prestaciones y atención a requerimientos del IMSS. Todo en un solo servicio, con CONTPAQi como plataforma." },
+  { q: "¿Qué incluye el outsourcing de nómina?", a: "Cálculo de nómina, altas y bajas en IMSS e Infonavit, cálculo de cuotas patronales, emisión de CFDI de nómina, finiquitos, liquidaciones, cálculo de prestaciones y atención a requerimientos del IMSS. Todo en un solo servicio, con un equipo dedicado que conoce a tu empresa." },
 ];
 
 export default function ServicioNominaC() {
@@ -25,7 +27,14 @@ export default function ServicioNominaC() {
 
   return (
     <div className="min-h-screen">
-      <SEO title={`Nómina Empresarial en Cancún | Camhaji Consultores`} description={`Nómina empresarial en Cancún: cálculo, IMSS, CFDI de nómina con CONTPAQi. Sin errores ni retrasos.`} path="/version-c/servicios/nomina" />
+      <SEO title={`Nómina Empresarial en Cancún | Camhaji Consultores`} description={`Nómina empresarial en Cancún: cálculo de nómina, IMSS, Infonavit y CFDI de nómina sin errores ni retrasos.`} path="/version-c/servicios/nomina" />
+      <ServiceJsonLd
+        name="Nómina Empresarial en Cancún"
+        description="Servicio integral de nómina en Cancún: cálculo, IMSS, Infonavit, CFDI de nómina, finiquitos y atención a requerimientos."
+        url="https://cconsultores-wireframe.lovable.app/version-c/servicios/nomina"
+        serviceType="PayrollService"
+      />
+      <FaqJsonLd faqs={faqs} />
       <Navbar version="c" />
 
       {/* HERO */}
@@ -85,7 +94,7 @@ export default function ServicioNominaC() {
       {/* QUÉ INCLUYE */}
       <section className="bg-camhaji-base py-24 px-5 md:px-10">
         <div className="max-w-[900px] mx-auto">
-          <p className="label-uppercase text-white/30 mb-4">SERVICIO DE NÓMINA CON CONTPAQi</p>
+          <p className="label-uppercase text-white/30 mb-4">SERVICIO DE NÓMINA EMPRESARIAL</p>
           <h2 className="font-sans font-bold text-white mb-16" style={{ fontSize: "clamp(24px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
             ¿Qué incluye?
           </h2>
@@ -98,9 +107,9 @@ export default function ServicioNominaC() {
             ))}
           </div>
           <div className="mt-14 border-l-2 border-camhaji-accent/40 pl-6">
-            <h3 className="font-sans font-bold text-white text-lg mb-3">CONTPAQi Nómina</h3>
+            <h3 className="font-sans font-bold text-white text-lg mb-3">Lo que recibes cada periodo</h3>
             <p className="font-sans text-sm font-light text-white/50 leading-relaxed">
-              Usamos CONTPAQi para nómina — el sistema más utilizado en México y reconocido por el SAT y el IMSS. Los cálculos son correctos, los CFDI se timbran sin error y los reportes son compatibles con cualquier revisión o auditoría.
+              Recibos de nómina timbrados, dispersión lista para autorizar, resumen de cuotas IMSS e Infonavit y un canal directo con quien lleva tu cuenta. Si surge una duda — del SAT, del IMSS o de un trabajador — alguien la contesta el mismo día.
             </p>
           </div>
         </div>
@@ -121,7 +130,7 @@ export default function ServicioNominaC() {
               <h3 className="font-sans font-bold text-camhaji-text text-xl mb-1">Marlon Rafael Chávez Sánchez</h3>
               <p className="label-uppercase text-primary mb-4">Supervisor de Nómina y Facturación</p>
               <p className="font-sans text-[15px] font-light text-camhaji-muted leading-relaxed">
-                Especialista en nómina, ley laboral y contribuciones de seguridad social. Domina CONTPAQi con una profundidad que pocos alcanzan y conoce la Ley Federal del Trabajo con la precisión de quien la aplica cada semana. Cuando contratas nuestro servicio de nómina en Cancún, tienes a Marlon y su equipo trabajando para que ningún número esté mal.
+                Marlon lleva años calculando nóminas reales — con eventuales, finiquitos complicados y trabajadores por obra. Conoce la Ley Federal del Trabajo con la precisión de quien la aplica cada semana y cuida cada movimiento como si fuera de su propia empresa. Cuando contratas nuestro servicio de nómina en Cancún, tienes a Marlon y su equipo del lado correcto del SAT y del IMSS.
               </p>
             </div>
           </div>
@@ -133,9 +142,9 @@ export default function ServicioNominaC() {
         <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1600&h=800&fit=crop" alt="Ambiente laboral profesional" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-camhaji-base/70" />
         <div className="relative z-10 px-5 md:px-10 py-16 max-w-[700px]">
-          <p className="label-uppercase text-camhaji-accent/60 mb-4">NÓMINA CON CONTPAQi — ESTÁNDAR EN MÉXICO</p>
+          <p className="label-uppercase text-camhaji-accent/60 mb-4">NÓMINA SIN OBSERVACIONES DEL IMSS</p>
           <p className="font-sans font-bold text-white" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em", lineHeight: 1.2 }}>
-            El sistema más utilizado en México. Cálculos correctos, CFDI sin error, reportes compatibles con cualquier auditoría.
+            Cálculos correctos, CFDI sin error y reportes listos para cualquier revisión. Tú pagas, tu equipo cobra a tiempo, el IMSS queda en orden.
           </p>
         </div>
       </section>
@@ -177,6 +186,12 @@ export default function ServicioNominaC() {
           </div>
         </div>
       </section>
+
+      <ServiceExtras
+        article={blogByService.nomina}
+        related={relatedByService.nomina}
+        serviceLabel="Nómina"
+      />
 
       {/* CTA */}
       <section className="min-h-[60dvh] bg-primary flex flex-col items-center justify-center text-center px-5 md:px-10 py-20">

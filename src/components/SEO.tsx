@@ -51,7 +51,9 @@ export function LocalBusinessJsonLd() {
   const data = {
     "@context": "https://schema.org",
     "@type": "AccountingService",
+    "@id": `${SITE_URL}/#business`,
     name: "Camhaji Consultores",
+    alternateName: "Camhaji Consultores Cancún",
     description:
       "Despacho contable en Cancún con más de 10 años de trayectoria. Contabilidad, fiscal, nómina y facturación para empresas en Quintana Roo.",
     url: SITE_URL,
@@ -59,6 +61,7 @@ export function LocalBusinessJsonLd() {
     email: "contacto@camhajiconsultores.mx",
     image: DEFAULT_OG,
     priceRange: "$$",
+    foundingDate: "2014",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Calle Mar #9, Lote 12, Manzana 12, SM 4",
@@ -67,10 +70,19 @@ export function LocalBusinessJsonLd() {
       postalCode: "77500",
       addressCountry: "MX",
     },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 21.1619,
+      longitude: -86.8515,
+    },
     areaServed: [
       { "@type": "City", name: "Cancún" },
+      { "@type": "City", name: "Playa del Carmen" },
+      { "@type": "City", name: "Tulum" },
+      { "@type": "City", name: "Chetumal" },
       { "@type": "AdministrativeArea", name: "Quintana Roo" },
       { "@type": "Place", name: "Riviera Maya" },
+      { "@type": "Country", name: "México" },
     ],
     openingHoursSpecification: [
       {
@@ -78,6 +90,44 @@ export function LocalBusinessJsonLd() {
         dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
         opens: "09:00",
         closes: "18:30",
+      },
+    ],
+    knowsAbout: [
+      "Contabilidad empresarial",
+      "Estrategia fiscal",
+      "SAT México",
+      "IMSS Infonavit",
+      "CFDI 4.0",
+      "Nómina empresarial",
+      "RESICO",
+      "Sector construcción",
+      "Sector inmobiliario",
+      "Régimen Simplificado de Confianza",
+    ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Servicios contables Camhaji",
+      itemListElement: [
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Contabilidad y Administración Empresarial", url: `${SITE_URL}/version-c/servicios/contabilidad` } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Estrategia y Asesoría Fiscal", url: `${SITE_URL}/version-c/servicios/fiscal` } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Nómina Empresarial", url: `${SITE_URL}/version-c/servicios/nomina` } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Facturación CFDI 4.0", url: `${SITE_URL}/version-c/servicios/facturacion` } },
+      ],
+    },
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        telephone: "+52-998-887-2584",
+        contactType: "customer service",
+        areaServed: "MX",
+        availableLanguage: ["Spanish"],
+      },
+      {
+        "@type": "ContactPoint",
+        telephone: "+52-1-55-4358-7159",
+        contactType: "WhatsApp",
+        areaServed: "MX",
+        availableLanguage: ["Spanish"],
       },
     ],
     sameAs: [],

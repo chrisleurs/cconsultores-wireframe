@@ -1,0 +1,44 @@
+# Camhaji Consultores
+
+> Despacho contable en Cancún, Quintana Roo, México. Más de 10 años llevando contabilidad, estrategia fiscal, nómina y facturación CFDI para empresas en construcción, comercialización, sector inmobiliario, RESICO y pequeños negocios.
+
+## Información clave
+
+- **Nombre legal:** Camhaji Consultores
+- **Tipo de negocio:** Despacho contable y de asesoría fiscal (AccountingService)
+- **Ubicación:** Calle Mar #9, Lote 12, Manzana 12, SM 4, Cancún, Benito Juárez, Quintana Roo, México, C.P. 77500
+- **Zona de servicio:** Cancún, Riviera Maya, todo Quintana Roo, atención remota a México
+- **Teléfono:** +52 998 887 2584
+- **WhatsApp:** +52 1 55 4358 7159
+- **Email:** contacto@camhajiconsultores.mx
+- **Horario:** Lunes a Viernes, 9:00 – 18:30 (hora de Cancún, GMT-5)
+- **Idioma:** Español (es-MX)
+- **Sitio:** https://cconsultores-wireframe.lovable.app
+
+## Servicios
+
+- [Contabilidad y Administración Empresarial](https://cconsultores-wireframe.lovable.app/version-c/servicios/contabilidad): Registro contable mensual, conciliación bancaria, cálculo de impuestos, declaraciones, gestión administrativa, tesorería y trámites ante SAT/IMSS/Infonavit.
+- [Estrategia Fiscal](https://cconsultores-wireframe.lovable.app/version-c/servicios/fiscal): Diagnóstico fiscal, cumplimiento mensual de IVA e ISR, declaración anual, atención a requerimientos del SAT y planeación fiscal por sector.
+- [Nómina Empresarial](https://cconsultores-wireframe.lovable.app/version-c/servicios/nomina): Cálculo de nómina, altas/bajas IMSS e Infonavit, cuotas patronales, CFDI de nómina, finiquitos y liquidaciones.
+- [Facturación CFDI 4.0](https://cconsultores-wireframe.lovable.app/version-c/servicios/facturacion): Emisión, timbrado, archivo digital, verificación de CFDI de proveedores, cancelaciones y sustituciones.
+
+## Sectores especializados
+
+- [Construcción](https://cconsultores-wireframe.lovable.app/version-c/sectores/construccion): Costos de obra, subcontratistas, estimaciones, retenciones IVA/ISR.
+- [Comercial](https://cconsultores-wireframe.lovable.app/version-c/sectores/comercial): Distribuidoras, comercializadoras, control de inventarios, CxC y CxP.
+- [Inmobiliario](https://cconsultores-wireframe.lovable.app/version-c/sectores/inmobiliario): Agentes inmobiliarios, comisiones, retenciones, régimen aplicable.
+- [RESICO](https://cconsultores-wireframe.lovable.app/version-c/sectores/resico): Régimen Simplificado de Confianza para personas morales y físicas.
+- [Pequeños negocios](https://cconsultores-wireframe.lovable.app/version-c/sectores/pequenos-negocios): Pymes en crecimiento, regularización fiscal y arranque ordenado.
+
+## Diferenciadores
+
+- Más de 10 años de experiencia, con trayectoria previa en grandes firmas de auditoría.
+- Atención directa por WhatsApp o correo — sin formularios interminables.
+- Respuesta el mismo día en horario hábil.
+- Diagnóstico fiscal inicial sin costo.
+- Especialización real en construcción, comercialización, inmobiliario y RESICO en Quintana Roo.
+
+## Contacto
+
+- [Página de contacto](https://cconsultores-wireframe.lovable.app/version-c/contacto)
+- WhatsApp directo: https://wa.me/5215543587159
