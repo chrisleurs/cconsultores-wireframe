@@ -52,7 +52,7 @@ export default function ServicioFacturacionC() {
             Facturación CFDI para tu Empresa en Cancún
           </h1>
           <p className="font-sans text-white/50 max-w-[560px] mx-auto" style={{ fontSize: "clamp(16px, 1.8vw, 19px)", lineHeight: 1.6 }}>
-            Un CFDI mal emitido no es solo un problema técnico. Es una factura que el SAT no reconoce, una deducción que tu cliente pierde y una multa que llega meses después.
+            Un CFDI mal emitido no es solo un problema técnico. Es una factura que el SAT no reconoce, una deducción que tu cliente pierde y, dependiendo del error, una multa que llega meses después. La facturación electrónica tiene reglas — y tiene consecuencias.
           </p>
         </div>
       </section>
