@@ -7,11 +7,11 @@ export function FooterC() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-9 h-9 flex items-center justify-center rounded-sm bg-white font-sans text-lg font-bold text-primary">
+              <div className="w-9 h-9 flex items-center justify-center rounded-sm bg-white font-serif text-lg font-bold text-primary">
                 CC
               </div>
               <div className="flex flex-col">
-                <span className="font-sans text-sm font-bold text-white leading-tight" itemProp="name">CAMHAJI</span>
+                <span className="font-serif text-sm font-bold text-white leading-tight" itemProp="name">CAMHAJI</span>
                 <span className="font-sans text-[9px] uppercase tracking-[0.22em] text-white/40">CONSULTORES</span>
               </div>
             </div>
