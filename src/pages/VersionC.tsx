@@ -323,22 +323,57 @@ export default function VersionC() {
             <p className="font-sans text-base font-light text-white/50 max-w-[360px] md:text-right leading-relaxed">Todo lo que tu empresa necesita en un solo lugar</p>
           </div>
           <div className="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-[1200px] mx-auto w-full">
-            {services.map((s, i) => (
-              <div
-                key={i}
-                className={`group flex flex-col justify-start p-10 hover:bg-white/[0.04] transition-colors duration-300 ${i < services.length - 1 ? "lg:border-r border-white/[0.07]" : ""} border-b lg:border-b-0 border-white/[0.07]`}
-                onMouseEnter={() => setHoveredService(i)}
-              >
-                <span className="font-sans text-xs text-white/[0.18] uppercase tracking-[0.22em] mb-8">{s.num}</span>
-                <h3 className="font-sans font-bold text-white mb-4 group-hover:text-camhaji-accent transition-colors duration-200" style={{ fontSize: "clamp(20px, 3vw, 36px)", letterSpacing: "-0.02em", lineHeight: 1.1 }}>
-                  {s.title}
-                </h3>
-                <p className="font-sans text-[15px] font-light text-white/55 leading-relaxed max-w-[280px] mb-8">{s.desc}</p>
-                <a href={s.href} className="label-uppercase text-white/35 hover:text-white/80 transition-colors border-b border-white/15 pb-0.5 self-start mt-auto">
-                  CONOCER MÁS →
-                </a>
-              </div>
-            ))}
+            {services.map((s, i) => {
+              const isEven = (i + 1) % 2 === 0; // 02 y 04
+              return (
+                <div
+                  key={i}
+                  className={`group flex flex-col justify-start p-10 transition-colors duration-300 ${
+                    i < services.length - 1 ? "lg:border-r border-white/[0.07]" : ""
+                  } border-b lg:border-b-0 border-white/[0.07] ${
+                    isEven
+                      ? "hover:bg-white hover:text-camhaji-base"
+                      : "hover:bg-white/[0.04]"
+                  }`}
+                  onMouseEnter={() => setHoveredService(i)}
+                >
+                  <span
+                    className={`font-sans text-xs uppercase tracking-[0.22em] mb-8 transition-colors duration-300 ${
+                      isEven ? "text-white/[0.18] group-hover:text-camhaji-base/40" : "text-white/[0.18]"
+                    }`}
+                  >
+                    {s.num}
+                  </span>
+                  <h3
+                    className={`font-sans font-bold mb-4 transition-colors duration-200 ${
+                      isEven
+                        ? "text-white group-hover:text-camhaji-base"
+                        : "text-white group-hover:text-camhaji-accent"
+                    }`}
+                    style={{ fontSize: "clamp(20px, 3vw, 36px)", letterSpacing: "-0.02em", lineHeight: 1.1 }}
+                  >
+                    {s.title}
+                  </h3>
+                  <p
+                    className={`font-sans text-[15px] font-light leading-relaxed max-w-[280px] mb-8 transition-colors duration-300 ${
+                      isEven ? "text-white/55 group-hover:text-camhaji-base/75" : "text-white/55"
+                    }`}
+                  >
+                    {s.desc}
+                  </p>
+                  <a
+                    href={s.href}
+                    className={`label-uppercase border-b pb-0.5 self-start mt-auto transition-colors ${
+                      isEven
+                        ? "text-white/35 border-white/15 group-hover:text-camhaji-base group-hover:border-camhaji-base/40"
+                        : "text-white/35 border-white/15 hover:text-white/80"
+                    }`}
+                  >
+                    CONOCER MÁS →
+                  </a>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
