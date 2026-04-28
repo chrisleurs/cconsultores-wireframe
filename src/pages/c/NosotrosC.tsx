@@ -69,10 +69,10 @@ export default function NosotrosC() {
           </p>
           <p className="label-uppercase text-white/30 mb-6">DESPACHO CONTABLE EN CANCÚN</p>
           <h1 className="font-sans font-bold text-white mb-6" style={{ fontSize: "clamp(36px, 6vw, 72px)", letterSpacing: "-0.03em", lineHeight: 1.05 }}>
-            El Equipo que Respalda tu Tranquilidad Financiera
+            Una Firma Contable Joven con más de 10 Años de Trayectoria
           </h1>
           <p className="font-sans text-base font-light text-white/50 max-w-[600px] mx-auto" style={{ fontSize: "clamp(16px, 1.8vw, 20px)", lineHeight: 1.6 }}>
-            Detrás de cada declaración, cada nómina y cada conciliación hay una persona con nombre, experiencia y responsabilidad clara. Estos son algunos de ellos.
+            Hay firmas que se venden con catálogos. Nosotros preferimos contarte quiénes somos.
           </p>
         </div>
       </section>

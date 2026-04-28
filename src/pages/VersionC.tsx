@@ -156,7 +156,7 @@ const faqs = [
   },
   {
     q: "¿Cómo elegir un buen despacho contable en Cancún?",
-    a: "Busca un despacho con equipo certificado, experiencia en tu sector, uso de software actualizado y comunicación clara y accesible. Que te expliquen lo que hacen — no solo que te manden el comprobante de declaración.",
+    a: "Busca un despacho con equipo certificado, experiencia en tu sector, uso de software actualizado y comunicación clara y accesible. Que te expliquen lo que hacen — no solo que te manden el comprobante de declaración. Un despacho que conoce tu giro trabaja diferente a uno que te trata como cualquier cliente.",
   },
   {
     q: "¿Qué incluye el servicio de contabilidad mensual?",
@@ -589,7 +589,7 @@ function SectoresCarousel({ sectors }: { sectors: Sector[] }) {
           <div>
             <p className="label-uppercase text-white/35 mb-3">SECTORES QUE ATENDEMOS EN QUINTANA ROO</p>
             <h2 className="font-sans font-bold text-white max-w-[640px]" style={{ fontSize: "clamp(24px, 3vw, 38px)", letterSpacing: "-0.02em", lineHeight: 1.15 }}>
-              Cada sector tiene sus propias reglas
+              Experiencia en los sectores que más importan en Quintana Roo
             </h2>
           </div>
           <div className="flex items-center gap-2">

@@ -52,7 +52,7 @@ export default function ServicioFiscalC() {
             Asesoría Fiscal en Cancún: Cumple, no Improvises
           </h1>
           <p className="font-sans text-white/50 max-w-[560px] mx-auto" style={{ fontSize: "clamp(16px, 1.8vw, 19px)", lineHeight: 1.6 }}>
-            El SAT no espera. No negocia plazos informales ni acepta excusas. No los juzgamos. Los resolvemos.
+            El SAT no espera. No negocia plazos informales ni acepta excusas. Y sin embargo, la mayoría de los empresarios que llegan por primera vez cargan con al menos uno de estos tres problemas: obligaciones atrasadas, deudas fiscales que no entienden, o normatividad que nunca nadie les explicó. No los juzgamos. Los resolvemos.
           </p>
         </div>
       </section>
@@ -65,7 +65,7 @@ export default function ServicioFiscalC() {
             El problema más común que vemos en empresas de Cancún
           </h2>
           <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed mb-6">
-            Hay un patrón que se repite: el empresario sabe que algo está mal con su situación fiscal, pero no sabe exactamente qué. A veces llegó con años de declaraciones sin presentar. Otras veces tiene un crédito fiscal en el portal del SAT que apareció sin que lo esperara.
+            Hay un patrón que se repite: el empresario sabe que algo está mal con su situación fiscal, pero no sabe exactamente qué. A veces llegó con años de declaraciones sin presentar. Otras veces tiene un crédito fiscal en el portal del SAT que apareció sin que lo esperara. O simplemente nunca le explicaron qué obligaciones tiene su tipo de empresa y lleva tiempo presentando lo que puede, no lo que debe.
           </p>
           <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed">
             El resultado en todos los casos es el mismo: incertidumbre permanente y riesgo real de multas, recargos y auditorías.

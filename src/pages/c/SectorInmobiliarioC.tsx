@@ -50,7 +50,7 @@ export default function SectorInmobiliarioC() {
             Contabilidad para Agentes<br />Inmobiliarios en Cancún
           </h1>
           <p className="font-sans text-white/50 mt-6 max-w-[560px]" style={{ fontSize: "clamp(16px, 1.6vw, 19px)", lineHeight: 1.6 }}>
-            El mercado inmobiliario de Cancún mueve comisiones altas. Pero muchos agentes llegan a nosotros cuando el SAT ya les mandó una carta.
+            El mercado inmobiliario de Cancún mueve comisiones altas. Pero muchos agentes independientes llegan a nosotros cuando el SAT ya les mandó una carta — porque nunca les explicaron exactamente cómo declarar sus ingresos ni cómo emitir sus facturas.
           </p>
         </div>
       </section>

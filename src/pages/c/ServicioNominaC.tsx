@@ -52,7 +52,7 @@ export default function ServicioNominaC() {
             Nómina Empresarial en Cancún: Sin Errores, sin Retrasos
           </h1>
           <p className="font-sans text-white/50 max-w-[560px] mx-auto" style={{ fontSize: "clamp(16px, 1.8vw, 19px)", lineHeight: 1.6 }}>
-            La nómina parece un proceso operativo — hasta que falla. Un error en las cuotas patronales puede derivar en una diferencia con el IMSS que aparece meses después, con recargos incluidos.
+            La nómina parece un proceso operativo — hasta que falla. Un error en las cuotas patronales puede derivar en una diferencia con el IMSS que aparece meses después, con recargos incluidos. Un CFDI de nómina con datos incorrectos es un comprobante que el trabajador no puede usar y que la empresa no puede deducir. Un alta tardía ante el IMSS es un riesgo legal que puede escalar.
           </p>
         </div>
       </section>
