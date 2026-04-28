@@ -35,7 +35,7 @@ export default function SectorComercialC() {
             Contabilidad para Empresas<br />Comerciales en Cancún
           </h1>
           <p className="font-sans text-white/50 mt-6 max-w-[560px]" style={{ fontSize: "clamp(16px, 1.6vw, 19px)", lineHeight: 1.6 }}>
-            Si tu empresa compra, vende y distribuye, tienes operaciones constantes que necesitan orden, registro y control puntual.
+            Si tu empresa compra, vende y distribuye, tienes operaciones constantes que necesitan orden, registro y control puntual. Una semana sin conciliar puede convertirse en un mes sin claridad. Un mes sin claridad puede convertirse en un año de problemas con el SAT.
           </p>
         </div>
       </section>
@@ -45,7 +45,7 @@ export default function SectorComercialC() {
         <div className="max-w-[900px] mx-auto">
           <p className="label-uppercase text-camhaji-muted mb-4">SECTOR COMERCIAL EN QUINTANA ROO</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-8" style={{ fontSize: "clamp(24px, 3.5vw, 40px)", letterSpacing: "-0.03em" }}>
-            Lo que necesita una empresa comercial para estar en regla
+            Inventarios, CxC y CxP: los retos contables de las empresas de comercialización en Cancún
           </h2>
           <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed mb-8">
             Las empresas de comercialización tienen un volumen alto de transacciones: facturas a clientes, facturas de proveedores, pagos, cobros, devoluciones, notas de crédito. Sin un proceso contable sólido, ese volumen se convierte en desorden — y el desorden en riesgo fiscal.
@@ -84,7 +84,7 @@ export default function SectorComercialC() {
         <div className="max-w-[900px] mx-auto">
           <p className="label-uppercase text-white/30 mb-4">SERVICIOS CONTABLES PARA COMERCIALIZADORAS</p>
           <h2 className="font-sans font-bold text-white mb-16" style={{ fontSize: "clamp(24px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
-            Nuestro servicio para empresas comerciales en Quintana Roo
+            Contabilidad mensual para distribuidoras y comercializadoras en Quintana Roo: qué cubrimos
           </h2>
           <div className="border-t border-white/[0.08]">
             {loQueHacemos.map((item, i) => (
@@ -102,7 +102,7 @@ export default function SectorComercialC() {
         <div className="max-w-[900px] mx-auto">
           <p className="label-uppercase text-camhaji-muted mb-4">EXPERIENCIA EN EL SECTOR COMERCIAL</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-8" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
-            Experiencia en el sector comercial de Cancún
+            Distribuidoras y comercializadoras en Quintana Roo: los retos que ya conocemos
           </h2>
           <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed mb-6">
             Hemos trabajado con distribuidoras, comercializadoras y empresas de venta al mayoreo y menudeo en Quintana Roo. Conocemos los ritmos de temporada del mercado local, la dinámica con proveedores regionales y las particularidades fiscales del sector.
@@ -139,7 +139,7 @@ export default function SectorComercialC() {
       <section className="min-h-[60dvh] bg-primary flex flex-col items-center justify-center text-center px-5 md:px-10 py-20">
         <p className="label-uppercase text-white/40 mb-6">CONTRATA CONTABILIDAD PARA TU EMPRESA COMERCIAL</p>
         <h2 className="font-sans font-bold text-white mb-6" style={{ fontSize: "clamp(36px, 6vw, 80px)", letterSpacing: "-0.04em", lineHeight: 1.0 }}>
-          Hablemos de tu operación.
+          ¿Tu distribuidora o empresa comercial en Cancún tiene la contabilidad en orden?
         </h2>
         <p className="font-sans text-white/55 max-w-[480px] mx-auto mb-12" style={{ fontSize: "clamp(15px, 1.5vw, 17px)" }}>
           Cuéntanos cómo está tu operación. Si hay desorden, lo ordenamos. Si ya tienes proceso, te decimos cómo mejorarlo.

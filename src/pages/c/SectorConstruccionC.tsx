@@ -66,7 +66,7 @@ export default function SectorConstruccionC() {
             Contabilidad para<br />Constructoras en Cancún
           </h1>
           <p className="font-sans text-white/50 mt-6 max-w-[560px]" style={{ fontSize: "clamp(16px, 1.6vw, 19px)", lineHeight: 1.6 }}>
-            La contabilidad de una constructora no funciona igual que la de cualquier otra empresa. Si tu contador no conoce el sector, tarde o temprano lo vas a notar — y no de buena manera.
+            La contabilidad de una constructora no funciona igual que la de cualquier otra empresa. Tiene estimaciones, subcontratistas, trabajadores por obra y retenciones que cambian según el contrato. Si tu contador no conoce el sector, tarde o temprano lo vas a notar — y no de buena manera.
           </p>
         </div>
       </section>
@@ -79,7 +79,10 @@ export default function SectorConstruccionC() {
             Por qué la construcción necesita contabilidad especializada
           </h2>
           <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed mb-6">
-            Una empresa de servicios factura, cobra y declara con cierta regularidad. Una constructora, no. Sus ingresos entran por estimaciones que no siempre reflejan el avance real. Sus costos se acumulan por etapas durante meses. Sus subcontratistas generan obligaciones de retención que la ley te pone a ti como responsable.
+            Una empresa de servicios factura, cobra y declara con cierta regularidad. Una constructora, no. Sus ingresos entran por estimaciones que no siempre reflejan el avance real. Sus costos se acumulan por etapas durante meses. Sus subcontratistas generan obligaciones de retención que la ley te pone a ti como responsable, aunque el subcontratista sea el que falló.
+          </p>
+          <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed mb-6">
+            Llevar todo eso con un contador que aprende el sector contigo es un riesgo que no tiene por qué correr tu empresa.
           </p>
           <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed">
             Nosotros ya trabajamos con constructoras en Cancún y la Riviera Maya. Conocemos las particularidades del mercado local, los criterios que el SAT aplica al sector construcción en auditorías, y los errores que se repiten con más frecuencia. Llegamos con experiencia.
@@ -128,7 +131,7 @@ export default function SectorConstruccionC() {
         <div className="max-w-[900px] mx-auto">
           <p className="label-uppercase text-camhaji-muted mb-4">SERVICIOS CONTABLES PARA CONSTRUCTORAS</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-14" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
-            Lo que Camhaji hace por tu empresa constructora en Cancún
+            Costos de obra, retenciones y declaraciones: contabilidad completa para constructoras en Cancún
           </h2>
           <div className="border-t border-border-subtle">
             {loQueHacemos.map((item, i) => (
@@ -146,13 +149,16 @@ export default function SectorConstruccionC() {
         <div className="max-w-[900px] mx-auto">
           <p className="label-uppercase text-camhaji-muted mb-4">CONSTRUCTORAS EN CANCÚN Y RIVIERA MAYA</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-8" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
-            Amplia experiencia en el sector construcción en Quintana Roo
+            Constructoras en Cancún y la Riviera Maya: el mercado local tiene sus propias reglas
           </h2>
           <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed mb-6">
             El sector construcción en Cancún y la Riviera Maya tiene dinámicas propias: proyectos turísticos, desarrollos inmobiliarios, obra civil, obra comercial. El volumen de operaciones, los tipos de contrato y el perfil de los subcontratistas son distintos a los de otras regiones del país.
           </p>
+          <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed mb-6">
+            Llevar la contabilidad de una constructora en Quintana Roo no es lo mismo que llevarla en cualquier otra ciudad. Los proyectos de larga duración que abarcan varios ejercicios fiscales, la dependencia del sector turístico y los ritmos de temporada afectan cómo se registra, cómo se declara y cómo se protege a la empresa.
+          </p>
           <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed">
-            Llevamos años trabajando con empresas de este sector en la región. Conocemos las características del mercado local y los criterios que el SAT aplica en revisiones al sector construcción en Quintana Roo.
+            Hemos trabajado con constructoras en Cancún, Playa del Carmen y la Riviera Maya. Conocemos los criterios que el SAT aplica en revisiones al sector en Quintana Roo. No llegamos a aprender con tu empresa — llegamos con experiencia acumulada.
           </p>
           <p className="font-sans font-semibold text-primary mt-8">No aprendemos contigo. Llegamos con experiencia.</p>
         </div>
@@ -187,7 +193,7 @@ export default function SectorConstruccionC() {
         <div className="max-w-[840px] mx-auto">
           <p className="label-uppercase text-camhaji-muted mb-4">CONSTRUCTORAS EN CANCÚN — PREGUNTAS FRECUENTES</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-14" style={{ fontSize: "clamp(24px, 3.5vw, 40px)", letterSpacing: "-0.02em" }}>
-            Contabilidad para constructoras en Cancún
+            Preguntas frecuentes: contabilidad para constructoras en Cancún
           </h2>
           <div className="border-t border-border-subtle">
             {faqs.map((f, i) => (
@@ -212,10 +218,10 @@ export default function SectorConstruccionC() {
       <section className="min-h-[60dvh] bg-primary flex flex-col items-center justify-center text-center px-5 md:px-10 py-20">
         <p className="label-uppercase text-white/40 mb-6">CONTRATA CONTABILIDAD PARA TU CONSTRUCTORA</p>
         <h2 className="font-sans font-bold text-white mb-6" style={{ fontSize: "clamp(36px, 6vw, 80px)", letterSpacing: "-0.04em", lineHeight: 1.0 }}>
-          Hablemos de tus proyectos.
+          ¿Tienes una empresa constructora en Cancún o Quintana Roo?
         </h2>
         <p className="font-sans text-white/55 max-w-[480px] mx-auto mb-12" style={{ fontSize: "clamp(15px, 1.5vw, 17px)" }}>
-          Cuéntanos cómo está tu contabilidad hoy. Si hay problemas, te decimos cuáles son y cómo resolverlos.
+          Cuéntanos cómo está tu contabilidad hoy. Si hay problemas, te decimos cuáles son y cómo resolverlos. Si está en orden, te decimos cómo mantenerla así.
         </p>
         <a href="/version-c/contacto" className="btn-uppercase border border-white/50 text-white px-10 py-4 hover:bg-white/10 hover:border-white transition-all duration-300 mb-5">
           ESCRÍBENOS POR WHATSAPP

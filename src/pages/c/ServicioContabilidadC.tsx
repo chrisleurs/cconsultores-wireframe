@@ -72,7 +72,7 @@ export default function ServicioContabilidadC() {
             Contabilidad y Administración para tu Empresa en Cancún
           </h1>
           <p className="font-sans text-white/50 max-w-[560px] mx-auto" style={{ fontSize: "clamp(16px, 1.8vw, 19px)", lineHeight: 1.6 }}>
-            Muchos empresarios llegan con la misma frase: "Sé que algo está mal, pero no sé qué." El resultado es siempre el mismo: incertidumbre y riesgo fiscal.
+            Muchos empresarios llegan con la misma frase: "Sé que algo está mal, pero no sé qué." Facturas sin registrar, cuentas sin conciliar, declaraciones firmadas sin entender los números. El resultado es siempre el mismo: incertidumbre y riesgo fiscal.
           </p>
         </div>
       </section>
@@ -82,7 +82,7 @@ export default function ServicioContabilidadC() {
         <div className="max-w-[900px] mx-auto">
           <p className="label-uppercase text-camhaji-muted mb-4">CONTABILIDAD PARA PYMES EN QUINTANA ROO</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-8" style={{ fontSize: "clamp(24px, 3.5vw, 40px)", letterSpacing: "-0.03em" }}>
-            Un servicio que se adapta a tu empresa
+            Para negocios pequeños, pymes en crecimiento y empresas medianas en Quintana Roo
           </h2>
           <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed mb-4">
             Atendemos desde negocios en etapa temprana hasta empresas medianas con operaciones complejas. Tenemos experiencia particular en el sector construcción y en empresas de comercialización en Quintana Roo.
@@ -156,7 +156,7 @@ export default function ServicioContabilidadC() {
         <div className="max-w-[900px] mx-auto">
           <p className="label-uppercase text-camhaji-muted mb-4">ADMINISTRACIÓN EMPRESARIAL EN CANCÚN</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-6" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
-            Gestión administrativa completa para tu negocio
+            Más que contabilidad: tesorería, CxC, CxP y trámites ante el SAT en un solo equipo
           </h2>
           <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed mb-10">
             El servicio contable puede incluir gestión administrativa si tu empresa lo requiere:
@@ -196,7 +196,7 @@ export default function ServicioContabilidadC() {
         <div className="max-w-[1100px] mx-auto">
           <p className="label-uppercase text-camhaji-muted mb-4">CONTABILIDAD POR SECTOR EN CANCÚN</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-14" style={{ fontSize: "clamp(24px, 3.5vw, 40px)", letterSpacing: "-0.03em" }}>
-            ¿Para qué tipo de empresas es este servicio?
+            Constructoras, comercializadoras y empresas en expansión: los sectores donde más trabajamos
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {paraQuien.map((p) => (
@@ -227,7 +227,7 @@ export default function ServicioContabilidadC() {
         <div className="max-w-[840px] mx-auto">
           <p className="label-uppercase text-camhaji-muted mb-4">CONTABILIDAD EMPRESARIAL — PREGUNTAS FRECUENTES</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-14" style={{ fontSize: "clamp(24px, 3.5vw, 40px)", letterSpacing: "-0.02em" }}>
-            Sobre contabilidad empresarial en Cancún
+            Lo que más nos preguntan sobre contabilidad para empresas en Cancún
           </h2>
           <div className="border-t border-border-subtle">
             {faqs.map((f, i) => (
@@ -258,7 +258,7 @@ export default function ServicioContabilidadC() {
       <section className="min-h-[60dvh] bg-primary flex flex-col items-center justify-center text-center px-5 md:px-10 py-20">
         <p className="label-uppercase text-white/40 mb-6">CONTRATA TU SERVICIO CONTABLE EN CANCÚN</p>
         <h2 className="font-sans font-bold text-white mb-6" style={{ fontSize: "clamp(36px, 6vw, 80px)", letterSpacing: "-0.04em", lineHeight: 1.0 }}>
-          Hablemos de tu contabilidad.
+          ¿Tienes la contabilidad al día? Hablemos sin compromiso.
         </h2>
         <p className="font-sans text-white/55 max-w-[480px] mx-auto mb-12" style={{ fontSize: "clamp(15px, 1.5vw, 17px)" }}>
           Cuéntanos cómo está la contabilidad hoy. Si está atrasada, la ponemos al corriente. Si está en orden, te decimos cómo mantenerla así.
