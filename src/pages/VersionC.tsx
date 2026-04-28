@@ -6,6 +6,7 @@ import { ClientLogos } from "@/components/ClientLogos";
 import { Phone, ChevronLeft, ChevronRight } from "lucide-react";
 
 import heroBg from "@/assets/hero-cancun-skyline.jpg";
+import heroVideo from "@/assets/cancun-hero-loop.mp4.asset.json";
 import sectorConstruccion from "@/assets/sector-construccion.jpg";
 import sectorComercial from "@/assets/sector-comercial.jpg";
 
@@ -228,7 +229,18 @@ export default function VersionC() {
 
       {/* ══ HERO — left-aligned, full-screen, arc-group style ══ */}
       <section className="min-h-[100dvh] relative flex flex-col items-start justify-center overflow-hidden" style={{ padding: "120px 40px 80px" }}>
-        <img src={heroBg} alt="Cancún skyline zona hotelera" className="absolute inset-0 w-full h-full object-cover object-top" width={1920} height={1080} />
+        <video
+          src={heroVideo.url}
+          poster={heroBg}
+          autoPlay
+          loop
+          muted
+          playsInline
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          style={{ animation: "heroDrift 28s ease-in-out infinite alternate" }}
+        />
+        <img src={heroBg} alt="Skyline de Cancún, despacho contable Camhaji Consultores" className="sr-only" width={1920} height={1080} />
         <div className="absolute inset-0" style={{ background: "rgba(12, 28, 24, 0.84)" }} />
         <div className="relative z-10 flex flex-col items-start max-w-[1200px] mx-auto w-full px-5 md:px-10">
           <p className="label-uppercase text-white/35 mb-12">DESPACHO CONTABLE · CANCÚN, MÉXICO</p>
