@@ -22,6 +22,7 @@ export function Navbar({ version }: NavbarProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const navRef = useRef<HTMLElement>(null);
   const location = useLocation();
 
   // Auto-close menus when route changes (prevents mobile click cancellation
@@ -74,7 +75,10 @@ export function Navbar({ version }: NavbarProps) {
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+      // Only close when clicking outside the entire nav (covers both desktop
+      // dropdown and mobile menu). Closing on mousedown inside the mobile
+      // menu unmounts links before the click event fires, cancelling navigation.
+      if (navRef.current && !navRef.current.contains(e.target as Node)) {
         setOpenDropdown(null);
       }
     };
@@ -84,6 +88,7 @@ export function Navbar({ version }: NavbarProps) {
 
   return (
     <nav
+      ref={navRef}
       className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ease-out ${
         scrolled ? "bg-background shadow-[var(--shadow-nav)]" : "bg-transparent"
       }`}
