@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface NavbarProps {
   version?: "a" | "b" | "c";
@@ -81,7 +82,7 @@ export function Navbar({ version }: NavbarProps) {
     >
       <div className="max-w-[1200px] mx-auto flex items-center justify-between px-5 py-4 md:px-8 md:py-5">
         {/* Logo */}
-        <a href={logoHref} className="flex items-center gap-3">
+        <Link to={logoHref} className="flex items-center gap-3">
           <div
             className={`w-9 h-9 flex items-center justify-center rounded-sm font-serif text-lg font-bold transition-colors duration-300 ${
               scrolled ? "bg-primary text-primary-foreground" : "bg-white text-primary"
@@ -105,7 +106,7 @@ export function Navbar({ version }: NavbarProps) {
               CONSULTORES
             </span>
           </div>
-        </a>
+        </Link>
 
         {/* Desktop links */}
         <div className="hidden md:flex items-center gap-8" ref={dropdownRef}>
@@ -125,32 +126,32 @@ export function Navbar({ version }: NavbarProps) {
                   {openDropdown === link.label && (
                     <div className="absolute top-full left-0 mt-2 bg-background border border-border-subtle rounded-sm shadow-lg min-w-[200px] py-2 z-50">
                       {link.dropdown.map((item) => (
-                        <a
+                        <Link
                           key={item.label}
-                          href={item.href}
+                          to={item.href}
                           className="block px-4 py-2.5 font-sans text-[13px] text-camhaji-text hover:bg-surface hover:text-primary transition-colors"
                           onClick={() => setOpenDropdown(null)}
                         >
                           {item.label}
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   )}
                 </>
               ) : (
-                <a
-                  href={link.href}
+                <Link
+                  to={link.href}
                   className={`font-sans text-[13px] tracking-[0.04em] transition-colors duration-300 hover:opacity-100 ${
                     scrolled ? "text-camhaji-text" : "text-white/85"
                   }`}
                 >
                   {link.label}
-                </a>
+                </Link>
               )}
             </div>
           ))}
-          <a
-            href={ctaHref}
+          <Link
+            to={ctaHref}
             className={`btn-uppercase px-6 py-2.5 transition-all duration-300 ${
               scrolled
                 ? "bg-primary text-primary-foreground"
@@ -158,7 +159,7 @@ export function Navbar({ version }: NavbarProps) {
             }`}
           >
             Agendar Consulta
-          </a>
+          </Link>
         </div>
 
         {/* Mobile hamburger */}
@@ -192,36 +193,36 @@ export function Navbar({ version }: NavbarProps) {
                   {openDropdown === link.label && (
                     <div className="pl-4 space-y-1 pb-2">
                       {link.dropdown.map((item) => (
-                        <a
+                        <Link
                           key={item.label}
-                          href={item.href}
+                          to={item.href}
                           className="block font-sans text-sm text-camhaji-muted py-2 hover:text-primary transition-colors"
                           onClick={() => { setMenuOpen(false); setOpenDropdown(null); }}
                         >
                           {item.label}
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   )}
                 </>
               ) : (
-                <a
-                  href={link.href}
+                <Link
+                  to={link.href}
                   className="block font-sans text-sm text-camhaji-text py-3"
                   onClick={() => setMenuOpen(false)}
                 >
                   {link.label}
-                </a>
+                </Link>
               )}
             </div>
           ))}
-          <a
-            href={ctaHref}
+          <Link
+            to={ctaHref}
             className="block btn-uppercase bg-primary text-primary-foreground px-6 py-3 text-center mt-4"
             onClick={() => setMenuOpen(false)}
           >
             Agendar Consulta
-          </a>
+          </Link>
         </div>
       )}
     </nav>
