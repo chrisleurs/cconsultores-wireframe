@@ -205,7 +205,6 @@ export function Navbar({ version }: NavbarProps) {
                           key={item.label}
                           to={item.href}
                           className="block font-sans text-sm text-camhaji-muted py-2 hover:text-primary transition-colors"
-                          onClick={() => { setMenuOpen(false); setOpenDropdown(null); }}
                         >
                           {item.label}
                         </Link>
@@ -217,7 +216,6 @@ export function Navbar({ version }: NavbarProps) {
                 <Link
                   to={link.href}
                   className="block font-sans text-sm text-camhaji-text py-3"
-                  onClick={() => setMenuOpen(false)}
                 >
                   {link.label}
                 </Link>
@@ -227,7 +225,6 @@ export function Navbar({ version }: NavbarProps) {
           <Link
             to={ctaHref}
             className="block btn-uppercase bg-primary text-primary-foreground px-6 py-3 text-center mt-4"
-            onClick={() => setMenuOpen(false)}
           >
             Agendar Consulta
           </Link>
