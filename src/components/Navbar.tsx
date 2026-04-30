@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 interface NavbarProps {
   version?: "a" | "b" | "c";
@@ -22,6 +22,15 @@ export function Navbar({ version }: NavbarProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const navRef = useRef<HTMLElement>(null);
+  const location = useLocation();
+
+  // Auto-close menus when route changes (prevents mobile click cancellation
+  // caused by unmounting the menu before React Router processes navigation)
+  useEffect(() => {
+    setMenuOpen(false);
+    setOpenDropdown(null);
+  }, [location.pathname]);
 
   const base = version ? `/version-${version}` : "";
 
@@ -66,7 +75,10 @@ export function Navbar({ version }: NavbarProps) {
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+      // Only close when clicking outside the entire nav (covers both desktop
+      // dropdown and mobile menu). Closing on mousedown inside the mobile
+      // menu unmounts links before the click event fires, cancelling navigation.
+      if (navRef.current && !navRef.current.contains(e.target as Node)) {
         setOpenDropdown(null);
       }
     };
@@ -76,6 +88,7 @@ export function Navbar({ version }: NavbarProps) {
 
   return (
     <nav
+      ref={navRef}
       className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ease-out ${
         scrolled ? "bg-background shadow-[var(--shadow-nav)]" : "bg-transparent"
       }`}
@@ -197,7 +210,6 @@ export function Navbar({ version }: NavbarProps) {
                           key={item.label}
                           to={item.href}
                           className="block font-sans text-sm text-camhaji-muted py-2 hover:text-primary transition-colors"
-                          onClick={() => { setMenuOpen(false); setOpenDropdown(null); }}
                         >
                           {item.label}
                         </Link>
@@ -209,7 +221,6 @@ export function Navbar({ version }: NavbarProps) {
                 <Link
                   to={link.href}
                   className="block font-sans text-sm text-camhaji-text py-3"
-                  onClick={() => setMenuOpen(false)}
                 >
                   {link.label}
                 </Link>
@@ -219,7 +230,6 @@ export function Navbar({ version }: NavbarProps) {
           <Link
             to={ctaHref}
             className="block btn-uppercase bg-primary text-primary-foreground px-6 py-3 text-center mt-4"
-            onClick={() => setMenuOpen(false)}
           >
             Agendar Consulta
           </Link>
