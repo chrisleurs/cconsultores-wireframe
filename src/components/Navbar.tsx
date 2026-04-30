@@ -22,6 +22,14 @@ export function Navbar({ version }: NavbarProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const location = useLocation();
+
+  // Auto-close menus when route changes (prevents mobile click cancellation
+  // caused by unmounting the menu before React Router processes navigation)
+  useEffect(() => {
+    setMenuOpen(false);
+    setOpenDropdown(null);
+  }, [location.pathname]);
 
   const base = version ? `/version-${version}` : "";
 
