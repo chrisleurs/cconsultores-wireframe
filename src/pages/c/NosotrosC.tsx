@@ -13,12 +13,6 @@ const principles = [
   { num: "05", name: "Empatía con el cliente", desc: "Para muchos empresarios, el mundo fiscal es opaco y estresante. No juzgamos el punto de partida. Nos enfocamos en el destino." },
 ];
 
-const milestones = [
-  { value: "10+", label: "AÑOS DE TRAYECTORIA INDIVIDUAL" },
-  { value: "6", label: "AÑOS COMO FIRMA CONSTITUIDA" },
-  { value: "10", label: "PROFESIONALES EN EL EQUIPO" },
-];
-
 const team = [
   {
     name: "[Fundador — PENDIENTE]",
