@@ -312,7 +312,11 @@ export default function VersionC() {
       </section>
 
       {/* ══ SERVICIOS — dark with background photo that changes on hover ══ */}
-      <section id="servicios" className="min-h-[100dvh] relative flex flex-col overflow-hidden">
+      <section
+        id="servicios"
+        className="min-h-[100dvh] relative flex flex-col overflow-hidden group/services"
+        onMouseLeave={() => setHoveredService(null)}
+      >
         {/* Background images — one per service, crossfade */}
         {serviceBgs.map((bg, i) => (
           <img
@@ -324,7 +328,12 @@ export default function VersionC() {
             loading={i === 0 ? "eager" : "lazy"}
           />
         ))}
-        <div className="absolute inset-0 bg-camhaji-base/[0.88]" />
+        {/* Dark overlay — lightens on hover so the photo breathes through */}
+        <div
+          className={`absolute inset-0 transition-colors duration-700 ${
+            hoveredService !== null ? "bg-camhaji-base/[0.55]" : "bg-camhaji-base/[0.88]"
+          }`}
+        />
 
         <div className="relative z-10 flex flex-col flex-1">
           <div className="flex flex-col md:flex-row justify-between items-baseline max-w-[1200px] mx-auto w-full px-5 md:px-10 pt-20 mb-20 gap-4">
@@ -333,49 +342,42 @@ export default function VersionC() {
           </div>
           <div className="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-[1200px] mx-auto w-full">
             {services.map((s, i) => {
-              const isEven = (i + 1) % 2 === 0; // 02 y 04
+              const isHovered = hoveredService === i;
+              const isDimmed = hoveredService !== null && !isHovered;
               return (
                 <div
                   key={i}
-                  className={`group flex flex-col justify-start p-10 transition-colors duration-300 ${
+                  className={`flex flex-col justify-start p-10 transition-all duration-500 ${
                     i < services.length - 1 ? "lg:border-r border-white/[0.07]" : ""
                   } border-b lg:border-b-0 border-white/[0.07] ${
-                    isEven
-                      ? "hover:bg-white hover:text-camhaji-base"
-                      : "hover:bg-white/[0.04]"
+                    isDimmed ? "opacity-30" : "opacity-100"
                   }`}
                   onMouseEnter={() => setHoveredService(i)}
                 >
                   <span
-                    className={`font-sans text-xs uppercase tracking-[0.22em] mb-8 transition-colors duration-300 ${
-                      isEven ? "text-white/[0.18] group-hover:text-camhaji-base/40" : "text-white/[0.18]"
-                    }`}
+                    className="font-sans text-xs uppercase tracking-[0.22em] mb-8 text-white/[0.25] transition-colors duration-300"
                   >
                     {s.num}
                   </span>
                   <h3
-                    className={`font-sans font-bold mb-4 transition-colors duration-200 ${
-                      isEven
-                        ? "text-white group-hover:text-camhaji-base"
-                        : "text-white group-hover:text-camhaji-accent"
+                    className={`font-sans font-bold mb-4 transition-colors duration-300 ${
+                      isHovered ? "text-camhaji-accent" : "text-white"
                     }`}
                     style={{ fontSize: "clamp(20px, 3vw, 36px)", letterSpacing: "-0.02em", lineHeight: 1.1 }}
                   >
                     {s.title}
                   </h3>
                   <p
-                    className={`font-sans text-[15px] font-light leading-relaxed max-w-[280px] mb-8 transition-colors duration-300 ${
-                      isEven ? "text-white/55 group-hover:text-camhaji-base/75" : "text-white/55"
-                    }`}
+                    className="font-sans text-[15px] font-light leading-relaxed max-w-[280px] mb-8 text-white/65 transition-colors duration-300"
                   >
                     {s.desc}
                   </p>
                   <a
                     href={s.href}
                     className={`label-uppercase border-b pb-0.5 self-start mt-auto transition-colors ${
-                      isEven
-                        ? "text-white/35 border-white/15 group-hover:text-camhaji-base group-hover:border-camhaji-base/40"
-                        : "text-white/35 border-white/15 hover:text-white/80"
+                      isHovered
+                        ? "text-white border-camhaji-accent/60"
+                        : "text-white/45 border-white/15 hover:text-white/80"
                     }`}
                   >
                     CONOCER MÁS →
