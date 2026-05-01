@@ -65,22 +65,23 @@ export function ClientLogos({ variant }: ClientLogosProps) {
 
   // variant === "c"
   return (
-    <section className="bg-camhaji-base py-16 md:py-20 border-t border-white/[0.06]">
-      <div className="max-w-[1200px] mx-auto px-5 md:px-10">
-        <p className="label-uppercase text-white/20 text-center mb-12">
-          EMPRESAS QUE CONFÍAN EN NOSOTROS
-        </p>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-px bg-white/[0.06]">
-          {clients.map((name) => (
-            <div
-              key={name}
-              className="bg-camhaji-base h-24 flex items-center justify-center px-4 hover:bg-white/[0.03] transition-colors duration-300"
-            >
-              <span className="font-sans text-[11px] uppercase tracking-[0.12em] text-white/25 text-center leading-tight">
+    <section className="bg-camhaji-base py-10 md:py-12 border-t border-b border-white/[0.06]">
+      <div className="max-w-[1400px] mx-auto px-5 md:px-10">
+        <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10">
+          <p className="label-uppercase text-white/30 whitespace-nowrap flex-shrink-0">
+            CONFÍAN EN NOSOTROS
+          </p>
+          <div className="hidden md:block w-px h-6 bg-white/10" />
+          <div className="flex-1 flex flex-nowrap items-center justify-between gap-x-6 md:gap-x-8 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            {clients.map((name) => (
+              <span
+                key={name}
+                className="font-sans text-[11px] uppercase tracking-[0.12em] text-white/30 hover:text-white/60 transition-colors whitespace-nowrap"
+              >
                 {name}
               </span>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
