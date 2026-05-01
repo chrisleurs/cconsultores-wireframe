@@ -12,10 +12,11 @@ import sectorConstruccion from "@/assets/sector-construccion.jpg";
 import sectorComercial from "@/assets/sector-comercial.jpg";
 
 const serviceBgs = [
-  "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1920&q=80&fit=crop",
-  "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1920&q=80&fit=crop",
-  "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1920&q=80&fit=crop",
-  "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=1920&q=80&fit=crop",
+  // People-centric photos: conversations, teamwork, advisory — not stock "accounting"
+  "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1920&q=80&fit=crop", // equipo en reunión
+  "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1920&q=80&fit=crop", // asesora sonriendo con cliente
+  "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1920&q=80&fit=crop", // dos personas conversando trabajo
+  "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=1920&q=80&fit=crop", // handshake / atención al cliente
 ];
 
 const services = [
