@@ -259,17 +259,17 @@ export default function VersionC() {
         <div className="absolute inset-0" style={{ background: "rgba(12, 28, 24, 0.84)" }} />
         <div className="relative z-10 flex flex-col items-start max-w-[1200px] mx-auto w-full px-5 md:px-10">
           <p className="label-uppercase text-white/35 mb-12">DESPACHO CONTABLE · CANCÚN, MÉXICO</p>
-          <h1 className="font-sans font-bold text-white mb-8" style={{ fontSize: "clamp(34px, 7vw, 96px)", letterSpacing: "-0.04em", lineHeight: 0.95 }}>
+          <h1 className="font-sans font-bold text-white mb-8" style={{ fontSize: "clamp(40px, 7vw, 96px)", letterSpacing: "-0.04em", lineHeight: 0.95 }}>
             Despacho Contable<br />en Cancún con<br />Compromiso Real.
           </h1>
           <p className="font-sans text-base font-light text-white/50 mb-12 max-w-[540px]" style={{ fontSize: "clamp(16px, 2vw, 20px)", lineHeight: 1.6 }}>
             Llevamos la contabilidad, el fiscal y la administración de tu empresa para que tú te dediques a lo que sabes hacer. Sin sorpresas con el SAT. Sin desorden. Sin promesas vacías.
           </p>
           <div className="flex gap-4 flex-wrap">
-            <a href="https://wa.me/5215543587159" target="_blank" rel="noopener noreferrer" className="btn-uppercase border border-white/50 text-white px-8 py-3.5 hover:bg-white/[0.08] hover:border-white transition-all duration-300">
+            <a href="https://wa.me/5215543587159" target="_blank" rel="noopener noreferrer" className="btn-uppercase bg-white text-primary border border-white px-8 py-3.5 hover:bg-camhaji-accent hover:border-camhaji-accent hover:text-camhaji-base transition-all duration-300">
               ESCRÍBENOS POR WHATSAPP
             </a>
-            <a href="#servicios" className="btn-uppercase border border-white/30 text-white/60 hover:text-white hover:border-white/60 transition-all duration-300 px-8 py-3.5">
+            <a href="#servicios" className="btn-uppercase border border-white/30 text-white/70 hover:text-white hover:border-white/60 transition-all duration-300 px-8 py-3.5">
               CONOCE NUESTROS SERVICIOS
             </a>
           </div>
@@ -500,7 +500,7 @@ export default function VersionC() {
           <p className="font-sans text-white/55 max-w-[480px] mb-12" style={{ fontSize: "clamp(15px, 1.5vw, 17px)" }}>
             Si llevas tiempo postergando el orden en tu contabilidad, o quieres un despacho que de verdad responda cuando lo necesitas, es buen momento para hablar.
           </p>
-          <a href="https://wa.me/5215543587159" target="_blank" rel="noopener noreferrer" className="btn-uppercase border border-white/50 text-white px-10 py-4 hover:bg-white/10 hover:border-white transition-all duration-300 mb-5 inline-block">
+          <a href="https://wa.me/5215543587159" target="_blank" rel="noopener noreferrer" className="btn-uppercase bg-white text-primary border border-white px-10 py-4 hover:bg-camhaji-accent hover:border-camhaji-accent hover:text-camhaji-base transition-all duration-300 mb-5 inline-block">
             ESCRÍBENOS POR WHATSAPP
           </a>
           <div className="flex items-center gap-2 mt-5">
