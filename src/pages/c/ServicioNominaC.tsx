@@ -51,10 +51,10 @@ export default function ServicioNominaC() {
           </p>
           <p className="label-uppercase text-camhaji-accent/70 mb-6">NÓMINA EMPRESARIAL EN CANCÚN</p>
           <h1 className="font-sans font-bold text-white mb-6" style={{ fontSize: "clamp(32px, 5.5vw, 64px)", letterSpacing: "-0.03em", lineHeight: 1.0 }}>
-            Nómina Empresarial en Cancún: Sin Errores, sin Retrasos
+            Nómina estratégica con control, cumplimiento y eficiencia laboral
           </h1>
           <p className="font-sans text-white/50 max-w-[560px] mx-auto" style={{ fontSize: "clamp(16px, 1.8vw, 19px)", lineHeight: 1.6 }}>
-            La nómina parece un proceso operativo — hasta que falla. Un error en las cuotas patronales puede derivar en una diferencia con el IMSS que aparece meses después, con recargos incluidos. Un CFDI de nómina con datos incorrectos es un comprobante que el trabajador no puede usar y que la empresa no puede deducir. Un alta tardía ante el IMSS es un riesgo legal que puede escalar.
+            La nómina impacta directamente en la operación, flujo de efectivo y carga fiscal de una empresa. Un manejo incorrecto puede generar diferencias ante IMSS, multas, conflictos laborales y costos sociales innecesarios. En Camhaji Consultores ayudamos a nuestros clientes a mantener procesos de nómina ordenados, oportunos y alineados a la normatividad vigente, buscando al mismo tiempo estructuras laborales más eficientes y sostenibles para la empresa.
           </p>
         </div>
       </section>
@@ -64,13 +64,16 @@ export default function ServicioNominaC() {
         <div className="max-w-[900px] mx-auto">
           <p className="label-uppercase text-camhaji-muted mb-4">RIESGOS DE NÓMINA MAL CALCULADA</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-8" style={{ fontSize: "clamp(24px, 3.5vw, 40px)", letterSpacing: "-0.03em" }}>
-            El costo real de equivocarse en nómina
+            El verdadero impacto de una nómina sin supervisión especializada
           </h2>
+          <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed mb-4">
+            Errores en cuotas obrero patronales, diferencias ante IMSS, ISR retenido incorrectamente, finiquitos mal calculados o CFDI con inconsistencias pueden convertirse en contingencias financieras y laborales importantes.
+          </p>
           <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed mb-6">
-            Multas por diferencias con el IMSS. Conflictos laborales por finiquitos mal calculados. Trabajadores con recibos que no sirven para nada porque el CFDI tiene errores. Los tres casos tienen una causa común: nómina hecha sin el nivel de especialización que requiere.
+            En muchos casos, las empresas terminan pagando más de lo necesario por falta de control, revisión o una correcta estructura administrativa de nómina y seguridad social.
           </p>
           <p className="font-sans text-[16px] font-semibold text-primary">
-            Tercerizar la nómina con especialistas no es un gasto extra — es la forma más inteligente de eliminar ese riesgo.
+            Una administración especializada de nómina no solo ayuda a mantener cumplimiento; también permite optimizar procesos, reducir riesgos y dar mayor claridad sobre los costos laborales reales de la empresa.
           </p>
         </div>
       </section>
@@ -102,16 +105,19 @@ export default function ServicioNominaC() {
           </h2>
           <div className="border-t border-white/[0.08]">
             {queIncluye.map((item, i) => (
-              <div key={i} className="flex items-start gap-4 py-4 border-b border-white/[0.06] hover:translate-x-2.5 transition-transform duration-200">
-                <span className="w-2 h-2 rounded-full bg-camhaji-accent flex-shrink-0 mt-2" />
-                <span className="font-sans text-[15px] text-white/70 leading-relaxed">{item}</span>
+              <div key={i} className="flex items-start gap-5 py-6 border-b border-white/[0.06] hover:translate-x-2.5 transition-transform duration-200">
+                <span className="font-sans text-sm text-white/20 mt-1 w-8 flex-shrink-0">{String(i + 1).padStart(2, "0")}</span>
+                <div className="flex-1">
+                  <h3 className="font-sans font-bold text-white text-[15px] mb-1.5">{item.title}</h3>
+                  <p className="font-sans text-sm font-light text-white/50 leading-relaxed">{item.desc}</p>
+                </div>
               </div>
             ))}
           </div>
           <div className="mt-14 border-l-2 border-camhaji-accent/40 pl-6">
-            <h3 className="font-sans font-bold text-white text-lg mb-3">Lo que recibes cada periodo</h3>
+            <h3 className="font-sans font-bold text-white text-lg mb-3">Procesos respaldados por CONTPAQi Nóminas</h3>
             <p className="font-sans text-sm font-light text-white/50 leading-relaxed">
-              Recibos de nómina timbrados, dispersión lista para autorizar, resumen de cuotas IMSS e Infonavit y un canal directo con quien lleva tu cuenta. Si surge una duda — del SAT, del IMSS o de un trabajador — alguien la contesta el mismo día.
+              Trabajamos con CONTPAQi Nóminas, uno de los sistemas más utilizados en México para administración de nómina y cumplimiento de obligaciones laborales y fiscales. Esto nos permite generar cálculos precisos, CFDI correctamente timbrados y reportes compatibles con procesos de revisión, auditoría y control administrativo.
             </p>
           </div>
         </div>
@@ -129,10 +135,16 @@ export default function ServicioNominaC() {
               <span className="label-uppercase text-white/30">FOTO</span>
             </div>
             <div>
-              <h3 className="font-sans font-bold text-camhaji-text text-xl mb-1">Marlon Rafael Chávez Sánchez</h3>
-              <p className="label-uppercase text-primary mb-4">Supervisor de Nómina y Facturación</p>
+              <h3 className="font-sans font-bold text-camhaji-text text-xl mb-1">Lic. Marlon Chávez Sánchez</h3>
+              <p className="label-uppercase text-primary mb-4">Gerente del área de Nómina y Seguridad Social</p>
+              <p className="font-sans text-[15px] font-light text-camhaji-muted leading-relaxed mb-4">
+                Marlon cuenta con experiencia en administración de nómina, seguridad social y cumplimiento laboral para empresas de distintos sectores, incluyendo operaciones con personal operativo, trabajadores por obra y estructuras con alta rotación.
+              </p>
+              <p className="font-sans text-[15px] font-light text-camhaji-muted leading-relaxed mb-4">
+                Su experiencia en cálculo de nómina, cuotas IMSS, finiquitos, prestaciones y administración laboral permite brindar seguimiento puntual y control especializado en una de las áreas más sensibles para cualquier empresa.
+              </p>
               <p className="font-sans text-[15px] font-light text-camhaji-muted leading-relaxed">
-                Marlon lleva años calculando nóminas reales — con eventuales, finiquitos complicados y trabajadores por obra. Conoce la Ley Federal del Trabajo con la precisión de quien la aplica cada semana y cuida cada movimiento como si fuera de su propia empresa. Cuando contratas nuestro servicio de nómina en Cancún, tienes a Marlon y su equipo del lado correcto del SAT y del IMSS.
+                En Camhaji Consultores trabajamos para que cada movimiento de nómina se procese con precisión, cumplimiento y claridad operativa.
               </p>
             </div>
           </div>
