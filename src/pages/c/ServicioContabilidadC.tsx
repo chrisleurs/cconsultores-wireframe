@@ -162,9 +162,12 @@ export default function ServicioContabilidadC() {
           </p>
           <div className="border-t border-border-subtle">
             {gestionAdmin.map((item) => (
-              <div key={item} className="flex items-start gap-3 py-4 border-b border-border-subtle">
-                <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0 mt-2" />
-                <span className="font-sans text-[15px] text-camhaji-text">{item}</span>
+              <div key={item.title} className="flex items-start gap-3 py-5 border-b border-border-subtle">
+                <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0 mt-2.5" />
+                <div className="flex-1">
+                  <h3 className="font-sans font-semibold text-[15px] text-camhaji-text mb-1">{item.title}</h3>
+                  <p className="font-sans text-sm font-light text-camhaji-muted leading-relaxed">{item.desc}</p>
+                </div>
               </div>
             ))}
           </div>
