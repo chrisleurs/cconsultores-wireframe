@@ -7,19 +7,21 @@ import { ServiceExtras, FaqJsonLd, ServiceJsonLd } from "@/components/ServiceExt
 import { blogByService, relatedByService } from "@/data/serviceLinks";
 import { Phone } from "lucide-react";
 
-const queIncluye = [
-  "Cálculo de nómina mensual o quincenal",
-  "Altas y bajas ante el IMSS e Infonavit",
-  "Cálculo de cuotas patronales y aportaciones",
-  "Generación de recibos de nómina en CFDI correctamente timbrados",
-  "Finiquitos, liquidaciones y cálculo de prestaciones",
-  "Atención a requerimientos del IMSS",
+const queIncluye: { title: string; desc: string }[] = [
+  { title: "Cálculo de nómina mensual o quincenal", desc: "Procesamiento puntual y preciso de nómina conforme a la estructura laboral y operación de cada empresa." },
+  { title: "Altas, bajas y movimientos ante IMSS e Infonavit", desc: "Gestión y seguimiento de movimientos afiliatorios, modificaciones salariales y obligaciones relacionadas con seguridad social." },
+  { title: "Cálculo de cuotas patronales y aportaciones", desc: "Determinación correcta de cuotas IMSS, Infonavit e impuestos relacionados con nómina, buscando mantener cumplimiento y control sobre los costos laborales de la empresa." },
+  { title: "Emisión de CFDI de nómina correctamente timbrados", desc: "Generación y validación de recibos de nómina conforme a disposiciones fiscales vigentes y criterios aplicables del SAT." },
+  { title: "Finiquitos, liquidaciones y cálculo de prestaciones", desc: "Cálculo de prestaciones laborales, finiquitos y liquidaciones conforme a Ley Federal del Trabajo y políticas internas de la empresa." },
+  { title: "Atención a requerimientos del IMSS", desc: "Acompañamiento y soporte en aclaraciones, diferencias y requerimientos relacionados con seguridad social y contribuciones laborales." },
+  { title: "Cumplimiento REPSE y control de servicios especializados", desc: "Acompañamiento administrativo y documental para empresas registradas en el REPSE, incluyendo revisión de información relacionada con proveedores especializados, control de documentación laboral y cumplimiento de obligaciones vinculadas a servicios especializados y subcontratación permitida." },
+  { title: "Administración de obligaciones ante FONACOT", desc: "Apoyo en el cumplimiento de obligaciones relacionadas con FONACOT, incluyendo afiliación patronal, aplicación de descuentos vía nómina, control de retenciones y seguimiento administrativo conforme a la normatividad aplicable." },
 ];
 
 const faqs = [
-  { q: "¿Cuánto cuesta el servicio de nómina para mi empresa?", a: "El costo depende del número de empleados, la frecuencia de pago (quincenal o mensual) y la complejidad de la operación (eventuales, trabajadores por obra, prestaciones especiales). Hacemos una cotización personalizada sin costo — cuéntanos tu situación y te damos un número real." },
-  { q: "¿Qué pasa si pago mal la nómina en México?", a: "Las consecuencias más comunes son: diferencias con el IMSS por cuotas patronales incorrectas (con recargos), multas por CFDI de nómina con errores, conflictos laborales por finiquitos mal calculados, y observaciones del IMSS en caso de auditoría." },
-  { q: "¿Qué incluye el outsourcing de nómina?", a: "Cálculo de nómina, altas y bajas en IMSS e Infonavit, cálculo de cuotas patronales, emisión de CFDI de nómina, finiquitos, liquidaciones, cálculo de prestaciones y atención a requerimientos del IMSS. Todo en un solo servicio, con un equipo dedicado que conoce a tu empresa." },
+  { q: "¿Cómo se determina el costo del servicio de nómina?", a: "El costo depende principalmente del número de trabajadores, periodicidad de pago, complejidad operativa y necesidades específicas de la empresa. Realizamos cotizaciones personalizadas conforme a cada operación." },
+  { q: "¿Qué riesgos existen cuando la nómina no se administra correctamente?", a: "Errores en cuotas patronales, diferencias ante IMSS, CFDI incorrectamente emitidos o cálculos laborales imprecisos pueden derivar en multas, recargos, conflictos laborales y observaciones en auditorías o revisiones." },
+  { q: "¿Qué incluye el servicio de outsourcing de nómina?", a: "Nuestro servicio puede incluir cálculo de nómina, movimientos IMSS e Infonavit, determinación de cuotas patronales, emisión de CFDI, cálculo de prestaciones, finiquitos, reportes administrativos y atención de requerimientos relacionados con seguridad social." },
 ];
 
 export default function ServicioNominaC() {
