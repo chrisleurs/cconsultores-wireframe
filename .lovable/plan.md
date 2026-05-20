@@ -1,25 +1,45 @@
-## Problema confirmado
+# Aplicar ediciones de Daniel a páginas de servicios
 
-Probé en vivo en mobile (390px): al hacer click en "Servicios" → "Contabilidad" el menú se cierra pero la URL no cambia (`/version-c` se queda igual).
+Aplicaré el contenido nuevo aportado por Daniel a tres páginas, manteniendo el diseño Versión C, la estructura SEO (H1/H2, breadcrumbs, JSON-LD) y solo cambiando textos / agregando los servicios nuevos donde corresponde.
 
-**Causa raíz:** el `onClick` del `Link` ejecuta `setMenuOpen(false)`, lo que desmonta el contenedor del menú móvil **antes** de que React Router procese la navegación del `Link`. El click se cancela porque el elemento ya no está en el DOM.
+## 1. `src/pages/c/ServicioFiscalC.tsx` — reescritura de contenido
 
-En desktop sí funciona porque el dropdown se cierra después por el handler de "click outside", no en el mismo ciclo de render.
+Reemplazar todos los textos por la versión nueva de Daniel, conservando layout y secciones:
 
-## Solución
+- **Hero**: "Estrategia fiscal y cumplimiento para empresas en crecimiento." + subtítulo sobre obligaciones que no admiten improvisación.
+- **Sección problema**: "El problema más común que encontramos en las empresas." con los dos párrafos sobre patrones de empresas sin supervisión fiscal.
+- **Sección enfoque**: "Cumplimiento fiscal claro, ordenado y sostenible." con enfoque preventivo, no improvisado.
+- **Proceso de 5 pasos** (reemplaza el proceso actual):
+  1. Diagnóstico inicial de situación fiscal
+  2. Cumplimiento de obligaciones fiscales y precierre mensual
+  3. Precierre anual
+  4. Atención a requerimientos y aclaraciones
+  5. Normatividad aplicable a cada sector
+- **Sección experiencia**: "Experiencia, criterio y acompañamiento fiscal para empresas." (10+ años, firmas de auditoría + operación directa).
+- **FAQs** reescritas (obligaciones atrasadas, etc.).
 
-En `src/components/Navbar.tsx`:
+## 2. `src/pages/c/ServicioNominaC.tsx` — reescritura + 2 servicios nuevos
 
-1. Importar `useLocation` de `react-router-dom`.
-2. Agregar un `useEffect` que escuche cambios en `location.pathname` y cierre automáticamente `menuOpen` y `openDropdown`. Esto desacopla el cierre del menú del evento click.
-3. **Eliminar** los `onClick={() => setMenuOpen(false)}` de los `Link` del menú móvil (los 3 lugares: dropdown items, links sin dropdown, y el CTA "Agendar Consulta"). Ya no son necesarios porque el `useEffect` cierra el menú al cambiar de ruta.
+- Aplicar los 18 textos nuevos de Daniel en sus secciones correspondientes.
+- **Agregar dos servicios nuevos** (de los comentarios de Daniel) a la lista de servicios/alcances:
+  - **Cumplimiento REPSE y control de servicios especializados** — Acompañamiento administrativo y documental para empresas registradas en REPSE: proveedores especializados, documentación laboral, subcontratación permitida.
+  - **Administración de obligaciones ante FONACOT** — Afiliación patronal, descuentos vía nómina, control de retenciones, seguimiento administrativo.
 
-## Resultado esperado
+## 3. `src/pages/c/ServicioContabilidadC.tsx` — ampliar "Para quién"
 
-- Mobile: tap en cualquier link del menú → navega a la página correcta → menú se cierra automáticamente.
-- Desktop: sigue funcionando igual.
-- Bonus: si el usuario ya está en la página y hace tap en el mismo link, el menú igual se cierra (porque el `Link` actualiza `key` aunque el path sea el mismo... en realidad no se dispara el effect; en ese caso el dropdown sigue abierto, pero es un caso menor).
+En el array `paraQuien` agregar (o sustituir según orden lógico) dos perfiles nuevos de los comentarios de Daniel, manteniendo los existentes de Construcción / Comercialización:
 
-## Archivos a modificar
+- **PYMES, restaurantes y empresas en crecimiento** — Empresas pasando de operación informal a estructura financiera y administrativa sólida.
+- **Profesionistas independientes y empresas de servicios** — Freelancers, agencias creativas, consultores, asesores inmobiliarios: facturación recurrente, control de ingresos, cobranza, gastos.
 
-- `src/components/Navbar.tsx` (un solo archivo, ~5 líneas de cambio neto)
+La sección pasará de 3 a 4-5 tarjetas (grid responsivo se ajusta).
+
+## Notas técnicas
+
+- Solo se editan los arrays/strings de contenido; no se modifica estructura de componentes, SEO meta, JSON-LD, ni estilos.
+- Se respetan los H1/H2 existentes salvo donde Daniel los reescribió explícitamente.
+- No se tocan otras páginas (Home, Nosotros, Contacto) — esas ya fueron aplicadas previamente.
+
+## Pendiente para después
+
+Confirmaste que tienes más cambios — los abordamos en el siguiente turno.

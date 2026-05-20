@@ -8,18 +8,18 @@ import { blogByService, relatedByService } from "@/data/serviceLinks";
 import { Phone } from "lucide-react";
 
 const servicios = [
-  { title: "Diagnóstico inicial de situación fiscal", desc: "Antes de cualquier cosa, revisamos el estado real de tu empresa ante el SAT: obligaciones vigentes, declaraciones presentadas, créditos fiscales pendientes y cumplimiento por régimen. Sin diagnóstico no hay estrategia." },
-  { title: "Cumplimiento de obligaciones mensuales", desc: "IVA, ISR, IMSS, declaraciones informativas. Cada obligación en su fecha, correctamente calculada y presentada." },
-  { title: "Declaración anual", desc: "La declaración anual es uno de los momentos de mayor riesgo fiscal. La preparamos con tiempo, la revisamos a detalle y la presentamos antes de que el SAT tenga que recordártelo." },
-  { title: "Atención a requerimientos del SAT", desc: "Si ya recibiste una carta del SAT, no la ignores. Te acompañamos en el proceso de respuesta, reunimos la documentación necesaria y gestionamos la resolución dentro de los plazos legales." },
-  { title: "Normatividad aplicable a tu sector", desc: "Las constructoras, las comercializadoras, los agentes inmobiliarios y quienes están en RESICO tienen obligaciones específicas. Nos aseguramos de que conozcas y cumplas las que corresponden a tu negocio." },
+  { title: "Diagnóstico inicial de situación fiscal", desc: "Antes de proponer cualquier estrategia, realizamos una revisión integral de la situación fiscal de la empresa: obligaciones vigentes, declaraciones presentadas, cumplimiento por régimen, opiniones de cumplimiento y posibles áreas de riesgo. Un diagnóstico claro permite tomar mejores decisiones." },
+  { title: "Cumplimiento de obligaciones fiscales y precierre mensual", desc: "Supervisión y presentación de obligaciones mensuales como ISR, IVA, IMSS, declaraciones informativas y demás obligaciones aplicables, asegurando cumplimiento oportuno y correcto cálculo de contribuciones. Nos anticipamos al cierre de cada mes para evitar sorpresas en el pago mensual de impuestos." },
+  { title: "Precierre anual", desc: "La declaración anual representa uno de los procesos fiscales más importantes para cualquier empresa. Preparamos y revisamos la información financiera y fiscal con anticipación para reducir riesgos y asegurar consistencia en la información presentada." },
+  { title: "Atención a requerimientos y aclaraciones", desc: "Brindamos acompañamiento en la atención de requerimientos emitidos por el SAT y otras autoridades, apoyando en la integración de documentación, análisis de información y seguimiento del proceso de respuesta." },
+  { title: "Normatividad aplicable a cada sector", desc: "Cada industria enfrenta obligaciones y criterios fiscales distintos. Contamos con experiencia en sectores como construcción, comercialización, servicios profesionales y RESICO, adaptando nuestros procesos a la operación específica de cada cliente." },
 ];
 
 const faqs = [
-  { q: "¿Qué pasa si tengo obligaciones fiscales atrasadas?", a: "Es más común de lo que imaginas. El primer paso es un diagnóstico: saber exactamente cuánto tiempo llevas atrasado, qué obligaciones están pendientes y cuál es la deuda acumulada con recargos. A partir de ahí trazamos un plan de regularización ordenado, empezando por lo más urgente." },
-  { q: "¿Puedo reducir legalmente lo que pago de impuestos?", a: "Sí, dentro de lo que la ley permite: deducciones autorizadas, regímenes adecuados para tu tipo de empresa y estructura correcta de operaciones. Lo que no hacemos es usar esquemas que trasladan el problema al futuro o que te ponen en riesgo ante una auditoría." },
-  { q: "¿Atienden requerimientos del SAT ya emitidos?", a: "Sí. Si ya tienes un requerimiento en mano, contáctanos a la brevedad — los plazos de respuesta son cortos y cada día que pasa reduce las opciones disponibles para resolverlo correctamente." },
-  { q: "¿Manejan declaraciones anuales de personas físicas con actividad empresarial?", a: "Sí. Atendemos personas morales y físicas con actividad empresarial o profesional, incluyendo quienes tributan en el RESICO. La declaración anual de una persona física tiene sus propias particularidades — sobre todo si tienes ingresos de más de una fuente." },
+  { q: "¿Qué sucede si tengo obligaciones fiscales atrasadas?", a: "Es una situación más común de lo que parece. El primer paso es realizar un diagnóstico claro para identificar obligaciones pendientes, periodos sin presentar y posibles diferencias o recargos acumulados. A partir de ello, desarrollamos un plan de regularización ordenado y priorizado según el nivel de riesgo de cada obligación." },
+  { q: "¿Es posible optimizar legalmente la carga fiscal de mi empresa?", a: "Sí. Una correcta estructura administrativa, financiera y fiscal permite aprovechar deducciones autorizadas, regímenes adecuados y procesos mejor organizados dentro del marco legal vigente. Nuestro enfoque se basa en cumplimiento y prevención, evitando esquemas que puedan generar riesgos futuros para la empresa." },
+  { q: "¿Atienden requerimientos del SAT?", a: "Sí. Brindamos acompañamiento en la atención de requerimientos, aclaraciones y seguimiento ante la autoridad fiscal, apoyando en la integración de información y documentación necesaria para cada caso." },
+  { q: "¿Trabajan con personas físicas con actividad empresarial y RESICO?", a: "Sí. Atendemos tanto personas morales como personas físicas con actividad empresarial o profesional, incluyendo contribuyentes bajo RESICO, adaptando nuestros procesos al tipo de operación y obligaciones de cada cliente." },
 ];
 
 export default function ServicioFiscalC() {
@@ -49,10 +49,10 @@ export default function ServicioFiscalC() {
           </p>
           <p className="label-uppercase text-camhaji-accent/70 mb-6">ASESORÍA FISCAL EN CANCÚN</p>
           <h1 className="font-sans font-bold text-white mb-6" style={{ fontSize: "clamp(32px, 5.5vw, 64px)", letterSpacing: "-0.03em", lineHeight: 1.0 }}>
-            Asesoría Fiscal en Cancún: Cumple, no Improvises
+            Estrategia fiscal y cumplimiento para empresas en crecimiento
           </h1>
           <p className="font-sans text-white/50 max-w-[560px] mx-auto" style={{ fontSize: "clamp(16px, 1.8vw, 19px)", lineHeight: 1.6 }}>
-            El SAT no espera. No negocia plazos informales ni acepta excusas. Y sin embargo, la mayoría de los empresarios que llegan por primera vez cargan con al menos uno de estos tres problemas: obligaciones atrasadas, deudas fiscales que no entienden, o normatividad que nunca nadie les explicó. No los juzgamos. Los resolvemos.
+            Las obligaciones fiscales no admiten improvisación. Una estructura contable desordenada, declaraciones pendientes o diferencias ante la autoridad pueden convertirse rápidamente en riesgos financieros y operativos para la empresa. En Camhaji Consultores ayudamos a nuestros clientes a mantener control, claridad y cumplimiento fiscal mediante acompañamiento profesional y atención especializada.
           </p>
         </div>
       </section>
@@ -62,13 +62,16 @@ export default function ServicioFiscalC() {
         <div className="max-w-[900px] mx-auto">
           <p className="label-uppercase text-camhaji-muted mb-4">RIESGOS FISCALES PARA EMPRESAS EN CANCÚN</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-8" style={{ fontSize: "clamp(24px, 3.5vw, 40px)", letterSpacing: "-0.03em" }}>
-            El problema más común que vemos en empresas de Cancún
+            El problema más común que encontramos en las empresas
           </h2>
           <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed mb-6">
-            Hay un patrón que se repite: el empresario sabe que algo está mal con su situación fiscal, pero no sabe exactamente qué. A veces llegó con años de declaraciones sin presentar. Otras veces tiene un crédito fiscal en el portal del SAT que apareció sin que lo esperara. O simplemente nunca le explicaron qué obligaciones tiene su tipo de empresa y lleva tiempo presentando lo que puede, no lo que debe.
+            Existe un patrón que vemos con frecuencia: empresas que operan durante años sin una supervisión fiscal adecuada, hasta que aparece un requerimiento, diferencias en declaraciones, créditos fiscales o inconsistencias detectadas por la autoridad.
+          </p>
+          <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed mb-4">
+            En muchos casos, el problema no comienza con una auditoría, sino con procesos administrativos desordenados, falta de seguimiento o información financiera incompleta.
           </p>
           <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed">
-            El resultado en todos los casos es el mismo: incertidumbre permanente y riesgo real de multas, recargos y auditorías.
+            El resultado suele ser el mismo: incertidumbre, presión operativa y riesgo de multas, recargos o revisiones fiscales.
           </p>
         </div>
       </section>
@@ -79,10 +82,10 @@ export default function ServicioFiscalC() {
           <div>
             <p className="label-uppercase text-camhaji-muted mb-4">DIAGNÓSTICO FISCAL PERSONALIZADO</p>
             <h2 className="font-sans font-bold text-camhaji-text mb-6" style={{ fontSize: "clamp(22px, 2.5vw, 32px)", letterSpacing: "-0.02em" }}>
-              Primero entendemos tu situación. Después actuamos.
+              Cumplimiento fiscal claro, ordenado y sostenible
             </h2>
             <p className="font-sans text-[15px] font-light text-camhaji-muted leading-relaxed">
-              No tomamos decisiones a ciegas. Cada caso empieza con una revisión completa de tu historial ante el SAT — obligaciones, declaraciones, créditos, alertas. Solo así podemos actuar con precisión.
+              Nuestra asesoría fiscal no se enfoca en buscar soluciones improvisadas ni estrategias de corto plazo. Se enfoca en ayudar a las empresas a operar correctamente, cumplir con sus obligaciones y tomar decisiones con mayor claridad financiera.
             </p>
           </div>
         </div>
@@ -96,13 +99,13 @@ export default function ServicioFiscalC() {
         <div className="max-w-[900px] mx-auto">
           <p className="label-uppercase text-camhaji-muted mb-4">CUMPLIMIENTO FISCAL SIN ATAJOS</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-8" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
-            Cumplimiento correcto, sin atajos
+            Enfoque preventivo, profesional y alineado a la normatividad
           </h2>
           <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed mb-6">
-            Nuestra asesoría fiscal en Cancún no se centra en pagar lo mínimo posible. Se centra en pagar lo justo — ni más, ni menos — cumpliendo correctamente con todas las obligaciones que la ley establece para tu empresa.
+            Creemos que una estructura fiscal sana debe brindar estabilidad, orden y tranquilidad a largo plazo, no generar incertidumbre futura.
           </p>
           <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed">
-            No ofrecemos esquemas grises ni estrategias que hoy funcionan y mañana generan problemas. Ofrecemos algo más valioso: la tranquilidad de saber que tu empresa está en regla.
+            Por eso, trabajamos bajo un enfoque preventivo, profesional y alineado a la normatividad vigente, priorizando siempre la seguridad operativa y fiscal de cada empresa y sus accionistas.
           </p>
         </div>
       </section>
@@ -133,10 +136,16 @@ export default function ServicioFiscalC() {
         <div className="max-w-[900px] mx-auto">
           <p className="label-uppercase text-camhaji-muted mb-4">EXPERIENCIA FISCAL EN CANCÚN</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-8" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
-            ¿Por qué confiar en Camhaji para tu estrategia fiscal?
+            Experiencia, criterio y acompañamiento fiscal para empresas
           </h2>
+          <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed mb-4">
+            Contamos con más de 10 años de experiencia en materia fiscal, participando tanto en firmas de auditoría y consultoría como en la operación directa de empresas de distintos sectores en Cancún y Quintana Roo.
+          </p>
+          <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed mb-4">
+            Esa combinación entre experiencia técnica y conocimiento operativo nos permite entender no solo la normatividad fiscal, sino también la realidad diaria de las empresas y los retos que enfrentan al crecer.
+          </p>
           <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed">
-            Más de 10 años de trayectoria en el ámbito fiscal — en grandes firmas de auditoría y en la operación directa con clientes de distintos sectores en Cancún. Nuestro equipo conoce cómo funciona el SAT, qué revisa y qué espera. Eso nos permite protegerte con precisión, no con suposiciones.
+            Nuestro enfoque se basa en prevención, análisis y acompañamiento constante, ayudando a cada cliente a operar con mayor claridad, control y seguridad fiscal.
           </p>
         </div>
       </section>

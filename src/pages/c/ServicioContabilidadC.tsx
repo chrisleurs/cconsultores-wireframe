@@ -8,38 +8,37 @@ import { blogByService, relatedByService } from "@/data/serviceLinks";
 import { Phone } from "lucide-react";
 
 const proceso = [
-  { num: "01", title: "Solicitud de documentación", desc: "A principios de cada mes te pedimos la documentación del periodo anterior por el canal que tú elijas: correo electrónico o WhatsApp. Nos adaptamos a cómo trabaja tu empresa, no al revés.", days: "Día 1–5" },
-  { num: "02", title: "Revisión y validación", desc: "Revisamos que la documentación esté completa y correcta antes de registrar cualquier cosa. Un error en el origen genera problemas en cascada — lo prevenimos desde aquí.", days: "Día 5–10" },
-  { num: "03", title: "Registro contable", desc: "Registramos todas las operaciones del periodo conforme a la normatividad contable vigente. Nada queda fuera, nada se registra de más.", days: "Día 10–14" },
-  { num: "04", title: "Conciliación bancaria", desc: "Comparamos el estado de cuenta con las facturas y comprobantes. Si hay una diferencia, la encontramos y la explicamos antes de seguir.", days: "Día 14–17" },
-  { num: "05", title: "Cálculo de impuestos y declaraciones", desc: "Calculamos el ISR, IVA y cualquier otra obligación del periodo. Llenamos las declaraciones correspondientes y las revisamos internamente antes de presentarlas.", days: "Día 17–20" },
-  { num: "06", title: "Envío al cliente para pago", desc: "Te enviamos el resumen del periodo con el monto a pagar, las declaraciones y cualquier observación relevante. Tú autorizas y pagas. Sin sorpresas de último minuto.", days: "Día 20–25" },
+  { num: "01", title: "Solicitud, revisión y validación de documentación", desc: "Al inicio de cada mes solicitamos la documentación correspondiente al periodo anterior a través del canal que resulte más cómodo para tu empresa: correo electrónico, WhatsApp o plataformas compartidas. Revisamos que toda la documentación esté completa, correctamente emitida y cumpla con los requisitos fiscales y contables aplicables.", days: "Día 1–5" },
+  { num: "02", title: "Registro contable (provisión) y conciliación bancaria", desc: "Registramos las operaciones del periodo y conciliamos movimientos bancarios, facturas y comprobantes para validar que la información financiera refleje correctamente la operación real del negocio. Cualquier diferencia es identificada y aclarada oportunamente.", days: "Día 5–12" },
+  { num: "03", title: "Cálculo de impuestos y llenado de declaraciones", desc: "Determinamos impuestos federales y obligaciones fiscales del periodo, incluyendo ISR, IVA y declaraciones correspondientes. Antes de su presentación, toda la información es revisada internamente por nuestro equipo.", days: "Día 12–15" },
+  { num: "04", title: "Envío al cliente para pago", desc: "Entregamos un resumen claro del periodo con impuestos a pagar, declaraciones presentadas y observaciones relevantes para la operación. Nuestro objetivo es que cada cierre mensual se realice con orden, claridad y sin sorpresas de último momento.", days: "Día 15–17" },
 ];
 
 const stats = [
   { num: "10+", label: "Años ordenando contabilidades en Quintana Roo" },
-  { num: "6", label: "Pasos definidos cada mes, sin excepciones" },
-  { num: "25", label: "Días promedio de ciclo de cierre mensual" },
+  { num: "4", label: "Pasos definidos cada mes, sin excepciones" },
+  { num: "17", label: "Días promedio de ciclo de cierre mensual" },
   { num: "100%", label: "Declaraciones revisadas antes de presentarse" },
 ];
 
-const gestionAdmin = [
-  "Tesorería centralizada y control de flujo de efectivo",
-  "Gestiones y trámites ante autoridades (SAT, IMSS, Infonavit)",
-  "Cuentas por cobrar y cuentas por pagar",
-  "Recursos humanos operativos",
+const gestionAdmin: { title: string; desc: string }[] = [
+  { title: "Tesorería y control de flujo de efectivo", desc: "Supervisión de ingresos, egresos y programación de pagos para mantener una administración financiera más clara y organizada." },
+  { title: "Gestiones y trámites ante autoridades", desc: "Acompañamiento y atención en trámites ante SAT, IMSS, Infonavit y otras dependencias relacionadas con la operación de la empresa." },
+  { title: "Cuentas por cobrar y cuentas por pagar", desc: "Control administrativo de proveedores, clientes, pagos pendientes y seguimiento de cobranza para mejorar la organización financiera del negocio." },
+  { title: "Recursos humanos operativos", desc: "Apoyo administrativo en procesos relacionados con personal, incidencias, expedientes, seguimiento operativo y coordinación interna." },
 ];
 
 const paraQuien = [
-  { title: "Empresas del sector construcción en Cancún", desc: "Costos de obra, subcontratistas, estimaciones y retenciones. Tenemos página dedicada con detalle completo.", href: "/version-c/sectores/construccion" },
-  { title: "Empresas de comercialización en Quintana Roo", desc: "Control de inventarios, facturación a clientes, cuentas por cobrar y por pagar para distribuidoras y comercializadoras.", href: "/version-c/sectores/comercial" },
-  { title: "Pymes y medianas empresas en crecimiento", desc: "Si tu empresa está creciendo y la contabilidad informal ya no alcanza, es el momento de hacer el cambio.", href: "/version-c/contacto" },
+  { title: "Construcción, arquitectura e ingeniería", desc: "Experiencia en control administrativo y contable de proyectos de construcción, incluyendo costos de obra, estimaciones, subcontratistas, anticipos, retenciones y control financiero de proyectos.", href: "/version-c/sectores/construccion" },
+  { title: "Comercialización y distribución", desc: "Administración y control contable para empresas comercializadoras, incluyendo inventarios, facturación, cuentas por cobrar, cuentas por pagar y seguimiento operativo de flujo comercial.", href: "/version-c/sectores/comercial" },
+  { title: "PYMES, restaurantes y empresas en crecimiento", desc: "Ayudamos a empresas que están pasando de una operación informal a una estructura financiera y administrativa más sólida, permitiéndoles crecer con mayor control, orden y claridad financiera.", href: "/version-c/contacto" },
+  { title: "Profesionistas independientes y empresas de servicios", desc: "Trabajamos con freelancers, agencias creativas, consultores y asesores inmobiliarios que requieren mayor control administrativo y cumplimiento fiscal en su operación diaria.", href: "/version-c/contacto" },
 ];
 
 const faqs = [
-  { q: "¿Qué incluye el servicio de contabilidad mensual?", a: "Solicitud y revisión de documentos, registro contable completo, conciliación bancaria, cálculo de impuestos, llenado de declaraciones y envío al cliente para autorizar el pago. Nos adaptamos al canal de comunicación que prefiere el cliente — correo o WhatsApp." },
-  { q: "¿Por qué tercerizar la contabilidad de mi empresa?", a: "Tercerizar la contabilidad significa tener a un equipo especializado que conoce la normatividad vigente, que detecta errores antes de que lleguen al SAT y que te explica lo que pasa con tus números. Es más económico que un contador interno con las mismas capacidades y elimina el riesgo de errores por falta de actualización." },
-  { q: "¿Atienden empresas fuera de Cancún?", a: "Sí. Trabajamos con empresas en todo Quintana Roo. Nos adaptamos al canal de comunicación del cliente — correo o WhatsApp — por lo que la distancia no es un obstáculo." },
+  { q: "¿Qué incluye el servicio de contabilidad mensual?", a: "Nuestro servicio contempla la recepción y revisión de documentación, registro contable, conciliaciones bancarias, cálculo de impuestos, presentación de declaraciones y envío mensual de información para autorización y pago. Además, mantenemos comunicación constante con nuestros clientes mediante los canales que mejor se adapten a su operación, como correo electrónico, WhatsApp o plataformas compartidas." },
+  { q: "¿Por qué tercerizar la contabilidad de mi empresa?", a: "Contar con un despacho especializado permite a las empresas tener acceso a un equipo actualizado en materia contable y fiscal, reducir riesgos de errores y mantener mayor control sobre su información financiera. Además de cumplir con las obligaciones fiscales, nuestro enfoque busca brindar claridad financiera y acompañamiento para la toma de decisiones." },
+  { q: "¿Atienden empresas fuera de Cancún?", a: "Sí. Trabajamos con empresas en distintos municipios de Quintana Roo y otras ciudades de México, manteniendo procesos digitales y canales de comunicación eficientes que nos permiten brindar una atención cercana y organizada sin importar la ubicación del cliente." },
 ];
 
 export default function ServicioContabilidadC() {
@@ -69,10 +68,10 @@ export default function ServicioContabilidadC() {
           </p>
           <p className="label-uppercase text-camhaji-accent/70 mb-6">CONTABILIDAD EMPRESARIAL EN CANCÚN</p>
           <h1 className="font-sans font-bold text-white mb-6" style={{ fontSize: "clamp(32px, 5.5vw, 64px)", letterSpacing: "-0.03em", lineHeight: 1.0 }}>
-            Contabilidad y Administración para tu Empresa en Cancún
+            Contabilidad y Administración Estratégica para Empresas en Cancún
           </h1>
-          <p className="font-sans text-white/50 max-w-[560px] mx-auto" style={{ fontSize: "clamp(16px, 1.8vw, 19px)", lineHeight: 1.6 }}>
-            Muchos empresarios llegan con la misma frase: "Sé que algo está mal, pero no sé qué." Facturas sin registrar, cuentas sin conciliar, declaraciones firmadas sin entender los números. El resultado es siempre el mismo: incertidumbre y riesgo fiscal.
+          <p className="font-sans text-white/50 max-w-[620px] mx-auto" style={{ fontSize: "clamp(16px, 1.8vw, 19px)", lineHeight: 1.6 }}>
+            Muchos empresarios llegan con la misma preocupación: "Sé que algo no está funcionando correctamente, pero no logro identificar qué es." La falta de control financiero y contable genera incertidumbre, riesgos fiscales y decisiones basadas en información incompleta. En Camhaji Consultores ayudamos a las empresas a mantener una contabilidad ordenada, transparente y alineada a sus objetivos de crecimiento, brindando información financiera confiable para una mejor toma de decisiones.
           </p>
         </div>
       </section>
@@ -82,13 +81,13 @@ export default function ServicioContabilidadC() {
         <div className="max-w-[900px] mx-auto">
           <p className="label-uppercase text-camhaji-muted mb-4">CONTABILIDAD PARA PYMES EN QUINTANA ROO</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-8" style={{ fontSize: "clamp(24px, 3.5vw, 40px)", letterSpacing: "-0.03em" }}>
-            Para negocios pequeños, pymes en crecimiento y empresas medianas en Quintana Roo
+            Un servicio diseñado para crecer junto con tu empresa
           </h2>
           <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed mb-4">
-            Atendemos desde negocios en etapa temprana hasta empresas medianas con operaciones complejas. Tenemos experiencia particular en el sector construcción y en empresas de comercialización en Quintana Roo.
+            Atendemos desde negocios en etapa inicial hasta empresas medianas con estructuras operativas complejas, adaptando nuestros procesos al tamaño, industria y necesidades de cada cliente. Contamos con experiencia particular en sectores como construcción, ingeniería, comercialización y prestación de servicios en Quintana Roo.
           </p>
           <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed">
-            El proceso es el mismo en todos los casos: ordenado, mensual y transparente. Lo que cambia es la profundidad y el volumen de operaciones — no el nivel de atención.
+            Nuestro enfoque de trabajo se basa en procesos claros, atención personalizada y seguimiento constante. Lo que cambia entre un cliente y otro es la complejidad de la operación, nunca la calidad del servicio ni el nivel de atención.
           </p>
         </div>
       </section>
@@ -156,20 +155,23 @@ export default function ServicioContabilidadC() {
         <div className="max-w-[900px] mx-auto">
           <p className="label-uppercase text-camhaji-muted mb-4">ADMINISTRACIÓN EMPRESARIAL EN CANCÚN</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-6" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
-            Más que contabilidad: tesorería, CxC, CxP y trámites ante el SAT en un solo equipo
+            Gestión administrativa integral para tu empresa
           </h2>
           <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed mb-10">
-            El servicio contable puede incluir gestión administrativa si tu empresa lo requiere:
+            Más que llevar la contabilidad, ayudamos a nuestros clientes a mantener control y orden en la operación administrativa de su negocio mediante procesos centralizados, seguimiento constante y atención personalizada. Nuestro servicio puede incluir:
           </p>
           <div className="border-t border-border-subtle">
             {gestionAdmin.map((item) => (
-              <div key={item} className="flex items-start gap-3 py-4 border-b border-border-subtle">
-                <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0 mt-2" />
-                <span className="font-sans text-[15px] text-camhaji-text">{item}</span>
+              <div key={item.title} className="flex items-start gap-3 py-5 border-b border-border-subtle">
+                <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0 mt-2.5" />
+                <div className="flex-1">
+                  <h3 className="font-sans font-semibold text-[15px] text-camhaji-text mb-1">{item.title}</h3>
+                  <p className="font-sans text-sm font-light text-camhaji-muted leading-relaxed">{item.desc}</p>
+                </div>
               </div>
             ))}
           </div>
-          <p className="font-sans text-sm font-light text-camhaji-muted mt-6 italic">Un solo despacho. Un solo proceso. Todo en orden.</p>
+          <p className="font-sans text-sm font-light text-camhaji-muted mt-6 italic">Un solo despacho. Un solo proceso. Todo bajo control.</p>
         </div>
       </section>
 
@@ -196,9 +198,9 @@ export default function ServicioContabilidadC() {
         <div className="max-w-[1100px] mx-auto">
           <p className="label-uppercase text-camhaji-muted mb-4">CONTABILIDAD POR SECTOR EN CANCÚN</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-14" style={{ fontSize: "clamp(24px, 3.5vw, 40px)", letterSpacing: "-0.03em" }}>
-            Constructoras, comercializadoras y empresas en expansión: los sectores donde más trabajamos
+            Experiencia contable adaptada a cada industria
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {paraQuien.map((p) => (
               <a key={p.title} href={p.href} className="group bg-white p-8 md:p-10 hover:shadow-lg transition-shadow">
                 <div className="w-6 h-px bg-primary mb-5" />
