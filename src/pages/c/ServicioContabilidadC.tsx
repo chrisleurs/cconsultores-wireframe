@@ -68,10 +68,10 @@ export default function ServicioContabilidadC() {
           </p>
           <p className="label-uppercase text-camhaji-accent/70 mb-6">CONTABILIDAD EMPRESARIAL EN CANCÚN</p>
           <h1 className="font-sans font-bold text-white mb-6" style={{ fontSize: "clamp(32px, 5.5vw, 64px)", letterSpacing: "-0.03em", lineHeight: 1.0 }}>
-            Contabilidad y Administración para tu Empresa en Cancún
+            Contabilidad y Administración Estratégica para Empresas en Cancún
           </h1>
-          <p className="font-sans text-white/50 max-w-[560px] mx-auto" style={{ fontSize: "clamp(16px, 1.8vw, 19px)", lineHeight: 1.6 }}>
-            Muchos empresarios llegan con la misma frase: "Sé que algo está mal, pero no sé qué." Facturas sin registrar, cuentas sin conciliar, declaraciones firmadas sin entender los números. El resultado es siempre el mismo: incertidumbre y riesgo fiscal.
+          <p className="font-sans text-white/50 max-w-[620px] mx-auto" style={{ fontSize: "clamp(16px, 1.8vw, 19px)", lineHeight: 1.6 }}>
+            Muchos empresarios llegan con la misma preocupación: "Sé que algo no está funcionando correctamente, pero no logro identificar qué es." La falta de control financiero y contable genera incertidumbre, riesgos fiscales y decisiones basadas en información incompleta. En Camhaji Consultores ayudamos a las empresas a mantener una contabilidad ordenada, transparente y alineada a sus objetivos de crecimiento, brindando información financiera confiable para una mejor toma de decisiones.
           </p>
         </div>
       </section>
@@ -81,13 +81,13 @@ export default function ServicioContabilidadC() {
         <div className="max-w-[900px] mx-auto">
           <p className="label-uppercase text-camhaji-muted mb-4">CONTABILIDAD PARA PYMES EN QUINTANA ROO</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-8" style={{ fontSize: "clamp(24px, 3.5vw, 40px)", letterSpacing: "-0.03em" }}>
-            Para negocios pequeños, pymes en crecimiento y empresas medianas en Quintana Roo
+            Un servicio diseñado para crecer junto con tu empresa
           </h2>
           <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed mb-4">
-            Atendemos desde negocios en etapa temprana hasta empresas medianas con operaciones complejas. Tenemos experiencia particular en el sector construcción y en empresas de comercialización en Quintana Roo.
+            Atendemos desde negocios en etapa inicial hasta empresas medianas con estructuras operativas complejas, adaptando nuestros procesos al tamaño, industria y necesidades de cada cliente. Contamos con experiencia particular en sectores como construcción, ingeniería, comercialización y prestación de servicios en Quintana Roo.
           </p>
           <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed">
-            El proceso es el mismo en todos los casos: ordenado, mensual y transparente. Lo que cambia es la profundidad y el volumen de operaciones — no el nivel de atención.
+            Nuestro enfoque de trabajo se basa en procesos claros, atención personalizada y seguimiento constante. Lo que cambia entre un cliente y otro es la complejidad de la operación, nunca la calidad del servicio ni el nivel de atención.
           </p>
         </div>
       </section>
@@ -155,10 +155,10 @@ export default function ServicioContabilidadC() {
         <div className="max-w-[900px] mx-auto">
           <p className="label-uppercase text-camhaji-muted mb-4">ADMINISTRACIÓN EMPRESARIAL EN CANCÚN</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-6" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
-            Más que contabilidad: tesorería, CxC, CxP y trámites ante el SAT en un solo equipo
+            Gestión administrativa integral para tu empresa
           </h2>
           <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed mb-10">
-            El servicio contable puede incluir gestión administrativa si tu empresa lo requiere:
+            Más que llevar la contabilidad, ayudamos a nuestros clientes a mantener control y orden en la operación administrativa de su negocio mediante procesos centralizados, seguimiento constante y atención personalizada. Nuestro servicio puede incluir:
           </p>
           <div className="border-t border-border-subtle">
             {gestionAdmin.map((item) => (
@@ -171,7 +171,7 @@ export default function ServicioContabilidadC() {
               </div>
             ))}
           </div>
-          <p className="font-sans text-sm font-light text-camhaji-muted mt-6 italic">Un solo despacho. Un solo proceso. Todo en orden.</p>
+          <p className="font-sans text-sm font-light text-camhaji-muted mt-6 italic">Un solo despacho. Un solo proceso. Todo bajo control.</p>
         </div>
       </section>
 
@@ -198,9 +198,9 @@ export default function ServicioContabilidadC() {
         <div className="max-w-[1100px] mx-auto">
           <p className="label-uppercase text-camhaji-muted mb-4">CONTABILIDAD POR SECTOR EN CANCÚN</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-14" style={{ fontSize: "clamp(24px, 3.5vw, 40px)", letterSpacing: "-0.03em" }}>
-            Constructoras, comercializadoras y empresas en expansión: los sectores donde más trabajamos
+            Experiencia contable adaptada a cada industria
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {paraQuien.map((p) => (
               <a key={p.title} href={p.href} className="group bg-white p-8 md:p-10 hover:shadow-lg transition-shadow">
                 <div className="w-6 h-px bg-primary mb-5" />
