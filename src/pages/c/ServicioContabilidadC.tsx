@@ -8,38 +8,37 @@ import { blogByService, relatedByService } from "@/data/serviceLinks";
 import { Phone } from "lucide-react";
 
 const proceso = [
-  { num: "01", title: "Solicitud de documentación", desc: "A principios de cada mes te pedimos la documentación del periodo anterior por el canal que tú elijas: correo electrónico o WhatsApp. Nos adaptamos a cómo trabaja tu empresa, no al revés.", days: "Día 1–5" },
-  { num: "02", title: "Revisión y validación", desc: "Revisamos que la documentación esté completa y correcta antes de registrar cualquier cosa. Un error en el origen genera problemas en cascada — lo prevenimos desde aquí.", days: "Día 5–10" },
-  { num: "03", title: "Registro contable", desc: "Registramos todas las operaciones del periodo conforme a la normatividad contable vigente. Nada queda fuera, nada se registra de más.", days: "Día 10–14" },
-  { num: "04", title: "Conciliación bancaria", desc: "Comparamos el estado de cuenta con las facturas y comprobantes. Si hay una diferencia, la encontramos y la explicamos antes de seguir.", days: "Día 14–17" },
-  { num: "05", title: "Cálculo de impuestos y declaraciones", desc: "Calculamos el ISR, IVA y cualquier otra obligación del periodo. Llenamos las declaraciones correspondientes y las revisamos internamente antes de presentarlas.", days: "Día 17–20" },
-  { num: "06", title: "Envío al cliente para pago", desc: "Te enviamos el resumen del periodo con el monto a pagar, las declaraciones y cualquier observación relevante. Tú autorizas y pagas. Sin sorpresas de último minuto.", days: "Día 20–25" },
+  { num: "01", title: "Solicitud, revisión y validación de documentación", desc: "Al inicio de cada mes solicitamos la documentación correspondiente al periodo anterior a través del canal que resulte más cómodo para tu empresa: correo electrónico, WhatsApp o plataformas compartidas. Revisamos que toda la documentación esté completa, correctamente emitida y cumpla con los requisitos fiscales y contables aplicables.", days: "Día 1–5" },
+  { num: "02", title: "Registro contable (provisión) y conciliación bancaria", desc: "Registramos las operaciones del periodo y conciliamos movimientos bancarios, facturas y comprobantes para validar que la información financiera refleje correctamente la operación real del negocio. Cualquier diferencia es identificada y aclarada oportunamente.", days: "Día 5–12" },
+  { num: "03", title: "Cálculo de impuestos y llenado de declaraciones", desc: "Determinamos impuestos federales y obligaciones fiscales del periodo, incluyendo ISR, IVA y declaraciones correspondientes. Antes de su presentación, toda la información es revisada internamente por nuestro equipo.", days: "Día 12–15" },
+  { num: "04", title: "Envío al cliente para pago", desc: "Entregamos un resumen claro del periodo con impuestos a pagar, declaraciones presentadas y observaciones relevantes para la operación. Nuestro objetivo es que cada cierre mensual se realice con orden, claridad y sin sorpresas de último momento.", days: "Día 15–17" },
 ];
 
 const stats = [
   { num: "10+", label: "Años ordenando contabilidades en Quintana Roo" },
-  { num: "6", label: "Pasos definidos cada mes, sin excepciones" },
-  { num: "25", label: "Días promedio de ciclo de cierre mensual" },
+  { num: "4", label: "Pasos definidos cada mes, sin excepciones" },
+  { num: "17", label: "Días promedio de ciclo de cierre mensual" },
   { num: "100%", label: "Declaraciones revisadas antes de presentarse" },
 ];
 
-const gestionAdmin = [
-  "Tesorería centralizada y control de flujo de efectivo",
-  "Gestiones y trámites ante autoridades (SAT, IMSS, Infonavit)",
-  "Cuentas por cobrar y cuentas por pagar",
-  "Recursos humanos operativos",
+const gestionAdmin: { title: string; desc: string }[] = [
+  { title: "Tesorería y control de flujo de efectivo", desc: "Supervisión de ingresos, egresos y programación de pagos para mantener una administración financiera más clara y organizada." },
+  { title: "Gestiones y trámites ante autoridades", desc: "Acompañamiento y atención en trámites ante SAT, IMSS, Infonavit y otras dependencias relacionadas con la operación de la empresa." },
+  { title: "Cuentas por cobrar y cuentas por pagar", desc: "Control administrativo de proveedores, clientes, pagos pendientes y seguimiento de cobranza para mejorar la organización financiera del negocio." },
+  { title: "Recursos humanos operativos", desc: "Apoyo administrativo en procesos relacionados con personal, incidencias, expedientes, seguimiento operativo y coordinación interna." },
 ];
 
 const paraQuien = [
-  { title: "Empresas del sector construcción en Cancún", desc: "Costos de obra, subcontratistas, estimaciones y retenciones. Tenemos página dedicada con detalle completo.", href: "/version-c/sectores/construccion" },
-  { title: "Empresas de comercialización en Quintana Roo", desc: "Control de inventarios, facturación a clientes, cuentas por cobrar y por pagar para distribuidoras y comercializadoras.", href: "/version-c/sectores/comercial" },
-  { title: "Pymes y medianas empresas en crecimiento", desc: "Si tu empresa está creciendo y la contabilidad informal ya no alcanza, es el momento de hacer el cambio.", href: "/version-c/contacto" },
+  { title: "Construcción, arquitectura e ingeniería", desc: "Experiencia en control administrativo y contable de proyectos de construcción, incluyendo costos de obra, estimaciones, subcontratistas, anticipos, retenciones y control financiero de proyectos.", href: "/version-c/sectores/construccion" },
+  { title: "Comercialización y distribución", desc: "Administración y control contable para empresas comercializadoras, incluyendo inventarios, facturación, cuentas por cobrar, cuentas por pagar y seguimiento operativo de flujo comercial.", href: "/version-c/sectores/comercial" },
+  { title: "PYMES, restaurantes y empresas en crecimiento", desc: "Ayudamos a empresas que están pasando de una operación informal a una estructura financiera y administrativa más sólida, permitiéndoles crecer con mayor control, orden y claridad financiera.", href: "/version-c/contacto" },
+  { title: "Profesionistas independientes y empresas de servicios", desc: "Trabajamos con freelancers, agencias creativas, consultores y asesores inmobiliarios que requieren mayor control administrativo y cumplimiento fiscal en su operación diaria.", href: "/version-c/contacto" },
 ];
 
 const faqs = [
-  { q: "¿Qué incluye el servicio de contabilidad mensual?", a: "Solicitud y revisión de documentos, registro contable completo, conciliación bancaria, cálculo de impuestos, llenado de declaraciones y envío al cliente para autorizar el pago. Nos adaptamos al canal de comunicación que prefiere el cliente — correo o WhatsApp." },
-  { q: "¿Por qué tercerizar la contabilidad de mi empresa?", a: "Tercerizar la contabilidad significa tener a un equipo especializado que conoce la normatividad vigente, que detecta errores antes de que lleguen al SAT y que te explica lo que pasa con tus números. Es más económico que un contador interno con las mismas capacidades y elimina el riesgo de errores por falta de actualización." },
-  { q: "¿Atienden empresas fuera de Cancún?", a: "Sí. Trabajamos con empresas en todo Quintana Roo. Nos adaptamos al canal de comunicación del cliente — correo o WhatsApp — por lo que la distancia no es un obstáculo." },
+  { q: "¿Qué incluye el servicio de contabilidad mensual?", a: "Nuestro servicio contempla la recepción y revisión de documentación, registro contable, conciliaciones bancarias, cálculo de impuestos, presentación de declaraciones y envío mensual de información para autorización y pago. Además, mantenemos comunicación constante con nuestros clientes mediante los canales que mejor se adapten a su operación, como correo electrónico, WhatsApp o plataformas compartidas." },
+  { q: "¿Por qué tercerizar la contabilidad de mi empresa?", a: "Contar con un despacho especializado permite a las empresas tener acceso a un equipo actualizado en materia contable y fiscal, reducir riesgos de errores y mantener mayor control sobre su información financiera. Además de cumplir con las obligaciones fiscales, nuestro enfoque busca brindar claridad financiera y acompañamiento para la toma de decisiones." },
+  { q: "¿Atienden empresas fuera de Cancún?", a: "Sí. Trabajamos con empresas en distintos municipios de Quintana Roo y otras ciudades de México, manteniendo procesos digitales y canales de comunicación eficientes que nos permiten brindar una atención cercana y organizada sin importar la ubicación del cliente." },
 ];
 
 export default function ServicioContabilidadC() {
