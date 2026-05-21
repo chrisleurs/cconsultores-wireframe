@@ -264,10 +264,10 @@ export default function VersionC() {
         <div className="relative z-10 flex flex-col items-start max-w-[1200px] mx-auto w-full px-5 md:px-10">
           <p className="label-uppercase text-white/35 mb-12">DESPACHO CONTABLE · CANCÚN, MÉXICO</p>
           <h1 className="font-sans font-bold text-white mb-8" style={{ fontSize: "clamp(40px, 7vw, 96px)", letterSpacing: "-0.04em", lineHeight: 0.95 }}>
-            Despacho Contable<br />en Cancún con<br />Compromiso Real.
+            Firma de Contadores<br />en Cancún comprometidos<br />con nuestros clientes.
           </h1>
           <p className="font-sans text-base font-light text-white/50 mb-12 max-w-[540px]" style={{ fontSize: "clamp(16px, 2vw, 20px)", lineHeight: 1.6 }}>
-            Llevamos la contabilidad, el fiscal y la administración de tu empresa para que tú te dediques a lo que sabes hacer. Sin sorpresas con el SAT. Sin desorden. Sin promesas vacías.
+            Elaboramos la contabilidad y damos el correcto cumplimiento a tus obligaciones fiscales para que tú te dediques a lo que sabes hacer. Con compromiso real. Hacemos lo que decimos que vamos a hacer.
           </p>
           <div className="flex gap-4 flex-wrap">
             <a href="https://wa.me/5215543587159" target="_blank" rel="noopener noreferrer" className="btn-uppercase bg-white text-primary border border-white px-8 py-3.5 hover:bg-camhaji-accent hover:border-camhaji-accent hover:text-camhaji-base transition-all duration-300">
@@ -290,10 +290,10 @@ export default function VersionC() {
       <section className="min-h-[100dvh] bg-white flex flex-col items-center justify-center text-center px-5 md:px-10 py-20">
         <p className="label-uppercase text-camhaji-muted mb-12">DESPACHO CONTABLE EN CANCÚN</p>
         <blockquote className="font-sans font-bold text-camhaji-text max-w-[840px] mb-16" style={{ fontSize: "clamp(28px, 4.5vw, 56px)", letterSpacing: "-0.02em", lineHeight: 1.25 }}>
-          Lo que nos diferencia de otros despachos contables en Cancún
+          ¿Qué nos hace tu mejor aliado?
         </blockquote>
         <div className="flex gap-0 justify-center flex-wrap border-t border-border-subtle pt-8 max-w-[840px] w-full items-center">
-          {["Atención Inmediata", "Todo en un Solo Lugar", "Compromiso Real"].map((p, i) => (
+          {["Atención inmediata", "Todo lo que necesitas en un solo lugar", "Soluciones realistas", "Compromiso con nuestro trabajo"].map((p, i) => (
             <span key={p} className="flex items-center">
               {i > 0 && <span className="text-[#D0CBC0] text-sm mx-4">·</span>}
               <span className="label-uppercase text-camhaji-muted px-0">{p}</span>
@@ -304,7 +304,7 @@ export default function VersionC() {
 
       {/* ══ DIFERENCIADORES — 3-col grid ══ */}
       <section className="bg-white pb-24 px-5 md:px-10">
-        <div className="max-w-[1000px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {differentiators.map((d) => (
             <div key={d.name}>
               <div className="w-6 h-px bg-primary mb-5" />
@@ -422,10 +422,10 @@ export default function VersionC() {
 
           <div className="max-w-[800px] mb-16">
             <p className="font-sans text-white/60 leading-relaxed mb-8" style={{ fontSize: "clamp(15px, 1.5vw, 17px)" }}>
-              Camhaji Consultores nació hace 6 años de una idea simple pero poderosa: un despacho donde el área fiscal y el área contable trabajan juntos, bajo el mismo techo, para el mismo cliente. Antes de la firma, nuestro equipo acumuló más de 10 años de trayectoria en grandes firmas, auditoría y administración de empresas en Cancún y la Riviera Maya.
+              Camhaji Consultores nació hace 6 años de una idea simple: una Firma donde la consultoría fiscal y la elaboración de la contabilidad van de la mano, encaminadas a un mismo objetivo. Antes de la Firma, nuestro equipo acumuló más de 10 años de trayectoria en grandes firmas de auditoría y consultoría fiscal en CDMX y Cancún.
             </p>
             <p className="font-sans text-white/60 leading-relaxed mb-10" style={{ fontSize: "clamp(15px, 1.5vw, 17px)" }}>
-              Hoy somos un equipo de 10 profesionales comprometidos con algo concreto: cumplir lo que decimos que vamos a hacer. No más. No menos.
+              Hoy somos un equipo de más de 10 profesionistas comprometidos con algo concreto: cumplir lo que decimos que vamos a hacer.
             </p>
             <a href="/version-c/nosotros" className="label-uppercase text-white/50 hover:text-white transition-colors border-b border-white/20 pb-0.5">
               CONOCE NUESTRA HISTORIA →
@@ -502,7 +502,7 @@ export default function VersionC() {
             Hablemos de tu negocio.
           </h2>
           <p className="font-sans text-white/55 max-w-[480px] mb-12" style={{ fontSize: "clamp(15px, 1.5vw, 17px)" }}>
-            Si llevas tiempo postergando el orden en tu contabilidad, o quieres un despacho que de verdad responda cuando lo necesitas, es buen momento para hablar.
+            Si llevas tiempo postergando el orden en tu contabilidad, o quieres una Firma que de verdad responda cuando lo necesitas, es buen momento para hablar.
           </p>
           <a href="https://wa.me/5215543587159" target="_blank" rel="noopener noreferrer" className="btn-uppercase bg-white text-primary border border-white px-10 py-4 hover:bg-camhaji-accent hover:border-camhaji-accent hover:text-camhaji-base transition-all duration-300 mb-5 inline-block">
             ESCRÍBENOS POR WHATSAPP
