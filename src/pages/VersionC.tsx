@@ -238,7 +238,7 @@ export default function VersionC() {
       {/* ══ HERO — left-aligned, full-screen, arc-group style ══ */}
       <section className="min-h-[100dvh] relative flex flex-col items-start justify-center overflow-hidden" style={{ padding: "120px 40px 80px" }}>
         <video
-          src={heroVideo.url}
+          src={heroVideo}
           poster={heroBg}
           autoPlay
           loop
