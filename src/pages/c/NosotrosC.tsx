@@ -4,6 +4,8 @@ import { FooterC } from "@/components/FooterC";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { ClientLogos } from "@/components/ClientLogos";
 import { Phone } from "lucide-react";
+import { team } from "@/data/team";
+import { TeamGrid } from "@/components/TeamGrid";
 
 const principles = [
   { num: "01", name: "Cumplimos lo que prometemos", desc: "Si decimos que tu declaración estará lista el día 15, estará lista el día 15. La confianza se construye en los detalles." },
@@ -13,32 +15,8 @@ const principles = [
   { num: "05", name: "Empatía con el cliente", desc: "Para muchos empresarios, el mundo fiscal es opaco y estresante. No juzgamos el punto de partida. Nos enfocamos en el destino." },
 ];
 
-const team = [
-  {
-    name: "[Fundador — PENDIENTE]",
-    role: "Fundador y Director",
-    bio: "[Biografía pendiente — solicitar al cliente: origen profesional, motivación para fundar el despacho, especialidad o sector de mayor experiencia.]",
-    img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&h=800&fit=crop&crop=face",
-  },
-  {
-    name: "Rogelio Ramón Moo Ruiz",
-    role: "Gerente General",
-    bio: "Contador con trayectoria en grandes firmas del sector auditoría y en empresas del ramo hotelero, donde se desempeñó como contralor. Es la mano derecha de la dirección y el responsable de que la operación del despacho funcione con precisión. Comprometido con la firma desde sus primeros años.",
-    img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=800&fit=crop&crop=face",
-  },
-  {
-    name: "Karen Rosado Ortiz",
-    role: "Supervisora Administrativa",
-    bio: "Contadora con amplia experiencia en la administración de empresas medianas y grandes. Ha trabajado en firmas reconocidas a nivel nacional. En Camhaji es responsable de cuentas por pagar, cuentas por cobrar y recursos humanos. Su orden y método son dos de los pilares operativos del despacho.",
-    img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=800&fit=crop&crop=face",
-  },
-  {
-    name: "Marlon Rafael Chávez Sánchez",
-    role: "Supervisor de Nómina y Facturación",
-    bio: "Especialista en nómina, ley laboral y contribuciones de seguridad social. Domina CONTPAQi con una profundidad que pocos logran. Es el referente interno cuando hay una duda compleja sobre IMSS, Infonavit o el CFDI de nómina. Lo que no sabe Marlon sobre nómina en México, probablemente no exista.",
-    img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=800&fit=crop&crop=face",
-  },
-];
+const direccion = team.filter((m) => m.group === "direccion");
+const operacion = team.filter((m) => m.group === "operacion");
 
 export default function NosotrosC() {
   return (
@@ -125,34 +103,12 @@ export default function NosotrosC() {
           <div className="flex flex-col md:flex-row justify-between items-baseline mb-6 gap-4">
             <p className="label-uppercase text-camhaji-muted">LIDERAZGO DEL DESPACHO CONTABLE</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
-            {team.slice(0, 2).map((m) => (
-              <div key={m.name}>
-                <div className="aspect-[3/4] overflow-hidden mb-6">
-                  <img src={m.img} alt={m.name} className="w-full h-full object-cover grayscale-[15%]" loading="lazy" />
-                </div>
-                <div className="w-8 h-px bg-camhaji-accent mb-4" />
-                <h3 className="font-sans font-bold text-lg text-camhaji-text mb-1">{m.name}</h3>
-                <p className="label-uppercase text-primary mb-3">{m.role}</p>
-                <p className="font-sans text-sm font-light text-camhaji-muted leading-relaxed">{m.bio}</p>
-              </div>
-            ))}
+          <div className="mb-16">
+            <TeamGrid members={direccion} tone="light" columns={2} />
           </div>
 
           <p className="label-uppercase text-camhaji-muted mb-10">EQUIPO DE NÓMINA Y FACTURACIÓN</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            {team.slice(2).map((m) => (
-              <div key={m.name}>
-                <div className="aspect-[3/4] overflow-hidden mb-6">
-                  <img src={m.img} alt={m.name} className="w-full h-full object-cover grayscale-[15%]" loading="lazy" />
-                </div>
-                <div className="w-8 h-px bg-camhaji-accent mb-4" />
-                <h3 className="font-sans font-bold text-lg text-camhaji-text mb-1">{m.name}</h3>
-                <p className="label-uppercase text-primary mb-3">{m.role}</p>
-                <p className="font-sans text-sm font-light text-camhaji-muted leading-relaxed">{m.bio}</p>
-              </div>
-            ))}
-          </div>
+          <TeamGrid members={operacion} tone="light" columns={2} />
 
           <div className="mt-16 p-8 bg-white border border-border-subtle rounded-sm text-center">
             <p className="font-sans text-camhaji-text leading-relaxed">
