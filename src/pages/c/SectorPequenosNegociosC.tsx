@@ -4,6 +4,7 @@ import { SEO } from "@/components/SEO";
 import { FooterC } from "@/components/FooterC";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { Phone } from "lucide-react";
+import { testimonials } from "@/data/testimonials";
 
 const perfiles = [
   { title: "Comercio y venta de productos", desc: "Tienda de abarrotes, ferretería, papelería, distribuidora pequeña, venta de ropa, tianguis con RFC. Si vendes productos y tienes o deberías tener facturas, aquí te atendemos." },
@@ -227,12 +228,11 @@ export default function SectorPequenosNegociosC() {
         <div className="max-w-[800px] mx-auto text-center">
           <span className="font-serif text-[80px] text-white/[0.06] leading-none block -mb-6" aria-hidden="true">"</span>
           <blockquote className="font-sans font-light text-white mb-6" style={{ fontSize: "clamp(18px, 2.5vw, 26px)", lineHeight: 1.6 }}>
-            "Tenía un negocio desde hacía 3 años y nunca había declarado. Pensé que debía una fortuna. Camhaji revisó todo, me explicó lo que realmente correspondía pagar y lo pusimos al corriente en pocos meses. Mucho menos de lo que esperaba."
+            "{testimonials.luis.short}"
           </blockquote>
           <div className="w-8 h-px bg-white/20 mx-auto mb-4" />
-          <p className="font-sans text-sm font-medium uppercase tracking-[0.15em] text-white/70">Dueño de taller</p>
-          <p className="font-sans text-sm text-white/40">Cancún, QR</p>
-          <p className="font-sans text-xs text-white/20 mt-4">* Testimonio de referencia — pendiente de validación</p>
+          <p className="font-sans text-sm font-medium uppercase tracking-[0.15em] text-white/70">{testimonials.luis.author}</p>
+          <p className="font-sans text-sm text-white/40">{testimonials.luis.role}</p>
         </div>
       </section>
 
