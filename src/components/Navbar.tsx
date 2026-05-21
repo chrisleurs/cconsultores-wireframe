@@ -43,8 +43,8 @@ export function Navbar({ version }: NavbarProps) {
         href: `${base}/servicios/contabilidad`,
         dropdown: [
           { label: "Contabilidad", href: `${base}/servicios/contabilidad` },
-          { label: "Estrategia Fiscal", href: `${base}/servicios/fiscal` },
-          { label: "Nómina", href: `${base}/servicios/nomina` },
+          { label: "Consultoría Fiscal", href: `${base}/servicios/fiscal` },
+          { label: "Nómina y Seguridad Social", href: `${base}/servicios/nomina` },
           { label: "Administración Integral", href: `${base}/servicios/administracion` },
         ],
       },

@@ -96,7 +96,7 @@ export default function NosotrosC() {
       {/* HISTORIA */}
       <section className="bg-white py-24 px-5 md:px-10">
         <div className="max-w-[1100px] mx-auto">
-          <p className="label-uppercase text-camhaji-muted mb-16">HISTORIA DE CAMHAJI CONSULTORES</p>
+          <p className="label-uppercase text-camhaji-muted mb-16">TRAYECTORIA DE CAMHAJI CONSULTORES</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-20">
             <h2 className="font-sans font-bold text-camhaji-text" style={{ fontSize: "clamp(22px, 3vw, 32px)", lineHeight: 1.3, letterSpacing: "-0.02em" }}>
               Cómo nació Camhaji Consultores

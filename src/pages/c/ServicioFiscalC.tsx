@@ -157,7 +157,7 @@ export default function ServicioFiscalC() {
         <div className="relative z-10 px-5 md:px-10 py-16 max-w-[700px]">
           <p className="label-uppercase text-camhaji-accent/60 mb-4">ASESORES FISCALES CON TRAYECTORIA</p>
           <p className="font-sans font-bold text-white" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em", lineHeight: 1.2 }}>
-            Más de 10 años de experiencia fiscal — en grandes firmas y en la operación directa con clientes.
+            Experiencia fiscal aplicada a la operación real de las empresas
           </p>
         </div>
       </section>

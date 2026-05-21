@@ -8,11 +8,11 @@ import { blogByService, relatedByService } from "@/data/serviceLinks";
 import { Phone } from "lucide-react";
 
 const servicios = [
-  { title: "Emisión y control de CFDI", desc: "Facturación correcta y seguimiento documental conforme a las disposiciones fiscales aplicables. Validamos datos del receptor, uso del CFDI, régimen fiscal y forma de pago antes de timbrar." },
-  { title: "Complementos de pago y control administrativo", desc: "Seguimiento de pagos, aplicación de complementos y control de información relacionada con cobranza y flujo operativo. Mantener cuadrada la facturación con la cobranza efectiva." },
-  { title: "Cuentas por cobrar y seguimiento de clientes", desc: "Apoyo administrativo para control de cobranza, facturas pendientes y seguimiento de cuentas por cobrar. Visibilidad clara sobre lo que se debe y desde cuándo." },
-  { title: "Organización documental y administrativa", desc: "Centralización y control de información operativa, expedientes y documentación relacionada con la operación diaria de la empresa. Información ordenada y disponible cuando se necesita." },
-  { title: "Soporte administrativo continuo", desc: "Acompañamiento operativo para tareas administrativas recurrentes que requieren seguimiento, control y organización constante. Un equipo externo que opera como parte del tuyo." },
+  { title: "Emisión de CFDI", desc: "Facturas ordinarias, notas de crédito, complementos de pago, CFDI de nómina. Cada tipo con el uso del CFDI correcto, los datos del receptor verificados y el régimen fiscal bien asignado." },
+  { title: "Timbrado ante el SAT en tiempo real", desc: "Usamos CONTPAQi conectado directamente al SAT. El timbrado es inmediato y el comprobante queda registrado desde el primer momento." },
+  { title: "Archivo digital y administración de comprobantes", desc: "Todos los CFDI emitidos y recibidos quedan archivados de forma organizada. El SAT exige conservarlos por un mínimo de 5 años." },
+  { title: "Verificación de facturas de proveedores", desc: "No solo emitimos — también verificamos que los CFDI que recibes de tus proveedores sean válidos y deducibles." },
+  { title: "Cancelaciones y rectificaciones", desc: "Cuando hay un error, lo corregimos con el procedimiento correcto conforme a la normatividad del SAT." },
 ];
 
 const faqs = [
@@ -77,7 +77,7 @@ export default function ServicioAdministracionC() {
       <section className="grid grid-cols-1 md:grid-cols-2 gap-0">
         <div className="flex items-center bg-surface px-8 md:px-16 py-16 order-2 md:order-1">
           <div>
-            <p className="label-uppercase text-camhaji-muted mb-4">FACTURACIÓN, COBRANZA Y CONTROL DOCUMENTAL</p>
+            <p className="label-uppercase text-camhaji-muted mb-4">SOPORTE ADMINISTRATIVO Y CONTROL OPERATIVO</p>
             <h2 className="font-sans font-bold text-camhaji-text mb-6" style={{ fontSize: "clamp(22px, 2.5vw, 32px)", letterSpacing: "-0.02em" }}>
               Procesos administrativos que sostienen el día a día de la empresa
             </h2>
@@ -130,9 +130,12 @@ export default function ServicioAdministracionC() {
         <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1600&h=800&fit=crop" alt="Oficina empresarial moderna" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-camhaji-base/70" />
         <div className="relative z-10 px-5 md:px-10 py-16 max-w-[700px]">
-          <p className="label-uppercase text-camhaji-accent/60 mb-4">ADMINISTRACIÓN INTEGRAL — ORDEN OPERATIVO</p>
-          <p className="font-sans font-bold text-white" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em", lineHeight: 1.2 }}>
-            Cuando la administración está en orden, el negocio puede crecer sin tropezar consigo mismo.
+          <p className="label-uppercase text-camhaji-accent/60 mb-4">ADMINISTRACIÓN INTEGRAL PARA EMPRESAS EN CANCÚN</p>
+          <p className="font-sans font-bold text-white mb-5" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em", lineHeight: 1.2 }}>
+            Un solo equipo para mantener tu operación organizada
+          </p>
+          <p className="font-sans text-white/70 max-w-[620px] mx-auto" style={{ fontSize: "clamp(15px, 1.5vw, 17px)", lineHeight: 1.6 }}>
+            Nuestro objetivo es ayudar a que la operación administrativa de cada empresa funcione con mayor orden, seguimiento y control, permitiendo que empresarios y directivos puedan enfocarse en el crecimiento del negocio.
           </p>
         </div>
       </section>
