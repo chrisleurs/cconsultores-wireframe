@@ -7,7 +7,7 @@ import { SEO } from "@/components/SEO";
 import { Phone, ChevronLeft, ChevronRight } from "lucide-react";
 
 import heroBg from "@/assets/hero-cancun-skyline.jpg";
-import heroVideo from "@/assets/cancun-hero-loop.mp4.asset.json";
+import heroVideo from "@/assets/camhaji-hero-loop.mp4";
 import sectorConstruccion from "@/assets/sector-construccion.jpg";
 import sectorComercial from "@/assets/sector-comercial.jpg";
 import { testimonials as testimonialsData, homeTestimonialsOrder } from "@/data/testimonials";
