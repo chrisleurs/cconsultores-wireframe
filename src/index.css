@@ -184,3 +184,18 @@ section.no-reveal,
   from { opacity: 0; transform: translateY(6px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+
+/* ═══ Logo marquee (infinite scrolling strip) ═══ */
+@keyframes logoMarquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.logo-marquee-track {
+  animation: logoMarquee 30s linear infinite;
+}
+.logo-marquee:hover .logo-marquee-track {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .logo-marquee-track { animation: none !important; }
+}
