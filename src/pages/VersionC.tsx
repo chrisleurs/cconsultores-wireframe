@@ -7,7 +7,7 @@ import { SEO } from "@/components/SEO";
 import { Phone, ChevronLeft, ChevronRight } from "lucide-react";
 
 import heroBg from "@/assets/hero-cancun-skyline.jpg";
-import heroVideo from "@/assets/cancun-hero-loop.mp4.asset.json";
+import heroVideo from "@/assets/camhaji-hero-loop.mp4";
 import sectorConstruccion from "@/assets/sector-construccion.jpg";
 import sectorComercial from "@/assets/sector-comercial.jpg";
 import { testimonials as testimonialsData, homeTestimonialsOrder } from "@/data/testimonials";
@@ -238,7 +238,7 @@ export default function VersionC() {
       {/* ══ HERO — left-aligned, full-screen, arc-group style ══ */}
       <section className="min-h-[100dvh] relative flex flex-col items-start justify-center overflow-hidden" style={{ padding: "120px 40px 80px" }}>
         <video
-          src={heroVideo.url}
+          src={heroVideo}
           poster={heroBg}
           autoPlay
           loop
