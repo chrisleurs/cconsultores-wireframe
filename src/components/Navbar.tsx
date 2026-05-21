@@ -45,7 +45,7 @@ export function Navbar({ version }: NavbarProps) {
           { label: "Contabilidad", href: `${base}/servicios/contabilidad` },
           { label: "Estrategia Fiscal", href: `${base}/servicios/fiscal` },
           { label: "Nómina", href: `${base}/servicios/nomina` },
-          { label: "Facturación CFDI", href: `${base}/servicios/facturacion` },
+          { label: "Administración Integral", href: `${base}/servicios/administracion` },
         ],
       },
       {

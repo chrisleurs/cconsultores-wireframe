@@ -42,7 +42,7 @@ const services = [
     num: "04",
     title: "Administración y Facturación",
     desc: "Emisión, timbrado y envío de facturas electrónicas para tus clientes. Revisamos los CFDI que recibes y te asesoramos sobre su correcta emisión y validez. Estados de cuenta, Cuentas por Cobrar y por Pagar, tesorería, dispersiones de nómina, pagos a proveedores y gestiones ante entidades gubernamentales para permisos y licencias.",
-    href: "/version-c/servicios/facturacion",
+    href: "/version-c/servicios/administracion",
   },
 ];
 

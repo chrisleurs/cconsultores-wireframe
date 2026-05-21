@@ -28,7 +28,7 @@ export function FooterC() {
                 { label: "Contabilidad & Administración", href: `${base}/servicios/contabilidad` },
                 { label: "Estrategia Fiscal", href: `${base}/servicios/fiscal` },
                 { label: "Nómina Empresarial", href: `${base}/servicios/nomina` },
-                { label: "Facturación CFDI", href: `${base}/servicios/facturacion` },
+                { label: "Administración Integral", href: `${base}/servicios/administracion` },
               ].map((s) => (
                 <li key={s.label}>
                   <a href={s.href} className="font-sans text-sm text-white/55 hover:text-white/85 transition-colors">

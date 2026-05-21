@@ -69,7 +69,7 @@ export const relatedByService: Record<ServiceSlug, RelatedService[]> = {
     {
       name: "Facturación CFDI",
       desc: "Si tu empresa emite facturas, integrar facturación y contabilidad bajo el mismo despacho evita observaciones cruzadas.",
-      href: "/version-c/servicios/facturacion",
+      href: "/version-c/servicios/administracion",
       image: svcFacturacion,
     },
   ],
@@ -83,7 +83,7 @@ export const relatedByService: Record<ServiceSlug, RelatedService[]> = {
     {
       name: "Facturación CFDI",
       desc: "El SAT cruza facturas con declaraciones. Llevar ambos en el mismo equipo cierra el ciclo fiscal.",
-      href: "/version-c/servicios/facturacion",
+      href: "/version-c/servicios/administracion",
       image: svcFacturacion,
     },
   ],
@@ -91,7 +91,7 @@ export const relatedByService: Record<ServiceSlug, RelatedService[]> = {
     {
       name: "Facturación CFDI",
       desc: "Los CFDI de nómina son solo una parte. Si emites facturas a clientes, conviene tener todo el flujo bajo el mismo equipo.",
-      href: "/version-c/servicios/facturacion",
+      href: "/version-c/servicios/administracion",
       image: svcFacturacion,
     },
     {
