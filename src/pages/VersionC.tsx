@@ -11,6 +11,8 @@ import heroVideo from "@/assets/camhaji-hero-loop.mp4";
 import sectorConstruccion from "@/assets/sector-construccion.jpg";
 import sectorComercial from "@/assets/sector-comercial.jpg";
 import { testimonials as testimonialsData, homeTestimonialsOrder } from "@/data/testimonials";
+import { team } from "@/data/team";
+import { TeamGrid } from "@/components/TeamGrid";
 
 const serviceBgs = [
   // People-centric photos: conversations, teamwork, advisory — not stock "accounting"
@@ -423,18 +425,7 @@ export default function VersionC() {
               El equipo que respalda tu tranquilidad financiera — contadores con trayectoria en grandes firmas, comprometidos con cumplir lo que decimos.
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
-            {team.map((m, i) => (
-              <div key={i} className="flex flex-col">
-                <div className="aspect-square w-full rounded-2xl overflow-hidden bg-white/5 mb-4">
-                  <img src={m.photo} alt={m.name} className="w-full h-full object-cover" loading="lazy" />
-                </div>
-                <h3 className="font-sans font-bold text-[15px] text-white mb-1">{m.name}</h3>
-                <p className="font-sans text-[13px] text-white/70 mb-1">{m.role}</p>
-                <p className="font-sans text-[12px] text-camhaji-accent">{m.location}</p>
-              </div>
-            ))}
-          </div>
+          <TeamGrid members={team} tone="dark" columns={4} />
         </div>
       </section>
 
