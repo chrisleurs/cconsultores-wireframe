@@ -113,30 +113,6 @@ const sectors = [
   },
 ];
 
-const team = [
-  {
-    name: "Rogelio R. Moo Ruiz",
-    role: "Gerente General",
-    location: "Cancún, México",
-    bio: "Contador con trayectoria en grandes firmas del sector auditoría y en empresas del ramo hotelero. Es la mano derecha de la dirección y el responsable de que la operación del despacho funcione con precisión.",
-    photo: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=800&q=80&fit=crop",
-  },
-  {
-    name: "Karen Rosado Ortiz",
-    role: "Supervisora Administrativa",
-    location: "Cancún, México",
-    bio: "Contadora con amplia experiencia en la administración de empresas medianas y grandes. Responsable de cuentas por pagar, cuentas por cobrar y recursos humanos.",
-    photo: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&h=800&q=80&fit=crop",
-  },
-  {
-    name: "Marlon R. Chávez Sánchez",
-    role: "Supervisor Nómina y Facturación",
-    location: "Cancún, México",
-    bio: "Especialista en nómina, ley laboral y contribuciones de seguridad social. Domina CONTPAQi con una profundidad que pocos logran.",
-    photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=800&q=80&fit=crop",
-  },
-];
-
 const homeTestimonials = homeTestimonialsOrder.map((id) => testimonialsData[id]);
 
 const faqs = [
