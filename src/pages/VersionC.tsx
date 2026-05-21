@@ -23,86 +23,90 @@ const services = [
   {
     num: "01",
     title: "Contabilidad y Administración",
-    desc: "Registro mensual, conciliación bancaria, declaraciones y control administrativo integral. Para que tus números siempre reflejen lo que realmente está pasando en tu empresa.",
+    desc: "Registro de operaciones, conciliación bancaria, cálculo de impuestos, emisión de Estados Financieros. Información financiera para la toma de decisiones.",
     href: "/version-c/servicios/contabilidad",
   },
   {
     num: "02",
-    title: "Estrategia Fiscal",
-    desc: "Cumplimiento correcto de tus obligaciones ante el SAT. No prometemos magia fiscal. Prometemos que no habrá sorpresas.",
+    title: "Cumplimiento de obligaciones fiscales",
+    desc: "Correcto cumplimiento de tus obligaciones fiscales, cálculo de impuestos, envío de declaraciones, presentación de informativas, envío de contabilidad electrónica. No es magia fiscal, es compliance. Acompañamiento en trámites ante autoridades.",
     href: "/version-c/servicios/fiscal",
   },
   {
     num: "03",
-    title: "Nómina Empresarial",
-    desc: "Cálculo de nómina, altas y bajas ante el IMSS y CFDI de nómina con CONTPAQi. Sin errores, sin multas, sin retrasos.",
+    title: "Maquila de nómina",
+    desc: "Determinación del salario diario integrado, cálculo de prestaciones y percepciones, movimientos afiliatorios ante el IMSS, cálculo de cuotas obrero-patronales, timbrado de CFDI de nómina. Sin retrasos, porque entendemos que la nómina es sagrada.",
     href: "/version-c/servicios/nomina",
   },
   {
     num: "04",
-    title: "Facturación CFDI",
-    desc: "Emisión, timbrado y administración de facturas electrónicas para tu empresa. Que ningún comprobante salga mal ni te cueste una deducción.",
+    title: "Administración y Facturación",
+    desc: "Emisión, timbrado y envío de facturas electrónicas para tus clientes. Revisamos los CFDI que recibes y te asesoramos sobre su correcta emisión y validez. Estados de cuenta, Cuentas por Cobrar y por Pagar, tesorería, dispersiones de nómina, pagos a proveedores y gestiones ante entidades gubernamentales para permisos y licencias.",
     href: "/version-c/servicios/facturacion",
   },
 ];
 
 const stats = [
-  { value: 10, suffix: "+", label: "AÑOS DE TRAYECTORIA", context: "Antes de ser firma, ya éramos expertos." },
-  { value: 6, suffix: "", label: "AÑOS COMO FIRMA", context: "Una sociedad construida para durar." },
-  { value: 10, suffix: "", label: "PROFESIONALES", context: "Cada expediente, con nombre propio." },
+  { value: 10, suffix: "+", label: "AÑOS DE TRAYECTORIA", context: "Antes de ser Firma, ya éramos expertos." },
+  { value: 6, suffix: "+", label: "AÑOS COMO FIRMA", context: "Una sociedad consolidada." },
+  { value: 10, suffix: "+", label: "PROFESIONALES", context: "Cada uno especialista en su área." },
 ];
 
 const principles = [
-  { name: "Cumplir la Palabra", desc: "Si lo decimos, lo hacemos. Sin pretextos." },
-  { name: "Honestidad", desc: "Decimos lo que pensamos aunque no sea lo esperado." },
-  { name: "Transparencia", desc: "No hay letra chica. Tu contabilidad es tuya." },
-  { name: "Responsabilidad", desc: "Nos hacemos cargo. Siempre, sin condiciones." },
-  { name: "Empatía", desc: "Nos adaptamos a cada cliente y su realidad." },
+  { name: "Compromiso", desc: "Cumplimos nuestra palabra. Si lo decimos, lo hacemos. Sin pretextos." },
+  { name: "Honestidad", desc: "Decimos lo que pensamos, aunque no sea lo esperado." },
+  { name: "Transparencia", desc: "Sabrás lo que sucede en tu contabilidad o la de tu empresa en todo momento. La contabilidad es tuya." },
+  { name: "Responsabilidad", desc: "Nos hacemos cargo de nuestro trabajo. Siempre, sin condiciones." },
+  { name: "Empatía", desc: "Nos adaptamos a cada cliente, a su realidad y la de su negocio." },
 ];
 
 const differentiators = [
   {
-    name: "Atención Inmediata",
-    desc: "Cuando tienes una duda urgente sobre el SAT o necesitas una factura hoy, no puedes esperar tres días. Respondemos el mismo día — por correo o WhatsApp, como prefieras.",
+    name: "Atención inmediata",
+    desc: "Atención a consultas por videollamada o junta en nuestras oficinas para un trato más personal. Facturación en menos de 24 horas hábiles — entendemos lo importante que es la cobranza. Atendemos solicitudes por correo o WhatsApp, como prefieras.",
   },
   {
-    name: "Todo en un Solo Lugar",
-    desc: "Contabilidad, fiscal, nómina, facturación y administración. Un solo equipo que conoce tu negocio de arriba a abajo.",
+    name: "Todo en un solo lugar",
+    desc: "Contabilidad, asesoría fiscal, maquila de nómina, facturación, administración y consultoría en negocios. Un equipo de profesionales a tu disposición.",
   },
   {
-    name: "Para el Negocio que Quiere Hacer las Cosas Bien",
-    desc: "Atendemos desde empresas pequeñas hasta medianas. No prometemos milagros fiscales — prometemos que tu empresa estará en regla y que sabrás exactamente qué pasa con tus números.",
+    name: "Explicaciones que puedes entender",
+    desc: "Atendemos desde pequeñas hasta grandes empresas y entendemos que no todos son expertos en la materia, ni tienen que serlo — para eso estamos nosotros. Te lo explicaremos de una forma que quede completamente claro, sin rodeos ni tecnicismos.",
+  },
+  {
+    name: "Tu tranquilidad y seguridad es nuestra prioridad",
+    desc: "Nos gusta hacer las cosas como deben de ser. Cumplimos con nuestro compromiso, y nuestro compromiso es que tengas seguridad de lo que hacemos y que puedas dormir tranquilo.",
   },
 ];
 
 const sectors = [
   {
     name: "Construcción",
-    desc: "Costos de obra, estimaciones, subcontratistas, retenciones. Llevamos años en el sector.",
+    desc: "Años de experiencia en el sector. Amortización de anticipos en estimaciones semanales, maquila de nómina semanal, avisos ante el SATQ, presentación de SIROC, cumplimiento en seguridad social, alta en REPSE y declaraciones informativas cuatrimestrales (ICSOE y SISUB).",
     href: "/version-c/sectores/construccion",
     img: sectorConstruccion,
   },
   {
-    name: "Empresas Comerciales",
-    desc: "Distribuidoras, comercializadoras y empresas de venta bajo un proceso mensual ordenado.",
+    name: "Comercializadoras",
+    desc: "Distribuidoras, importadoras, empresas con ventas al mayoreo y minoristas al público general con tiendas o centro de distribución.",
     href: "/version-c/sectores/comercial",
     img: sectorComercial,
   },
   {
     name: "RESICO",
-    desc: "Freelancers, consultores e independientes. Régimen Simplificado de Confianza con acompañamiento real.",
+    desc: "Personas físicas con actividad empresarial y profesional o RESICO: freelancers, consultores, profesionistas independientes y contratistas.",
     href: "/version-c/sectores/resico",
     img: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=960&q=80&fit=crop",
   },
   {
-    name: "Agentes Inmobiliarios",
-    desc: "Comisiones inmobiliarias con reglas fiscales específicas. CFDI correcto y régimen óptimo.",
+    name: "Asesores Inmobiliarios",
+    desc: "Comisiones inmobiliarias con reglas fiscales específicas. CFDI correcto y régimen óptimo. Apoyamos en operaciones para que se cierren de la manera más eficiente desde el punto de vista fiscal.",
     href: "/version-c/sectores/inmobiliario",
     img: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=960&q=80&fit=crop",
   },
   {
-    name: "Pequeños Negocios",
-    desc: "Tienda, taller, restaurante o venta en línea. Si facturas como persona física, te ayudamos.",
+    name: "Declaraciones Anuales para personas físicas",
+    desc: "Asalariados, asimilados a salarios, intereses, ventas de acciones y otros ingresos.",
     href: "/version-c/sectores/pequenos-negocios",
     img: "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=960&q=80&fit=crop",
   },
@@ -153,11 +157,11 @@ const testimonials = [
 const faqs = [
   {
     q: "¿Cuánto cobra un contador en Cancún?",
-    a: "El costo varía según los servicios requeridos. La contabilidad básica para una empresa pequeña puede empezar desde $2,000–$4,000 MXN/mes. Para empresas medianas con nómina y facturación incluidas, el rango es de $5,000–$15,000 MXN/mes. En Camhaji hacemos una cotización personalizada sin costo — cuéntanos tu operación y te damos un número real.",
+    a: "El costo varía según los servicios requeridos. La contabilidad básica para una empresa pequeña puede empezar desde $2,000–$4,000 MXN/mes. Para empresas medianas con nómina y facturación incluidas, el rango es de $5,000–$15,000 MXN/mes. En Camhaji Consultores hacemos una cotización personalizada sin costo — cuéntanos tu operación y te damos un número adecuado a tu realidad.",
   },
   {
-    q: "¿Cómo elegir un buen despacho contable en Cancún?",
-    a: "Busca un despacho con equipo certificado, experiencia en tu sector, uso de software actualizado y comunicación clara y accesible. Que te expliquen lo que hacen — no solo que te manden el comprobante de declaración. Un despacho que conoce tu giro trabaja diferente a uno que te trata como cualquier cliente.",
+    q: "¿Cómo elegir una buena Firma contable en Cancún?",
+    a: "Busca una Firma con equipo certificado, experiencia en tu sector, uso de software actualizado y comunicación clara y accesible. Que te expliquen lo que hacen — no solo que te manden el comprobante de declaración.",
   },
   {
     q: "¿Qué incluye el servicio de contabilidad mensual?",
