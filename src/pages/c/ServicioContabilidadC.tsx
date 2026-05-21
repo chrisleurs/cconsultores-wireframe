@@ -5,6 +5,7 @@ import { FooterC } from "@/components/FooterC";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { ServiceExtras, FaqJsonLd, ServiceJsonLd } from "@/components/ServiceExtras";
 import { blogByService, relatedByService } from "@/data/serviceLinks";
+import { testimonials } from "@/data/testimonials";
 import { Phone } from "lucide-react";
 
 const proceso = [
@@ -218,9 +219,9 @@ export default function ServicioContabilidadC() {
         <div className="max-w-[820px] mx-auto">
           <span className="font-serif text-[80px] text-white/[0.08] leading-none block -mb-8" aria-hidden="true">"</span>
           <blockquote className="font-serif italic text-white/80 mb-8" style={{ fontSize: "clamp(18px, 2.4vw, 28px)", lineHeight: 1.5 }}>
-            "Llevo dos años sin abrir el portal del SAT con miedo. Cada mes recibo el resumen, autorizo el pago y sigo con lo mío. Eso para mí no tiene precio."
+            "{testimonials.paola.short}"
           </blockquote>
-          <p className="font-sans text-[13px] uppercase tracking-[0.15em] text-white/40">Director General, empresa de servicios · Cancún, QR</p>
+          <p className="font-sans text-[13px] uppercase tracking-[0.15em] text-white/40">{testimonials.paola.author} · {testimonials.paola.role}</p>
         </div>
       </section>
 

@@ -4,6 +4,7 @@ import { SEO } from "@/components/SEO";
 import { FooterC } from "@/components/FooterC";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { Phone } from "lucide-react";
+import { testimonials } from "@/data/testimonials";
 
 const obligaciones = [
   {
@@ -215,10 +216,9 @@ export default function SectorResicoC() {
         <div className="max-w-[800px] mx-auto text-center">
           <span className="font-serif text-[80px] text-white/[0.08] leading-none block -mb-8" aria-hidden="true">"</span>
           <blockquote className="font-sans font-light text-white/80 mb-8" style={{ fontSize: "clamp(18px, 2.5vw, 28px)", lineHeight: 1.5 }}>
-            "Tenía 8 meses sin presentar declaraciones. Camhaji puso todo al corriente, me explicó qué debía y por qué, y desde entonces no he faltado un mes."
+            "{testimonials.edgar.short}"
           </blockquote>
-          <p className="font-sans text-[13px] uppercase tracking-[0.15em] text-white/40">Consultora de marketing independiente · Cancún, QR</p>
-          <p className="font-sans text-xs text-white/20 mt-4">* Testimonio de referencia — pendiente validación</p>
+          <p className="font-sans text-[13px] uppercase tracking-[0.15em] text-white/40">{testimonials.edgar.author} · {testimonials.edgar.role}</p>
         </div>
       </section>
 

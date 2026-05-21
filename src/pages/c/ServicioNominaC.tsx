@@ -5,6 +5,7 @@ import { FooterC } from "@/components/FooterC";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { ServiceExtras, FaqJsonLd, ServiceJsonLd } from "@/components/ServiceExtras";
 import { blogByService, relatedByService } from "@/data/serviceLinks";
+import { testimonials } from "@/data/testimonials";
 import { Phone } from "lucide-react";
 
 const queIncluye: { title: string; desc: string }[] = [
@@ -162,10 +163,9 @@ export default function ServicioNominaC() {
         <div className="max-w-[800px] mx-auto text-center">
           <span className="font-serif text-[80px] text-white/[0.08] leading-none block -mb-8" aria-hidden="true">"</span>
           <blockquote className="font-serif italic text-white/80 mb-8" style={{ fontSize: "clamp(18px, 2.5vw, 28px)", lineHeight: 1.5 }}>
-            "Antes teníamos errores en el IMSS todos los meses. Desde que Camhaji lleva la nómina, no hemos tenido ni una sola observación."
+            "{testimonials.efrain.short}"
           </blockquote>
-          <p className="font-sans text-[13px] uppercase tracking-[0.15em] text-white/40">Gerente Administrativo, empresa comercial · Cancún, QR</p>
-          <p className="font-sans text-xs text-white/20 mt-4 italic">* Testimonio de referencia — pendiente validación</p>
+          <p className="font-sans text-[13px] uppercase tracking-[0.15em] text-white/40">{testimonials.efrain.author} · {testimonials.efrain.role}</p>
         </div>
       </section>
 

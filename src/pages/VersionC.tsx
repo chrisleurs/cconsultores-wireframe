@@ -10,6 +10,7 @@ import heroBg from "@/assets/hero-cancun-skyline.jpg";
 import heroVideo from "@/assets/cancun-hero-loop.mp4.asset.json";
 import sectorConstruccion from "@/assets/sector-construccion.jpg";
 import sectorComercial from "@/assets/sector-comercial.jpg";
+import { testimonials as testimonialsData, homeTestimonialsOrder } from "@/data/testimonials";
 
 const serviceBgs = [
   // People-centric photos: conversations, teamwork, advisory — not stock "accounting"
@@ -136,23 +137,7 @@ const team = [
   },
 ];
 
-const testimonials = [
-  {
-    quote: "Llevábamos años sin claridad en nuestros números. En pocos meses ya sabíamos exactamente cómo estaba la empresa — y dejamos de tenerle miedo al SAT.",
-    author: "Director General, empresa comercial",
-    location: "Cancún, QR",
-  },
-  {
-    quote: "Cuando tuve dudas a mitad de mes, respondieron ese mismo día. Eso no lo encontraba en el despacho anterior.",
-    author: "Propietario, empresa constructora",
-    location: "Cancún, QR",
-  },
-  {
-    quote: "Me explicaron el RESICO en términos que entendí. Por primera vez sé cuánto voy a pagar antes de que llegue el 17.",
-    author: "Consultora independiente",
-    location: "Cancún, QR",
-  },
-];
+const homeTestimonials = homeTestimonialsOrder.map((id) => testimonialsData[id]);
 
 const faqs = [
   {
@@ -236,6 +221,10 @@ function CifraCell({ value, suffix, label, context }: { value: number; suffix: s
 export default function VersionC() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [hoveredService, setHoveredService] = useState(0);
+  const [testimonialIdx, setTestimonialIdx] = useState(0);
+  const totalTestimonials = homeTestimonials.length;
+  const nextTestimonial = () => setTestimonialIdx((i) => (i + 1) % totalTestimonials);
+  const prevTestimonial = () => setTestimonialIdx((i) => (i - 1 + totalTestimonials) % totalTestimonials);
 
   return (
     <div className="min-h-screen">
@@ -475,22 +464,69 @@ export default function VersionC() {
 
       {/* ══ TESTIMONIAL — light surface, centered ══ */}
       <section className="min-h-[100dvh] bg-surface flex flex-col items-center justify-center px-5 md:px-10 py-20">
-        <div className="max-w-[1200px] w-full">
-          <p className="label-uppercase text-primary/60 mb-16 text-left">LO QUE DICEN NUESTROS CLIENTES EN CANCÚN</p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 w-full">
-          {testimonials.map((t, i) => (
-            <div key={i} className="text-left">
-              <span className="font-serif text-[64px] text-primary/[0.08] leading-none block -mb-4" aria-hidden="true">"</span>
-              <blockquote className="font-sans font-light text-camhaji-text mb-6" style={{ fontSize: "clamp(16px, 2vw, 22px)", lineHeight: 1.6 }}>
-                "{t.quote}"
-              </blockquote>
-              <div className="w-6 h-px bg-border-subtle mb-4" />
-              <p className="font-sans text-[13px] font-medium uppercase tracking-[0.15em] text-camhaji-text mb-1">{t.author}</p>
-              <p className="font-sans text-[13px] font-light text-camhaji-muted">{t.location}</p>
-            </div>
-          ))}
+        <div className="max-w-[960px] w-full">
+          <div className="flex items-baseline justify-between mb-12 gap-6">
+            <p className="label-uppercase text-primary/60">LO QUE DICEN NUESTROS CLIENTES EN CANCÚN</p>
+            <span className="font-sans text-xs text-camhaji-muted/60 tabular-nums whitespace-nowrap">
+              {String(testimonialIdx + 1).padStart(2, "0")} / {String(totalTestimonials).padStart(2, "0")}
+            </span>
           </div>
-          <p className="font-sans text-xs text-camhaji-muted/50 mt-12 text-left">* Testimonios de referencia — pendientes de validación</p>
+
+          {/* Quote card */}
+          <div className="relative bg-white border border-border-subtle px-6 sm:px-10 md:px-16 py-12 md:py-16 min-h-[420px] md:min-h-[380px] flex flex-col justify-center">
+            <span
+              className="font-serif text-[120px] md:text-[160px] text-primary/[0.08] leading-none absolute top-4 left-6 md:left-10 select-none pointer-events-none"
+              aria-hidden="true"
+            >
+              "
+            </span>
+            <blockquote
+              key={testimonialIdx}
+              className="font-sans font-light text-camhaji-text mb-8 animate-[fadeIn_0.45s_ease-out] relative z-10"
+              style={{ fontSize: "clamp(15px, 1.6vw, 19px)", lineHeight: 1.65 }}
+            >
+              {homeTestimonials[testimonialIdx].quote}
+            </blockquote>
+            <div className="w-8 h-px bg-primary mb-4" />
+            <p className="font-sans text-[14px] font-semibold uppercase tracking-[0.1em] text-camhaji-text mb-1">
+              {homeTestimonials[testimonialIdx].author}
+            </p>
+            <p className="font-sans text-[13px] font-light text-camhaji-muted">
+              {homeTestimonials[testimonialIdx].role}
+            </p>
+          </div>
+
+          {/* Controls */}
+          <div className="flex items-center justify-between mt-10">
+            <div className="flex gap-2">
+              {homeTestimonials.map((t, i) => (
+                <button
+                  key={t.id}
+                  onClick={() => setTestimonialIdx(i)}
+                  aria-label={`Ver testimonio ${i + 1}`}
+                  className={`h-1 transition-all duration-300 ${
+                    i === testimonialIdx ? "w-10 bg-primary" : "w-4 bg-border-subtle hover:bg-camhaji-muted/40"
+                  }`}
+                />
+              ))}
+            </div>
+            <div className="flex gap-2">
+              <button
+                onClick={prevTestimonial}
+                aria-label="Testimonio anterior"
+                className="w-11 h-11 border border-border-subtle flex items-center justify-center hover:bg-white hover:border-primary hover:text-primary transition-colors"
+              >
+                <ChevronLeft className="w-4 h-4" />
+              </button>
+              <button
+                onClick={nextTestimonial}
+                aria-label="Siguiente testimonio"
+                className="w-11 h-11 border border-border-subtle flex items-center justify-center hover:bg-white hover:border-primary hover:text-primary transition-colors"
+              >
+                <ChevronRight className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
         </div>
       </section>
 
