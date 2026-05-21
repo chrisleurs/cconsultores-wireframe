@@ -119,7 +119,7 @@ export default function ServicioContabilidadC() {
         <div className="max-w-[900px] mx-auto">
           <p className="label-uppercase text-white/30 mb-4">PROCESO DE CONTABILIDAD MENSUAL</p>
           <h2 className="font-sans font-bold text-white mb-16" style={{ fontSize: "clamp(24px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
-            Así es nuestro proceso contable mensual
+            Cómo trabajamos tu contabilidad
           </h2>
           <div className="border-t border-white/[0.08]">
             {proceso.map((p) => (

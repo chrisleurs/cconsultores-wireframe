@@ -8,11 +8,11 @@ import { blogByService, relatedByService } from "@/data/serviceLinks";
 import { Phone } from "lucide-react";
 
 const servicios = [
-  { title: "Emisión y control de CFDI", desc: "Facturación correcta y seguimiento documental conforme a las disposiciones fiscales aplicables. Validamos datos del receptor, uso del CFDI, régimen fiscal y forma de pago antes de timbrar." },
-  { title: "Complementos de pago y control administrativo", desc: "Seguimiento de pagos, aplicación de complementos y control de información relacionada con cobranza y flujo operativo. Mantener cuadrada la facturación con la cobranza efectiva." },
-  { title: "Cuentas por cobrar y seguimiento de clientes", desc: "Apoyo administrativo para control de cobranza, facturas pendientes y seguimiento de cuentas por cobrar. Visibilidad clara sobre lo que se debe y desde cuándo." },
-  { title: "Organización documental y administrativa", desc: "Centralización y control de información operativa, expedientes y documentación relacionada con la operación diaria de la empresa. Información ordenada y disponible cuando se necesita." },
-  { title: "Soporte administrativo continuo", desc: "Acompañamiento operativo para tareas administrativas recurrentes que requieren seguimiento, control y organización constante. Un equipo externo que opera como parte del tuyo." },
+  { title: "Emisión de CFDI", desc: "Facturas ordinarias, notas de crédito, complementos de pago, CFDI de nómina. Cada tipo con el uso del CFDI correcto, los datos del receptor verificados y el régimen fiscal bien asignado." },
+  { title: "Timbrado ante el SAT en tiempo real", desc: "Usamos CONTPAQi conectado directamente al SAT. El timbrado es inmediato y el comprobante queda registrado desde el primer momento." },
+  { title: "Archivo digital y administración de comprobantes", desc: "Todos los CFDI emitidos y recibidos quedan archivados de forma organizada. El SAT exige conservarlos por un mínimo de 5 años." },
+  { title: "Verificación de facturas de proveedores", desc: "No solo emitimos — también verificamos que los CFDI que recibes de tus proveedores sean válidos y deducibles." },
+  { title: "Cancelaciones y rectificaciones", desc: "Cuando hay un error, lo corregimos con el procedimiento correcto conforme a la normatividad del SAT." },
 ];
 
 const faqs = [

@@ -114,12 +114,6 @@ export default function ServicioNominaC() {
               </div>
             ))}
           </div>
-          <div className="mt-14 border-l-2 border-camhaji-accent/40 pl-6">
-            <h3 className="font-sans font-bold text-white text-lg mb-3">Procesos respaldados por CONTPAQi Nóminas</h3>
-            <p className="font-sans text-sm font-light text-white/50 leading-relaxed">
-              Trabajamos con CONTPAQi Nóminas, uno de los sistemas más utilizados en México para administración de nómina y cumplimiento de obligaciones laborales y fiscales. Esto nos permite generar cálculos precisos, CFDI correctamente timbrados y reportes compatibles con procesos de revisión, auditoría y control administrativo.
-            </p>
-          </div>
         </div>
       </section>
 

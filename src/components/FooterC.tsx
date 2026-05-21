@@ -26,8 +26,8 @@ export function FooterC() {
             <ul className="space-y-3">
               {[
                 { label: "Contabilidad & Administración", href: `${base}/servicios/contabilidad` },
-                { label: "Estrategia Fiscal", href: `${base}/servicios/fiscal` },
-                { label: "Nómina Empresarial", href: `${base}/servicios/nomina` },
+                { label: "Consultoría Fiscal", href: `${base}/servicios/fiscal` },
+                { label: "Nómina y Seguridad Social", href: `${base}/servicios/nomina` },
                 { label: "Administración Integral", href: `${base}/servicios/administracion` },
               ].map((s) => (
                 <li key={s.label}>
