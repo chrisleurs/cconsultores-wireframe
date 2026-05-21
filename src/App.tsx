@@ -1,6 +1,6 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { HelmetProvider } from "react-helmet-async";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -12,7 +12,7 @@ import NosotrosC from "./pages/c/NosotrosC.tsx";
 import ContactoC from "./pages/c/ContactoC.tsx";
 import ServicioFiscalC from "./pages/c/ServicioFiscalC.tsx";
 import ServicioNominaC from "./pages/c/ServicioNominaC.tsx";
-import ServicioFacturacionC from "./pages/c/ServicioFacturacionC.tsx";
+import ServicioAdministracionC from "./pages/c/ServicioAdministracionC.tsx";
 import SectorComercialC from "./pages/c/SectorComercialC.tsx";
 import SectorInmobiliarioC from "./pages/c/SectorInmobiliarioC.tsx";
 import SectorResicoC from "./pages/c/SectorResicoC.tsx";
@@ -42,7 +42,8 @@ const App = () => (
           <Route path="/version-c/servicios/contabilidad" element={<ServicioContabilidadC />} />
           <Route path="/version-c/servicios/fiscal" element={<ServicioFiscalC />} />
           <Route path="/version-c/servicios/nomina" element={<ServicioNominaC />} />
-          <Route path="/version-c/servicios/facturacion" element={<ServicioFacturacionC />} />
+          <Route path="/version-c/servicios/administracion" element={<ServicioAdministracionC />} />
+          <Route path="/version-c/servicios/facturacion" element={<Navigate to="/version-c/servicios/administracion" replace />} />
           <Route path="/version-c/sectores/construccion" element={<SectorConstruccionC />} />
           <Route path="/version-c/sectores/comercial" element={<SectorComercialC />} />
           <Route path="/version-c/sectores/inmobiliario" element={<SectorInmobiliarioC />} />
