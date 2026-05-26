@@ -1,6 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import { useLang, localizePath } from "@/i18n/lang";
+import { t } from "@/i18n/ui";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 interface NavbarProps {
   version?: "a" | "b" | "c";
@@ -24,6 +27,7 @@ export function Navbar({ version }: NavbarProps) {
   const dropdownRef = useRef<HTMLDivElement>(null);
   const navRef = useRef<HTMLElement>(null);
   const location = useLocation();
+  const lang = useLang();
 
   // Auto-close menus when route changes (prevents mobile click cancellation
   // caused by unmounting the menu before React Router processes navigation)
@@ -32,34 +36,35 @@ export function Navbar({ version }: NavbarProps) {
     setOpenDropdown(null);
   }, [location.pathname]);
 
-  const base = version ? `/version-${version}` : "";
+  const baseRaw = version ? `/version-${version}` : "";
+  const base = baseRaw ? localizePath(baseRaw, lang) : "";
 
   const getNavLinks = (): NavLink[] => {
     return [
-      { label: "Home", href: base },
-      { label: "Nosotros", href: `${base}/nosotros` },
+      { label: t(lang, "navHome"), href: base || "/" },
+      { label: t(lang, "navNosotros"), href: `${base}/nosotros` },
       {
-        label: "Servicios",
+        label: t(lang, "navServicios"),
         href: `${base}/servicios/contabilidad`,
         dropdown: [
-          { label: "Contabilidad", href: `${base}/servicios/contabilidad` },
-          { label: "Consultoría Fiscal", href: `${base}/servicios/fiscal` },
-          { label: "Nómina y Seguridad Social", href: `${base}/servicios/nomina` },
-          { label: "Administración Integral", href: `${base}/servicios/administracion` },
+          { label: t(lang, "svcContabilidad"), href: `${base}/servicios/contabilidad` },
+          { label: t(lang, "svcFiscal"), href: `${base}/servicios/fiscal` },
+          { label: t(lang, "svcNomina"), href: `${base}/servicios/nomina` },
+          { label: t(lang, "svcAdministracion"), href: `${base}/servicios/administracion` },
         ],
       },
       {
-        label: "Sectores",
+        label: t(lang, "navSectores"),
         href: `${base}/sectores/construccion`,
         dropdown: [
-          { label: "Construcción", href: `${base}/sectores/construccion` },
-          { label: "Comercial", href: `${base}/sectores/comercial` },
-          { label: "Asesores Inmobiliarios", href: `${base}/sectores/inmobiliario` },
-          { label: "RESICO", href: `${base}/sectores/resico` },
-          { label: "Renta Vacacional", href: `${base}/sectores/renta-vacacional` },
+          { label: t(lang, "sectConstruccion"), href: `${base}/sectores/construccion` },
+          { label: t(lang, "sectComercial"), href: `${base}/sectores/comercial` },
+          { label: t(lang, "sectInmobiliario"), href: `${base}/sectores/inmobiliario` },
+          { label: t(lang, "sectResico"), href: `${base}/sectores/resico` },
+          { label: t(lang, "sectRentaVac"), href: `${base}/sectores/renta-vacacional` },
         ],
       },
-      { label: "Contacto", href: `${base}/contacto` },
+      { label: t(lang, "navContacto"), href: `${base}/contacto` },
     ];
   };
 
