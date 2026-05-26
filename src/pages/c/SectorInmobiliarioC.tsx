@@ -12,6 +12,13 @@ const impuestos = [
   { title: "CFDI obligatorio", desc: "Por cada comisión debes emitir una factura electrónica con los datos correctos. Sin CFDI, el ingreso sigue existiendo para el SAT aunque no lo declares." },
 ];
 
+const areasClave = [
+  { title: "Facturación correcta de comisiones e ingresos", desc: "Emisión adecuada de CFDI relacionados con servicios inmobiliarios, comisiones y operaciones comerciales." },
+  { title: "Control de ingresos y flujo de efectivo", desc: "Seguimiento administrativo y financiero para mantener claridad sobre ingresos cobrados, comisiones pendientes y flujo operativo." },
+  { title: "Declaraciones fiscales y pagos provisionales", desc: "Cumplimiento mensual y anual de obligaciones fiscales para personas físicas y morales relacionadas con actividades inmobiliarias." },
+  { title: "Organización documental y soporte administrativo", desc: "Control y resguardo de información fiscal y administrativa relacionada con operaciones, clientes y comprobantes." },
+];
+
 const loQueHacemos = [
   "Diagnóstico de tu situación fiscal actual (régimen, obligaciones, historial)",
   "Emisión correcta de CFDI por cada comisión",
@@ -22,9 +29,9 @@ const loQueHacemos = [
 ];
 
 const faqs = [
-  { q: "¿Qué impuestos paga un agente inmobiliario en México?", a: "Depende del régimen fiscal. En RESICO, paga entre 1% y 2.5% de ISR mensual sobre sus comisiones. En Régimen General, la tasa puede llegar al 35% pero con más deducciones disponibles. Además, debe pagar IVA sobre sus servicios de intermediación (16% en la mayoría de casos)." },
-  { q: "¿Cómo facturar comisiones inmobiliarias con CFDI?", a: "El agente debe emitir un CFDI por el monto de su comisión. El concepto debe corresponder a 'servicios de intermediación inmobiliaria'. Si la empresa te retiene ISR, esa retención se refleja en el CFDI. El complemento de pago aplica si la comisión no se liquida al momento de la operación." },
-  { q: "¿Conviene el RESICO para un agente inmobiliario en Cancún?", a: "Para agentes con ingresos anuales de comisiones por debajo de $3.5 millones, el RESICO suele ser conveniente: tasas bajas, proceso simplificado. Para agentes con volúmenes altos o con estructura de gastos deducibles significativos, puede convenir el Régimen General." },
+  { q: "¿Qué impuestos paga un asesor inmobiliario en México?", a: "Depende del régimen fiscal. En RESICO, paga entre 1% y 2.5% de ISR mensual sobre sus comisiones. En Régimen General, la tasa puede llegar al 35% pero con más deducciones disponibles. Además, debe pagar IVA sobre sus servicios de intermediación (16% en la mayoría de casos)." },
+  { q: "¿Cómo facturar comisiones inmobiliarias con CFDI?", a: "El asesor debe emitir un CFDI por el monto de su comisión. El concepto debe corresponder a 'servicios de intermediación inmobiliaria'. Si la empresa te retiene ISR, esa retención se refleja en el CFDI. El complemento de pago aplica si la comisión no se liquida al momento de la operación." },
+  { q: "¿Conviene el RESICO para un asesor inmobiliario en Cancún?", a: "Para asesores con ingresos anuales de comisiones por debajo de $3.5 millones, el RESICO suele ser conveniente: tasas bajas, proceso simplificado. Para asesores con volúmenes altos o con estructura de gastos deducibles significativos, puede convenir el Régimen General." },
 ];
 
 export default function SectorInmobiliarioC() {
@@ -32,7 +39,7 @@ export default function SectorInmobiliarioC() {
 
   return (
     <div className="min-h-screen">
-      <SEO title={`Contabilidad para Agentes Inmobiliarios en Cancún | Camhaji`} description={`Servicios contables y fiscales para agentes inmobiliarios y desarrolladoras en Cancún y Riviera Maya.`} path="/version-c/sectores/inmobiliario" />
+      <SEO title={`Contabilidad para Asesores Inmobiliarios en Cancún | Camhaji`} description={`Servicios contables y fiscales para asesores inmobiliarios y desarrolladoras en Cancún y Riviera Maya.`} path="/version-c/sectores/inmobiliario" />
       <Navbar version="c" />
 
       {/* HERO */}
@@ -43,14 +50,14 @@ export default function SectorInmobiliarioC() {
           <p className="font-sans text-xs text-white/30 mb-8">
             <a href="/version-c" className="hover:text-white/50 transition-colors">Inicio</a>
             <span className="text-white/15 mx-2">/</span><span>Sectores</span>
-            <span className="text-white/15 mx-2">/</span><span>Inmobiliario</span>
+            <span className="text-white/15 mx-2">/</span><span>Asesores Inmobiliarios</span>
           </p>
-          <p className="label-uppercase text-camhaji-accent/70 mb-6">CONTABILIDAD PARA AGENTES INMOBILIARIOS</p>
+          <p className="label-uppercase text-camhaji-accent/70 mb-6">CONTABILIDAD PARA ASESORES INMOBILIARIOS</p>
           <h1 className="font-sans font-bold text-white" style={{ fontSize: "clamp(40px, 7vw, 88px)", letterSpacing: "-0.04em", lineHeight: 0.95 }}>
-            Contabilidad para Agentes<br />Inmobiliarios en Cancún
+            Contabilidad para Asesores<br />Inmobiliarios en Cancún
           </h1>
           <p className="font-sans text-white/50 mt-6 max-w-[560px]" style={{ fontSize: "clamp(16px, 1.6vw, 19px)", lineHeight: 1.6 }}>
-            El mercado inmobiliario de Cancún mueve comisiones altas. Pero muchos agentes independientes llegan a nosotros cuando el SAT ya les mandó una carta — porque nunca les explicaron exactamente cómo declarar sus ingresos ni cómo emitir sus facturas.
+            El mercado inmobiliario de Cancún mueve comisiones altas. Pero muchos asesores independientes llegan a nosotros cuando el SAT ya les mandó una carta — porque nunca les explicaron exactamente cómo declarar sus ingresos ni cómo emitir sus facturas.
           </p>
         </div>
       </section>
@@ -58,9 +65,9 @@ export default function SectorInmobiliarioC() {
       {/* IMPUESTOS */}
       <section className="bg-white py-24 px-5 md:px-10">
         <div className="max-w-[900px] mx-auto">
-          <p className="label-uppercase text-camhaji-muted mb-4">IMPUESTOS PARA AGENTES INMOBILIARIOS EN MÉXICO</p>
+          <p className="label-uppercase text-camhaji-muted mb-4">IMPUESTOS PARA ASESORES INMOBILIARIOS EN MÉXICO</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-14" style={{ fontSize: "clamp(24px, 3.5vw, 40px)", letterSpacing: "-0.03em" }}>
-            Los impuestos que enfrenta un agente inmobiliario en México
+            Los impuestos que enfrenta un asesor inmobiliario en México
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {impuestos.map((item) => (
@@ -77,7 +84,7 @@ export default function SectorInmobiliarioC() {
       {/* SPLIT IMAGE — AGENTE INMOBILIARIO */}
       <section className="grid grid-cols-1 md:grid-cols-2 gap-0">
         <div>
-          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1200&h=800&fit=crop" alt="Agente inmobiliario mostrando propiedad" className="w-full h-full object-cover aspect-[4/3]" />
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1200&h=800&fit=crop" alt="Asesor inmobiliario mostrando propiedad" className="w-full h-full object-cover aspect-[4/3]" />
         </div>
         <div className="flex items-center bg-surface px-8 md:px-16 py-16">
           <div>
@@ -112,9 +119,9 @@ export default function SectorInmobiliarioC() {
       {/* RESICO */}
       <section className="bg-camhaji-base py-24 px-5 md:px-10">
         <div className="max-w-[900px] mx-auto">
-          <p className="label-uppercase text-white/30 mb-4">RESICO PARA AGENTES INMOBILIARIOS</p>
+          <p className="label-uppercase text-white/30 mb-4">RESICO PARA ASESORES INMOBILIARIOS</p>
           <h2 className="font-sans font-bold text-white mb-8" style={{ fontSize: "clamp(24px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
-            RESICO para agentes inmobiliarios: ¿conviene?
+            RESICO para asesores inmobiliarios: ¿conviene?
           </h2>
           <p className="font-sans text-white/60 leading-relaxed mb-6" style={{ fontSize: "clamp(15px, 1.5vw, 17px)" }}>
             Depende. El RESICO es una opción atractiva si tus ingresos anuales no superan los $3.5 millones de pesos: tasas de ISR bajas, declaración mensual simplificada, menos trámites.
@@ -144,6 +151,42 @@ export default function SectorInmobiliarioC() {
         </div>
       </section>
 
+      {/* ÁREAS CLAVE */}
+      <section className="bg-surface py-24 px-5 md:px-10">
+        <div className="max-w-[900px] mx-auto">
+          <p className="label-uppercase text-camhaji-muted mb-4">ÁREAS CLAVE PARA ASESORES Y AGENCIAS INMOBILIARIAS</p>
+          <h2 className="font-sans font-bold text-camhaji-text mb-14" style={{ fontSize: "clamp(24px, 3.5vw, 40px)", letterSpacing: "-0.03em" }}>
+            Áreas clave para asesores y agencias inmobiliarias
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {areasClave.map((item) => (
+              <div key={item.title}>
+                <div className="w-6 h-px bg-primary mb-5" />
+                <h3 className="font-sans font-bold text-camhaji-text text-lg mb-3">{item.title}</h3>
+                <p className="font-sans text-sm font-light text-camhaji-muted leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* EXPERIENCIA EN EL SECTOR */}
+      <section className="bg-white py-24 px-5 md:px-10">
+        <div className="max-w-[900px] mx-auto">
+          <p className="label-uppercase text-camhaji-muted mb-4">EXPERIENCIA EN EL SECTOR INMOBILIARIO</p>
+          <h2 className="font-sans font-bold text-camhaji-text mb-8" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
+            Entendemos cómo opera el mercado inmobiliario en Cancún y Riviera Maya
+          </h2>
+          <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed mb-6">
+            Hemos trabajado con asesores inmobiliarios, brokers y empresas relacionadas con el sector, entendiendo las dinámicas comerciales y fiscales propias de una región con fuerte actividad turística e inversión inmobiliaria.
+          </p>
+          <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed mb-8">
+            Conocemos los retos relacionados con comisiones variables, operaciones de alto valor, clientes extranjeros y administración de ingresos en un entorno comercial altamente dinámico.
+          </p>
+          <p className="font-sans font-semibold text-primary">No solo llevamos la contabilidad. Ayudamos a mantener orden y claridad financiera conforme crece la operación.</p>
+        </div>
+      </section>
+
       {/* FULL-BLEED BAND — CONDOMINIOS FRENTE AL MAR */}
       <section className="min-h-[40vh] relative flex items-center justify-center text-center">
         <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1600&h=800&fit=crop" alt="Condominios frente al mar en Cancún" className="absolute inset-0 w-full h-full object-cover" />
@@ -159,9 +202,9 @@ export default function SectorInmobiliarioC() {
       {/* FAQ */}
       <section className="bg-surface py-24 px-5 md:px-10">
         <div className="max-w-[840px] mx-auto">
-          <p className="label-uppercase text-camhaji-muted mb-4">AGENTES INMOBILIARIOS — PREGUNTAS FRECUENTES</p>
+          <p className="label-uppercase text-camhaji-muted mb-4">ASESORES INMOBILIARIOS — PREGUNTAS FRECUENTES</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-14" style={{ fontSize: "clamp(24px, 3.5vw, 40px)", letterSpacing: "-0.02em" }}>
-            Agentes inmobiliarios en Cancún
+            Asesores inmobiliarios en Cancún
           </h2>
           <div className="border-t border-border-subtle">
             {faqs.map((f, i) => (
