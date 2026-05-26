@@ -79,7 +79,7 @@ function LogoMarquee({ tone }: { tone: "light" | "dark" }) {
             src={c.logo}
             alt={c.name}
             loading="lazy"
-            className={`h-14 md:h-16 w-auto object-contain shrink-0 transition-opacity duration-300 ${filterClass}`}
+            className={`${c.name === "Cliente Camhaji" ? "h-20 md:h-24" : "h-14 md:h-16"} w-auto object-contain shrink-0 transition-opacity duration-300 ${filterClass}`}
           />
         ))}
       </div>
