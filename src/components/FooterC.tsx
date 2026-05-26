@@ -1,5 +1,10 @@
+import { useLang, localizePath } from "@/i18n/lang";
+import { t } from "@/i18n/ui";
+import { LanguageSwitcher } from "./LanguageSwitcher";
+
 export function FooterC() {
-  const base = "/version-c";
+  const lang = useLang();
+  const base = localizePath("/version-c", lang);
   return (
     <footer className="bg-camhaji-base py-16 md:py-20" itemScope itemType="https://schema.org/AccountingService">
       <div className="max-w-[1200px] mx-auto px-5 md:px-10">
@@ -16,19 +21,22 @@ export function FooterC() {
               </div>
             </div>
             <p className="font-serif text-sm italic text-white/45 leading-relaxed mt-4">
-              Contabilidad con compromiso real.
+              {t(lang, "footerTagline")}
             </p>
+            <div className="mt-6">
+              <LanguageSwitcher variant="footer" />
+            </div>
           </div>
 
           {/* Servicios */}
           <div>
-            <h4 className="label-uppercase text-white/30 mb-6">Servicios</h4>
+            <h4 className="label-uppercase text-white/30 mb-6">{t(lang, "footerServicios")}</h4>
             <ul className="space-y-3">
               {[
-                { label: "Contabilidad & Administración", href: `${base}/servicios/contabilidad` },
-                { label: "Consultoría Fiscal", href: `${base}/servicios/fiscal` },
-                { label: "Nómina y Seguridad Social", href: `${base}/servicios/nomina` },
-                { label: "Administración Integral", href: `${base}/servicios/administracion` },
+                { label: t(lang, "svcContabilidad"), href: `${base}/servicios/contabilidad` },
+                { label: t(lang, "svcFiscal"), href: `${base}/servicios/fiscal` },
+                { label: t(lang, "svcNomina"), href: `${base}/servicios/nomina` },
+                { label: t(lang, "svcAdministracion"), href: `${base}/servicios/administracion` },
               ].map((s) => (
                 <li key={s.label}>
                   <a href={s.href} className="font-sans text-sm text-white/55 hover:text-white/85 transition-colors">
@@ -41,14 +49,14 @@ export function FooterC() {
 
           {/* Sectores */}
           <div>
-            <h4 className="label-uppercase text-white/30 mb-6">Sectores</h4>
+            <h4 className="label-uppercase text-white/30 mb-6">{t(lang, "footerSectores")}</h4>
             <ul className="space-y-3">
               {[
-                { label: "Construcción", href: `${base}/sectores/construccion` },
-                { label: "Comercial", href: `${base}/sectores/comercial` },
-                { label: "Inmobiliario", href: `${base}/sectores/inmobiliario` },
-                { label: "RESICO", href: `${base}/sectores/resico` },
-                { label: "Renta Vacacional", href: `${base}/sectores/renta-vacacional` },
+                { label: t(lang, "sectConstruccion"), href: `${base}/sectores/construccion` },
+                { label: t(lang, "sectComercial"), href: `${base}/sectores/comercial` },
+                { label: t(lang, "sectInmobiliario"), href: `${base}/sectores/inmobiliario` },
+                { label: t(lang, "sectResico"), href: `${base}/sectores/resico` },
+                { label: t(lang, "sectRentaVac"), href: `${base}/sectores/renta-vacacional` },
               ].map((s) => (
                 <li key={s.label}>
                   <a href={s.href} className="font-sans text-sm text-white/55 hover:text-white/85 transition-colors">
@@ -61,7 +69,7 @@ export function FooterC() {
 
           {/* Contacto */}
           <div itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
-            <h4 className="label-uppercase text-white/30 mb-6">Contacto</h4>
+            <h4 className="label-uppercase text-white/30 mb-6">{t(lang, "footerContacto")}</h4>
             <ul className="space-y-3 font-sans text-sm text-white/55">
               <li>
                 <a href="tel:+529988872584" className="hover:text-white/85 transition-colors" itemProp="telephone">
@@ -88,16 +96,16 @@ export function FooterC() {
                 <span itemProp="addressLocality">Cancún</span>,{" "}
                 <span itemProp="addressRegion">Quintana Roo</span>{" "}
                 <span itemProp="postalCode">77500</span>,{" "}
-                <span itemProp="addressCountry">México</span>
+                <span itemProp="addressCountry">{lang === "en" ? "Mexico" : "México"}</span>
               </li>
-              <li>Lun–Vie · 9:00–18:30</li>
+              <li>{t(lang, "footerHours")}</li>
             </ul>
           </div>
         </div>
 
         <div className="mt-12 pt-6 border-t border-white/[0.06] flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="font-sans text-xs text-white/25">
-            © 2026 Camhaji Consultores. Todos los derechos reservados.
+            {t(lang, "footerRights")}
           </p>
           <p className="font-sans text-[10px] uppercase tracking-[0.15em] text-white/20">
             CANCÚN · QUINTANA ROO · MÉXICO

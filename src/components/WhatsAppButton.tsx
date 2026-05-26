@@ -1,10 +1,14 @@
+import { useLang } from "@/i18n/lang";
+import { t } from "@/i18n/ui";
+
 export function WhatsAppButton() {
+  const lang = useLang();
   return (
     <a
       href="https://wa.me/5215543587159"
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Contactar por WhatsApp"
+      aria-label={t(lang, "waAria")}
       className="fixed bottom-7 right-7 z-[200] w-14 h-14 rounded-full bg-whatsapp flex items-center justify-center shadow-[0_4px_16px_rgba(37,211,102,0.45)] hover:scale-105 transition-transform duration-300"
     >
       <svg width="28" height="28" viewBox="0 0 24 24" fill="white">

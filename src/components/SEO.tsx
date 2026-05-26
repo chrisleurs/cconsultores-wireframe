@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import type { Lang } from "@/i18n/lang";
 
 const SITE_URL = "https://cconsultores-wireframe.lovable.app";
 const DEFAULT_OG = `${SITE_URL}/og-image.png`;
@@ -10,6 +11,16 @@ interface SEOProps {
   image?: string;
   type?: "website" | "article";
   noindex?: boolean;
+  /**
+   * Page language. When set, also emits hreflang alternates assuming the
+   * counterpart route lives at /en/<path> (or removes /en prefix for ES).
+   */
+  lang?: Lang;
+  /**
+   * Optional explicit alternate path override (without language prefix).
+   * Defaults to deriving from `path`.
+   */
+  altPath?: string;
 }
 
 export function SEO({
@@ -19,14 +30,27 @@ export function SEO({
   image = DEFAULT_OG,
   type = "website",
   noindex = false,
+  lang = "es",
+  altPath,
 }: SEOProps) {
   const url = `${SITE_URL}${path}`;
+  // Derive ES and EN paths
+  const stripped = path.startsWith("/en/") ? path.slice(3) : path === "/en" ? "/" : path;
+  const esPath = altPath ?? stripped;
+  const enPath = esPath === "/" ? "/en" : `/en${esPath}`;
+  const esUrl = `${SITE_URL}${esPath}`;
+  const enUrl = `${SITE_URL}${enPath}`;
+  const ogLocale = lang === "en" ? "en_US" : "es_MX";
+  const htmlLang = lang === "en" ? "en" : "es-MX";
   return (
     <Helmet>
-      <html lang="es-MX" />
+      <html lang={htmlLang} />
       <title>{title}</title>
       <meta name="description" content={description} />
       <link rel="canonical" href={url} />
+      <link rel="alternate" hrefLang="es-MX" href={esUrl} />
+      <link rel="alternate" hrefLang="en" href={enUrl} />
+      <link rel="alternate" hrefLang="x-default" href={esUrl} />
       {noindex && <meta name="robots" content="noindex,nofollow" />}
 
       {/* Open Graph */}
@@ -36,7 +60,7 @@ export function SEO({
       <meta property="og:description" content={description} />
       <meta property="og:url" content={url} />
       <meta property="og:image" content={image} />
-      <meta property="og:locale" content="es_MX" />
+      <meta property="og:locale" content={ogLocale} />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
