@@ -4,6 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import { useLang, localizePath } from "@/i18n/lang";
 import { t } from "@/i18n/ui";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import logoBlanco from "@/assets/logo-blanco.png";
 
 interface NavbarProps {
   version?: "a" | "b" | "c";
