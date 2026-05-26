@@ -485,9 +485,9 @@ function SectoresCarousel({
       <div className="max-w-[1200px] mx-auto w-full px-5 md:px-10 mb-10">
         <div className="flex flex-col md:flex-row justify-between md:items-end gap-6">
           <div>
-            <p className="label-uppercase text-white/35 mb-3">SECTORES QUE ATENDEMOS EN QUINTANA ROO</p>
+            <p className="label-uppercase text-white/35 mb-3">{sectionLabel}</p>
             <h2 className="font-sans font-bold text-white max-w-[640px]" style={{ fontSize: "clamp(24px, 3vw, 38px)", letterSpacing: "-0.02em", lineHeight: 1.15 }}>
-              Experiencia en los sectores que más importan en Quintana Roo
+              {sectionTitle}
             </h2>
           </div>
           <div className="flex items-center gap-2">
@@ -541,7 +541,7 @@ function SectoresCarousel({
                 {s.desc}
               </p>
               <span className="label-uppercase text-white/45 group-hover:text-white transition-colors">
-                VER ESPECIALIZACIÓN →
+                {s.cta}
               </span>
             </div>
           </a>
