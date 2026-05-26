@@ -106,7 +106,7 @@ export function Navbar({ version }: NavbarProps) {
           <img
             src={camhajiLogo}
             alt="Camhaji Consultores"
-            className={`h-9 md:h-10 w-auto object-contain transition-[filter] duration-300 ${
+            className={`h-12 md:h-14 w-auto object-contain transition-[filter] duration-300 ${
               scrolled ? "invert" : ""
             }`}
           />
