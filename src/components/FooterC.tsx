@@ -1,7 +1,7 @@
 import { useLang, localizePath } from "@/i18n/lang";
 import { t } from "@/i18n/ui";
 import { LanguageSwitcher } from "./LanguageSwitcher";
-import logoBlanco from "@/assets/logo-blanco.png";
+
 
 export function FooterC() {
   const lang = useLang();
