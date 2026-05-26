@@ -37,13 +37,13 @@ const services = [
   },
   {
     num: "03",
-    title: "Maquila de nómina",
+    title: "Nómina y Seguridad Social",
     desc: "Determinación del salario diario integrado, cálculo de prestaciones y percepciones, movimientos afiliatorios ante el IMSS, cálculo de cuotas obrero-patronales, timbrado de CFDI de nómina. Sin retrasos, porque entendemos que la nómina es sagrada.",
     href: "/version-c/servicios/nomina",
   },
   {
     num: "04",
-    title: "Administración y Facturación",
+    title: "Administración Integral",
     desc: "Emisión, timbrado y envío de facturas electrónicas para tus clientes. Revisamos los CFDI que recibes y te asesoramos sobre su correcta emisión y validez. Estados de cuenta, Cuentas por Cobrar y por Pagar, tesorería, dispersiones de nómina, pagos a proveedores y gestiones ante entidades gubernamentales para permisos y licencias.",
     href: "/version-c/servicios/administracion",
   },
@@ -253,24 +253,22 @@ export default function VersionC() {
 
       <ClientLogos variant="c" />
 
-      {/* ══ STATEMENT — full-screen white, quote + principles ══ */}
-      <section className="min-h-[100dvh] bg-white flex flex-col items-center justify-center text-center px-5 md:px-10 py-20">
-        <p className="label-uppercase text-camhaji-muted mb-12">DESPACHO CONTABLE EN CANCÚN</p>
-        <blockquote className="font-sans font-bold text-camhaji-text max-w-[840px] mb-16" style={{ fontSize: "clamp(28px, 4.5vw, 56px)", letterSpacing: "-0.02em", lineHeight: 1.25 }}>
-          ¿Qué nos hace tu mejor aliado?
-        </blockquote>
-        <div className="flex gap-0 justify-center flex-wrap border-t border-border-subtle pt-8 max-w-[840px] w-full items-center">
-          {["Atención inmediata", "Todo lo que necesitas en un solo lugar", "Soluciones realistas", "Compromiso con nuestro trabajo"].map((p, i) => (
-            <span key={p} className="flex items-center">
-              {i > 0 && <span className="text-[#D0CBC0] text-sm mx-4">·</span>}
-              <span className="label-uppercase text-camhaji-muted px-0">{p}</span>
-            </span>
-          ))}
+      {/* ══ STATEMENT + DIFERENCIADORES — unified white section ══ */}
+      <section className="bg-white pt-24 pb-24 px-5 md:px-10">
+        <div className="max-w-[1200px] mx-auto flex flex-col items-center text-center">
+          <p className="label-uppercase text-camhaji-muted mb-10">DESPACHO CONTABLE EN CANCÚN</p>
+          <blockquote className="font-sans font-bold text-camhaji-text max-w-[840px] mb-10" style={{ fontSize: "clamp(28px, 4.5vw, 56px)", letterSpacing: "-0.02em", lineHeight: 1.25 }}>
+            ¿Qué nos hace tu mejor aliado?
+          </blockquote>
+          <div className="flex gap-0 justify-center flex-wrap border-t border-border-subtle pt-8 max-w-[840px] w-full items-center mb-16">
+            {["Atención inmediata", "Todo lo que necesitas en un solo lugar", "Soluciones realistas", "Compromiso con nuestro trabajo"].map((p, i) => (
+              <span key={p} className="flex items-center">
+                {i > 0 && <span className="text-[#D0CBC0] text-sm mx-4">·</span>}
+                <span className="label-uppercase text-camhaji-muted px-0">{p}</span>
+              </span>
+            ))}
+          </div>
         </div>
-      </section>
-
-      {/* ══ DIFERENCIADORES — 3-col grid ══ */}
-      <section className="bg-white pb-24 px-5 md:px-10">
         <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {differentiators.map((d) => (
             <div key={d.name}>
