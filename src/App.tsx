@@ -58,10 +58,11 @@ const App = () => (
           <Route path="/en/version-c" element={<VersionC />} />
           <Route path="/en/version-c/nosotros" element={<NosotrosC />} />
           <Route path="/en/version-c/contacto" element={<ContactoC />} />
-          <Route path="/en/version-c/servicios/contabilidad" element={<Navigate to="/version-c/servicios/contabilidad" replace />} />
-          <Route path="/en/version-c/servicios/fiscal" element={<Navigate to="/version-c/servicios/fiscal" replace />} />
-          <Route path="/en/version-c/servicios/nomina" element={<Navigate to="/version-c/servicios/nomina" replace />} />
-          <Route path="/en/version-c/servicios/administracion" element={<Navigate to="/version-c/servicios/administracion" replace />} />
+          <Route path="/en/version-c/servicios/contabilidad" element={<ServicioContabilidadC />} />
+          <Route path="/en/version-c/servicios/fiscal" element={<ServicioFiscalC />} />
+          <Route path="/en/version-c/servicios/nomina" element={<ServicioNominaC />} />
+          <Route path="/en/version-c/servicios/administracion" element={<ServicioAdministracionC />} />
+          <Route path="/en/version-c/servicios/facturacion" element={<Navigate to="/en/version-c/servicios/administracion" replace />} />
           <Route path="/en/version-c/sectores/construccion" element={<Navigate to="/version-c/sectores/construccion" replace />} />
           <Route path="/en/version-c/sectores/comercial" element={<Navigate to="/version-c/sectores/comercial" replace />} />
           <Route path="/en/version-c/sectores/inmobiliario" element={<Navigate to="/version-c/sectores/inmobiliario" replace />} />
