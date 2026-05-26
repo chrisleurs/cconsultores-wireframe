@@ -52,8 +52,7 @@ const App = () => (
           <Route path="/version-c/sectores/pequenos-negocios" element={<Navigate to="/version-c/sectores/renta-vacacional" replace />} />
           <Route path="/version-c/nosotros" element={<NosotrosC />} />
           <Route path="/version-c/contacto" element={<ContactoC />} />
-          {/* ── English mirror routes (Phase 4-A: home, about, contact). ── */}
-          {/* Service & sector EN routes redirect to ES until phases 4-B/4-C ship. */}
+          {/* ── English mirror routes (Phases 4-A / 4-B / 4-C). ── */}
           <Route path="/en" element={<Navigate to="/en/version-c" replace />} />
           <Route path="/en/version-c" element={<VersionC />} />
           <Route path="/en/version-c/nosotros" element={<NosotrosC />} />
@@ -63,11 +62,12 @@ const App = () => (
           <Route path="/en/version-c/servicios/nomina" element={<ServicioNominaC />} />
           <Route path="/en/version-c/servicios/administracion" element={<ServicioAdministracionC />} />
           <Route path="/en/version-c/servicios/facturacion" element={<Navigate to="/en/version-c/servicios/administracion" replace />} />
-          <Route path="/en/version-c/sectores/construccion" element={<Navigate to="/version-c/sectores/construccion" replace />} />
-          <Route path="/en/version-c/sectores/comercial" element={<Navigate to="/version-c/sectores/comercial" replace />} />
-          <Route path="/en/version-c/sectores/inmobiliario" element={<Navigate to="/version-c/sectores/inmobiliario" replace />} />
-          <Route path="/en/version-c/sectores/resico" element={<Navigate to="/version-c/sectores/resico" replace />} />
-          <Route path="/en/version-c/sectores/renta-vacacional" element={<Navigate to="/version-c/sectores/renta-vacacional" replace />} />
+          <Route path="/en/version-c/sectores/construccion" element={<SectorConstruccionC />} />
+          <Route path="/en/version-c/sectores/comercial" element={<SectorComercialC />} />
+          <Route path="/en/version-c/sectores/inmobiliario" element={<SectorInmobiliarioC />} />
+          <Route path="/en/version-c/sectores/resico" element={<SectorResicoC />} />
+          <Route path="/en/version-c/sectores/renta-vacacional" element={<SectorRentaVacacionalC />} />
+          <Route path="/en/version-c/sectores/pequenos-negocios" element={<Navigate to="/en/version-c/sectores/renta-vacacional" replace />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
