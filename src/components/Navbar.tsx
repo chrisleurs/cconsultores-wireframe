@@ -101,29 +101,13 @@ export function Navbar({ version }: NavbarProps) {
       <div className="max-w-[1200px] mx-auto flex items-center justify-between px-5 py-4 md:px-8 md:py-5">
         {/* Logo */}
         <Link to={logoHref} className="flex items-center gap-3">
-          <div
-            className={`w-9 h-9 flex items-center justify-center rounded-sm font-serif text-lg font-bold transition-colors duration-300 ${
-              scrolled ? "bg-primary text-primary-foreground" : "bg-white text-primary"
+          <img
+            src={logoBlanco}
+            alt="CAMHAJI Consultores"
+            className={`h-10 md:h-11 w-auto transition-[filter] duration-300 ${
+              scrolled ? "brightness-0" : ""
             }`}
-          >
-            CC
-          </div>
-          <div className="flex flex-col">
-            <span
-              className={`font-serif text-sm font-bold leading-tight transition-colors duration-300 ${
-                scrolled ? "text-primary" : "text-white"
-              }`}
-            >
-              CAMHAJI
-            </span>
-            <span
-              className={`font-sans text-[9px] uppercase tracking-[0.22em] transition-colors duration-300 ${
-                scrolled ? "text-muted-foreground" : "text-white/60"
-              }`}
-            >
-              CONSULTORES
-            </span>
-          </div>
+          />
         </Link>
 
         {/* Desktop links */}
