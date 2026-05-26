@@ -102,14 +102,31 @@ export function Navbar({ version }: NavbarProps) {
       <div className="max-w-[1200px] mx-auto flex items-center justify-between px-5 py-4 md:px-8 md:py-5">
         {/* Logo */}
         <Link to={logoHref} className="flex items-center gap-3">
-          <img
-            src={logoBlanco}
-            alt="CAMHAJI Consultores"
-            className={`h-10 md:h-11 w-auto transition-[filter] duration-300 ${
-              scrolled ? "brightness-0" : ""
-            }`}
-          />
+          <div className={`w-9 h-9 flex items-center justify-center border transition-colors duration-300 ${
+            scrolled
+              ? "border-[hsl(var(--camhaji-green)/0.35)]"
+              : "border-white/25"
+          }`}>
+            <span className={`font-display text-base tracking-[0.04em] transition-colors duration-300 ${
+              scrolled ? "text-[hsl(var(--camhaji-green))]" : "text-white"
+            }`}>
+              CC
+            </span>
+          </div>
+          <div className="flex flex-col leading-none">
+            <span className={`font-sans text-[11px] tracking-[0.25em] transition-colors duration-300 ${
+              scrolled ? "text-camhaji-text" : "text-white"
+            }`}>
+              CAMHAJI
+            </span>
+            <span className={`font-sans text-[9px] tracking-[0.18em] mt-[2px] transition-colors duration-300 ${
+              scrolled ? "text-camhaji-muted" : "text-white/50"
+            }`}>
+              CONSULTORES
+            </span>
+          </div>
         </Link>
+
 
         {/* Desktop links */}
         <div className="hidden md:flex items-center gap-8" ref={dropdownRef}>
