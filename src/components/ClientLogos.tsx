@@ -1,11 +1,13 @@
 import hereAndNow from "@/assets/clients/here-and-now.png";
 import ecoSupply from "@/assets/clients/ecosupply.png";
 import propiedadesCancun from "@/assets/clients/propiedades-cancun.png";
+import clienteBlanco from "@/assets/clients/cliente-blanco.png";
 
 const clients = [
   { name: "Here and Now Real Estate", logo: hereAndNow },
   { name: "EcoSupply", logo: ecoSupply },
   { name: "Propiedades Cancún", logo: propiedadesCancun },
+  { name: "Cliente Camhaji", logo: clienteBlanco },
 ];
 
 interface ClientLogosProps {
