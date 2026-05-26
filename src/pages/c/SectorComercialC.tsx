@@ -4,21 +4,19 @@ import { FooterC } from "@/components/FooterC";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { Phone } from "lucide-react";
 import { testimonials } from "@/data/testimonials";
-
-const loQueHacemos = [
-  "Contabilidad mensual con registro de todas las operaciones del periodo",
-  "Control de cuentas por cobrar y cuentas por pagar",
-  "Facturación CFDI a clientes y validación de CFDI de proveedores",
-  "Declaraciones mensuales de IVA e ISR",
-  "Declaración anual",
-  "Nómina del equipo de ventas, almacén y administración",
-  "Conciliación bancaria mensual",
-];
+import { useLang, localizePath } from "@/i18n/lang";
+import { getComercialContent } from "@/i18n/sectorComercialContent";
 
 export default function SectorComercialC() {
+  const lang = useLang();
+  const t = getComercialContent(lang);
+  const path = lang === "en" ? "/en/version-c/sectores/comercial" : "/version-c/sectores/comercial";
+  const home = localizePath("/version-c", lang);
+  const contacto = localizePath("/version-c/contacto", lang);
+
   return (
     <div className="min-h-screen">
-      <SEO title={`Contabilidad para Comercios en Cancún | Camhaji`} description={`Servicios contables para empresas comerciales en Cancún: inventarios, facturación, fiscal y nómina.`} path="/version-c/sectores/comercial" />
+      <SEO title={t.seo.title} description={t.seo.description} path={path} lang={lang} />
       <Navbar version="c" />
 
       {/* HERO */}
@@ -27,16 +25,16 @@ export default function SectorComercialC() {
         <div className="absolute inset-0 bg-gradient-to-t from-camhaji-base/95 via-camhaji-base/60 to-camhaji-base/30" />
         <div className="relative z-10 px-5 md:px-10 lg:px-16 pb-16 pt-32 w-full max-w-[1200px] mx-auto">
           <p className="font-sans text-xs text-white/30 mb-8">
-            <a href="/version-c" className="hover:text-white/50 transition-colors">Inicio</a>
-            <span className="text-white/15 mx-2">/</span><span>Sectores</span>
-            <span className="text-white/15 mx-2">/</span><span>Comercial</span>
+            <a href={home} className="hover:text-white/50 transition-colors">{t.bcInicio}</a>
+            <span className="text-white/15 mx-2">/</span><span>{t.bcSectores}</span>
+            <span className="text-white/15 mx-2">/</span><span>{t.bcCurrent}</span>
           </p>
-          <p className="label-uppercase text-camhaji-accent/70 mb-6">CONTABILIDAD PARA EMPRESAS COMERCIALES</p>
+          <p className="label-uppercase text-camhaji-accent/70 mb-6">{t.heroLabel}</p>
           <h1 className="font-sans font-bold text-white" style={{ fontSize: "clamp(40px, 7vw, 88px)", letterSpacing: "-0.04em", lineHeight: 0.95 }}>
-            Contabilidad para Empresas<br />Comerciales en Cancún
+            {t.heroH1L1}<br />{t.heroH1L2}
           </h1>
           <p className="font-sans text-white/50 mt-6 max-w-[560px]" style={{ fontSize: "clamp(16px, 1.6vw, 19px)", lineHeight: 1.6 }}>
-            Si tu empresa compra, vende y distribuye, tienes operaciones constantes que necesitan orden, registro y control puntual. Una semana sin conciliar puede convertirse en un mes sin claridad. Un mes sin claridad puede convertirse en un año de problemas con el SAT.
+            {t.heroP}
           </p>
         </div>
       </section>
@@ -44,15 +42,15 @@ export default function SectorComercialC() {
       {/* LO QUE NECESITA */}
       <section className="bg-white py-24 px-5 md:px-10">
         <div className="max-w-[900px] mx-auto">
-          <p className="label-uppercase text-camhaji-muted mb-4">SECTOR COMERCIAL EN QUINTANA ROO</p>
+          <p className="label-uppercase text-camhaji-muted mb-4">{t.retosLabel}</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-8" style={{ fontSize: "clamp(24px, 3.5vw, 40px)", letterSpacing: "-0.03em" }}>
-            Inventarios, CxC y CxP: los retos contables de las empresas de comercialización en Cancún
+            {t.retosTitle}
           </h2>
           <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed mb-8">
-            Las empresas de comercialización tienen un volumen alto de transacciones: facturas a clientes, facturas de proveedores, pagos, cobros, devoluciones, notas de crédito. Sin un proceso contable sólido, ese volumen se convierte en desorden — y el desorden en riesgo fiscal.
+            {t.retosIntro}
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {["Declaración mensual de IVA e ISR", "Control de inventarios con impacto contable", "Facturación CFDI correcta a cada tipo de cliente", "Conciliación permanente de CxC y CxP"].map((item) => (
+            {t.retos.map((item) => (
               <div key={item} className="flex items-start gap-3 py-3">
                 <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0 mt-2" />
                 <span className="font-sans text-[15px] text-camhaji-text">{item}</span>
@@ -66,12 +64,12 @@ export default function SectorComercialC() {
       <section className="grid grid-cols-1 md:grid-cols-2 gap-0">
         <div className="flex items-center bg-surface px-8 md:px-16 py-16 order-2 md:order-1">
           <div>
-            <p className="label-uppercase text-camhaji-muted mb-4">CONTABILIDAD PARA DISTRIBUIDORAS EN CANCÚN</p>
+            <p className="label-uppercase text-camhaji-muted mb-4">{t.splitLabel}</p>
             <h2 className="font-sans font-bold text-camhaji-text mb-6" style={{ fontSize: "clamp(22px, 2.5vw, 32px)", letterSpacing: "-0.02em" }}>
-              El volumen de transacciones exige orden contable permanente
+              {t.splitTitle}
             </h2>
             <p className="font-sans text-[15px] font-light text-camhaji-muted leading-relaxed">
-              Facturas a clientes, facturas de proveedores, pagos, cobros, devoluciones, notas de crédito. Sin un proceso contable sólido, el volumen se convierte en desorden.
+              {t.splitP}
             </p>
           </div>
         </div>
@@ -83,12 +81,12 @@ export default function SectorComercialC() {
       {/* LO QUE HACEMOS */}
       <section className="bg-camhaji-base py-24 px-5 md:px-10">
         <div className="max-w-[900px] mx-auto">
-          <p className="label-uppercase text-white/30 mb-4">SERVICIOS CONTABLES PARA COMERCIALIZADORAS</p>
+          <p className="label-uppercase text-white/30 mb-4">{t.loQueHacemosLabel}</p>
           <h2 className="font-sans font-bold text-white mb-16" style={{ fontSize: "clamp(24px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
-            Contabilidad mensual para distribuidoras y comercializadoras en Quintana Roo: qué cubrimos
+            {t.loQueHacemosTitle}
           </h2>
           <div className="border-t border-white/[0.08]">
-            {loQueHacemos.map((item, i) => (
+            {t.loQueHacemos.map((item, i) => (
               <div key={i} className="flex items-start gap-4 py-4 border-b border-white/[0.06] hover:translate-x-2.5 transition-transform duration-200">
                 <span className="w-2 h-2 rounded-full bg-camhaji-accent flex-shrink-0 mt-2" />
                 <span className="font-sans text-[15px] text-white/70 leading-relaxed">{item}</span>
@@ -101,25 +99,25 @@ export default function SectorComercialC() {
       {/* EXPERIENCIA */}
       <section className="bg-surface py-24 px-5 md:px-10">
         <div className="max-w-[900px] mx-auto">
-          <p className="label-uppercase text-camhaji-muted mb-4">EXPERIENCIA EN EL SECTOR COMERCIAL</p>
+          <p className="label-uppercase text-camhaji-muted mb-4">{t.expLabel}</p>
           <h2 className="font-sans font-bold text-camhaji-text mb-8" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em" }}>
-            Distribuidoras y comercializadoras en Quintana Roo: los retos que ya conocemos
+            {t.expTitle}
           </h2>
           <p className="font-sans text-[16px] font-light text-camhaji-muted leading-relaxed mb-6">
-            Hemos trabajado con distribuidoras, comercializadoras y empresas de venta al mayoreo y menudeo en Quintana Roo. Conocemos los ritmos de temporada del mercado local, la dinámica con proveedores regionales y las particularidades fiscales del sector.
+            {t.expP}
           </p>
-          <p className="font-sans font-semibold text-primary">No empezamos a aprender con cada cliente nuevo. Llegamos con experiencia acumulada.</p>
+          <p className="font-sans font-semibold text-primary">{t.expClose}</p>
         </div>
       </section>
 
-      {/* FULL-BLEED BAND — CANCÚN COMERCIAL */}
+      {/* FULL-BLEED BAND */}
       <section className="min-h-[40vh] relative flex items-center justify-center text-center">
         <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1600&h=800&fit=crop" alt="Centro comercial en Cancún" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-camhaji-base/70" />
         <div className="relative z-10 px-5 md:px-10 py-16 max-w-[700px]">
-          <p className="label-uppercase text-camhaji-accent/60 mb-4">COMERCIALIZADORAS EN QUINTANA ROO</p>
+          <p className="label-uppercase text-camhaji-accent/60 mb-4">{t.bandLabel}</p>
           <p className="font-sans font-bold text-white" style={{ fontSize: "clamp(22px, 3vw, 36px)", letterSpacing: "-0.02em", lineHeight: 1.2 }}>
-            Distribuidoras, comercializadoras y ventas al mayoreo en Quintana Roo.
+            {t.bandText}
           </p>
         </div>
       </section>
@@ -137,15 +135,15 @@ export default function SectorComercialC() {
 
       {/* CTA */}
       <section className="min-h-[60dvh] bg-primary flex flex-col items-center justify-center text-center px-5 md:px-10 py-20">
-        <p className="label-uppercase text-white/40 mb-6">CONTRATA CONTABILIDAD PARA TU EMPRESA COMERCIAL</p>
+        <p className="label-uppercase text-white/40 mb-6">{t.ctaLabel}</p>
         <h2 className="font-sans font-bold text-white mb-6" style={{ fontSize: "clamp(36px, 6vw, 80px)", letterSpacing: "-0.04em", lineHeight: 1.0 }}>
-          ¿Tu distribuidora o empresa comercial en Cancún tiene la contabilidad en orden?
+          {t.ctaTitle}
         </h2>
         <p className="font-sans text-white/55 max-w-[480px] mx-auto mb-12" style={{ fontSize: "clamp(15px, 1.5vw, 17px)" }}>
-          Cuéntanos cómo está tu operación. Si hay desorden, lo ordenamos. Si ya tienes proceso, te decimos cómo mejorarlo.
+          {t.ctaP}
         </p>
-        <a href="/version-c/contacto" className="btn-uppercase border border-white/50 text-white px-10 py-4 hover:bg-white/10 hover:border-white transition-all duration-300 mb-5">
-          ESCRÍBENOS POR WHATSAPP
+        <a href={contacto} className="btn-uppercase border border-white/50 text-white px-10 py-4 hover:bg-white/10 hover:border-white transition-all duration-300 mb-5">
+          {t.ctaBtn}
         </a>
         <div className="flex items-center gap-2">
           <Phone className="w-3.5 h-3.5 text-white/40" />
