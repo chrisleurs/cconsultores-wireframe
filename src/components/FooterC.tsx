@@ -1,6 +1,7 @@
 import { useLang, localizePath } from "@/i18n/lang";
 import { t } from "@/i18n/ui";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import logoBlanco from "@/assets/logo-blanco.png";
 
 export function FooterC() {
   const lang = useLang();
@@ -11,14 +12,13 @@ export function FooterC() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 md:gap-12">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-9 h-9 flex items-center justify-center rounded-sm bg-white font-serif text-lg font-bold text-primary">
-                CC
-              </div>
-              <div className="flex flex-col">
-                <span className="font-serif text-sm font-bold text-white leading-tight" itemProp="name">CAMHAJI</span>
-                <span className="font-sans text-[9px] uppercase tracking-[0.22em] text-white/40">CONSULTORES</span>
-              </div>
+            <div className="flex items-center mb-4">
+              <img
+                src={logoBlanco}
+                alt="CAMHAJI Consultores"
+                className="h-12 w-auto"
+                itemProp="logo"
+              />
             </div>
             <p className="font-serif text-sm italic text-white/45 leading-relaxed mt-4">
               {t(lang, "footerTagline")}
