@@ -1,6 +1,7 @@
 import { useLang, localizePath } from "@/i18n/lang";
 import { t } from "@/i18n/ui";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import camhajiLogo from "@/assets/camhaji-logo-blanco.png";
 
 
 export function FooterC() {
@@ -12,21 +13,12 @@ export function FooterC() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 md:gap-12">
           {/* Brand */}
           <div>
-            <div className="flex items-center mb-4">
-              <div className="w-10 h-10 flex items-center justify-center border border-[hsl(var(--camhaji-green)/0.3)]">
-                <span className="font-display text-lg tracking-[0.04em] text-[hsl(var(--camhaji-green))]">
-                  CC
-                </span>
-              </div>
-              <div className="ml-3 flex flex-col leading-none">
-                <span className="font-sans text-xs tracking-[0.25em] text-white/90">
-                  CAMHAJI
-                </span>
-                <span className="font-sans text-[10px] tracking-[0.18em] text-white/40 mt-[2px]">
-                  CONSULTORES
-                </span>
-              </div>
-            </div>
+            <img
+              src={camhajiLogo}
+              alt="Camhaji Consultores"
+              itemProp="logo"
+              className="h-12 w-auto object-contain mb-4"
+            />
 
             <p className="font-serif text-sm italic text-white/45 leading-relaxed mt-4">
               {t(lang, "footerTagline")}
