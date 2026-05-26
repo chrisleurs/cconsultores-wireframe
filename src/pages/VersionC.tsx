@@ -8,137 +8,13 @@ import { Phone, ChevronLeft, ChevronRight } from "lucide-react";
 
 import heroBg from "@/assets/hero-cancun-skyline.jpg";
 import heroVideo from "@/assets/camhaji-hero-loop.mp4";
-import sectorConstruccion from "@/assets/sector-construccion.jpg";
-import sectorComercial from "@/assets/sector-comercial.jpg";
 import { testimonials as testimonialsData, homeTestimonialsOrder } from "@/data/testimonials";
 import { team } from "@/data/team";
 import { TeamGrid } from "@/components/TeamGrid";
-
-const serviceBgs = [
-  // People-centric photos: conversations, teamwork, advisory — not stock "accounting"
-  "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1920&q=80&fit=crop", // equipo en reunión
-  "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1920&q=80&fit=crop", // asesora sonriendo con cliente
-  "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1920&q=80&fit=crop", // dos personas conversando trabajo
-  "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=1920&q=80&fit=crop", // handshake / atención al cliente
-];
-
-const services = [
-  {
-    num: "01",
-    title: "Contabilidad y Administración",
-    desc: "Registro de operaciones, conciliación bancaria, cálculo de impuestos, emisión de Estados Financieros. Información financiera para la toma de decisiones.",
-    href: "/version-c/servicios/contabilidad",
-  },
-  {
-    num: "02",
-    title: "Cumplimiento de obligaciones fiscales",
-    desc: "Correcto cumplimiento de tus obligaciones fiscales, cálculo de impuestos, envío de declaraciones, presentación de informativas, envío de contabilidad electrónica. No es magia fiscal, es compliance. Acompañamiento en trámites ante autoridades.",
-    href: "/version-c/servicios/fiscal",
-  },
-  {
-    num: "03",
-    title: "Nómina y Seguridad Social",
-    desc: "Determinación del salario diario integrado, cálculo de prestaciones y percepciones, movimientos afiliatorios ante el IMSS, cálculo de cuotas obrero-patronales, timbrado de CFDI de nómina. Sin retrasos, porque entendemos que la nómina es sagrada.",
-    href: "/version-c/servicios/nomina",
-  },
-  {
-    num: "04",
-    title: "Administración Integral",
-    desc: "Emisión, timbrado y envío de facturas electrónicas para tus clientes. Revisamos los CFDI que recibes y te asesoramos sobre su correcta emisión y validez. Estados de cuenta, Cuentas por Cobrar y por Pagar, tesorería, dispersiones de nómina, pagos a proveedores y gestiones ante entidades gubernamentales para permisos y licencias.",
-    href: "/version-c/servicios/administracion",
-  },
-];
-
-const stats = [
-  { value: 10, suffix: "+", label: "AÑOS DE TRAYECTORIA", context: "Antes de ser Firma, ya éramos expertos." },
-  { value: 6, suffix: "+", label: "AÑOS COMO FIRMA", context: "Una sociedad consolidada." },
-  { value: 10, suffix: "+", label: "PROFESIONALES", context: "Cada uno especialista en su área." },
-];
-
-const principles = [
-  { name: "Compromiso", desc: "Cumplimos nuestra palabra. Si lo decimos, lo hacemos. Sin pretextos." },
-  { name: "Honestidad", desc: "Decimos lo que pensamos, aunque no sea lo esperado." },
-  { name: "Transparencia", desc: "Sabrás lo que sucede en tu contabilidad o la de tu empresa en todo momento. La contabilidad es tuya." },
-  { name: "Responsabilidad", desc: "Nos hacemos cargo de nuestro trabajo. Siempre, sin condiciones." },
-  { name: "Empatía", desc: "Nos adaptamos a cada cliente, a su realidad y la de su negocio." },
-];
-
-const differentiators = [
-  {
-    name: "Atención inmediata",
-    desc: "Atención a consultas por videollamada o junta en nuestras oficinas para un trato más personal. Facturación en menos de 24 horas hábiles — entendemos lo importante que es la cobranza. Atendemos solicitudes por correo o WhatsApp, como prefieras.",
-  },
-  {
-    name: "Todo en un solo lugar",
-    desc: "Contabilidad, asesoría fiscal, maquila de nómina, facturación, administración y consultoría en negocios. Un equipo de profesionales a tu disposición.",
-  },
-  {
-    name: "Explicaciones que puedes entender",
-    desc: "Atendemos desde pequeñas hasta grandes empresas y entendemos que no todos son expertos en la materia, ni tienen que serlo — para eso estamos nosotros. Te lo explicaremos de una forma que quede completamente claro, sin rodeos ni tecnicismos.",
-  },
-  {
-    name: "Tu tranquilidad y seguridad es nuestra prioridad",
-    desc: "Nos gusta hacer las cosas como deben de ser. Cumplimos con nuestro compromiso, y nuestro compromiso es que tengas seguridad de lo que hacemos y que puedas dormir tranquilo.",
-  },
-];
-
-const sectors = [
-  {
-    name: "Construcción",
-    desc: "Años de experiencia en el sector. Amortización de anticipos en estimaciones semanales, maquila de nómina semanal, avisos ante el SATQ, presentación de SIROC, cumplimiento en seguridad social, alta en REPSE y declaraciones informativas cuatrimestrales (ICSOE y SISUB).",
-    href: "/version-c/sectores/construccion",
-    img: sectorConstruccion,
-  },
-  {
-    name: "Comercializadoras",
-    desc: "Distribuidoras, importadoras, empresas con ventas al mayoreo y minoristas al público general con tiendas o centro de distribución.",
-    href: "/version-c/sectores/comercial",
-    img: sectorComercial,
-  },
-  {
-    name: "RESICO",
-    desc: "Personas físicas con actividad empresarial y profesional o RESICO: freelancers, consultores, profesionistas independientes y contratistas.",
-    href: "/version-c/sectores/resico",
-    img: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=960&q=80&fit=crop",
-  },
-  {
-    name: "Asesores Inmobiliarios",
-    desc: "Comisiones inmobiliarias con reglas fiscales específicas. CFDI correcto y régimen óptimo. Apoyamos en operaciones para que se cierren de la manera más eficiente desde el punto de vista fiscal.",
-    href: "/version-c/sectores/inmobiliario",
-    img: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=960&q=80&fit=crop",
-  },
-  {
-    name: "Renta Vacacional",
-    desc: "Propietarios y administradores de inmuebles en Airbnb, Booking y otras plataformas. ISR, IVA, ISH, CFDI, conciliación de plataformas y administración operativa para hospedaje en Cancún y Riviera Maya.",
-    href: "/version-c/sectores/renta-vacacional",
-    img: "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=960&q=80&fit=crop",
-  },
-];
+import { useLang } from "@/i18n/lang";
+import { getHomeContent, serviceBgs } from "@/i18n/homeContent";
 
 const homeTestimonials = homeTestimonialsOrder.map((id) => testimonialsData[id]);
-
-const faqs = [
-  {
-    q: "¿Cuánto cobra un contador en Cancún?",
-    a: "El costo varía según los servicios requeridos. La contabilidad básica para una empresa pequeña puede empezar desde $2,000–$4,000 MXN/mes. Para empresas medianas con nómina y facturación incluidas, el rango es de $5,000–$15,000 MXN/mes. En Camhaji Consultores hacemos una cotización personalizada sin costo — cuéntanos tu operación y te damos un número adecuado a tu realidad.",
-  },
-  {
-    q: "¿Cómo elegir una buena Firma contable en Cancún?",
-    a: "Busca una Firma con equipo certificado, experiencia en tu sector, uso de software actualizado y comunicación clara y accesible. Que te expliquen lo que hacen — no solo que te manden el comprobante de declaración.",
-  },
-  {
-    q: "¿Qué incluye el servicio de contabilidad mensual?",
-    a: "Solicitud y revisión de documentos, registro contable, conciliación de estado de cuenta con facturas, cálculo de impuestos, llenado de declaraciones y envío al cliente para autorizar el pago. Nos adaptamos al canal que prefiere el cliente — correo o WhatsApp.",
-  },
-  {
-    q: "¿Atienden empresas fuera de Cancún?",
-    a: "Sí. Trabajamos con empresas en todo Quintana Roo. Nos adaptamos al canal de comunicación del cliente, por lo que la distancia no es un obstáculo.",
-  },
-  {
-    q: "¿Tienen experiencia con empresas que están atrasadas en el SAT?",
-    a: "Sí. Es uno de los casos más frecuentes con los que llegan nuevos clientes. El primer paso es un diagnóstico de la situación fiscal, sin juicios, para entender exactamente dónde está el problema y qué se necesita para regularizarse.",
-  },
-];
 
 /* ── Counter animation hook ── */
 function useCountUp(target: number, duration = 1400) {
