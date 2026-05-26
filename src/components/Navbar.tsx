@@ -176,15 +176,16 @@ export function Navbar({ version }: NavbarProps) {
                 : "border border-white/50 text-white hover:bg-white/10 hover:border-white"
             }`}
           >
-            Agendar Consulta
+            {t(lang, "navCta")}
           </Link>
+          <LanguageSwitcher variant={scrolled ? "navbar-light" : "navbar-dark"} />
         </div>
 
         {/* Mobile hamburger */}
         <button
           className="md:hidden"
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
+          aria-label={menuOpen ? t(lang, "menuClose") : t(lang, "menuOpen")}
         >
           {menuOpen ? (
             <X className={`w-6 h-6 ${scrolled ? "text-camhaji-text" : "text-white"}`} />
@@ -236,8 +237,11 @@ export function Navbar({ version }: NavbarProps) {
             to={ctaHref}
             className="block btn-uppercase bg-primary text-primary-foreground px-6 py-3 text-center mt-4"
           >
-            Agendar Consulta
+            {t(lang, "navCta")}
           </Link>
+          <div className="mt-5 flex justify-center">
+            <LanguageSwitcher variant="navbar-light" />
+          </div>
         </div>
       )}
     </nav>
