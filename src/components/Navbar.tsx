@@ -56,7 +56,7 @@ export function Navbar({ version }: NavbarProps) {
           { label: "Comercial", href: `${base}/sectores/comercial` },
           { label: "Asesores Inmobiliarios", href: `${base}/sectores/inmobiliario` },
           { label: "RESICO", href: `${base}/sectores/resico` },
-          { label: "Pequeños Negocios", href: `${base}/sectores/pequenos-negocios` },
+          { label: "Renta Vacacional", href: `${base}/sectores/renta-vacacional` },
         ],
       },
       { label: "Contacto", href: `${base}/contacto` },

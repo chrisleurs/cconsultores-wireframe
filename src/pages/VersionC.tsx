@@ -108,10 +108,10 @@ const sectors = [
     img: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=960&q=80&fit=crop",
   },
   {
-    name: "Declaraciones Anuales para personas físicas",
-    desc: "Asalariados, asimilados a salarios, intereses, ventas de acciones y otros ingresos.",
-    href: "/version-c/sectores/pequenos-negocios",
-    img: "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=960&q=80&fit=crop",
+    name: "Renta Vacacional",
+    desc: "Propietarios y administradores de inmuebles en Airbnb, Booking y otras plataformas. ISR, IVA, ISH, CFDI, conciliación de plataformas y administración operativa para hospedaje en Cancún y Riviera Maya.",
+    href: "/version-c/sectores/renta-vacacional",
+    img: "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=960&q=80&fit=crop",
   },
 ];
 

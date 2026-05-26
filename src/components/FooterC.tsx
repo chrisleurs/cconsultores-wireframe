@@ -48,7 +48,7 @@ export function FooterC() {
                 { label: "Comercial", href: `${base}/sectores/comercial` },
                 { label: "Inmobiliario", href: `${base}/sectores/inmobiliario` },
                 { label: "RESICO", href: `${base}/sectores/resico` },
-                { label: "Pequeños Negocios", href: `${base}/sectores/pequenos-negocios` },
+                { label: "Renta Vacacional", href: `${base}/sectores/renta-vacacional` },
               ].map((s) => (
                 <li key={s.label}>
                   <a href={s.href} className="font-sans text-sm text-white/55 hover:text-white/85 transition-colors">
