@@ -16,7 +16,7 @@ import ServicioAdministracionC from "./pages/c/ServicioAdministracionC.tsx";
 import SectorComercialC from "./pages/c/SectorComercialC.tsx";
 import SectorInmobiliarioC from "./pages/c/SectorInmobiliarioC.tsx";
 import SectorResicoC from "./pages/c/SectorResicoC.tsx";
-import SectorPequenosNegociosC from "./pages/c/SectorPequenosNegociosC.tsx";
+import SectorRentaVacacionalC from "./pages/c/SectorRentaVacacionalC.tsx";
 import PropuestaSEO from "./pages/PropuestaSEO.tsx";
 import RevisionTextos from "./pages/RevisionTextos.tsx";
 import NotFound from "./pages/NotFound.tsx";
@@ -48,7 +48,8 @@ const App = () => (
           <Route path="/version-c/sectores/comercial" element={<SectorComercialC />} />
           <Route path="/version-c/sectores/inmobiliario" element={<SectorInmobiliarioC />} />
           <Route path="/version-c/sectores/resico" element={<SectorResicoC />} />
-          <Route path="/version-c/sectores/pequenos-negocios" element={<SectorPequenosNegociosC />} />
+          <Route path="/version-c/sectores/renta-vacacional" element={<SectorRentaVacacionalC />} />
+          <Route path="/version-c/sectores/pequenos-negocios" element={<Navigate to="/version-c/sectores/renta-vacacional" replace />} />
           <Route path="/version-c/nosotros" element={<NosotrosC />} />
           <Route path="/version-c/contacto" element={<ContactoC />} />
           <Route path="*" element={<NotFound />} />
