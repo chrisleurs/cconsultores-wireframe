@@ -117,11 +117,11 @@ export default function VersionC() {
           <p className="font-sans text-base font-light text-white/50 mb-12 max-w-[540px]" style={{ fontSize: "clamp(16px, 2vw, 20px)", lineHeight: 1.6 }}>
             {C.hero.intro}
           </p>
-          <div className="flex gap-4 flex-wrap">
-            <a href="https://wa.me/5215543587159" target="_blank" rel="noopener noreferrer" className="btn-uppercase bg-white text-primary border border-white px-8 py-3.5 hover:bg-camhaji-accent hover:border-camhaji-accent hover:text-camhaji-base transition-all duration-300">
+          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+            <a href="https://wa.me/5215543587159" target="_blank" rel="noopener noreferrer" className="btn-uppercase bg-white text-primary border border-white px-8 py-3.5 hover:bg-camhaji-accent hover:border-camhaji-accent hover:text-camhaji-base transition-all duration-300 w-full sm:w-[220px] text-center inline-flex items-center justify-center">
               {C.hero.ctaWhats}
             </a>
-            <a href="#servicios" className="btn-uppercase border border-white/30 text-white/70 hover:text-white hover:border-white/60 transition-all duration-300 px-8 py-3.5">
+            <a href="#servicios" className="btn-uppercase border border-white/30 text-white/70 hover:text-white hover:border-white/60 transition-all duration-300 px-8 py-3.5 w-full sm:w-[220px] text-center inline-flex items-center justify-center">
               {C.hero.ctaServ}
             </a>
           </div>
