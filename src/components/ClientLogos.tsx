@@ -2,12 +2,30 @@ import hereAndNow from "@/assets/clients/here-and-now.png";
 import ecoSupply from "@/assets/clients/ecosupply.png";
 import propiedadesCancun from "@/assets/clients/propiedades-cancun.png";
 import clienteBlanco from "@/assets/clients/cliente-blanco.png";
+import somaWellness from "@/assets/clients/soma-wellness.png";
+import megaLed from "@/assets/clients/mega-led.png";
+import savyAi from "@/assets/clients/savy-ai.png";
+import century21Evo from "@/assets/clients/century21-evo.png";
+import clubHotelia from "@/assets/clients/club-hotelia.png";
+import ledsBeGreen from "@/assets/clients/leds-be-green.png";
+import moMe from "@/assets/clients/mo-me.png";
+import emcMep from "@/assets/clients/emc-mep.png";
+import royFpv from "@/assets/clients/roy-fpv.png";
 
-const clients = [
+const clients: { name: string; logo: string; alreadyWhite?: boolean }[] = [
   { name: "Here and Now Real Estate", logo: hereAndNow },
   { name: "EcoSupply", logo: ecoSupply },
   { name: "Propiedades Cancún", logo: propiedadesCancun },
   { name: "Cliente Camhaji", logo: clienteBlanco },
+  { name: "SOMA Wellness & Spa", logo: somaWellness, alreadyWhite: true },
+  { name: "Mega LED", logo: megaLed, alreadyWhite: true },
+  { name: "Savy AI", logo: savyAi, alreadyWhite: true },
+  { name: "Century 21 Evo", logo: century21Evo, alreadyWhite: true },
+  { name: "Club Hotelia", logo: clubHotelia, alreadyWhite: true },
+  { name: "LED's Be Green", logo: ledsBeGreen, alreadyWhite: true },
+  { name: "MO|ME Arquitectura", logo: moMe, alreadyWhite: true },
+  { name: "EMC Instalaciones MEP", logo: emcMep, alreadyWhite: true },
+  { name: "Roy FPV", logo: royFpv, alreadyWhite: true },
 ];
 
 interface ClientLogosProps {
@@ -57,10 +75,6 @@ export function ClientLogos({ variant }: ClientLogosProps) {
 function LogoMarquee({ tone }: { tone: "light" | "dark" }) {
   // Duplicate the list so the translateX(-50%) loop is seamless
   const loop = [...clients, ...clients, ...clients, ...clients];
-  const filterClass =
-    tone === "light"
-      ? "brightness-0 invert opacity-50 hover:opacity-90"
-      : "grayscale opacity-60 hover:opacity-100";
 
   return (
     <div
@@ -73,15 +87,23 @@ function LogoMarquee({ tone }: { tone: "light" | "dark" }) {
       }}
     >
       <div className="logo-marquee-track flex items-center gap-16 md:gap-24 w-max">
-        {loop.map((c, i) => (
-          <img
-            key={`${c.name}-${i}`}
-            src={c.logo}
-            alt={c.name}
-            loading="lazy"
-            className={`${c.name === "Cliente Camhaji" ? "h-20 md:h-24" : "h-14 md:h-16"} w-auto object-contain shrink-0 transition-opacity duration-300 ${filterClass}`}
-          />
-        ))}
+        {loop.map((c, i) => {
+          const filterClass =
+            tone === "light"
+              ? c.alreadyWhite
+                ? "opacity-60 hover:opacity-100"
+                : "brightness-0 invert opacity-50 hover:opacity-90"
+              : "grayscale opacity-60 hover:opacity-100";
+          return (
+            <img
+              key={`${c.name}-${i}`}
+              src={c.logo}
+              alt={c.name}
+              loading="lazy"
+              className={`${c.name === "Cliente Camhaji" ? "h-20 md:h-24" : "h-14 md:h-16"} w-auto object-contain shrink-0 transition-opacity duration-300 ${filterClass}`}
+            />
+          );
+        })}
       </div>
     </div>
   );
