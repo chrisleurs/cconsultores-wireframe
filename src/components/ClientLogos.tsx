@@ -88,19 +88,29 @@ function LogoMarquee({ tone }: { tone: "light" | "dark" }) {
     >
       <div className="logo-marquee-track flex items-center gap-16 md:gap-24 w-max">
         {loop.map((c, i) => {
+          // Unified color treatment for ALL logos so they read as one family.
           const filterClass =
             tone === "light"
               ? c.alreadyWhite
-                ? "opacity-60 hover:opacity-100"
-                : "brightness-0 invert opacity-50 hover:opacity-90"
+                ? "opacity-55 hover:opacity-90"
+                : "brightness-0 invert opacity-55 hover:opacity-90"
               : "grayscale opacity-60 hover:opacity-100";
-          const biggerLogos = ["SOMA Wellness & Spa", "MO|ME Arquitectura", "Club Hotelia"];
-          const sizeClass =
-            c.name === "Cliente Camhaji"
-              ? "h-24 md:h-28"
-              : biggerLogos.includes(c.name)
-                ? "h-[88px] md:h-[100px]"
-                : "h-[68px] md:h-[77px]";
+          // Optical sizing: dense/bold logos get smaller heights, thin/airy logos get larger ones,
+          // so every logo occupies a similar visual weight on the row.
+          const denseLogos = ["SOMA Wellness & Spa", "Mega LED", "Savy AI", "Cliente Camhaji"];
+          const airyLogos = [
+            "MO|ME Arquitectura",
+            "Club Hotelia",
+            "Century 21 Evo",
+            "EMC Instalaciones MEP",
+            "LED's Be Green",
+            "Roy FPV",
+          ];
+          const sizeClass = denseLogos.includes(c.name)
+            ? "h-[56px] md:h-[64px]"
+            : airyLogos.includes(c.name)
+              ? "h-[80px] md:h-[92px]"
+              : "h-[68px] md:h-[77px]";
           return (
             <img
               key={`${c.name}-${i}`}
