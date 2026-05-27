@@ -100,7 +100,7 @@ function LogoMarquee({ tone }: { tone: "light" | "dark" }) {
               src={c.logo}
               alt={c.name}
               loading="lazy"
-              className={`${c.name === "Cliente Camhaji" ? "h-20 md:h-24" : "h-14 md:h-16"} w-auto object-contain shrink-0 transition-opacity duration-300 ${filterClass}`}
+              className={`${c.name === "Cliente Camhaji" ? "h-24 md:h-28" : "h-[68px] md:h-[77px]"} w-auto object-contain shrink-0 transition-opacity duration-300 ${filterClass}`}
             />
           );
         })}
