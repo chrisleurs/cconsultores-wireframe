@@ -94,13 +94,20 @@ function LogoMarquee({ tone }: { tone: "light" | "dark" }) {
                 ? "opacity-60 hover:opacity-100"
                 : "brightness-0 invert opacity-50 hover:opacity-90"
               : "grayscale opacity-60 hover:opacity-100";
+          const biggerLogos = ["SOMA Wellness & Spa", "MO|ME Arquitectura", "Club Hotelia"];
+          const sizeClass =
+            c.name === "Cliente Camhaji"
+              ? "h-24 md:h-28"
+              : biggerLogos.includes(c.name)
+                ? "h-[88px] md:h-[100px]"
+                : "h-[68px] md:h-[77px]";
           return (
             <img
               key={`${c.name}-${i}`}
               src={c.logo}
               alt={c.name}
               loading="lazy"
-              className={`${c.name === "Cliente Camhaji" ? "h-24 md:h-28" : "h-[68px] md:h-[77px]"} w-auto object-contain shrink-0 transition-opacity duration-300 ${filterClass}`}
+              className={`${sizeClass} w-auto object-contain shrink-0 transition-opacity duration-300 ${filterClass}`}
             />
           );
         })}
