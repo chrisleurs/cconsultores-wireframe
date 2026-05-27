@@ -122,7 +122,7 @@ export function getHomeContent(lang: Lang): HomeContent {
         items: [
           {
             num: "01",
-            title: "Bookkeeping & Administration",
+            title: "Bookkeeping",
             desc: "Recording of operations, bank reconciliation, tax calculation, issuance of financial statements. Financial information for decision-making.",
             href: `${b}/servicios/contabilidad`,
             cta: "LEARN MORE →",
@@ -308,7 +308,7 @@ export function getHomeContent(lang: Lang): HomeContent {
       items: [
         {
           num: "01",
-          title: "Contabilidad y Administración",
+          title: "Contabilidad",
           desc: "Registro de operaciones, conciliación bancaria, cálculo de impuestos, emisión de Estados Financieros. Información financiera para la toma de decisiones.",
           href: `${b}/servicios/contabilidad`,
           cta: "CONOCER MÁS →",
