@@ -129,7 +129,7 @@ export function getHomeContent(lang: Lang): HomeContent {
           },
           {
             num: "02",
-            title: "Tax Compliance",
+            title: "Tax Consulting",
             desc: "Proper compliance with your tax obligations, tax calculation, filing of returns, submission of informative reports, electronic accounting submissions. It's not tax magic, it's compliance. Support in procedures before tax authorities.",
             href: `${b}/servicios/fiscal`,
             cta: "LEARN MORE →",
@@ -315,7 +315,7 @@ export function getHomeContent(lang: Lang): HomeContent {
         },
         {
           num: "02",
-          title: "Cumplimiento de obligaciones fiscales",
+          title: "Consultoría Fiscal",
           desc: "Correcto cumplimiento de tus obligaciones fiscales, cálculo de impuestos, envío de declaraciones, presentación de informativas, envío de contabilidad electrónica. No es magia fiscal, es compliance. Acompañamiento en trámites ante autoridades.",
           href: `${b}/servicios/fiscal`,
           cta: "CONOCER MÁS →",
