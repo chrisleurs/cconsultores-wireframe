@@ -1,12 +1,17 @@
 import type { Lang } from "./lang";
 import sectorConstruccion from "@/assets/sector-construccion.jpg";
 import sectorComercial from "@/assets/sector-comercial.jpg";
+import serviceContabilidad from "@/assets/home/service-contabilidad.jpg.asset.json";
+import serviceFiscal from "@/assets/home/service-fiscal.jpg.asset.json";
+import serviceNomina from "@/assets/home/service-nomina.jpg.asset.json";
+import serviceAdministracion from "@/assets/home/service-administracion.jpg.asset.json";
+import sectorInmobiliario from "@/assets/home/sector-inmobiliario.jpg.asset.json";
 
 export const serviceBgs = [
-  "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1920&q=80&fit=crop",
-  "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1920&q=80&fit=crop",
-  "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1920&q=80&fit=crop",
-  "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=1920&q=80&fit=crop",
+  serviceContabilidad.url,
+  serviceFiscal.url,
+  serviceNomina.url,
+  serviceAdministracion.url,
 ];
 
 export interface HomeContent {
