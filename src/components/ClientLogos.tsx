@@ -95,22 +95,8 @@ function LogoMarquee({ tone }: { tone: "light" | "dark" }) {
                 ? "opacity-55 hover:opacity-90"
                 : "brightness-0 invert opacity-55 hover:opacity-90"
               : "grayscale opacity-60 hover:opacity-100";
-          // Optical sizing: dense/bold logos get smaller heights, thin/airy logos get larger ones,
-          // so every logo occupies a similar visual weight on the row.
-          const denseLogos = ["SOMA Wellness & Spa", "Mega LED", "Savy AI", "Cliente Camhaji"];
-          const airyLogos = [
-            "MO|ME Arquitectura",
-            "Club Hotelia",
-            "Century 21 Evo",
-            "EMC Instalaciones MEP",
-            "LED's Be Green",
-            "Roy FPV",
-          ];
-          const sizeClass = denseLogos.includes(c.name)
-            ? "h-[56px] md:h-[64px]"
-            : airyLogos.includes(c.name)
-              ? "h-[80px] md:h-[92px]"
-              : "h-[68px] md:h-[77px]";
+          // Unified size for all logos (matches the Mega LED reference).
+          const sizeClass = "h-[56px] md:h-[64px]";
           return (
             <img
               key={`${c.name}-${i}`}
