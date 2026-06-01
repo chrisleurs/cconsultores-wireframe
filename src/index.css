@@ -191,7 +191,7 @@ section.no-reveal,
   to   { transform: translateX(-50%); }
 }
 .logo-marquee-track {
-  animation: logoMarquee 30s linear infinite;
+  animation: logoMarquee 60s linear infinite;
 }
 .logo-marquee:hover .logo-marquee-track {
   animation-play-state: paused;

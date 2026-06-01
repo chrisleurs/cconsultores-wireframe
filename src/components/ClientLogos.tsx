@@ -95,16 +95,18 @@ function LogoMarquee({ tone }: { tone: "light" | "dark" }) {
                 ? "opacity-55 hover:opacity-90"
                 : "brightness-0 invert opacity-55 hover:opacity-90"
               : "grayscale opacity-60 hover:opacity-100";
-          // Unified size for all logos (matches the Mega LED reference).
-          const sizeClass = "h-[56px] md:h-[64px]";
           return (
-            <img
+            <div
               key={`${c.name}-${i}`}
-              src={c.logo}
-              alt={c.name}
-              loading="lazy"
-              className={`${sizeClass} w-auto object-contain shrink-0 transition-opacity duration-300 ${filterClass}`}
-            />
+              className="flex items-center justify-center shrink-0 w-[140px] h-[72px] md:w-[170px] md:h-[80px]"
+            >
+              <img
+                src={c.logo}
+                alt={c.name}
+                loading="lazy"
+                className={`max-h-full max-w-full object-contain transition-opacity duration-300 ${filterClass}`}
+              />
+            </div>
           );
         })}
       </div>
