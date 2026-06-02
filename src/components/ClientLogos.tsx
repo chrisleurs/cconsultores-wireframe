@@ -1,32 +1,34 @@
-import hereAndNow from "@/assets/clients/here-and-now.png";
-import ecoSupply from "@/assets/clients/ecosupply.png";
-import propiedadesCancun from "@/assets/clients/propiedades-cancun.png";
-import clienteBlanco from "@/assets/clients/cliente-blanco.png";
-import somaWellness from "@/assets/clients/soma-wellness.png";
-import megaLed from "@/assets/clients/mega-led.png";
-import savyAi from "@/assets/clients/savy-ai.png";
-import century21Evo from "@/assets/clients/century21-evo.png";
-import clubHotelia from "@/assets/clients/club-hotelia.png";
-import ledsBeGreen from "@/assets/clients/leds-be-green.png";
-import moMe from "@/assets/clients/mo-me.png";
-import emcMep from "@/assets/clients/emc-mep.png";
-import royFpv from "@/assets/clients/roy-fpv.png";
+import logo01 from "@/assets/clients-v2/logo-01.png.asset.json";
+import logo02 from "@/assets/clients-v2/logo-02.png.asset.json";
+import logo03 from "@/assets/clients-v2/logo-03.png.asset.json";
+import logo04 from "@/assets/clients-v2/logo-04.png.asset.json";
+import logo05 from "@/assets/clients-v2/logo-05.png.asset.json";
+import logo06 from "@/assets/clients-v2/logo-06.png.asset.json";
+import logo07 from "@/assets/clients-v2/logo-07.png.asset.json";
+import logo08 from "@/assets/clients-v2/logo-08.png.asset.json";
+import logo09 from "@/assets/clients-v2/logo-09.png.asset.json";
+import logo10 from "@/assets/clients-v2/logo-10.png.asset.json";
+import logo11 from "@/assets/clients-v2/logo-11.png.asset.json";
+import logo12 from "@/assets/clients-v2/logo-12.png.asset.json";
+import logo13 from "@/assets/clients-v2/logo-13.png.asset.json";
+import logo14 from "@/assets/clients-v2/logo-14.png.asset.json";
+import logo15 from "@/assets/clients-v2/logo-15.png.asset.json";
+import logo16 from "@/assets/clients-v2/logo-16.png.asset.json";
+import logo17 from "@/assets/clients-v2/logo-17.png.asset.json";
+import logo18 from "@/assets/clients-v2/logo-18.png.asset.json";
+import logo19 from "@/assets/clients-v2/logo-19.png.asset.json";
+import logo20 from "@/assets/clients-v2/logo-20.png.asset.json";
+import logo21 from "@/assets/clients-v2/logo-21.png.asset.json";
+import logo22 from "@/assets/clients-v2/logo-22.png.asset.json";
+import logo23 from "@/assets/clients-v2/logo-23.png.asset.json";
+import logo24 from "@/assets/clients-v2/logo-24.png.asset.json";
 
+// All logos are pre-processed to pure white on transparent background.
 const clients: { name: string; logo: string; alreadyWhite?: boolean }[] = [
-  { name: "Here and Now Real Estate", logo: hereAndNow },
-  { name: "EcoSupply", logo: ecoSupply },
-  { name: "Propiedades Cancún", logo: propiedadesCancun },
-  { name: "Cliente Camhaji", logo: clienteBlanco },
-  { name: "SOMA Wellness & Spa", logo: somaWellness, alreadyWhite: true },
-  { name: "Mega LED", logo: megaLed, alreadyWhite: true },
-  { name: "Savy AI", logo: savyAi, alreadyWhite: true },
-  { name: "Century 21 Evo", logo: century21Evo, alreadyWhite: true },
-  { name: "Club Hotelia", logo: clubHotelia, alreadyWhite: true },
-  { name: "LED's Be Green", logo: ledsBeGreen, alreadyWhite: true },
-  { name: "MO|ME Arquitectura", logo: moMe, alreadyWhite: true },
-  { name: "EMC Instalaciones MEP", logo: emcMep, alreadyWhite: true },
-  { name: "Roy FPV", logo: royFpv, alreadyWhite: true },
-];
+  logo01, logo02, logo03, logo04, logo05, logo06, logo07, logo08,
+  logo09, logo10, logo11, logo12, logo13, logo14, logo15, logo16,
+  logo17, logo18, logo19, logo20, logo21, logo22, logo23, logo24,
+].map((a, i) => ({ name: `Cliente ${String(i + 1).padStart(2, "0")}`, logo: a.url, alreadyWhite: true }));
 
 interface ClientLogosProps {
   variant: "a" | "b" | "c";
@@ -91,10 +93,8 @@ function LogoMarquee({ tone }: { tone: "light" | "dark" }) {
           // Unified color treatment for ALL logos so they read as one family.
           const filterClass =
             tone === "light"
-              ? c.alreadyWhite
-                ? "opacity-55 hover:opacity-90"
-                : "brightness-0 invert opacity-55 hover:opacity-90"
-              : "grayscale opacity-60 hover:opacity-100";
+              ? "opacity-70 hover:opacity-100"
+              : "brightness-0 opacity-60 hover:opacity-100";
           return (
             <div
               key={`${c.name}-${i}`}
