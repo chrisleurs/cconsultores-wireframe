@@ -59,7 +59,7 @@ export function getNosotrosContent(lang: Lang): NosotrosContent {
           "The solution was simple. One took care of the tax side. The other, of the accounting side. Together, they could offer what neither could give alone: an integrated, coordinated service, with no gaps.",
           "That's how Camhaji Consultores was born.",
         ],
-        closingHTML: `Since then, we have grown to a team of 10 people. We have served <a href="${b}/sectores/construccion" class="text-primary hover:underline">construction companies</a>, distributors, <a href="${b}/sectores/resico" class="text-primary hover:underline">freelancers under RESICO</a>, real estate advisors and entrepreneurs who arrived with years of overdue obligations and left with their finances in order.`,
+        closingHTML: `Since then, we have grown to a team of 10 people. We have served <a href="${b}/sectores/construccion" class="text-primary hover:underline">construction companies</a>, distributors, <a href="${b}/sectores/resico" class="text-primary hover:underline">freelancers under RESICO</a>, real estate agencies and entrepreneurs who arrived with years of overdue obligations and left with their finances in order.`,
       },
       lideres: {
         label: "ACCOUNTING FIRM LEADERSHIP",
@@ -111,7 +111,7 @@ export function getNosotrosContent(lang: Lang): NosotrosContent {
         "La solución fue sencilla. Uno se hacía cargo de la parte fiscal. El otro, de la parte contable. Juntos, podían ofrecer lo que ninguno podía dar solo: un servicio integral, coordinado, sin huecos.",
         "Así nació Camhaji Consultores.",
       ],
-      closingHTML: `Desde entonces, hemos crecido a un equipo de 10 personas. Hemos atendido <a href="${b}/sectores/construccion" class="text-primary hover:underline">empresas de construcción</a>, comercializadoras, <a href="${b}/sectores/resico" class="text-primary hover:underline">freelancers en RESICO</a>, agentes inmobiliarios y empresarios que llegaron con años de obligaciones atrasadas y salieron con sus finanzas en orden.`,
+      closingHTML: `Desde entonces, hemos crecido a un equipo de 10 personas. Hemos atendido <a href="${b}/sectores/construccion" class="text-primary hover:underline">empresas de construcción</a>, comercializadoras, <a href="${b}/sectores/resico" class="text-primary hover:underline">freelancers en RESICO</a>, agencias inmobiliarias y empresarios que llegaron con años de obligaciones atrasadas y salieron con sus finanzas en orden.`,
     },
     lideres: {
       label: "LIDERAZGO DEL DESPACHO CONTABLE",

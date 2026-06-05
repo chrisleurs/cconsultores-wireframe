@@ -207,8 +207,8 @@ export function getHomeContent(lang: Lang): HomeContent {
             cta: "VIEW SPECIALIZATION →",
           },
           {
-            name: "Real Estate Advisors",
-            desc: "Real estate commissions with specific tax rules. Correct CFDI and optimal tax regime. We support closings to make them as tax-efficient as possible.",
+            name: "Real Estate Agencies",
+            desc: "Real estate agencies with commission-based income and specific tax rules. Correct CFDI and optimal tax regime. We support closings to make them as tax-efficient as possible.",
             href: `${b}/sectores/inmobiliario`,
             img: sectorInmobiliario.url,
             cta: "VIEW SPECIALIZATION →",
@@ -393,8 +393,8 @@ export function getHomeContent(lang: Lang): HomeContent {
           cta: "VER ESPECIALIZACIÓN →",
         },
         {
-          name: "Asesores Inmobiliarios",
-          desc: "Comisiones inmobiliarias con reglas fiscales específicas. CFDI correcto y régimen óptimo. Apoyamos en operaciones para que se cierren de la manera más eficiente desde el punto de vista fiscal.",
+          name: "Agencias Inmobiliarias",
+          desc: "Agencias inmobiliarias con ingresos por comisiones y reglas fiscales específicas. CFDI correcto y régimen óptimo. Apoyamos en operaciones para que se cierren de la manera más eficiente desde el punto de vista fiscal.",
           href: `${b}/sectores/inmobiliario`,
           img: sectorInmobiliario.url,
           cta: "VER ESPECIALIZACIÓN →",

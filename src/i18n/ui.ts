@@ -21,7 +21,7 @@ export const ui = {
     // Sectors dropdown
     sectConstruccion: "Construcción",
     sectComercial: "Comercial",
-    sectInmobiliario: "Asesores Inmobiliarios",
+    sectInmobiliario: "Agencias Inmobiliarias",
     sectResico: "Personas Físicas / RESICO",
     sectRentaVac: "Renta Vacacional",
     // Footer
@@ -57,7 +57,7 @@ export const ui = {
     svcAdministracion: "Integrated Administration",
     sectConstruccion: "Construction",
     sectComercial: "Commercial",
-    sectInmobiliario: "Real Estate Advisors",
+    sectInmobiliario: "Real Estate Agencies",
     sectResico: "Individuals / RESICO",
     sectRentaVac: "Vacation Rentals",
     footerTagline: "Accounting with real commitment.",
