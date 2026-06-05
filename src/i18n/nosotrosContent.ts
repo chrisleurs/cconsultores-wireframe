@@ -89,7 +89,7 @@ export function getNosotrosContent(lang: Lang): NosotrosContent {
     },
     breadcrumbCurrent: "Nosotros",
     heroLabel: "DESPACHO CONTABLE EN CANCÚN",
-    heroH1: "Una Firma Contable Joven con más de 10 Años de Trayectoria",
+    heroH1: "Una firma contable joven con más de 10 años de trayectoria",
     heroIntro: "Hay firmas que se venden con catálogos. Nosotros preferimos contarte quiénes somos.",
     filo: {
       label: "VALORES DE CAMHAJI CONSULTORES",

@@ -80,8 +80,8 @@ export function getResicoContent(lang: Lang): ResicoContent {
   return {
     seo: { title: "Régimen RESICO en Cancún | Camhaji Consultores", description: "Asesoría y contabilidad RESICO en Cancún. Cumple con el SAT bajo el Régimen Simplificado de Confianza sin complicaciones." },
     bcInicio: "Inicio", bcSectores: "Sectores", bcCurrent: "RESICO",
-    heroLabel: "CONTADOR PARA RESICO EN CANCÚN",
-    heroH1L1: "Contador para RESICO",
+    heroLabel: "PERSONAS FÍSICAS / RESICO",
+    heroH1L1: "Personas Físicas / RESICO",
     heroH1L2: "en Cancún",
     heroP: "El RESICO existe para simplificar tus obligaciones fiscales. Pero muchos freelancers, consultores y profesionistas independientes llegan con meses de declaraciones sin presentar, CFDI emitidos con el régimen incorrecto o sin saber si el RESICO realmente les conviene. Nosotros resolvemos eso.",
     queEsLabel: "RÉGIMEN SIMPLIFICADO DE CONFIANZA",

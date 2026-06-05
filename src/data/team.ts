@@ -33,7 +33,7 @@ export const team: TeamMember[] = [
   {
     id: "rogelio-moo",
     name: "Rogelio R. Moo Ruiz",
-    role: "Gerente General",
+    role: "Gerente de Contabilidad",
     tagline: "Operación y supervisión contable",
     photo: rogelioPhoto,
     bio:

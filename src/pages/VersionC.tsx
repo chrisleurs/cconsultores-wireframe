@@ -391,7 +391,7 @@ export default function VersionC() {
           </a>
           <div className="flex items-center gap-2 mt-5">
             <Phone className="w-3.5 h-3.5 text-white/50" />
-            <span className="font-sans text-sm text-white/50">(998) 887-2584</span>
+            <span className="font-sans text-sm text-white/50">WhatsApp: +52 1 55 4358 7159</span>
           </div>
         </div>
       </section>

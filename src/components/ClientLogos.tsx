@@ -5,16 +5,8 @@ import logo04 from "@/assets/clients-v2/logo-04.png.asset.json";
 import logo05 from "@/assets/clients-v2/logo-05.png.asset.json";
 import logo06 from "@/assets/clients-v2/logo-06.png.asset.json";
 import logo07 from "@/assets/clients-v2/logo-07.png.asset.json";
-import logo08 from "@/assets/clients-v2/logo-08.png.asset.json";
-import logo09 from "@/assets/clients-v2/logo-09.png.asset.json";
 import logo10 from "@/assets/clients-v2/logo-10.png.asset.json";
-import logo11 from "@/assets/clients-v2/logo-11.png.asset.json";
 import logo12 from "@/assets/clients-v2/logo-12.png.asset.json";
-import logo13 from "@/assets/clients-v2/logo-13.png.asset.json";
-import logo14 from "@/assets/clients-v2/logo-14.png.asset.json";
-import logo15 from "@/assets/clients-v2/logo-15.png.asset.json";
-import logo16 from "@/assets/clients-v2/logo-16.png.asset.json";
-import logo17 from "@/assets/clients-v2/logo-17.png.asset.json";
 import logo18 from "@/assets/clients-v2/logo-18.png.asset.json";
 import logo19 from "@/assets/clients-v2/logo-19.png.asset.json";
 import logo20 from "@/assets/clients-v2/logo-20.png.asset.json";
@@ -25,9 +17,8 @@ import logo24 from "@/assets/clients-v2/logo-24.png.asset.json";
 
 // All logos are pre-processed to pure white on transparent background.
 const clients: { name: string; logo: string; alreadyWhite?: boolean }[] = [
-  logo01, logo02, logo03, logo04, logo05, logo06, logo07, logo08,
-  logo09, logo10, logo11, logo12, logo13, logo14, logo15, logo16,
-  logo17, logo18, logo19, logo20, logo21, logo22, logo23, logo24,
+  logo01, logo02, logo03, logo04, logo05, logo06, logo07,
+  logo10, logo12, logo18, logo19, logo20, logo21, logo22, logo23, logo24,
 ].map((a, i) => ({ name: `Cliente ${String(i + 1).padStart(2, "0")}`, logo: a.url, alreadyWhite: true }));
 
 interface ClientLogosProps {
