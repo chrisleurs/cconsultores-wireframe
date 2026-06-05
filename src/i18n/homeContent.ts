@@ -200,7 +200,7 @@ export function getHomeContent(lang: Lang): HomeContent {
             cta: "VIEW SPECIALIZATION →",
           },
           {
-            name: "RESICO (Self-Employed)",
+            name: "Individuals / RESICO",
             desc: "Individuals with business or professional activity under RESICO: freelancers, consultants, independent professionals and contractors.",
             href: `${b}/sectores/resico`,
             img: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=960&q=80&fit=crop",
@@ -386,7 +386,7 @@ export function getHomeContent(lang: Lang): HomeContent {
           cta: "VER ESPECIALIZACIÓN →",
         },
         {
-          name: "RESICO",
+          name: "Personas Físicas / RESICO",
           desc: "Personas físicas con actividad empresarial y profesional o RESICO: freelancers, consultores, profesionistas independientes y contratistas.",
           href: `${b}/sectores/resico`,
           img: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=960&q=80&fit=crop",
