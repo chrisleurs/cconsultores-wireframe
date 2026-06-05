@@ -1,38 +1,37 @@
 ## Cambios
 
-### 1. Servicio 01 — solo "Contabilidad"
-Editar `src/i18n/homeContent.ts`:
-- Línea 311 (ES): `"Contabilidad y Administración"` → `"Contabilidad"`
-- Línea 125 (EN): `"Bookkeeping & Administration"` → `"Bookkeeping"`
+### 1. Iconos en el footer (columna Contacto)
+En `src/components/FooterC.tsx`, agregar los mismos iconos que usa la página de contacto al lado de cada dato:
+- Phone → teléfono fijo (998) 887 2584 ext. 1001
+- WhatsApp (SVG) → +52 1 55 4358 7159
+- Mail → contacto@camhajiconsultores.mx
+- MapPin → dirección
+- Clock → horario
 
-No tocar descripciones, hrefs, ni SEO. El servicio 04 "Administración Integral" se mantiene intacto.
+Iconos en blanco a baja opacidad (`text-white/35`), alineados con `flex items-start gap-3`, manteniendo tipografía y colores actuales.
 
-### 2. Nueve logos nuevos en blanco — sección "CONFÍAN EN NOSOTROS"
+### 2. Logo del footer más grande sin afectar layout
+En `src/components/FooterC.tsx`, aumentar el logo de `h-20 md:h-24` a `h-28 md:h-36` y envolverlo en un contenedor con altura fija o margen negativo para que el logo crezca visualmente sin empujar el resto de columnas. Mantener el grid de 4 columnas alineado en la parte superior usando `items-start` (ya lo está) y aplicar `-mt-4` o `relative` al logo para que el crecimiento sea hacia arriba/abajo sin desplazar el tagline ni el switcher de idioma.
 
-**Procesar cada logo subido con `imagegen--edit_image`** para convertirlo a una silueta blanca pura sobre fondo transparente (mismo tratamiento visual que ya tiene el marquee, que aplica `brightness-0 invert` — pero como varios logos son de colores complejos con gradientes, conviene generar versiones blancas dedicadas para que se vean limpias y consistentes).
+### 3. Rename "Asesores Inmobiliarios" → "Agencias Inmobiliarias"
+Cambios de etiquetas (ES) / "Real Estate Advisors" → "Real Estate Agencies" (EN):
 
-Prompt por logo: "Convert this logo into a clean monochrome solid white version, preserving all shapes, letters and proportions exactly. Pure white (#FFFFFF) on a fully transparent background. No gradients, no shadows, no color." con `transparent_background: true`.
+- **`src/i18n/ui.ts`**: `sectInmobiliario` en ES y EN.
+- **`src/i18n/homeContent.ts`**: nombre de la card en home (ES/EN).
+- **`src/i18n/contactoContent.ts`**: opción del select de servicios (ES/EN).
+- **`src/i18n/sectorInmobiliarioContent.ts`**: 
+  - SEO title/description
+  - H1 del hero
+  - Reescribir copys del sector para hablar de **agencias inmobiliarias** (brokers/agencias completas con varios agentes, comisiones, esquemas de facturación a la agencia, gestión de equipo de asesores, etc.) en lugar de asesores individuales. Mantener estructura, longitud y keywords SEO equivalentes (Cancún, contabilidad, fiscal, RESICO si aplica).
+- **`src/i18n/contabilidadContent.ts`** y **`src/i18n/nosotrosContent.ts`**: actualizar menciones puntuales para que digan "agencias inmobiliarias".
 
-Archivos destino en `src/assets/clients/`:
-| Origen | Destino | Nombre cliente |
-|---|---|---|
-| SOMA Wellness | `soma-wellness.png` | SOMA Wellness & Spa |
-| MEGA LED | `mega-led.png` | Mega LED |
-| SAVY AI | `savy-ai.png` | Savy AI |
-| Century 21 EVO | `century21-evo.png` | Century 21 Evo |
-| Club Hotelia | `club-hotelia.png` | Club Hotelia |
-| LED's be green | `leds-be-green.png` | LED's Be Green |
-| MO\|ME | `mo-me.png` | MO\|ME Arquitectura |
-| EMC | `emc-mep.png` | EMC Instalaciones MEP |
-| ROY FPV | `roy-fpv.png` | Roy FPV |
+No se tocan rutas ni slugs (`/sectores/inmobiliario` se mantiene).
 
-### 3. Actualizar `src/components/ClientLogos.tsx`
-- Añadir 9 imports al inicio.
-- Añadir 9 entradas al array `clients` después de los 4 existentes (orden: SOMA, Mega LED, Savy AI, Century 21 Evo, Club Hotelia, LED's Be Green, MO|ME, EMC, Roy FPV).
-- Mantener el filtro `brightness-0 invert opacity-50 hover:opacity-90` para tono "light" (refuerza el blanco puro y unifica todos los logos).
-- Mantener el tamaño especial `h-20 md:h-24` solo para "Cliente Camhaji" (los nuevos usan el tamaño estándar `h-14 md:h-16`).
-
-## Archivos tocados
-- `src/i18n/homeContent.ts` (2 líneas)
-- `src/components/ClientLogos.tsx`
-- 9 archivos PNG nuevos en `src/assets/clients/`
+### Archivos a editar
+- `src/components/FooterC.tsx`
+- `src/i18n/ui.ts`
+- `src/i18n/homeContent.ts`
+- `src/i18n/contactoContent.ts`
+- `src/i18n/sectorInmobiliarioContent.ts`
+- `src/i18n/contabilidadContent.ts`
+- `src/i18n/nosotrosContent.ts`
