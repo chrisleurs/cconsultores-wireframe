@@ -17,7 +17,7 @@ export function FooterC() {
               src={camhajiLogo}
               alt="Camhaji Consultores"
               itemProp="logo"
-              className="h-12 w-auto object-contain mb-4"
+              className="h-20 md:h-24 w-auto object-contain mb-4"
             />
 
             <p className="font-serif text-sm italic text-white/45 leading-relaxed mt-4">
@@ -73,7 +73,7 @@ export function FooterC() {
             <ul className="space-y-3 font-sans text-sm text-white/55">
               <li>
                 <a href="tel:+529988872584" className="hover:text-white/85 transition-colors" itemProp="telephone">
-                  (998) 887 2584
+                  (998) 887 2584 ext. 1001
                 </a>
               </li>
               <li>
