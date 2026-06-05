@@ -22,7 +22,7 @@ export const ui = {
     sectConstruccion: "Construcción",
     sectComercial: "Comercial",
     sectInmobiliario: "Asesores Inmobiliarios",
-    sectResico: "RESICO",
+    sectResico: "Personas Físicas / RESICO",
     sectRentaVac: "Renta Vacacional",
     // Footer
     footerTagline: "Contabilidad con compromiso real.",
@@ -58,7 +58,7 @@ export const ui = {
     sectConstruccion: "Construction",
     sectComercial: "Commercial",
     sectInmobiliario: "Real Estate Advisors",
-    sectResico: "RESICO (Self-Employed)",
+    sectResico: "Individuals / RESICO",
     sectRentaVac: "Vacation Rentals",
     footerTagline: "Accounting with real commitment.",
     footerServicios: "Services",
