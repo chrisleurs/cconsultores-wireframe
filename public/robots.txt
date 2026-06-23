@@ -1,7 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /revision-textos
-Disallow: /propuesta-seo
 
 # === LLM / AI crawlers ===
 # Permitimos explícitamente que los modelos de IA indexen y citen el sitio.
